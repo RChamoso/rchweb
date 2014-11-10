@@ -1,0 +1,67 @@
+@font-face {
+	font-family: Regular;
+	src: url(../../fuentes/OpenSans-Regular.ttf) format('truetype');
+}
+@font-face {
+	font-family: SemiBold;
+	src: url(../../fuentes/OpenSans-SemiBold.ttf) format('truetype');
+}
+@font-face {
+	font-family: Bold;
+	src: url(../fuentes/OpenSans-Bold.ttf) format('truetype');
+}
+@font-face {
+	font-family: ExtraBold;
+	src: url(../fuentes/OpenSans-ExtraBold.ttf) format('truetype');
+}
+@font-face {
+	font-family: RegularItalic;
+	src: url(../fuentes/OpenSans-Italic.ttf) format('truetype');
+}
+@font-face {
+	font-family: BoldItalic;
+	src: url(../fuentes/OpenSans-BoldItalic.ttf) format('truetype');
+}
+@font-face {
+	font-family: unifont;
+	src: url(../fuentes/unifont.ttf) format('truetype');
+}
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+a {
+  display: block;
+}
+#ocultar  {
+  display: none;
+}
+h3  {
+	font-family: Regular;
+  margin-left: 20px;
+}
+pre {
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.codigo {
+  background-color: #F2F7FF;
+  border: 3px solid #032A66;
+/*  font-family: monospace !important;
+*/  margin: 0px 50px;
+}
+.columna1 {
+  background-color: #BFD8FC;
+  display: none;
+  padding: 5px 10px;
+}
+#css  {
+  padding: 15px;
+}
+.separador {
+	clear: both;
+}
+.izq {
+	float: left;
+}

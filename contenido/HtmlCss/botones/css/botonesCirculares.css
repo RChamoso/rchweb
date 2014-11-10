@@ -1,0 +1,73 @@
+﻿/*.icon-home:after {  content: "\2616";} */
+.icon-home:after {  content: url('../iconos/google110.png');
+top: 10px;} 
+.icon-content:after {  content: "\261f";} 
+.icon-contact:after {  content: "\2709";} 
+.icon-cloud:after {  content: "\2601";}
+.botonCircular {
+  background: #f7f7f7;
+  font-size: 5em;
+  list-style: none;
+  text-align: center;
+}
+.botonCircular li {
+  display: inline-block;
+  margin-right: -4px;
+}
+.botonCircular a {
+  background-color: #f7f7f7;
+  background-image: linear-gradient(top, #f7f7f7, #e7e7e7);
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+    -o-box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+    -ms-box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+    -moz-box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+    -webkit-box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+  color: #a7a7a7;
+  display: block;
+  height: 144px;
+  line-height: 134px;
+  margin: 36px;
+  position: relative;
+  width: 144px;
+}
+.botonCircular a:active {
+  box-shadow: 0px 1px 5px #aaa, inset 0px 2px 3px #fff;
+    -o-box-shadow: 0px 1px 5px #aaa, inset 0px 2px 3px #fff;
+    -ms-box-shadow: 0px 1px 5px #aaa, inset 0px 2px 3px #fff;
+    -moz-box-shadow: 0px 1px 5px #aaa, inset 0px 2px 3px #fff;
+    -webkit-box-shadow: 0px 1px 5px #aaa, inset 0px 2px 3px #fff;
+}
+.botonCircular a:hover {
+  background: #f5f5f5;
+  color: #555;
+  text-decoration: none;
+}
+.botonCircular a:before {
+  border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+  box-shadow: inset 0px 8px 48px #ddd;
+    -o-box-shadow: inset 0px 8px 48px #ddd;
+    -ms-box-shadow: inset 0px 8px 48px #ddd;
+    -moz-box-shadow: inset 0px 8px 48px #ddd;
+    -webkit-box-shadow: inset 0px 8px 48px #ddd;
+  border-top: 2px solid #ddd;
+  bottom: -18px;
+  content: "";
+  display: block;
+  left: -18px;
+  position: absolute;
+  right: -18px;
+  top: -18px;
+}

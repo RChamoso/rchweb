@@ -1,0 +1,76 @@
+{
+    "listaMenu2": [
+        {
+            "principal": {  //
+                "titulo": "Accesibilidad",
+                "subMenu": "menuAccesibilidad",
+                "contenido": [
+                    {
+                        "item": {
+                            "titulo": "AENOR",
+                            "funcion": "mostrarFuncion",
+                            "subTitulo": "Requisitos de accesibilidad para contenidos en la Web",
+                            "enlace": "http://www.aenor.es/aenor/normas/normas/fichanorma.asp?tipo=N&codigo=N0049614#.UZe-HMoeWsh"
+                        }
+                    },
+                    {
+                        "item": {
+                            "titulo": "CheckMyColours",
+                            "funcion": "mostrarFuncion",
+                            "subTitulo": "Análisis de los colores utilizados en el diseño de nuestra web",
+                            "enlace": "http://www.checkmycolours.com/"
+                        }
+                    },
+                    {
+                        "item": {
+                            "titulo": "Color Filter",
+                            "funcion": "mostrarFuncion",
+                            "subTitulo": "Análisis de los colores utilizados en el diseño de nuestra web",
+                            "enlace": "http://colorfilter.wickline.org/"
+                        }
+                    },
+                    {
+                        "item": {
+                            "titulo": "W3C WAI",
+                            "funcion": "mostrarFuncion",
+                            "subTitulo": "Web Accessibility Initiative (WAI)",
+                            "enlace": "http://www.w3.org/WAI/"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "principal": {
+                "titulo": "APIs",
+                "subMenu": "menuApis",
+                "contenido": [
+                    {
+                        "item": {
+                            "titulo": "Amazon",
+                            "funcion": "nuevaVentana",
+                            "subTitulo": "",
+                            "enlace": "https://afiliados.amazon.es"
+                        }
+                    },
+                    {
+                        "item": {
+                            "titulo": "Bing",
+                            "funcion": "mostrarFuncion",
+                            "subTitulo": "API Bing",
+                            "enlace": "http://www.bing.com/toolbox/bingdeveloper"
+                        }
+                    },
+                    {
+                        "item": {
+                            "titulo": "Envato",
+                            "funcion": "mostrarFuncion",
+                            "subTitulo": "API Envato",
+                            "enlace": "http://extras.envato.com/api"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

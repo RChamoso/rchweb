@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+  Created using /
+  Source can be edited via /ijeza/510/edit
+
+-->
+<head>
+<meta charset=utf-8 />
+<title>Basic Drag and Drop</title>
+<style>
+#drop {
+  min-height: 100px;
+  width: 200px;
+  border: 3px dashed #ccc;
+  margin: 10px;
+  padding: 10px;
+  clear: left;
+}
+p {
+  margin: 3px 0;
+}
+#rem {
+  background: url(http://twitter.com/api/users/profile_image/rem) no-repeat;
+}
+#brucel {
+  background: url(http://twitter.com/api/users/profile_image/brucel) no-repeat;
+}
+#Rich_Clark {
+  background: url(http://twitter.com/api/users/profile_image/Rich_Clark) no-repeat;
+}
+#leads {
+  background: url(http://twitter.com/api/users/profile_image/leads) no-repeat;
+}
+#akamike {
+  background: url(http://twitter.com/api/users/profile_image/akamike) no-repeat;
+}
+#jackosborne {
+  background: url(http://twitter.com/api/users/profile_image/jackosborne) no-repeat;
+}
+.drag {
+  height: 48px;
+  width: 48px;
+  float: left;
+  -khtml-user-drag: element;
+  margin: 10px;
+}
+</style>
+<script src="http://html5demos.com/h5utils.js"></script>
+</head>
+<body>
+  <div class="drag" id="rem" draggable="true"></div>
+  <div class="drag" id="brucel" draggable="true"></div>
+  <div class="drag" id="Rich_Clark" draggable="true"></div>
+  <div class="drag" id="leads" draggable="true"></div>
+  <div class="drag" id="akamike" draggable="true"></div>
+  <div class="drag" id="jackosborne" draggable="true"></div>
+  
+  <div id="drop"></div>
+<script>
+var people = {
+  rem : { 
+    name : "Remy Sharp",
+    blog : "http://remysharp.com"
+  },
+  brucel : {
+    name : "Bruce Lawson",
+    blog : "http://brucelawson.co.uk"
+  },
+  "Rich_Clark" : {
+    name : "Rich Clark",
+    blog : "http://richclarkdesign.com/"
+  },
+  akamike : {
+    name : "Mike Robinson",
+    blog : "http://akamike.net/"
+  },
+  leads : {
+    name : "Tom Leadbetter",
+    blog : "http://www.tomleadbetter.co.uk/"
+  },
+  jackosborne : {
+    name : "Jack Osborne",
+    blog : "http://jackosborne.co.uk/"
+  }
+};
+
+function cancel(e) {
+  if (e.preventDefault) {
+    e.preventDefault();
+  }
+  return false;
+}
+
+var dragIcon = document.createElement('img');
+dragIcon.src = 'http://twitter.com/api/users/profile_image/twitter?size=mini';
+
+var dragItems = document.querySelectorAll('[draggable=true]');
+
+for (var i = 0; i < dragItems.length; i++) {
+  addEvent(dragItems[i], 'dragstart', function (event) {
+    // store the ID of the element, and collect it on the drop later on
+    event.dataTransfer.setData('Text', this.id);
+    event.dataTransfer.setDragImage(dragIcon, -10, -10);
+    return false;
+  });
+}
+
+var drop = document.querySelector('#drop');
+
+// Tells the browser that we *can* drop on this target
+addEvent(drop, 'dragover', cancel);
+addEvent(drop, 'dragenter', cancel);
+
+addEvent(drop, 'drop', function (event) {
+  if (event.preventDefault) event.preventDefault(); // stops the browser from redirecting off to the text.
+
+  var person = people[event.dataTransfer.getData('Text')];
+
+  this.innerHTML += '<p><a href="' + person.blog + '">' + person.name + '</a></p>';
+  return false;
+});
+</script>
+</body>
+</html>

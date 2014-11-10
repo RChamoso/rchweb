@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+
+ <title>Caja de Luz</title>
+
+ <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+	
+ <script src="js/prototype.js" type="text/javascript"></script>
+ <script src="js/scriptaculous.js?load=effects,builder" type="text/javascript"></script>
+ <script src="js/lightbox.js" type="text/javascript"></script>
+
+ <style type="text/css">
+  body{ color: #333; font: 13px 'Lucida Grande', Verdana, sans-serif;	}
+ </style>
+
+</head>
+
+<body>
+
+ <h1><a href="http://www.lokeshdhakar.com/projects/lightbox2/">Lightbox JS <em>v2.05</em></a></h1>
+ <h2>Ejemplo</h2>
+
+ <a href="images/image-1.jpg" rel="lightbox[roadtrip]"><img src="images/thumb-1.jpg" width="50" height="50" alt="" /></a>
+ <a href="images/image-2.jpg" rel="lightbox[roadtrip]"><img src="images/thumb-2.jpg" width="50" height="50" alt="" /></a>
+ <a href="images/image-3.jpg" rel="lightbox[roadtrip]"><img src="images/thumb-3.jpg" width="50" height="50" alt="" /></a>
+ <a href="images/image-4.jpg" rel="lightbox[roadtrip]"><img src="images/thumb-4.jpg" width="50" height="50" alt="" /></a>
+ <a href="images/image-5.jpg" rel="lightbox[roadtrip]"><img src="images/thumb-5.jpg" width="50" height="50" alt="" /></a>
+ <a href="images/image-6.jpg" rel="lightbox[roadtrip]"><img src="images/thumb-6.jpg" width="50" height="50" alt="" /></a>
+ <a href="images/image-7.jpg" rel="lightbox[roadtrip]"><img src="images/thumb-7.jpg" width="50" height="50" alt="" /></a>
+ <a href="images/image-8.jpg" rel="lightbox[roadtrip]"><img src="images/thumb-8.jpg" width="50" height="50" alt="" /></a>
+
+ <h2>Instrucciones de uso:</h2>
+ <h3>Parte 1 - Configuración</h3>
+ <ol>
+  <li>Lightbox v2.0 utiliza el marco de prototipos y la biblioteca de efectos de Scriptaculous.
+    Usted tendrá que incluir estos tres archivos Javascript en su cabecera.
+    <pre><code>
+     &lt;script type=&quot;text/javascript&quot; src=&quot;js/prototype.js&quot;&gt;&lt;/script&gt;
+     &lt;script type=&quot;text/javascript&quot; src=&quot;js/scriptaculous.js?load=effects,builder&quot;&gt;&lt;/script&gt;
+     &lt;script type=&quot;text/javascript&quot; src=&quot;js/lightbox.js&quot;&gt;&lt;/script&gt;
+	 
+       <a href="http://www.prototypejs.org/">Prototype.js</a> es un Framework de JavaScript que tiene como objetivo
+       facilitar el desarrollo de aplicaciones web dinámicas.
+	 </code></pre>
+  </li>
+  <li>Incluya el archivo de la mesa de luz CSS (o anexar su hoja de estilo activo con los estilos de la mesa de luz).
+    <pre><code>
+     &lt;link rel=&quot;stylesheet&quot; href=&quot;css/lightbox.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+    </code></pre>
+  </li>
+  <li>Compruebe la CSS y asegúrese de que la referencia <code>prevlabel.gif</code> and <code>nextlabel.gif</code>
+    archivos se encuentran en el lugar correcto. Además, asegúrese de que el <code>loading.gif</code> y <code>closelabel.gif</code>
+	archivos como se indica en la parte superior de la <code>lightbox.js</code> archivo se encuentran en el lugar correcto.
+  </li>
+ </ol>
+
+ <h3>Parte 2 - Activar</h3>
+ <ol>
+  <li>Añadir un <code>rel="lightbox"</code> atributo de cualquier etiqueta de enlace para activar la caja de luz. Por ejemplo:
+    <pre><code>
+      &lt;a href=&quot;images/image-1.jpg&quot; rel=&quot;lightbox&quot; title=&quot;my caption&quot;&gt;image #1&lt;/a&gt;
+    </code></pre>
+    <em>Opcional: </em>Utilice el <code>title</code> atributo si desea mostrar un título.
+  </li>
+  <li>Si usted tiene un conjunto de imágenes relacionadas entre sí que le gustaría grupo, siga el paso uno, sino, además,
+    de un nombre de grupo entre corchetes en el atributo rel. Por ejemplo: 
+    <pre><code>
+     &lt;a href=&quot;images/image-1.jpg&quot; rel=&quot;lightbox[roadtrip]&quot;&gt;image #1&lt;/a&gt;
+     &lt;a href=&quot;images/image-2.jpg&quot; rel=&quot;lightbox[roadtrip]&quot;&gt;image #2&lt;/a&gt;
+     &lt;a href=&quot;images/image-3.jpg&quot; rel=&quot;lightbox[roadtrip]&quot;&gt;image #3&lt;/a&gt;
+    </code></pre>
+    No hay límites al número de conjuntos de imágenes por página o número de imágenes que se permiten en cada conjunto.
+  </li>
+ </ol>	
+
+
+ 
+</body>
+</html>

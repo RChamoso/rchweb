@@ -1,0 +1,77 @@
+﻿.flip {
+  border: 1px solid #000;
+  display: table;
+  height: 140px;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 220px;
+}
+.flip div {
+  height: 140px;
+  position: relative;
+  width: 220px;
+  transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+  transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+  transform: perspective(600px);
+    -o-transform: perspective(600px);
+    -ms-transform: perspective(600px);
+    -moz-transform: perspective(600px);
+    -webkit-transform: perspective(600px);
+  transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+.flip:hover div {
+  transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+  transform: perspective(600px) rotateY(-180deg) translateX(100%);
+    -o-transform: perspective(600px) rotateY(-180deg) translateX(100%);
+    -ms-transform: perspective(600px) rotateY(-180deg) translateX(100%);
+    -moz-transform: perspective(600px) rotateY(-180deg) translateX(100%);
+    -webkit-transform: perspective(600px) rotateY(-180deg) translateX(100%);
+}
+.flip img, .flip h2 {
+  height: 140px;
+  width: 220px;
+  backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.flip1 {
+  background-color: #ccc;
+  left: 0px;
+  margin-top: 0px;
+  position: absolute;
+  top: 0px;
+}
+.flip2 {
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+  transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}

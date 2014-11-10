@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang='es' itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+
+  <title>RChWeb.Net</title>
+  <meta charset='utf-8' />
+  <meta itemprop="primaryImageOfPage" content="images/logoRChWeb.png"/>
+  <meta name='description' content='Desarrollo de p&aacute;ginas y aplicaciones moviles Web. Utilizando Html5, Css3, Javascript, Svg, Canvas. Con t&eacute;cnicas de Dise&ntilde;o Adaptable (Responsive Design).' />
+  <meta name='author' content='Roberto Chamoso' />
+  <meta name='web_author' content='Roberto Chamoso' />
+  <meta name='designer' content='Roberto Chamoso' />
+  <meta name='created' content='2014-07-25' />
+  <meta name='contact' content='robchamoso@gmail' />
+  <meta name='keywords' content='desarrollo web, html5, css3, javascript, canvas, responsive design, dise&ntilde;o adaptable' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=1' />
+  <meta name="HandheldFriendly" content="true">
+  <link rel='shortcut icon' href='images/favicon.ico' type="image/x-icon" />
+  <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+	<link rel="stylesheet" href="css/estiloConsulta.css" />
+	<script src='../js/funciones.js'></script>
+	<!--script src='js/contenidoMenu.js'></script>
+	<!--link type='application/json' src='js/contenidoMenu2.json'></link-->
+	<script src='js/codigoAscii.js'></script>
+	<script src='js/indexjs.js'></script>
+  <script>
+  // Comprobar version de I.E.
+    var navegador = window.navigator.appName;
+    if(navegador == 'Microsoft Internet Explorer') {
+      var version = window.navigator.appVersion;
+      var compatibleIE = document.implementation.hasFeature('html', '2.0');
+      if ((version == '4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; InfoPath.2)') || 
+         (version == '4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; InfoPath.2)')) 
+      {
+        // version IE 8 no compatible
+        location.href="https://www.google.com";
+      } else if (compatibleIE == false) {
+        alert('Para poder visualizar correctamente esta página debes activar' +
+              ' el "Modo del Documento" a IE9 pulsando la tecla "F12"' +
+              ' y a continuación la combinación de teclas "Alt+9".');
+      }
+    }
+
+    //  Cargar el archivo JSON del Menu
+    var xmlhttp = new XMLHttpRequest();
+    var url = "../json/contenidoMenu.json";
+    xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        menuJSON = JSON.parse(xmlhttp.responseText);
+      }
+    }
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+    //----------------
+  </script>
+
+</head>
+
+<body onload='inicio();'>
+
+  <header id='header'>
+    <object rel='image_src' type='image/svg+xml' data='./images/logoRChWeb.svg' title='Logo de RchWeb.net' >
+      <img rel='image_src' src='./images/logoRChWeb.png' alt='Logo de RchWeb.net' title='Logo de RchWeb.net'/>
+    </object>
+    <h1 class='inlineBlock'><span class='inlineBlock'>R</span>Ch Web</h1>
+  </header>
+
+  <div id='ocultarScroll'></div>
+	<nav id='menuPrincipal'>
+		<ul id='opcionesMenu'>
+		</ul>
+	</nav>
+
+	<section id='cuerpoPrincipal'>
+		<article id='seccionArticulo' class='seccion'>
+			<header id='encabezadoSubMenu'>
+				<hgroup id='encabezadoArticulo'>
+					<h1 id='tituloArticulo'></h1>
+          <div id='abrirSubMenu'>mostrar menú <span onclick='abrirSubMenu();'>&#9660;</span></div>
+					<div id='subMenu' onclick='ocultarSubMenu();'></div>
+				</hgroup>
+			</header>
+			<section id='articulos' class='articulos'>
+				<article id='hoja'>
+          <div>
+            <h3 id='titulo'></h3>
+            <!--a id='nuevaVentana' href='' target="_blank" title='pestaña nueva'>&#9094;</a-->
+            <a id='nuevaVentana' href='' target="_blank" title='pestaña nueva'>&#10144;</a>
+          </div>
+					<object id='contenidoObject' data='' width='100%' height='500'>
+						<embed id='contenido' type='text/html' src='' width='100%' height='500'></embed>
+					</object>
+				</article>
+				<article id='codigosAsciiVarios'>
+					<!-- h3>Códigos Ascii Varios</h3-->
+					<dl>
+						<dd><p><strong>&#8220;</strong><code>& # 8 2 2 0 ;</code></p></dd>
+						<dd><p><strong>&#8221;</strong><code>& # 8 2 2 1 ;</code></p></dd>
+						<dd><p><strong>&#8216;</strong><code>& # 8 2 1 6 ;</code></p></dd>
+						<dd><p><strong>&#8217;</strong><code>& # 8 2 1 7 ;</code></p></dd>
+						<dd><p><strong>&#8211;</strong><code>& # 8 2 1 1 ;  /  & n d a s h ;</code></p></dd>
+						<dd><p><strong>&#8212;</strong><code>& # 8 2 1 2 ;  /  & m d a s h ;</code></p></dd>
+						<dd><p><strong>&#8230;</strong><code>& # 8 2 3 0 ;  /  & h e l l i p ;</code></p></dd>
+					</dl>
+				</article>
+				<article id='codigosAsciiCompleto'>
+					<!-- h3 id="tituloAscii"></h3-->
+					<a href='http://www.unicode.org/charts/nameslist/' target='blank'>Unicode Standard Lista Completa</a><br>
+					<a href='http://www.unicode.org/Public/6.2.0/charts/CodeCharts.pdf' target='blank'>Unicode Standard</a><br>
+					<a href='http://en.wikipedia.org/wiki/List_of_Unicode_characters' target='blank'>List of Unicode characters</a><br>
+					<a href='http://en.wikipedia.org/wiki/Mapping_of_Unicode_characters' target='blank'>Mapping of Unicode characters</a><br>
+					<nav>
+						<ul id='menuCodigosAscii'>
+						</ul> 
+					</nav>
+				</article>
+				<article id='colorPsicologia'>
+          <img src='imagenes/cjga-color-theory-3.jpg' />
+				</article>
+				<article id='lightbox'>
+					<a href='javascript:mostrarCajaLuz();'>Mostrar</a>
+					<div id='frenteCajaLuz'>Contenido Caja Luz
+						<a href='javascript:ocultarCajaLuz();'>Ocultar</a>
+					</div>
+					<div id='fondoCajaLuz'>&nbsp;</div>
+				</article>
+				<article id='testearPaginas'>
+					<h4>
+						<a href="http://developers.google.com/speed/pagespeed/insights/" target="blank">
+						Google Page Speed</a>
+					</h4>
+					<h4>
+						<a href="http://gtmetrix.com/" target="blank">
+						GTmetrix</a>
+					</h4>
+					<h4>
+						<a href="http://tools.pingdom.com/fpt/" target="blank">
+						Pingdom</a>
+					</h4>
+					<h4>
+						<a href="http://whichloadsfaster.com/" target="blank">
+						Whichloadsfaster</a>
+					</h4>
+				</article>
+				<article id='codigoOnline'>
+					<!-- h3>Ejecutar Códigos Online</h3-->
+					<h4>
+						<a href="http://codepad.org/" target="blank">
+						Codepad</a>
+					</h4>
+					<h4>
+						<a href="http://cssdesk.com/" target="blank">
+						Css Desk</a>
+					</h4>
+					<h4>
+						<a href="http://code.google.com/apis/ajax/playground/" target="blank">
+						Google Code</a>
+					</h4>
+					<h4>
+						<a href="http://www.landofcode.com/online-code-editor.php" target="blank">
+						Landof Code</a>
+					</h4>
+					<h4>
+						<a href="http://jsbin.com/" target="blank">
+						Js Bin</a>
+					</h4>
+					<h4>
+						<a href="http://jsdo.it/robchamoso/m83M/edit" target="blank">
+						Js Do it</a>
+					</h4>
+					<h4>
+						<a href="http://jsfiddle.net/" target="blank">
+						Js Fiddle</a>
+					</h4>
+				</article>
+				<article id='tendencias2014'>
+					<!-- h3>Tendencias 2014</h3-->
+					<ul>
+						<li>Diseños tipo revista</li>
+						<li>Tipografía variada</li>
+						<li>Efectos visuales realizados en código puro (HTML5/CSS y JavaScript)</li>
+						<li>Interfaz de usuario plana (icono-descripción) (diskette-guardar)</li>
+						<li>Incluir Vídeo para conseguir más impresion</li>
+						<li>El lenguaje natural y las interfaces contextuales</li>
+						<li>Ir al grano más rápido</li>
+						<li>Desplazamiento y experiencias impulsadas por gestos (The mouse, tablet, touch, and pinch - El ratón, tableta, toque y pellizco)</li>
+						<li>El Contenido primero</li>
+						<li>JavaScript (animación ágil)</li>
+						<li>No traer de vuelta al sitio 'introducción'</li>
+						<li>Proporcionar Imágenes Retina - imágenes en un tamaño más grande primero, preferiblemente el doble del tamaño normal que se necesita.
+                Cuando <a href='http://retinajs.com/' target="_blank">Retina.js</a> carga la página comprobará si el dispositivo actual admite una
+                densidad de píxeles superior a 1x.
+                Si es así se reemplazarán todos los atributos src.</li>
+						<li></li>
+					</ul>
+				</article>
+			</section>
+		</article>
+	</section>
+
+<!--div id='foot'>
+</div-->
+    <aside id='aside'>
+      <img height="auto" src="https://storage.googleapis.com/support-kms-prod/SNP_1DA7588EEB5450EE2A22C2B2F0A6458A61C0_2922342_en_v1"/>
+    </aside>
+
+	<!--footer>
+		<time datetime="2010-11-08">2010</time>.
+	</footer-->
+
+</body>
+</html>

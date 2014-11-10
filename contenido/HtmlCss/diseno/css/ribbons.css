@@ -1,0 +1,160 @@
+﻿/***		Ribbon 1		***/
+#ribbon1-navigation li {
+  display: block;
+  float: left;
+  list-style: none;
+  margin: 1em;
+}
+#ribbon1-navigation li a {
+  color: #f0f0f0;
+  display: block;
+  font-size: 1.6em;
+  margin: 0 .5em;
+  text-decoration: none;
+  text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+}
+#ribbon1-navigation li a:hover {
+  margin-top: 2px;
+}
+#ribbon1 {
+  margin: 0 auto;
+  width: 960px;
+}
+.ribbon1-rectangle {
+  background: #e5592e;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    -o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    -ms-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+  border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+  height: 62px;
+  margin: 3em 0;
+  position: relative;
+  z-index: 500;
+}
+.ribbon1-l-triangle-top {
+  border-color: #d9542b transparent transparent;
+  border-style:solid;
+  border-width:50px;
+  float: left;
+  height:0px;
+  left: -50px;
+  position: relative;
+  top: 1px;
+  width:0px;
+}
+.ribbon1-l-triangle-bottom {
+  border-color: transparent transparent #d9542b;
+  border-style:solid;
+  border-width:50px;
+  float: left;
+  height:0px;
+  left: -150px;
+  position: relative;
+  top: -40px;
+  width:0px;
+}
+.ribbon1-r-triangle-top {
+  border-color: #d9542b transparent transparent;
+  border-style:solid;
+  border-width:50px;
+  float: right;
+  height:0px;
+  position: relative;
+  right: -45px;
+  top: -107px;
+  width:0px;
+}
+.ribbon1-r-triangle-bottom {
+  border-color: transparent transparent #d9542b;
+  border-style:solid;
+  border-width:50px;
+  float: right;
+  height:0px;
+  position: relative;
+  right: -145px;
+  top: -149px;
+  width:0px;
+}
+
+/***		Ribbon 2		***/
+#ribbon2 {
+  background: #666;
+  font-family: helvetica, arial, sans-serif;
+  height: 200px;
+  margin: auto;
+  padding-top: 30px;
+  width: 800px;
+}
+#ribbon2 h1 {
+  background: #e3e3e3;
+  background: linear-gradient(top, #e3e3e3, #c8c8c8);
+  background: -o-linear-gradient(top, #e3e3e3, #c8c8c8);
+  background: -ms-linear-gradient(top, #e3e3e3, #c8c8c8);
+  background: -moz-linear-gradient(top, #e3e3e3, #c8c8c8);
+  background: -webkit-linear-gradient(top, #e3e3e3, #c8c8c8);
+  background: -webkit-gradient(linear, left top, left bottombottom, from(#e3e3e3), to(#c8c8c8));
+  box-shadow: 1px 1px 3px #292929;
+    -o-box-shadow: 1px 1px 3px #292929;
+    -ms-box-shadow: 1px 1px 3px #292929;
+    -moz-box-shadow: 1px 1px 3px #292929;
+    -webkit-box-shadow: 1px 1px 3px #292929;
+  color: #454545;
+  margin-left: -20px;
+  margin-top: 0;
+  padding: 10px 25px;
+  position: relative;
+  text-shadow: 0 1px 0 white;
+  width: 70%;
+}
+#ribbon2 .arrow  {
+  border-left: 20px solid transparent;
+  border-top: 10px solid #c8c8c8;
+  height: 0;
+  left: 0;
+  line-height: 0;
+  top: 104%;
+  position: absolute;
+  width: 0;
+}
+#ribbon2 h2   {
+  background: #e3e3e3;
+  background-image:  linear-gradient(#e3e3e3, #c8c8c8);
+  background-image: -o-linear-gradient(#e3e3e3, #c8c8c8);
+  background-image: -ms-linear-gradient(#e3e3e3, #c8c8c8);
+  background-image: -moz-linear-gradient(#e3e3e3, #c8c8c8);
+  background-image: -webkit-linear-gradient(#e3e3e3, #c8c8c8);
+  background-image: -webkit-gradient(#e3e3e3, #c8c8c8);
+  box-shadow: 0 2px 0 rgba(0,0,0,.3);
+    -o-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+    -ms-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+    -moz-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+  color: #454545;
+  margin: 20px -10px 20px -10px;
+  padding: 10px 20px;
+  position: relative;
+  text-shadow: 0 1px #ffffff;
+}
+#ribbon2 h2:before, #ribbon2 h2:after {
+  border-color: transparent;
+  border-style: solid;
+  bottom: -10px;
+  content: '';
+  position: absolute;
+}
+#ribbon2 h2:before {
+  border-right-color: #222;
+  border-width: 0 10px 10px 0;
+  left: 0;
+}
+#ribbon2 h2:after {
+  border-left-color: #222;
+  border-width: 0 0 10px 10px;
+  right: 0;
+}

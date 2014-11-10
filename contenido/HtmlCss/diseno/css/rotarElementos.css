@@ -1,0 +1,374 @@
+﻿#rotar1, #rotar2 {
+  border: 1px solid #000000;
+  margin-left: 20px;
+  padding: 20px 10px;
+}
+#rotar1 {
+  height: 600px;
+  width: 1030px;
+}
+#rotar2 {
+  margin-left: 250px;
+  margin-top: 130px;
+  height: 260px;
+  width: 330px;
+}
+.rotarTipo {
+  border: 1px solid #000000;
+  float: left;
+  height: 40px;
+  margin: 0px 10px 20px 10px;
+  width: 40px;
+}
+#elementoRotar {
+  background-color: #B1E580;
+  border: 1px solid #000000;
+  height: 200px;
+  /*		margin-top: 100px;*/
+  padding: 30px;
+  text-align: center;
+  width: 250px;
+  transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+  transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+  transform: perspective(600px);
+    -o-transform: perspective(600px);
+    -ms-transform: perspective(600px);
+    -moz-transform: perspective(600px);
+    -webkit-transform: perspective(600px);
+}
+.elemento1, .elemento3, .elemento5, .elemento7, .elemento9, .elemento11, .elemento13, .elemento15 {
+  background-color: #00B159;
+}
+.elemento1:hover, .elemento3:hover, .elemento5:hover, .elemento7:hover, .elemento9:hover, .elemento11:hover, .elemento13:hover, .elemento15:hover {
+  background-color: #026B36;
+}
+.elemento2, .elemento4, .elemento6, .elemento8, .elemento10, .elemento12, .elemento14, .elemento16 {
+  background-color: #284AE0;
+}
+.elemento2:hover, .elemento4:hover, .elemento6:hover, .elemento8:hover, .elemento10:hover, .elemento12:hover, .elemento14:hover, .elemento16:hover {
+  background-color: #011984;
+}
+.elemento1:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+  transform-origin: 50% 0px 0px;
+    -o-transform-origin: 50% 0px 0px;
+    -ms-transform-origin: 50% 0px 0px;
+    -moz-transform-origin: 50% 0px 0px;
+    -webkit-transform-origin: 50% 0px 0px;
+  transform: perspective(600px) rotatex(-30deg) rotatey(0deg) rotatez(0deg);
+    -o-transform: perspective(600px) rotatex(-30deg) rotatey(0deg) rotatez(0deg);
+    -ms-transform: perspective(600px) rotatex(-30deg) rotatey(0deg) rotatez(0deg);
+    -moz-transform: perspective(600px) rotatex(-30deg) rotatey(0deg) rotatez(0deg);
+    -webkit-transform: perspective(600px) rotatex(-30deg) rotatey(0deg) rotatez(0deg);
+}
+.elemento2:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+  transform-origin: 0px 50% 0px;
+    -o-transform-origin: 0px 50% 0px;
+    -ms-transform-origin: 0px 50% 0px;
+    -moz-transform-origin: 0px 50% 0px;
+    -webkit-transform-origin: 0px 50% 0px;
+  transform: perspective(600px) rotatex(0deg) rotatey(30deg) rotatez(0deg);
+    -o-transform: perspective(600px) rotatex(0deg) rotatey(30deg) rotatez(0deg);
+    -ms-transform: perspective(600px) rotatex(0deg) rotatey(30deg) rotatez(0deg);
+    -moz-transform: perspective(600px) rotatex(0deg) rotatey(30deg) rotatez(0deg);
+    -webkit-transform: perspective(600px) rotatex(0deg) rotatey(30deg) rotatez(0deg);
+}
+.elemento3:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+  transform-origin: 50% 100% 0px;
+    -o-transform-origin: 50% 100% 0px;
+    -ms-transform-origin: 50% 100% 0px;
+    -moz-transform-origin: 50% 100% 0px;
+    -webkit-transform-origin: 50% 100% 0px;
+  transform: perspective(600px) rotatex(30deg) rotatey(0deg) rotatez(0deg);
+    -o-transform: perspective(600px) rotatex(30deg) rotatey(0deg) rotatez(0deg);
+    -ms-transform: perspective(600px) rotatex(30deg) rotatey(0deg) rotatez(0deg);
+    -moz-transform: perspective(600px) rotatex(30deg) rotatey(0deg) rotatez(0deg);
+    -webkit-transform: perspective(600px) rotatex(30deg) rotatey(0deg) rotatez(0deg);
+}
+.elemento4:hover ~ #rotar2 > #elementoRotar {
+  transform-origin: 100% 50% 0px;
+    -o-transform-origin: 100% 50% 0px;
+    -ms-transform-origin: 100% 50% 0px;
+    -moz-transform-origin: 100% 50% 0px;
+    -webkit-transform-origin: 100% 50% 0px;
+  transform: perspective(600px) rotatex(0deg) rotatey(-30deg) rotatez(0deg);
+    -o-transform: perspective(600px) rotatex(0deg) rotatey(-30deg) rotatez(0deg);
+    -ms-transform: perspective(600px) rotatex(0deg) rotatey(-30deg) rotatez(0deg);
+    -moz-transform: perspective(600px) rotatex(0deg) rotatey(-30deg) rotatez(0deg);
+    -webkit-transform: perspective(600px) rotatex(0deg) rotatey(-30deg) rotatez(0deg);
+}
+.elemento5:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+  transform-origin: 50% 0px 0px;
+    -o-transform-origin: 50% 0px 0px;
+    -ms-transform-origin: 50% 0px 0px;
+    -moz-transform-origin: 50% 0px 0px;
+    -webkit-transform-origin: 50% 0px 0px;
+  transform: perspective(600px) rotatex(75deg) rotatey(0deg) rotatez(0deg);
+    -o-transform: perspective(600px) rotatex(75deg) rotatey(0deg) rotatez(0deg);
+    -ms-transform: perspective(600px) rotatex(75deg) rotatey(0deg) rotatez(0deg);
+    -moz-transform: perspective(600px) rotatex(75deg) rotatey(0deg) rotatez(0deg);
+    -webkit-transform: perspective(600px) rotatex(75deg) rotatey(0deg) rotatez(0deg);
+}
+.elemento6:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+  transform-origin: 0px 50% 0px;
+    -o-transform-origin: 0px 50% 0px;
+    -ms-transform-origin: 0px 50% 0px;
+    -moz-transform-origin: 0px 50% 0px;
+    -webkit-transform-origin: 0px 50% 0px;
+  transform: perspective(600px) rotatex(0deg) rotatey(-75deg) rotatez(0deg);
+    -o-transform: perspective(600px) rotatex(0deg) rotatey(-75deg) rotatez(0deg);
+    -ms-transform: perspective(600px) rotatex(0deg) rotatey(-75deg) rotatez(0deg);
+    -moz-transform: perspective(600px) rotatex(0deg) rotatey(-75deg) rotatez(0deg);
+    -webkit-transform: perspective(600px) rotatex(0deg) rotatey(-75deg) rotatez(0deg);
+}
+.elemento7:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+  transform-origin: 50% 100% 0px;
+    -o-transform-origin: 50% 100% 0px;
+    -ms-transform-origin: 50% 100% 0px;
+    -moz-transform-origin: 50% 100% 0px;
+    -webkit-transform-origin: 50% 100% 0px;
+  transform: perspective(600px) rotatex(-75deg) rotatey(0deg) rotatez(0deg);
+    -o-transform: perspective(600px) rotatex(-75deg) rotatey(0deg) rotatez(0deg);
+    -ms-transform: perspective(600px) rotatex(-75deg) rotatey(0deg) rotatez(0deg);
+    -moz-transform: perspective(600px) rotatex(-75deg) rotatey(0deg) rotatez(0deg);
+    -webkit-transform: perspective(600px) rotatex(-75deg) rotatey(0deg) rotatez(0deg);
+}
+.elemento8:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+  transform-origin: 100% 50% 0px;
+    -o-transform-origin: 100% 50% 0px;
+    -ms-transform-origin: 100% 50% 0px;
+    -moz-transform-origin: 100% 50% 0px;
+    -webkit-transform-origin: 100% 50% 0px;
+  transform: perspective(600px) rotatex(0deg) rotatey(75deg) rotatez(0deg);
+    -o-transform: perspective(600px) rotatex(0deg) rotatey(75deg) rotatez(0deg);
+    -ms-transform: perspective(600px) rotatex(0deg) rotatey(75deg) rotatez(0deg);
+    -moz-transform: perspective(600px) rotatex(0deg) rotatey(75deg) rotatez(0deg);
+    -webkit-transform: perspective(600px) rotatex(0deg) rotatey(75deg) rotatez(0deg);
+}
+.elemento9:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+  transform-origin: 100% 50% 0px;
+    -o-transform-origin: 100% 50% 0px;
+    -ms-transform-origin: 100% 50% 0px;
+    -moz-transform-origin: 100% 50% 0px;
+    -webkit-transform-origin: 100% 50% 0px;
+  transform: perspective(600px) rotatex(0deg) rotatey(180deg) rotatez(0deg);
+    -o-transform: perspective(600px) rotatex(0deg) rotatey(180deg) rotatez(0deg);
+    -ms-transform: perspective(600px) rotatex(0deg) rotatey(180deg) rotatez(0deg);
+    -moz-transform: perspective(600px) rotatex(0deg) rotatey(180deg) rotatez(0deg);
+    -webkit-transform: perspective(600px) rotatex(0deg) rotatey(180deg) rotatez(0deg);
+}
+.elemento10:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+  transform-origin: 50% 100% 0px;
+    -o-transform-origin: 50% 100% 0px;
+    -ms-transform-origin: 50% 100% 0px;
+    -moz-transform-origin: 50% 100% 0px;
+    -webkit-transform-origin: 50% 100% 0px;
+  transform: perspective(600px) rotatex(180deg) rotatey(0deg) rotatez(0deg);
+    -o-transform: perspective(600px) rotatex(180deg) rotatey(0deg) rotatez(0deg);
+    -ms-transform: perspective(600px) rotatex(180deg) rotatey(0deg) rotatez(0deg);
+    -moz-transform: perspective(600px) rotatex(180deg) rotatey(0deg) rotatez(0deg);
+    -webkit-transform: perspective(600px) rotatex(180deg) rotatey(0deg) rotatez(0deg);
+}
+.elemento11:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+  transform-origin: 0px 50% 0px;
+    -o-transform-origin: 0px 50% 0px;
+    -ms-transform-origin: 0px 50% 0px;
+    -moz-transform-origin: 0px 50% 0px;
+    -webkit-transform-origin: 0px 50% 0px;
+  transform: perspective(600px) rotatex(0deg) rotatey(-180deg) rotatez(0deg);
+    -o-transform: perspective(600px) rotatex(0deg) rotatey(-180deg) rotatez(0deg);
+    -ms-transform: perspective(600px) rotatex(0deg) rotatey(-180deg) rotatez(0deg);
+    -moz-transform: perspective(600px) rotatex(0deg) rotatey(-180deg) rotatez(0deg);
+    -webkit-transform: perspective(600px) rotatex(0deg) rotatey(-180deg) rotatez(0deg);
+}
+.elemento12:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+  transform-origin: 50% 0px 0px;
+    -o-transform-origin: 50% 0px 0px;
+    -ms-transform-origin: 50% 0px 0px;
+    -moz-transform-origin: 50% 0px 0px;
+    -webkit-transform-origin: 50% 0px 0px;
+  transform: perspective(600px) rotatex(-180deg) rotatey(0deg) rotatez(0deg);
+    -o-transform: perspective(600px) rotatex(-180deg) rotatey(0deg) rotatez(0deg);
+    -ms-transform: perspective(600px) rotatex(-180deg) rotatey(0deg) rotatez(0deg);
+    -moz-transform: perspective(600px) rotatex(-180deg) rotatey(0deg) rotatez(0deg);
+    -webkit-transform: perspective(600px) rotatex(-180deg) rotatey(0deg) rotatez(0deg);
+}
+.elemento13:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+  transform-origin: 0% 0% 0px;
+    -o-transform-origin: 0% 0% 0px;
+    -ms-transform-origin: 0% 0% 0px;
+    -moz-transform-origin: 0% 0% 0px;
+    -webkit-transform-origin: 0% 0% 0px;
+  animation: XITRUS_traor 2.5s infinite ease;
+    -o-animation: XITRUS_traor 2.5s infinite ease;
+    -ms-animation: XITRUS_traor 2.5s infinite ease;
+    -moz-animation: XITRUS_traor 2.5s infinite ease;
+    -webkit-animation: XITRUS_traor 2.5s infinite ease;
+  animation-play-state: running;
+    -o-animation-play-state: running;
+    -ms-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -webkit-animation-play-state: running;
+  transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -o-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -ms-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -moz-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -webkit-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+}
+.elemento14:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+  transform-origin: 0% 100% 0px;
+    -o-transform-origin: 0% 100% 0px;
+    -ms-transform-origin: 0% 100% 0px;
+    -moz-transform-origin: 0% 100% 0px;
+    -webkit-transform-origin: 0% 100% 0px;
+  animation: XITRUS_traor 2.5s infinite ease;
+    -o-animation: XITRUS_traor 2.5s infinite ease;
+    -ms-animation: XITRUS_traor 2.5s infinite ease;
+    -moz-animation: XITRUS_traor 2.5s infinite ease;
+    -webkit-animation: XITRUS_traor 2.5s infinite ease;
+  animation-play-state: running;
+    -o-animation-play-state: running;
+    -ms-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -webkit-animation-play-state: running;
+  transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -o-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -ms-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -moz-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -webkit-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+}
+.elemento15:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+  transform-origin: 100% 0% 0px;
+    -o-transform-origin: 100% 0% 0px;
+    -ms-transform-origin: 100% 0% 0px;
+    -moz-transform-origin: 100% 0% 0px;
+    -webkit-transform-origin: 100% 0% 0px;
+  animation: XITRUS_traor 2.5s infinite ease;
+    -o-animation: XITRUS_traor 2.5s infinite ease;
+    -ms-animation: XITRUS_traor 2.5s infinite ease;
+    -moz-animation: XITRUS_traor 2.5s infinite ease;
+    -webkit-animation: XITRUS_traor 2.5s infinite ease;
+  animation-play-state: running;
+    -o-animation-play-state: running;
+    -ms-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -webkit-animation-play-state: running;
+  transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -o-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -ms-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -moz-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -webkit-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+}
+.elemento16:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+  transform-origin: 100% 100% 0px;
+    -o-transform-origin: 100% 100% 0px;
+    -ms-transform-origin: 100% 100% 0px;
+    -moz-transform-origin: 100% 100% 0px;
+    -webkit-transform-origin: 100% 100% 0px;
+  animation: XITRUS_traor 2.5s infinite ease;
+    -o-animation: XITRUS_traor 2.5s infinite ease;
+    -ms-animation: XITRUS_traor 2.5s infinite ease;
+    -moz-animation: XITRUS_traor 2.5s infinite ease;
+    -webkit-animation: XITRUS_traor 2.5s infinite ease;
+  animation-play-state: running;
+    -o-animation-play-state: running;
+    -ms-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -webkit-animation-play-state: running;
+  transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -o-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -ms-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -moz-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+    -webkit-transform: perspective(600px) rotatex(180deg) rotatey(180deg) rotatez(180deg);
+}
+@-o-keyframes XITRUS_traor {
+  50% {
+  transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+    -o-transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+  }
+}
+@-ms-keyframes XITRUS_traor {
+  50% {
+  transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+    -ms-transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+  }
+}
+@-moz-keyframes XITRUS_traor {
+  50% {
+  transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+    -moz-transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+  }
+}
+@-webkit-keyframes XITRUS_traor {
+  50% {
+    transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+      -webkit-transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+  }
+}
+@keyframes XITRUS_traor {
+  50% {
+    transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+      -o-transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+      -ms-transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+      -moz-transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+      -webkit-transform: perspective(600px) rotatex(360deg) rotatey(360deg) rotatez(360deg);
+  }
+}
+.elemento13:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+}
+.elemento14:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+}
+.elemento15:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+}
+.elemento16:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+}
+.elemento13:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+}
+.elemento14:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+}
+.elemento15:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+}
+.elemento16:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+}
+.elemento13:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+}
+.elemento14:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+}
+.elemento15:hover ~ #rotar2 > #elementoRotar {
+  background-color: #026B36;
+}
+.elemento16:hover ~ #rotar2 > #elementoRotar {
+  background-color: #011984;
+}

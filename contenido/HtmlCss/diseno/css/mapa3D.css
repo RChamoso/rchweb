@@ -1,0 +1,130 @@
+﻿.mapa3DInicio {
+  background: none repeat scroll 0 0 #666;
+  height: 350px;
+  margin: 20px 0;
+  padding: 0  20px;
+  perspective: 2000px;
+    -o-perspective: 2000px;
+    -ms-perspective: 2000px;
+    -moz-perspective: 2000px;
+    -webkit-perspective: 2000px;
+  width: 100%;
+}
+.mapa3DInicio {
+  transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    -ms-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -webkit-transition: all 1s ease 0s;
+}
+.mapa3D0 {
+  display: block;
+  height: 300px;
+  margin:0 auto 20px;
+  perspective: 2000px;
+    -o-perspective: 2000px;
+    -ms-perspective: 2000px;
+    -moz-perspective: 2000px;
+    -webkit-perspective: 2000px;
+  position:  relative;
+  transform: perspective(2000px) rotateX(35deg);
+    -o-transform: perspective(2000px) rotateX(35deg);
+    -ms-transform: perspective(2000px) rotateX(35deg);
+    -moz-transform: perspective(2000px) rotateX(35deg);
+    -webkit-transform: perspective(2000px) rotateX(35deg);
+  transform-origin: 50% 100%  0;
+    -o-transform-origin: 50% 100%  0;
+    -ms-transform-origin: 50% 100%  0;
+    -moz-transform-origin: 50% 100%  0;
+    -webkit-transform-origin: 50% 100%   0;
+  transform-style:  preserve-3d;
+    -o-transform-style:  preserve-3d;
+    -ms-transform-style:  preserve-3d;
+    -moz-transform-style:  preserve-3d;
+    -webkit-transform-style:  preserve-3d;
+  width: 330px;
+}
+.mapa3D {
+  background-image: url("../imagenes/mapa.jpg");
+  height: 300px;
+  left: 100%;
+  perspective:  2000px;
+    -o-perspective:  2000px;
+    -ms-perspective:  2000px;
+    -moz-perspective:  2000px;
+    -webkit-perspective:  2000px;
+  position: absolute;
+  top: 0;
+  transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -mstransform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+  transform-origin: 0% 50% 0;
+    -o-transform-origin: 0% 50% 0;
+    -ms-transform-origin: 0% 50% 0;
+    -moz-transform-origin: 0% 50% 0;
+    -webkit-transform-origin: 0% 50% 0;
+  transform-style: preserve-3d;
+  -o-transform-style:  preserve-3d;
+  -ms-transform-style:  preserve-3d;
+  -moz-transform-style:  preserve-3d;
+  -webkit-transform-style:  preserve-3d;
+  width:  50px;
+}
+.mapa3D1 {
+  background-position: 0 0;
+  left: 0;
+}
+.mapa3D2, .mapa3D4, .mapa3D6  {
+  box-shadow: 0px 0px 0px 900px rgba(0,0,0,0.2) inset;
+    -o-box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.2) inset;
+    -ms-box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.2) inset;
+    -moz-box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.2) inset;
+    -webkit-box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.2) inset;
+}
+.mapa3D2 {
+  background-position: -50px 0;
+}
+.mapa3DInicio:hover .mapa3D {
+  transform: rotateY(-60deg);
+    -o-transform: rotateY(-60deg);
+    -ms-transform: rotateY(-60deg);
+    -moz-transform: rotateY(-60deg);
+    -webkit-transform: rotateY(-60deg);
+}
+.mapa3DInicio:hover .mapa3D1 {
+  transform: rotateY(-30deg);
+    -o-transform: rotateY(-30deg);
+    -ms-transform: rotateY(-30deg);
+    -moz-transform: rotateY(-30deg);
+    -webkit-transform: rotateY(-30deg);
+}
+.mapa3DInicio:hover .mapa3D2,  .mapa3DInicio:hover .mapa3D4, .mapa3DInicio:hover .mapa3D6 {
+  box-shadow: 0px 0px 0px 900px rgba(0,0,0,0.2) inset;
+    -o-box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.2) inset;
+    -ms-box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.2) inset;
+    -moz-box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.2) inset;
+    -webkit-box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.2) inset;
+  transform: rotateY(60deg);
+    -o-transform: rotateY(60deg);
+    -ms-transform: rotateY(60deg);
+    -moz-transform: rotateY(60deg);
+    -webkit-transform: rotateY(60deg);
+}
+.mapa3D3 {
+  background-position: -100px 0;
+}
+.mapa3D4 {
+  background-position: -150px 0;
+}
+.mapa3D5 {
+  background-position: -200px 0;
+}
+.mapa3D6 {
+  background-position: -250px 0;
+}
+.mapa3D0 {
+  height: 150px;
+  width: 165px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class=" history" lang="en" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#" slick-uniqueid="5">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body class="single cacheable" data-twttr-rendered="true">
+
+<div id="page">
+<div id="contentHolder">
+<section class="left"><!--CONTENT-->
+
+	<article>
+		<h1>HTML5′s async Script&nbsp;Attribute</h1>
+
+<p>One of the big reasons I'me excited about HMTL5 is that features are being implemented that have been long overdue. &nbsp;We've been using <a href="http://davidwalsh.name/html5-placeholder">placeholders</a> forever but we've needed to use JavaScript to do it. &nbsp;We've been making entire blocks clickable like links but we've needed to use JavaScript to do it. &nbsp;WebKit recently implemented HTML5's <code>async</code> attribute for SCRIPT tags. &nbsp;We've been accomplishing this task with a variety of JavaScript hacks but this new attribute will allow us to prevent blocking in an easy way.</p>
+
+<h2>async - The HTML</h2>
+
+<p>As I mentioned above, it's as easy as adding an attribute:</p>
+
+<pre class="html lit" style="display: none;">&lt;script async src="siteScript.js" onload="myInit()"&gt;&lt;/script&gt;
+</pre><pre class="standardLighter gitLighter"><span class="kw1">&lt;script</span> async <span class="kw2">src</span><span class="kw1">=</span><span class="kw3">"siteScript.js"</span> <span class="kw2">onload</span><span class="kw1">=</span><span class="kw3">"myInit()"</span><span class="kw1">&gt;</span><span class="kw1">&lt;/script&gt;</span></pre>
+
+<p>The truth is that if you write your JavaScript effectively, you'll use the <code>async</code> attribute to 90% of your SCRIPT elements.</p>
+
+<h2>defer - The HTML</h2>
+
+<p>Safari has also added a <code>defer</code> attribute:</p>
+
+<pre class="html lit" style="display: none;">&lt;script defer src="siteScript.js" onload="myInit()"&gt;&lt;/script&gt;
+</pre><pre class="standardLighter gitLighter"><span class="kw1">&lt;script</span> defer <span class="kw2">src</span><span class="kw1">=</span><span class="kw3">"siteScript.js"</span> <span class="kw2">onload</span><span class="kw1">=</span><span class="kw3">"myInit()"</span><span class="kw1">&gt;</span><span class="kw1">&lt;/script&gt;</span></pre>
+
+<p>Very similar to the <code>async</code> assignment.</p>
+
+<h2>async &amp; defer - What's the Difference</h2>
+
+<p><a href="http://webkit.org/blog/1395/running-scripts-in-webkit/" rel="nofollow">This WebKit blog post</a> explains the difference between <code>defer</code> and <code>async</code> best:</p>
+
+<blockquote><p>Both <code>async</code> and <code>defer</code> scripts begin to download immediately without pausing the parser and both support an optional onload handler to address the common need to perform initialization which depends on the script. The difference between <code>async</code> and <code>defer</code> centers around when the script is executed. Each <code>async</code> script executes at the first opportunity after it is finished downloading and before the window’s load event. This means it’s possible (and likely) that <code>async</code> scripts are not executed in the order in which they occur in the page. The <code>defer</code> scripts, on the other hand, are guaranteed to be executed in the order they occur in the page. That execution starts after parsing is completely finished, but before the document’s <code>DOMContentLoaded</code> event.</p></blockquote>
+
+<h2>Who Supports async and defer?</h2>
+
+<p>Also from the Safari blog:</p>
+
+<blockquote><p>In addition to upcoming versions of WebKit-based browsers, Firefox has long supported the defer and onload attributes and support for async was added in version 3.6. Internet Explorer has also long supported the defer attribute. While async is not yet supported, support for the onload attribute was added in version 9.</p></blockquote>
+
+<h2>async FTW!</h2>
+
+<p>Seeing that WebKit had implemented <code>async</code> put a huge smile on my face. &nbsp;Blocking is a huge bottleneck for every website and the ability to easily direct a script to load asynchronously should speed up the web!</p>	
+</article>
+
+</section>
+
+</div>
+</div></body></html>

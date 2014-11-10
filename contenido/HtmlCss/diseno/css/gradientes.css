@@ -1,0 +1,24 @@
+﻿.gradientes {
+  background-color: #DEB8A0;
+  box-shadow: 0 0 1px #a27b62;
+    -o-box-shadow: 0 0 1px #a27b62;
+    -ms-box-shadow: 0 0 1px #a27b62;
+    -moz-box-shadow: 0 0 1px #a27b62;
+    -webkit-box-shadow: 0 0 1px #a27b62;
+  height: 120px;
+  margin: 20px;
+  position: relative;
+  width: 120px;
+}
+.gradiente-light-linear {
+  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+}
+.gradiente-dark-linear {
+  background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,0));
+}
+.gradiente-light-radial {
+  background-image: radial-gradient(center 0, circle farthest-corner, rgba(255,255,255,0.4), rgba(255,255,255,0));
+}
+.gradiente-dark-radial {
+  background-image: radial-gradient(center 0, circle farthest-corner, rgba(0,0,0,0.15), rgba(0,0,0,0));
+}

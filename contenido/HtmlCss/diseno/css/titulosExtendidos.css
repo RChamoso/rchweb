@@ -1,0 +1,48 @@
+﻿#titulosExtendidos {
+  background-color: #ddd;
+  color: #111;
+  font-family: sans-serif;
+  height: auto;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+}
+#titulosExtendidos div {
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  display: block;
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 60%;
+}
+#titulosExtendidos h3, #titulosExtendidos h4 {
+  background-color: #ccf;
+  border: 1px solid #66c;
+  font-size: 1.8em;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+#titulosExtendidos h3 {
+  margin-top: 20px;
+}
+#titulosExtendidos h4{
+  font-size: 1.5em;
+}
+#titulosExtendidos p {
+  margin: 0 0 1em;
+}
+#titulosExtendidos a {
+  color: #ff0000;
+}
+.extendidoCompleto, .extendidoIzq {
+  margin-left: -3000px;
+  padding-left: 3000px;
+}
+.extendidoCompleto, .extendidoDch {
+  margin-right: -3000px;
+  padding-right: 3000px;
+}

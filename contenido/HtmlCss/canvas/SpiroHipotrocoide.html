@@ -1,0 +1,1140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="js SI-FILES-STYLIZED" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" dir="ltr" lang="es"><!-- Begin Head section --><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Language" content="es-es">
+  <meta http-equiv="X-UA-Compatible" content="IE=8">
+  	<!-- base href="http://appdeveloper.intel.com/es-es/" -->
+	<title>Mis primeros pasos en HTML5 - Trasteando con el Canvas | Programa Intel AppUp(SM) para desarrolladores </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link type="text/css" rel="stylesheet" media="all" href="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/css_687e405f5410027170b6eae262ba32cb.css">
+<link type="text/css" rel="stylesheet" media="print" href="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/css_be3cd695927f40eaa034225a7fb61cd0.css">
+</head>
+<!-- End Head section -->
+ 
+<!-- Begin Body section -->
+<body class="not-front not-logged-in node-type-blog two-sidebars i18n-es page-blog-2011-12-15-mis-primeros-pasos-en-html5-trasteando-con-el-canvas section-blog"><div style="display: none;" id="cboxOverlay"></div><div style="padding-bottom: 50px; padding-right: 50px; display: none;" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div class="" id="cboxLoadedContent" style="width: 0pt; height: 0pt;"></div><div class="" id="cboxLoadingOverlay"></div><div class="" id="cboxLoadingGraphic"></div><div class="" id="cboxTitle"></div><div class="" id="cboxCurrent"></div><div class="" id="cboxNext"></div><div class="" id="cboxPrevious"></div><div class="" id="cboxSlideshow"></div><div class="" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position:absolute; width:9999px; visibility:hidden; display:none"></div></div>
+
+<!-- Begin Page Section -->
+  <div id="page">
+    <div id="page-inner"><a name="top" id="navigation-top"></a>
+      <div id="header" class="region region-header">
+  <div id="header-inner">
+  
+    <!-- login -->
+    <div id="header-row-1">
+              <div id="login"> 
+          <a href="https://secure-appdeveloper.intel.com/es-es/user/login" class="first">Iniciar sesión</a> | <a href="https://secure-appdeveloper.intel.com/es-es/user/register">Unirse</a>
+        </div> 
+          </div>
+  
+  
+    <div id="header-row-2">
+      <!-- logo -->
+      <a href="http://appdeveloper.intel.com/es-es/home">
+        <h1 id="logo-es-es" class="logo">
+            Intel AppUp<sup>SM</sup> developer program
+        </h1>
+      </a>
+      
+      <div id="header-utilities">
+        <!-- language -->
+        <div id="languageLabel">Idioma:</div>
+        <div id="languageSelect"> 
+          <form action="/es-es/blog/2011/12/15/mis-primeros-pasos-en-html5-trasteando-con-el-canvas" accept-charset="UTF-8" method="post" id="lang-dropdown-form">
+<div><div class="form-item" id="edit-lang-dropdown-select-wrapper">
+ <div class="form_value_wrapper"><select name="lang_dropdown_select" style="width: 100px; display: none;" class="form-select" id="edit-lang-dropdown-select"><option value="http://appdeveloper.intel.com/en-us/blog/2011/12/15/mis-primeros-pasos-en-html5-trasteando-con-el-canvas">English</option><option value="http://appdeveloper.intel.com/fr-fr/blog/2011/12/15/mis-primeros-pasos-en-html5-trasteando-con-el-canvas">Français</option><option value="http://appdeveloper.intel.com/de-de/blog/2011/12/15/mis-primeros-pasos-en-html5-trasteando-con-el-canvas">Deutsch</option><option value="http://appdeveloper.intel.com/it-it/blog/2011/12/15/mis-primeros-pasos-en-html5-trasteando-con-el-canvas">Italiano</option><option value="http://appdeveloper.intel.com/es-es/blog/2011/12/15/mis-primeros-pasos-en-html5-trasteando-con-el-canvas" selected="selected">Español</option></select><a style="width: 100px;" class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown " id="edit-lang-dropdown-select-button" role="button" href="#" aria-haspopup="true" aria-owns="edit-lang-dropdown-select-menu"><span class="ui-selectmenu-status">Español</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></div>
+</div>
+<noscript><span>
+<input type="submit" name="op" id="edit-submit-1" value="Ir"  class="form-submit" />
+
+</span></noscript><input name="form_build_id" id="form-f8ef81440de62f854c77715ec9391963" value="form-f8ef81440de62f854c77715ec9391963" type="hidden">
+<input name="form_id" id="edit-lang-dropdown-form" value="lang_dropdown_form" type="hidden">
+
+</div></form>
+        </div>
+        
+        <!-- search -->
+        <div id="search"> 
+          <form id="nav_search_bar" accept-charset="UTF-8" action="/es-es/search/apachesolr_search">
+            <input class="searchBox" name="keys" type="text">
+            <input src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/transparent.gif" class="searchSubmit" value="" type="image">
+          </form>
+        </div>
+      </div>
+      
+     </div>
+
+    
+    <div id="header-row-3">
+      <!-- header blocks -->
+      <div id="block-intel-2" class="block block-intel region-even even region-count-2 count-10"><div class="block-inner">
+
+  
+  <div class="content">
+    <div id="navbar"><div id="navbar-inner" class="clear-block region region-navbar"><ul class="sf-menu sf-js-enabled sf-shadow"><li class="expanded first"><a class="sf-with-ul Windows" href="http://appdeveloper.intel.com/es-es" title="">Inicio<span class="sf-sub-indicator"> »</span></a><ul style="display: none; visibility: hidden;"><li class="leaf first"><a class="Windows" href="http://appdeveloper.intel.com/es-es/program-overview" title="">Visión general del programa</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/sdksandtools" title="">Descargue el SDK</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/join" title="">Unirse al programa</a></li>
+<li class="leaf last"><a class="Windows" href="http://appdeveloper.intel.com/es-es/submit-app" title="">Envíe una aplicación</a></li>
+</ul></li>
+<li class="expanded"><a class="sf-with-ul Windows" href="http://appdeveloper.intel.com/es-es/development" title="">Desarrollo<span class="sf-sub-indicator"> »</span></a><ul style="display: none; visibility: hidden;"><li class="leaf first"><a class="Windows" href="http://appdeveloper.intel.com/es-es/learn" title="">Aprender</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/design" title="">Diseño</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/build" title="">Creación</a></li>
+<li class="leaf last"><a class="Windows" href="http://appdeveloper.intel.com/es-es/publish" title="">Publicar</a></li>
+</ul></li>
+<li class="expanded"><a class="sf-with-ul Windows" href="http://appdeveloper.intel.com/es-es/sdksandtools" title="">SDKs y herramientas<span class="sf-sub-indicator"> »</span></a><ul style="display: none; visibility: hidden;"><li class="leaf first"><a class="Windows" href="http://appdeveloper.intel.com/es-es/developertools" title="">Herramientas de desarrollador</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/sdksandtools" title="">SDK Intel AppUp</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/test-submission-tools" title="">Herramientas de prueba y envío</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/componentcatalog" title="">Catálogo de componentes</a></li>
+<li class="leaf last"><a class="Windows" href="http://appdeveloper.intel.com/es-es/ideplugins" title="">Complementos IDE</a></li>
+</ul></li>
+<li class="expanded"><a class="sf-with-ul Windows" href="http://appdeveloper.intel.com/es-es/documentation" title="">Documentación<span class="sf-sub-indicator"> »</span></a><ul style="display: none; visibility: hidden;"><li class="leaf first"><a class="Windows" href="http://appdeveloper.intel.com/es-es/documentation" title="">Examinar la biblioteca</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/documentation?platform%5B1130%5D=1130" title="">Desarrollo para Windows*</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/documentation?platform%5B1131%5D=1131" title="">Desarrollo para MeeGo*</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/documentation?platform%5B1210%5D=1210" title="">Desarrollo para Tizen*</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/documentation?platform%5B1129%5D=1129" title="">Multiplataforma</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/documentation?type[1140]=1140" title="">Guías para desarrolladores</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/documentation?type%5B1139%5D=1139" title="">Ejemplos de código</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/documentation?type%5B1134%5D=1134" title="">APIs</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/documentation?type%5B1136%5D=1136" title="">Documentación del programa</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/documentation?type%5B1138%5D=1138" title="">Guías descriptivas</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/documentation?type%5B1184%5D=1184" title="">Casos prácticos</a></li>
+<li class="leaf last"><a class="Windows" href="http://appdeveloper.intel.com/es-es/documentation?type%5B1135%5D=1135" title="">Notas de la versión</a></li>
+</ul></li>
+<li class="expanded"><a class="sf-with-ul Windows" href="http://appdeveloper.intel.com/es-es/opportunities" title="">Oportunidades<span class="sf-sub-indicator"> »</span></a><ul style="display: none; visibility: hidden;"><li class="leaf first"><a class="Windows" href="http://appdeveloper.intel.com/es-es/developerfunding" title="">Financiación para desarrolladores</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/reputation" title="">Programa Black Belt</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/legends" title="">Programa de leyendas</a></li>
+<li class="leaf last"><a class="Windows" href="http://appdeveloper.intel.com/es-es/affiliatestores" title="">Tiendas asociadas</a></li>
+</ul></li>
+<li class="expanded"><a class="sf-with-ul Windows" href="http://appdeveloper.intel.com/es-es/community" title="">Comunidad<span class="sf-sub-indicator"> »</span></a><ul style="display: none; visibility: hidden;"><li class="leaf first"><a class="Windows" href="http://appdeveloper.intel.com/es-es/forum" title="">Foros</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/blog" title="">Blogs</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/appup-show" title="">Show de Intel AppUp</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/videos" title="">Vídeos</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/reputation" title="">Programa Black Belt</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/events-old" title="">Eventos</a></li>
+<li class="leaf"><a class="Windows" href="http://appdeveloper.intel.com/es-es/events" title="">Eventos</a></li>
+<li class="leaf last"><a class="Windows" href="http://appdeveloper.intel.com/es-es/students" title="">Estudiantes</a></li>
+</ul></li>
+<li class="expanded last"><a class="sf-with-ul Windows" href="http://appdeveloper.intel.com/es-es/support" title="">Asistencia<span class="sf-sub-indicator"> »</span></a><ul style="display: none; visibility: hidden;"><li class="leaf first"><a class="Windows" href="http://appdeveloper.intel.com/es-es/article/frequently-asked-questions">Preguntas frecuentes</a></li>
+<li class="leaf last"><a class="Windows" href="http://appdeveloper.intel.com/es-es/forum">Foros</a></li>
+</ul></li>
+</ul></div></div> <!-- /#navbar-inner, /#navbar -->  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+    </div>
+    
+  </div>
+</div><!-- Main Container Section -->
+			<div id="main">
+				<div id="main-inner" class="clear-block with-navbar">
+
+<!-- Show Dashboard Bar if on a dashboard page -->
+
+
+<!-- Begin Content Section -->
+					<div id="content">
+						<div id="content-inner">
+							
+							
+														  <div id="content-header">
+																								  <h1 class="title">Mis primeros pasos en HTML5 - Trasteando con el Canvas</h1>
+																																							  </div> <!-- /#content-header -->
+							
+							<div id="content-area">
+							  <div id="node-15087" class="node node-type-blog"><div class="node-inner">
+
+  
+
+      <div class="post">
+      <div class="info">
+        <div class="socialMediaIcons">
+
+          <div class="blog-print-link">
+              <a href="http://appdeveloper.intel.com/es-es/print/15087"><img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/print_icon.gif" alt="Printer-friendly version" title="Printer-friendly version" class="print-icon" height="16" width="16"></a>              
+          </div>
+        
+         <a href="http://appdeveloper.intel.com/es-es/blogs/herniman/feed" class="rss">RSS Link</a>          
+          <div class="like">
+            <iframe src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/like.htm" style="border: medium none; overflow: hidden; width: 90px; height: 21px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+          </div>
+          
+          
+          <!--[if gt IE 7]>
+            <div class="googlePlusCount">
+              <g:plusone size="medium" href="http://appdeveloper.intel.com/es-es/blog/2011/12/15/mis-primeros-pasos-en-html5-trasteando-con-el-canvas"></g:plusone>
+            </div>
+          <![endif]-->
+          <!--[if !IE]> -->
+            <div class="googlePlusCount">
+              <div style="height: 20px; width: 90px; display: inline-block; text-indent: 0pt; margin: 0pt; padding: 0pt; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline;" id="___plusone_0"><iframe title="+1" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/fastbutton.htm" name="I0_1344450621945" id="I0_1344450621945" vspace="0" tabindex="0" style="position: static; top: 0pt; width: 90px; margin: 0px; border-style: none; left: 0pt; visibility: visible; height: 20px;" marginwidth="0" marginheight="0" hspace="0" allowtransparency="true" frameborder="0" scrolling="no" width="100%"></iframe></div>
+            </div>
+          <!-- <![endif]-->
+          
+          <div class="tweet">
+            <iframe title="Twitter Tweet Button" style="width: 120px; height: 20px;" class="twitter-share-button twitter-count-horizontal" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/tweet_button.htm" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+        </div>
+        
+        <!-- Author info -->
+        <div class="picture"></div>        <div class="user-info">
+          <a href="http://appdeveloper.intel.com/es-es/user/55028" title="Ver el perfil de usuario.">Hernán Alijo</a>          <a href="http://appdeveloper.intel.com/es-es/blogs/herniman" class="user-blog">Blog</a>          <p>
+            <span><a href="http://appdeveloper.intel.com/es-es">Send Private Message</a></span>
+            <span>Posted December 15, 2011</span>
+            <span class="last">9:27 am</span>
+          </p>
+        </div>
+      </div> <!-- End info -->
+      
+      <p>&nbsp;</p><p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">En este artículo firmado
+por <a href="http://appdeveloper.intel.com/en-us/user/28666">Paul Farquhar</a>
+(<a href="https://twitter.com/#%21/TheGlenPaul">@TheGlenpaul</a>), vamos a poder
+conocer un poco más cómo poder crear y divertirnos con Canvas en HTML5. Veréis
+que ilustrativo y qué detallado lo muestra!! &nbsp;<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><b><span style="line-height: 115%;"><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><b><span style="line-height: 115%;">Introducción</span></b></span></p><hr><b><o:p></o:p></b><p></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Yo
+ he escrito algo de
+código en mi vida. Los lenguajes de programación que he utilizado son: 
+Cobol (bufff), Pascal, C, C + + Java, y otros no tan conocidos como 
+Algol y
+Smalltalk 80. Nunca he hecho mucho con HTML, pero HTML5 está siendo 
+empujado
+a través de los medios. <o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">¿Tal vez llegado el
+momento de echar un vistazo más de cerca?<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;"><o:p>&nbsp;</o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><b><span style="line-height: 115%;">¿Cómo
+fue la primera impresión con HTML?</span></b></span></p><hr><b><o:p></o:p></b><p></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">La primera vez que vi HTML
+/ Javascript no me gustó (a partir de aquí, al decir HTML me referiré al
+conglomerado de HTML, JavaScript / ECMAScript y CSS). Yo no podía depurar las
+cosas y que tenía que hacer prueba y error o guardar mensajes e en el proceso.
+Todo parecía un gran lío para mí.<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Mi último vistazo a HTML5
+fue mucho más agradable!<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Con el navegador Chrome
+tengo un depurador - lo que realmente depura el código completo. También puedo
+establecer puntos de interrupción en los acontecimientos. La "herramienta
+de desarrollo" también me da un inspector para los elementos y los estilos
+utilizados. Puedo ver los distintos recursos (o activos) que se utilizan y más elementos
+que no he usado en profundidad, como la supervisión del rendimiento. El desarrollo
+en HTML ha recorrido un largo camino desde que lo probé. En la lectura de
+algunos artículos sobre HTML5, el Canvas sale con buenas críticas. El Canvas
+permite a los desarrolladores web dibujar dinámicamente gráficos en la pantalla
+sin ningún tipo de plug-ins, lo que antes no era posible hasta HTML5. Me decidí
+a escribir algo para tratar con el Canvas.<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;"><o:p>&nbsp;</o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><b><span style="line-height: 115%;">Pero
+primero necesitaba una idea…</span></b></span></p><hr><b><o:p></o:p></b><p></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Mirando alrededor de la
+oficina de mi casa, mi caja de Spirograph sobresalía de un estante. Mi
+inspiración para escribir una aplicación sobre un espirógrafo!<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><font face="Verdana, sans-serif" size="2"><span style="line-height: 14px;"><img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/SpiroBox_600.jpg" height="450" width="600"></span></font></span></p><p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><font face="Verdana, sans-serif" size="2"><span style="line-height: 14px;"><img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/SprioInside_600.jpg" height="450" width="600"><br></span></font></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Como puedes ver, la
+mayoría de los bits todavía están allí y me sorprendió encontrar una pila de
+viejos dibujos que hice cuando era niño:<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><font face="Verdana, sans-serif" size="2"><span style="line-height: 14px;"><img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/SpiroHead_600_0.jpg" height="800" width="600"><br></span></font></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Si no sabes qué es un
+espirógrafo, es básicamente un anillo plano de plástico con algunas ruedas
+dentadas. El anillo se fija en una hoja de papel encima de un cartón. Después,
+se coloca una rueda dentada en el interior del anilo, colocando dentro de él la
+punta de un bolígrafo. A continuación, se echaba a rodar con el boli, dando
+lugar a interesantes y originales figuras. Yo solía hacer durante horas y
+horas. Aquí hay un enlace para conocer un poco más su <a href="http://appdeveloper.intel.com/en-us/%E2%80%9Dhttp:/en.wikipedia.org/wiki/Spirograph%E2%80%9D">historia</a>.<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">El espirógrafo es la
+matemática aplicada sobre la base de <a href="http://appdeveloper.intel.com/en-us/%E2%80%9Dhttp:/en.wikipedia.org/wiki/Cycloid%E2%80%9D">cicloides</a>.
+Si el engranaje se mueve alrededor de la parte exterior del anillo se obtiene
+una <a href="http://en.wikipedia.org/wiki/Epitrochoid">Epitrocoide</a>,
+trasladado al interior del anillo se obtiene una <a href="http://en.wikipedia.org/wiki/Hypotrochoid">Hipotrocoide</a>.<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">En mi aplicación de prueba
+pretendo dibujar las curvas de tipo Hipotrocoide.<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;"><o:p>&nbsp;</o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><b><span style="line-height: 115%;">Diseño
+inicial</span></b></span></p><hr><b><o:p></o:p></b><p></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Quiero una interfaz simple
+que permita al usuario:<o:p></o:p></span></p>
+
+<ul><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">Entrar en el radio del
+anillo y la rueda</span></li><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">Introducir la distancia
+entre el lápiz y el centro de las ruedas</span></li><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">Algunos botones para
+cambiar fácilmente los números de arriba (+ -10, + -1)</span></li><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">Un botón para empezar a
+dibujar y un botón para borrar el dibujo</span></li></ul>
+
+
+
+
+
+
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">También voy a añadir algo
+de código para prepararse para el cambio del color de la pluma y el grosor del
+lápiz. Esto puede ser una futura ampliación.<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><span style="line-height: 14px;">Este es el sitio de donde
+me basé para los principios matemáticos: </span><a href="http://www.mathematische-basteleien.de/spirograph.htm" style="font-family: Verdana,sans-serif; font-size: 13px; line-height: 14px;">Mathematische
+Basteleien</a><span style="line-height: 14px;">. El autor tiene una buena explicación de las matemáticas
+involucradas.</span></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">El siguiente paso es
+escribir todo dentro Para la edición utilicé <a href="http://notepad-plus-plus.org/">Notepad + +</a> y esta es la primera creación
+de Sprio: <o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;"><o:p>&nbsp;</o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><b><span style="line-height: 115%;">spiro1.html</span></b></span></p><hr><b><o:p></o:p></b><p></p>
+
+<p style="text-align: justify;" class="MsoNormal">&nbsp;</p><pre style="font-family: 'Bitstream Vera Sans Mono', 'Courier New', monospace; z-index: 0; font-size: 1.1em; line-height: 12px; text-align: -webkit-auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 0px; margin: 0px;"><span style="font-size: small; font-family: verdana, geneva;"><span style="z-index: 0; color: #004a43; padding: 0px; margin: 0px;">&lt;!DOCTYPE html&gt;</span>
+<span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">html</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+ <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">head</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+ <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">title</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>Spiro-<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">01</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">title</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+  <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">script type="application/javascript"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> DrawSpiro<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span> <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> objCanvas <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>getElementById<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">canvas</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> ctx <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> objCanvas<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>getContext<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">2d</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        ctx<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>save<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> size <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> <span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">0</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">if</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>objCanvas<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>width<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">&lt;</span>objCanvas<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>height<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span>
+            size <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> objCanvas<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>width<span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">else</span>
+            size <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> objCanvas<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>height<span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        ctx<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>translate<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>size<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">2</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">,</span>size<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">2</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> OuterRadius <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> InnerRadius <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> PenOffset <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">100</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> PenColour<span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>        <span style="z-index: 0; color: #696969; padding: 0px; margin: 0px;">// for later extension</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> PenThickness<span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>    <span style="z-index: 0; color: #696969; padding: 0px; margin: 0px;">// for later extension</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> StartX<span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>            <span style="z-index: 0; color: #696969; padding: 0px; margin: 0px;">// we start drawing here</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> StartY<span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>            <span style="z-index: 0; color: #696969; padding: 0px; margin: 0px;">// we start drawing here</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> x<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">,</span>y<span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> Step <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> <span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Math</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>PI<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">180</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> Angle <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> <span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">0</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        
+        StartX <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Math</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">cos</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>InnerRadius <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span> OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span>Angle<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">+</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Math</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">cos</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>InnerRadius <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span> OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span>Angle<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        StartY <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Math</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">sin</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>InnerRadius <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span> OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span>Angle<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Math</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">sin</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>InnerRadius <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span> OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span>Angle<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+
+        ctx<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>beginPath<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        ctx<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>moveTo<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>StartX<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">,</span>StartY<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">do</span>
+        <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+            Angle <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">+=</span> Step<span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+            x <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Math</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">cos</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>InnerRadius <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span> OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span>Angle<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">+</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Math</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">cos</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>InnerRadius <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span> OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span>Angle<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+            y <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Math</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">sin</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>InnerRadius <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span> OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span>Angle<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Math</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">sin</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>InnerRadius <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span> OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">*</span>Angle<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+            ctx<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>lineTo<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>x<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">,</span>y<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+            ctx<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>stroke<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span> <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">while</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>x <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">!=</span> StartX<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">&amp;&amp;</span> <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>y <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">!=</span> StartY<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+
+        ctx<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>restore<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>
+    
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> clearCanvas<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> canvas <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>getElementById<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">canvas</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">var</span> context <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> canvas<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>getContext<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">2d</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+        context<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>clearRect<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">0</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">,</span> <span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">0</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">,</span> canvas<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>width<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">,</span> canvas<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>height<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>
+
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> OuterP10<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> String<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Number</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">+</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> OuterP1<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> String<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Number</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">+</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>    
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> OuterM10<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> String<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Number</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> OuterM1<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> String<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Number</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> InnerP10<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> String<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Number</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">+</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> InnerP1<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> String<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Number</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">+</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>    
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> InnerM10<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> String<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Number</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> InnerM1<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> String<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Number</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>InnerRadius<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> PenOffsetP10<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> String<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Number</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">+</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> PenOffsetP1<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> String<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Number</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">+</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>    
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> PenOffsetM10<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> String<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Number</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>
+    <span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">function</span> PenOffsetM1<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">{</span>
+        document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value <span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span> String<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span><span style="z-index: 0; color: #797997; padding: 0px; margin: 0px;">Number</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">(</span>document<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>PenOffset<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">.</span>value<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">-</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">)</span><span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">;</span>    
+    <span style="z-index: 0; color: #800080; padding: 0px; margin: 0px;">}</span>
+  <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">script</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+ <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">head</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+ <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">body</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+   <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #5f5035; padding: 0px; margin: 0px;">canvas</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">id</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"canvas"</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">width</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"400"</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">height</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"400"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #5f5035; padding: 0px; margin: 0px;">canvas</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+   <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">br</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">/&gt;</span>
+
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"OuterP10();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>+<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"OuterP1();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>+<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"InnerP10();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>+<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"InnerP1();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>+<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"PenOffsetP10();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>+<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"PenOffsetP1();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>+<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+   <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">form</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">name</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"SpiroInput"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+        <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">input</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">name</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"OuterRadius"</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">type</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"text"</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">size</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"7"</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">value</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"77"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+        <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">input</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">name</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"InnerRadius"</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">type</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"text"</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">size</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"7"</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">value</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"29"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+        <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">input</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">name</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"PenOffset"</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">type</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"text"</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">size</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"5"</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">value</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"68"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">form</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"OuterM10();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>-<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span> <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"OuterM1();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>-<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"InnerM10();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>-<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"InnerM1();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>-<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"PenOffsetM10();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>-<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"PenOffsetM1();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>-<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">br</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"DrawSpiro();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>Zeichnen<span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+    <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"clearCanvas();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>Löschen<span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+  
+ <span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">body</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+<span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">html</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span></span></pre><p>&nbsp;</p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; color: #004a43; font-size: small; font-family: verdana, geneva;"><o:p>&nbsp;</o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><b><span style="line-height: 115%;">Vamos
+a echar un vistazo a algunos bits del código</span></b></span></p><hr><b><o:p></o:p></b><p></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">El Canvas se define a sí
+mismo en la línea 90:</span></p>
+
+<p style="text-align: justify;" class="MsoNormal">&nbsp;</p><pre style="font-family: 'Bitstream Vera Sans Mono', 'Courier New', monospace; z-index: 0; font-size: 1.1em; line-height: 12px; text-align: -webkit-auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 0px; margin: 0px;"><span style="font-size: small; font-family: verdana, geneva;">canvas id<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">canvas</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span> width<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">400</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span> height<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">400</span><span style="z-index: 0; color: #800000; padding: 0px; margin: 0px;">"</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">&gt;</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">/</span>canvas<span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">&gt;</span></span></pre><p>&nbsp;</p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Todos los dibujos que suceden
+en el DrawSprio function () comienzan a partir de la línea 6.<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">El primer paso para
+trabajar con el Canvas es tener un contexto para trabajar. Todas las funciones
+de dibujo necesitan de un contexto (no trabajan sobre el Canvas en sí). Mi
+contexto se llama ctx:</span></p>
+
+<p style="text-align: justify;" class="MsoNormal">&nbsp;</p><pre style="font-family: 'Bitstream Vera Sans Mono', 'Courier New', monospace; z-index: 0; font-size: 1.1em; line-height: 12px; text-align: -webkit-auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 0px; margin: 0px;"><span style="font-size: small; font-family: verdana, geneva;">var objCanvas = document<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>getElementById("canvas");
+var ctx = objCanvas<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>getContext("<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">2</span>d");
+ctx<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>save();</span></pre><p>&nbsp;</p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Lo que estoy haciendo
+aquí, además, es ahorrar el contexto actual. Esto me permite trabajar con
+seguridad y restaurar el viejo contexto con el que mi función termina (con
+ctx.restore ()). No es necesario para esta aplicación simple, pero creo que es
+algo bueno acostumbrarse para futuros desarrollos más complejos.<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Las matemáticas requieren del
+punto de origen para estar en el centro del área de dibujo. Así que tengo que
+traducir esto al Canvas. En primer lugar busco el lado más pequeño y luego,
+mover el centro hacia el centro del lienzo:<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal">&nbsp;</p><pre style="font-family: 'Bitstream Vera Sans Mono', 'Courier New', monospace; z-index: 0; font-size: 1.1em; line-height: 12px; text-align: -webkit-auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 0px; margin: 0px;"><span style="font-size: small; font-family: verdana, geneva;">if(objCanvas<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>width<span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #5f5035; padding: 0px; margin: 0px;">objCanvas</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">height</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;">)</span>
+<span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">size</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> objCanvas</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">width</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;">;</span>
+<span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;">else</span>
+<span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">size</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> objCanvas</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">height</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;">;</span>
+<span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;">ctx</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;">translate(</span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">size</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;">/</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">2</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;">,</span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">size</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;">/</span><span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">2</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;">);</span></span></pre><p>&nbsp;</p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Dibujar líneas en Canvas
+consiste se denomina como ‘path’. Un ‘path’ es esencialmente un polígono
+formado por líneas y arcos. También puede tener varios caminos secundarios. Un
+contexto sólo tiene un camino al mismo tiempo. Para extraer algunas líneas que
+necesitas para construir un trazado con funciones tales como lineTo y moveTo,
+puedes cambiar los elementos como el color y el grosor de la línea y,
+finalmente, utilizar tiempos para dibujar el trazado. Los próximos pasos en el
+código son muy sencillos:<o:p></o:p></span></p>
+
+<ul><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">calcular el punto de
+partida (el = startx y líneas StartY =) matemáticamente.</span></li><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">comenzar un ‘path’ con
+ctx.beginPath ();</span></li><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">mover la pluma a ese
+punto: ctx.moveTo (startx, StartY);</span></li></ul>
+
+
+
+
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">El siguiente es el bucle
+principal que termina cuando se vuelve al punto de partida. Todo lo que hace es
+calcular el siguiente paso (con las mismas matemáticas que para el punto de
+partida) e ir a ese punto: ctx.lineTo (x, y); Esto no trae ninguna línea en la
+pantalla sino que añade la línea a la ruta. Para que sea visible lo que
+necesito, es esta función: ctx.stroke (); La función Canvas relacionada es
+clearCanvas (), que hace precisamente esto:<o:p></o:p></span></p>
+
+<ul><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">obtener un contexto</span></li><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">Rectángulo:
+context.clearRect (0, 0, canvas.width, canvas.height);</span></li></ul>
+
+
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Las demás funciones que
+manejan los botones -10 + y + -1 son para cambiar los parámetros.<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">La aplicación funcionó,
+pero no estaba satisfecho.<o:p></o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;"><o:p>&nbsp;</o:p></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><b><span style="line-height: 115%;">Esto
+necesita un poco de optimización</span></b></span></p><hr><b><o:p></o:p></b><p></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Sí que funciona, pero:<o:p></o:p></span></p>
+
+<ul><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">es muy lento</span></li><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">el botón de funciones + -10
+y + -1 &nbsp;no son óptimos</span></li><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">el circuito principal
+tiene una gran cantidad de matemáticas que se pueden optimizar</span></li></ul>
+
+
+
+
+
+<p style="text-align: justify;" class="MsoNormal"><span style="line-height: 115%; font-size: small; font-family: verdana, geneva;">Antes de empezar a
+optimizar la aplicación por primera vez se midió el tiempo que se tarda en
+dibujar una curva utilizando la herramienta de perfiles de Chrome, tomando el
+tiempo que necesita DrawSpiro:<o:p></o:p></span></p>
+
+<ul><li><span style="font-size: small; font-family: verdana, geneva;"><span style="line-height: 115%;"><o:p>&nbsp;</o:p></span><span style="line-height: 14px;">Parámetros de la prueba:
+175, 50, 130</span></span></li><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">Sprio1: 810ms para
+DrawSpiro</span></li></ul>
+
+
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><b><span style="line-height: 115%;">Primer
+paso</span></b><span style="line-height: 115%;">:
+mover la llamada a la función carrera fuera del circuito principal:<o:p></o:p></span></span></p>
+
+<p style="text-align: justify;" class="MsoNormal">&nbsp;</p><pre style="font-family: 'Bitstream Vera Sans Mono', 'Courier New', monospace; z-index: 0; font-size: 1.1em; line-height: 12px; text-align: -webkit-auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 0px; margin: 0px;"><span style="font-size: small; font-family: verdana, geneva;">} while ((x != StartX) &amp;&amp; (y != StartY));
+ctx<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>stroke();
+ctx<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>restore();</span></pre><p>&nbsp;</p>
+
+<ul><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">Sprio1-1: 7ms</span></li></ul>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><span style="line-height: 115%; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white;">Una gran diferencia! Un
+camino grande es mucho mejor que muchos pequeños.<o:p></o:p></span></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><span style="line-height: 115%; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white;"><o:p>&nbsp;</o:p></span></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><span><b><span style="line-height: 115%; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white;">Segundo paso: </span></b></span><span><span style="line-height: 115%; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white;">optimizar algunos de los cálculos
+en el bucle principal. Algunas de las afirmaciones nunca cambian y se podrían
+calcular una vez fuera del bucle:<o:p></o:p></span></span></span></p>
+
+<p style="text-align: justify;" class="MsoNormal">&nbsp;</p><pre style="font-family: 'Bitstream Vera Sans Mono', 'Courier New', monospace; z-index: 0; font-size: 1.1em; line-height: 12px; text-align: -webkit-auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 0px; margin: 0px;"><span style="font-size: small; font-family: verdana, geneva;">var OmI = OuterRadius-InnerRadius;
+var IdO = InnerRadius / OuterRadius;
+var IdO1 = <span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">1</span> - IdO;
+…
+StartX = OmI*Math<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>cos(IdO*Angle)+PenOffset*Math<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>cos(IdO1*Angle);
+StartY = OmI*Math<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>sin(IdO*Angle)-PenOffset*Math<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>sin(IdO1*Angle);</span></pre><p>&nbsp;</p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><span style="line-height: 115%; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white;">Necesitaba un poco de los
+parámetros de la nueva prueba para obtener un tiempo de dibujo más largo:<o:p></o:p></span></span></p>
+
+<ul><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">Parámetros de la prueba:
+181, 47, 130</span></li><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">Spiro1-1: 310ms la primera
+vez y 190ms en las siguientes ejecuciones.</span></li><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">Spiro1-2: 180ms la primera
+vez, y cada 43ms se ejecutan otros.</span></li></ul>
+
+
+
+
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><span style="line-height: 115%; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white;">Una vez más, una actuación
+de gran impulso. Esto demuestra que JavaScript no puede reconocer las porciones
+de código que no cambian en el circuito y hacer de ellas una constante. Esta es
+una de las principales diferencias entre un lenguaje dinámico interpretado y un
+lenguaje compilado que en el optimizador puede hacer maravillas. Curioso es que
+las segundas ejecuciones y siguientes son más rápidas que la primera. No tengo
+una explicación para ello - ¿tal vez vosotros sí? Otra área para acelerar la
+aplicación de la resolución es el cálculo de los pasos. En lugar de cada grado
+(Paso = Math.PI/180) cada 10 grados es suficiente (Paso = Math.PI/180 * 10).<o:p></o:p></span></span></p>
+
+<ul><li><span style="line-height: 14px; font-size: small; font-family: verdana, geneva;">Spiro1-2: 128 ms en
+frescos de carga, segunda prueba de 5 ms</span></li></ul>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><span style="line-height: 115%; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white;">Ahora tengo la velocidad
+que buscaba. El siguiente paso es limpiar el botón + -10 y + -1. Empecé con una
+función más por menos (sólo dos botones y una función que se muestra aquí):<o:p></o:p></span></span></p>
+
+<p style="text-align: justify;" class="MsoNormal">&nbsp;</p><pre style="font-family: 'Bitstream Vera Sans Mono', 'Courier New', monospace; z-index: 0; font-size: 1.1em; line-height: 12px; text-align: -webkit-auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 0px; margin: 0px;"><span style="font-size: small; font-family: verdana, geneva;"><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"OuterP10();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>+<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+<span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"InnerP10();"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>+<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+
+function OuterP10()
+{
+   document<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>value = 
+      string(Number(document<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>value)+<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span>);
+}</span></pre><p>&nbsp;</p><p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><span style="line-height: 115%; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white;">Todo esto se puede
+escribir más elegante:</span></span></p><p style="text-align: justify;" class="MsoNormal"><font face="verdana, geneva" size="2"><span style="line-height: 14px;"><br></span></font></p><pre style="font-family: 'Bitstream Vera Sans Mono', 'Courier New', monospace; z-index: 0; font-size: 1.1em; line-height: 12px; text-align: -webkit-auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 0px; margin: 0px;"><span style="font-size: small; font-family: verdana, geneva;"><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"ChangeParam('O',10);"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>+<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+<span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #274796; padding: 0px; margin: 0px;"> </span><span style="z-index: 0; color: #074726; padding: 0px; margin: 0px;">onclick</span><span style="z-index: 0; color: #808030; padding: 0px; margin: 0px;">=</span><span style="z-index: 0; color: #0000e6; padding: 0px; margin: 0px;">"ChangeParam('I',10);"</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>+<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">10</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&lt;/</span><span style="z-index: 0; color: #800000; font-weight: bold; padding: 0px; margin: 0px;">button</span><span style="z-index: 0; color: #a65700; padding: 0px; margin: 0px;">&gt;</span>
+
+function ChangeParam(param,value)
+{
+    switch(param)
+    {
+    case "O": document<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>value  =  
+        String(Number(document<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>OuterRadius<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>value)+value);break;
+    case "I": document<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>InnerRadius<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>value  = 
+        String(Number(document<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>InnerRadius<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>value)+value);break;
+    case "PO": document<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>PenOffset<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>value = 
+        String(Number(document<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>SpiroInput<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>PenOffset<span style="z-index: 0; color: #008c00; padding: 0px; margin: 0px;">.</span>value)+value);break;
+    }
+}</span></pre><p>&nbsp;</p><p><span style="font-family: verdana, geneva; line-height: 14px; font-size: small;">Ahora tengo una pequeña
+aplicación muy satisfactoria. El formato de los botones y el texto circundante
+podría ser más claro, y estaría bien cambiar el color del lápiz y el grosor – que
+será una extensión, o lo puedes añadir tú por tu cuenta.</span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><span style="line-height: 115%; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white;"><o:p>&nbsp;</o:p></span></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><b><span style="line-height: 115%; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white;">Recursos:</span></b></span></p><hr><b><o:p></o:p></b><p></p>
+
+<p style="margin-top: 0cm; margin-right: 0cm; margin-bottom: .0001pt; margin-left: 12.0pt; text-indent: -18.0pt; line-height: 18.0pt; mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background: white;"><!--[if !supportLists]--><span style="font-size: small; font-family: verdana, geneva;">1.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp; </span><!--[endif]--><a href="http://upload-appdeveloper.intel.com/sites/files/SpiroSource.zip"><span style="color: #0860a8; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm;">All three versions of sprio</span></a><o:p></o:p></span></p>
+
+<p style="margin-top: 0cm; margin-right: 0cm; margin-bottom: .0001pt; margin-left: 12.0pt; text-indent: -18.0pt; line-height: 18.0pt; mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background: white; z-index: 0;"><!--[if !supportLists]--><span style="font-size: small; font-family: verdana, geneva;">2.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp; </span><!--[endif]--><a href="http://appdeveloper.intel.com/en-us/%E2%80%9Dhttp:/en.wikipedia.org/wiki/Cycloid%E2%80%9D" style="z-index: 0;"><span style="color: #0860a8; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm;">More about Cycloids</span></a><o:p></o:p></span></p>
+
+<p style="margin-top: 0cm; margin-right: 0cm; margin-bottom: .0001pt; margin-left: 12.0pt; text-indent: -18.0pt; line-height: 18.0pt; mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background: white; z-index: 0;"><!--[if !supportLists]--><span style="font-size: small; font-family: verdana, geneva;">3.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp; </span><!--[endif]--><a href="http://en.wikipedia.org/wiki/Epitrochoid" style="z-index: 0;"><span style="color: #0860a8; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm;">More about Epitrochoids</span></a><o:p></o:p></span></p>
+
+<p style="margin-top: 0cm; margin-right: 0cm; margin-bottom: .0001pt; margin-left: 12.0pt; text-indent: -18.0pt; line-height: 18.0pt; mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background: white; z-index: 0;"><!--[if !supportLists]--><span style="font-size: small; font-family: verdana, geneva;">4.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp; </span><!--[endif]--><a href="http://en.wikipedia.org/wiki/Hypotrochoid" style="z-index: 0;"><span style="color: #0860a8; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm;">More about Hypotrochoids</span></a><o:p></o:p></span></p>
+
+<p style="margin-top: 0cm; margin-right: 0cm; margin-bottom: .0001pt; margin-left: 12.0pt; text-indent: -18.0pt; line-height: 18.0pt; mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background: white; z-index: 0;"><!--[if !supportLists]--><span style="font-size: small; font-family: verdana, geneva;">5.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp; </span><!--[endif]--><a href="http://notepad-plus-plus.org/" style="z-index: 0;"><span style="color: #0860a8; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm;">Notepad++ The Editor I used</span></a><o:p></o:p></span></p>
+
+<p style="margin-top: 0cm; margin-right: 0cm; margin-bottom: .0001pt; margin-left: 12.0pt; text-indent: -18.0pt; line-height: 18.0pt; mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background: white; z-index: 0;"><!--[if !supportLists]--><span style="font-size: small; font-family: verdana, geneva;">6.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size: small; font-family: verdana, geneva;"><a href="http://http/www.html5rocks.com" style="z-index: 0;"><span style="color: #0860a8; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; mso-ansi-language: EN-US;">html5rocks
+- a HTML5 site I like</span></a><span><o:p></o:p></span></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><b><span style="line-height: 115%;"><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: small; font-family: verdana, geneva;"><span style="line-height: 115%;">Artículo original
+disponible </span><a href="http://appdeveloper.intel.com/en-us/article/my-first-steps-towards-html5-trying-out-canvas#firstImpression">aquí.</a><span style="line-height: 115%;"><o:p></o:p></span></span></p><div class="fivestar-static-form-item"><div class="form-item">
+ <label>Promedio: </label>
+ <div class="form_value_wrapper"><div class="fivestar-widget-static fivestar-widget-static-vote fivestar-widget-static-5 clear-block"><div class="star star-1 star-odd star-first"><span class="off">0</span></div><div class="star star-2 star-even"><span class="off"></span></div><div class="star star-3 star-odd"><span class="off"></span></div><div class="star star-4 star-even"><span class="off"></span></div><div class="star star-5 star-odd star-last"><span class="off"></span></div></div></div>
+ <div class="description"><div class="fivestar-summary fivestar-summary-user"></div></div>
+</div>
+</div>      
+      <div class="viewsLarge"><span class="number">1K</span><span class="views">ver</span></div>      
+      <div class="tags">
+        TAGS: <ul class="links inline"><li class="taxonomy_term_1127 first"><a href="http://appdeveloper.intel.com/es-es/content-tier/Content" rel="tag" title="Blogs, video, articles, forums should = this, but we created navigation pages as articles, so either we redo those as pages or we create this category and manually manage.  Other way to think about it is, if it has a title and author on the page then it = Content.">Content</a></li>
+<li class="taxonomy_term_1129"><a href="http://appdeveloper.intel.com/es-es/platform/Cross%20Platform" rel="tag" title="">Cross Platform</a></li>
+<li class="taxonomy_term_1138"><a href="http://appdeveloper.intel.com/es-es/type/How%20To%20Guides" rel="tag" title="">How To Guides</a></li>
+<li class="taxonomy_term_1145"><a href="http://appdeveloper.intel.com/es-es/topic/Tools" rel="tag" title="">Tools</a></li>
+<li class="taxonomy_term_1159 last"><a href="http://appdeveloper.intel.com/es-es/technology/HTML5" rel="tag" title="">HTML5</a></li>
+</ul>      </div>
+      
+    </div> <!-- End post -->
+    
+    <div id="node-split"></div>
+  </div></div>
+
+ <!-- /node-inner, /node -->
+  <div id="comments">
+          <h2 id="comments-title">Comentarios</h2>
+        <div class="box"><div class="box-inner">
+
+      <h2 class="title">Enviar nuevo comentario</h2>
+  
+  <div class="content">
+    <form action="/es-es/comment/reply/15087" accept-charset="UTF-8" method="post" id="comment-form">
+<div><div class="form-item" id="edit-name-wrapper">
+ <label for="edit-name">Su nombre: <span class="form-required" title="Este campo es obligatorio.">*</span></label>
+ <div class="form_value_wrapper"><input maxlength="60" name="name" id="edit-name" size="30" class="form-text required" type="text"></div>
+</div>
+<div class="form-item" id="edit-mail-wrapper">
+ <label for="edit-mail">Dirección de correo electrónico: <span class="form-required" title="Este campo es obligatorio.">*</span></label>
+ <div class="form_value_wrapper"><input maxlength="64" name="mail" id="edit-mail" size="30" class="form-text required" type="text"></div>
+ <div class="description">The content of this field is kept private and will not be shown publicly.</div>
+</div>
+<div class="form-item" id="edit-homepage-wrapper">
+ <label for="edit-homepage">Homepage: </label>
+ <div class="form_value_wrapper"><input maxlength="255" name="homepage" id="edit-homepage" size="30" class="form-text" type="text"></div>
+</div>
+<div class="form-item" id="edit-comment-wrapper">
+ <label for="edit-comment">Comment: <span class="form-required" title="Este campo es obligatorio.">*</span></label>
+ <div class="form_value_wrapper"><div class="resizable-textarea"><span><textarea cols="60" rows="15" name="comment" id="edit-comment" class="form-textarea resizable required textarea-processed"></textarea><div style="margin-right: -12px;" class="grippie"></div></span></div></div>
+</div>
+<fieldset id="fieldset_comment_filter_format" class=" collapsible collapsed"><legend class="collapse-processed"><a href="#">Formato de entrada</a></legend><div class="fieldset-wrapper"><div class="form-item" id="edit-format-1-wrapper">
+ <div class="form_value_wrapper"><label class="option" for="edit-format-1"><input id="edit-format-1" name="format" value="1" checked="checked" class="form-radio wysiwyg wysiwyg-format-1 wysiwyg-editor-none wysiwyg-field-edit-comment wysiwyg-status-1 wysiwyg-toggle-1 wysiwyg-resizable-1" type="radio"> Filtered HTML</label></div>
+ <div class="description"><ul class="tips"><li>Las direcciones de página web y las direcciones de correo electrónico se convierten en enlaces automáticamente.</li><li>Etiquetas
+ HTML permitidas: &lt;a&gt; &lt;img&gt; &lt;em&gt; &lt;strong&gt; 
+&lt;cite&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; 
+&lt;dt&gt; &lt;dd&gt; &lt;b&gt; &lt;i&gt; &lt;blockquote&gt; 
+&lt;strike&gt;</li><li>Cambio automático de líneas y párrafos.</li></ul></div>
+</div><div class="form-item" id="edit-format-4-wrapper">
+ <div class="form_value_wrapper"><label class="option" for="edit-format-4"><input id="edit-format-4" name="format" value="4" class="form-radio wysiwyg wysiwyg-format-4 wysiwyg-editor-none wysiwyg-field-edit-comment wysiwyg-status-1 wysiwyg-toggle-1 wysiwyg-resizable-1" type="radio"> Plain Text</label></div>
+</div><p><a href="http://appdeveloper.intel.com/es-es/filter/tips">Más información sobre las opciones de formato</a></p></div>
+
+</fieldset>
+<input name="form_build_id" id="form-cb3e9c5ce077717a1cbb1406ef37d773" value="form-cb3e9c5ce077717a1cbb1406ef37d773" type="hidden">
+<input name="form_id" id="edit-comment-form" value="comment_form" type="hidden">
+<div class="captcha"><input name="captcha_sid" id="edit-captcha-sid" value="6712730" type="hidden">
+<input name="captcha_token" id="edit-captcha-token" value="8f662676aa3ad23ec5586449c0af8df6" type="hidden">
+<input autocomplete="off" name="captcha_response" id="edit-captcha-response" value="reCAPTCHA" type="hidden">
+<div class="form-item" id="captcha_captcha_widgets_captcha_form-wrapper">
+ <div class="form_value_wrapper"><script type="text/javascript" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/challenge"></script><script type="text/javascript" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/recaptcha.js"></script><div class=" recaptcha_nothad_incorrect_sol recaptcha_isnot_showing_audio" id="recaptcha_widget_div" style=""><div id="recaptcha_area"><table id="recaptcha_table" class="recaptchatable recaptcha_theme_white"> <tbody><tr> <td colspan="6" class="recaptcha_r1_c1"></td> </tr> <tr> <td class="recaptcha_r2_c1"></td> <td colspan="4" class="recaptcha_image_cell"><div style="width: 300px; height: 57px;" id="recaptcha_image"><img style="display: block;" alt="Pista de imagen reCAPTCHA" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/image.jpg" height="57" width="300"></div></td> <td class="recaptcha_r2_c2"></td> </tr> <tr> <td rowspan="6" class="recaptcha_r3_c1"></td> <td colspan="4" class="recaptcha_r3_c2"></td> <td rowspan="6" class="recaptcha_r3_c3"></td> </tr> <tr> <td rowspan="3" class="recaptcha_r4_c1" height="49"> <div class="recaptcha_input_area"> <label for="recaptcha_response_field" class="recaptcha_input_area_text"><span id="recaptcha_instructions_image" class="recaptcha_only_if_image recaptcha_only_if_no_incorrect_sol">Escribe las dos palabras:</span><span id="recaptcha_instructions_audio" class="recaptcha_only_if_no_incorrect_sol recaptcha_only_if_audio">Escribe lo que oigas:</span><span id="recaptcha_instructions_error" class="recaptcha_only_if_incorrect_sol">Incorrecto. Vuélvelo a intentar.</span></label><br> <span style="display: none;" id="recaptcha_challenge_field_holder"><input name="recaptcha_challenge_field" id="recaptcha_challenge_field" value="03AHJ_VuuLVDVleEXpRPSMywnzUG5wHTYZLaDBGIERAlHWupFA0gTXtfkDQfOm_9ictF8uOf7aNnquD_H1m9ybpArfLkB6cR9Q0H5pE2_HRwLiRX8rrJpxZ83qN0QCDjZj3MmDFVLkDqtUCmgzQtmcQUCs_mvlLSw2LA" type="hidden"></span><input autocomplete="off" name="recaptcha_response_field" id="recaptcha_response_field" autocorrect="off" autocapitalize="off" type="text"> </div> </td> <td rowspan="4" class="recaptcha_r4_c2"></td> <td><a href="javascript:Recaptcha.reload();" title="Obtener una pista nueva" id="recaptcha_reload_btn"><img alt="Obtener una pista nueva" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/refresh.gif" id="recaptcha_reload" height="17" width="25"></a></td> <td rowspan="4" class="recaptcha_r4_c4"></td> </tr> <tr> <td><a href="javascript:Recaptcha.switch_type('audio');" title="Obtener una pista sonora" id="recaptcha_switch_audio_btn" class="recaptcha_only_if_image"><img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/audio.gif" id="recaptcha_switch_audio" alt="Obtener una pista sonora" height="16" width="25"></a><a href="javascript:Recaptcha.switch_type('image');" title="Obtener una pista visual" id="recaptcha_switch_img_btn" class="recaptcha_only_if_audio"><img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/text.gif" id="recaptcha_switch_img" alt="Obtener una pista visual" height="16" width="25"></a></td> </tr> <tr> <td><a target="_blank" href="http://www.google.com/recaptcha/help?c=03AHJ_VuuLVDVleEXpRPSMywnzUG5wHTYZLaDBGIERAlHWupFA0gTXtfkDQfOm_9ictF8uOf7aNnquD_H1m9ybpArfLkB6cR9Q0H5pE2_HRwLiRX8rrJpxZ83qN0QCDjZj3MmDFVLkDqtUCmgzQtmcQUCs_mvlLSw2LA&amp;hl=es" title="Ayuda" id="recaptcha_whatsthis_btn"><img alt="Ayuda" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/help.gif" id="recaptcha_whatsthis" height="16" width="25"></a></td> </tr> <tr> <td class="recaptcha_r7_c1"></td> <td class="recaptcha_r8_c1"></td> </tr> </tbody></table> </div></div><script>Recaptcha.widget = Recaptcha.$("recaptcha_widget_div"); Recaptcha.challenge_callback();</script>
+
+	<noscript>
+  		<iframe src="http://www.google.com/recaptcha/api/noscript?k=6LeMuAcAAAAAADFmx9xeDOuxDOR7xMIB-cJUbQcg" height="300" width="500" frameborder="0"></iframe><br/>
+  		<textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+  		<input type="hidden" name="recaptcha_response_field" value="manual_challenge"/>
+	</noscript></div>
+</div>
+</div><input name="op" id="edit-submit" value="Guardar" class="form-submit" type="submit">
+<input name="op" id="edit-preview" value="Vista previa" class="form-submit" type="submit">
+
+</div></form>
+  </div>
+
+</div></div> <!-- /box-inner, /box -->
+  </div>
+							</div>
+
+							
+													</div>
+					</div> <!-- /#content-inner, /#content -->
+<!-- End Content Section -->
+
+                  <div id="sidebar-left"><div id="sidebar-left-inner" class="region region-left">
+            <div id="block-intel_blog-0" class="block block-intel_blog region-odd odd region-count-1 count-5"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="storyList moreFrom">
+  <div class="header">
+    <h3>MORE FROM<br>HERNáN ALIJO</h3>
+
+    <div class="avatar"><div class="contactDetails">
+        <div class="socialMediaIcons"><a href="http://twitter.com/@_Alijo" class="twitter" target="_blank">Twitter</a><a href="http://facebook.com/html5.es" class="facebook" target="_blank">Facebook</a><a href="mailto:hernan.alijo@intel.com" class="email" target="_blank">Email</a></div>
+      </div>
+    </div>
+
+    <div class="profileDetails">
+      <strong>Last&nbsp;seen:</strong> Aug 03 2012 - 11:31<br>
+      <strong>Joined:</strong> May 22 2011<br>
+      <img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/brown_belt.gif" alt="Brown Belt">
+      <strong>Brown Belt</strong>
+      <div class="points">4388 Points</div>
+    </div>
+  </div></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views-7962062070ac83f7694e9a700f88434f" class="block block-views region-even even region-count-2 count-6"><div class="block-inner">
+
+      <h2 class="title">Related Articles</h2>
+  
+  <div class="content">
+    <div class="view view-intel-blog-related-content view-id-intel_blog_related_content view-display-id-block_1 altHighlight storyList view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    
+<div class="storyBrief">
+  <div class="link">
+    <a href="http://appdeveloper.intel.com/es-es/blog/2012/08/03/curso-de-html5-en-video-clase-12-dispositivos">Curso de HTML5 en Video. Clase 12: Dispositivos</a>        <div class="viewsSmall"><span class="number">153</span><span class="views">Views</span></div>
+  </div>
+  <p class="description">
+    August 03, 2012 08:42 AM  </p>
+</div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+    
+<div class="storyBrief">
+  <div class="link">
+    <a href="http://appdeveloper.intel.com/es-es/blog/2012/08/01/curso-de-html5-en-video-clase-11-almacenamiento">Curso de HTML5 en Video. Clase 11: Almacenamiento</a>        <div class="viewsSmall"><span class="number">199</span><span class="views">Views</span></div>
+  </div>
+  <p class="description">
+    August 01, 2012 06:43 AM  </p>
+</div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    
+<div class="storyBrief">
+  <div class="link">
+    <a href="http://appdeveloper.intel.com/es-es/blog/2012/07/30/curso-de-html5-en-video-clase-10-server-sent-events-websocket-comunicaciones-parte-3">Curso de HTML5 en Video. Clase 10: Server-Sent Events &amp; WebSocket   (Comunicaciones, Parte 3)</a>        <div class="viewsSmall"><span class="number">246</span><span class="views">Views</span></div>
+  </div>
+  <p class="description">
+    July 30, 2012 10:19 AM  </p>
+</div>  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+    
+<div class="storyBrief">
+  <div class="link">
+    <a href="http://appdeveloper.intel.com/es-es/blog/2012/07/30/curso-de-html5-en-video-clase-9-xdm-y-web-workers-comunicaciones-parte-2">Curso de HTML5 en Video. Clase 9: XDM y Web Workers (Comunicaciones Parte 2)</a>        <div class="viewsSmall"><span class="number">206</span><span class="views">Views</span></div>
+  </div>
+  <p class="description">
+    July 30, 2012 09:02 AM  </p>
+</div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+          </div></div> <!-- /#sidebar-left-inner, /#sidebar-left -->
+        
+
+<!-- Begin RHC Section -->
+				  					<div id="sidebar-right">
+						<div id="sidebar-right-inner" class="region region-right">
+					  		<div id="block-intel-0" class="block block-intel region-odd odd region-count-1 count-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="highlight" id="gettingStarted"> 
+					<div class="content">
+						<h3>ACCIONES PRINCIPALES</h3>
+						<ul>
+							<li><a href="http://appdeveloper.intel.com/es-es/sdksandtools">Descargue el SDK</a></li>
+							<li><a href="http://appdeveloper.intel.com/es-es/join">Unirse al programa</a></li>
+						</ul>
+						<h3>PLATAFORMAS DE DESARROLLO</h3>
+						<ul>
+							<li><a href="http://appdeveloper.intel.com/es-es/windows">Desarrolle para Windows*</a></li>
+							<li><a href="http://appdeveloper.intel.com/es-es/article/develop-ultrabooks-join-rebirth-personal-computing">Desarrolle para Ultrabook</a></li>
+						</ul>
+					</div>
+				</div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+<div id="block-intel-1" class="block block-intel region-even even region-count-2 count-2"><div class="block-inner">
+
+  
+  <div class="content">
+    <!-- Visit AppUp -->
+    <div class="highlight spotlight" id="visitAppUp">
+      <div class="content">
+        <ul>
+          <li><a href="http://www.appup.com/">Centro<br>Intel AppUp(SM)</a></li>
+        </ul>
+      </div>
+    </div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+<div id="block-intel_blog-1" class="block block-intel_blog region-odd odd region-count-3 count-3"><div class="block-inner">
+
+  
+  <div class="content">
+    <!-- FACEBOOK WIDGET -->
+					<div class="socialWidget facebookWidget">
+						<div class="headerContainer">
+							<img class="logo" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/appUpFacebook_logo.png">
+							<h2><a href="http://www.facebook.com/IntelAppUpDeveloperProgram" target="Facebook">Intel AppUp<br>on Facebook</a></h2>
+						</div>
+						<div class="content">
+							<script type="text/javascript" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/en_US.js"></script>
+							<script type="text/javascript">FB.init("1690883eb733618b294e98cb1dfba95a");</script>
+							<!-- you must replace the css attribute with a link to your own stylesheet - this is an absolute path to a remote server because the CSS file must be publicly available, and during development, my project was not.  Please update this css attribute in production. -->
+							<!-- whenever you update the facebook.css file, you'll need to increment the ?x in the css attribute path so Facebook does not use a cached version -->
+							<!-- documentation on this technique: http://www.daddydesign.com/wordpress/how-to-customize-your-facebook-fan-box/ -->
+							<fb:fan class="  fb_iframe_widget " profile_id="136829464493" stream="0" connections="6" logobar="0" width="178" height="245" css="http://malibu.cmdagency.com/ccamarillo/5831-2/facebook.css?8"><span style="height: 245px; width: 178px;"><iframe src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/fan.htm" class="fb_ltr" style="border: medium none; overflow: hidden; height: 245px; width: 178px;" name="f365084a61a7fba" id="f355f9acbfad31a" scrolling="no"></iframe></span></fb:fan>
+						</div>
+					</div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+<div id="block-intel_blog-2" class="block block-intel_blog region-even even region-count-4 count-4"><div class="block-inner">
+
+  
+  <div class="content">
+    <!-- TWITTER WIDGET -->
+					<div class="socialWidget twitterWidget">
+						<div class="headerContainer">
+							<img class="logo" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/bird_logo.png">
+							<h2><a href="https://twitter.com/#%21/Develop4AppUp" target="Twitter">Intel AppUp <br>on Twitter</a></h2>
+						</div>
+						<div id="twitter_feed"><ul class="jta-tweet-list"><li class="jta-tweet-list-item"><div class="jta-tweet-body "><span class="jta-tweet-text"><span class="jta-tweet-user-name"><span class="jta-tweet-user-screen-name"><a class="jta-tweet-user-screen-name-link" href="http://twitter.com/Develop4AppUp" target="_blank">Develop4AppUp</a></span></span> Ultimate Coder: Ultrabook Challenge has officially kicked off!  <a href="http://t.co/O1Ry2SBc" class="jta-tweet-a jta-tweet-link" target="_blank" rel="nofollow">http://t.co/O1Ry2SBc</a></span><span class="jta-tweet-attributes"><span class="jta-tweet-twitter-bird"><a href="https://twitter.com/intent/user?screen_name=Develop4AppUp" target="_blank" title="Develop4AppUp on Twitter"><span class="jta-tweet-twitter-bird-icon">&nbsp;</span></a></span><span class="jta-tweet-timestamp"><a class="jta-tweet-timestamp-link" data-timestamp="Wed, Aug 08 2012 16:07:44 +0000" href="http://twitter.com/Develop4AppUp/status/233233038698500098" target="_blank" title="miércoles, 08 de agosto de 2012 18:07:44">2 hours ago</a></span></span></div><div class="jta-clear">&nbsp;</div></li><li class="jta-tweet-list-item"><div class="jta-tweet-body "><span class="jta-tweet-text"><span class="jta-tweet-user-name"><span class="jta-tweet-user-screen-name"><a class="jta-tweet-user-screen-name-link" href="http://twitter.com/Develop4AppUp" target="_blank">Develop4AppUp</a></span></span> Learn more about Intel AppUp at <a href="http://search.twitter.com/search?q=%23SIGGRAPH2012" class="jta-tweet-a jta-tweet-hashtag" title="#SIGGRAPH2012" target="_blank" rel="nofollow">#SIGGRAPH2012</a>.  Meet up with us! <a href="http://t.co/RiRgS40A" class="jta-tweet-a jta-tweet-link" target="_blank" rel="nofollow">http://t.co/RiRgS40A</a></span><span class="jta-tweet-attributes"><span class="jta-tweet-twitter-bird"><a href="https://twitter.com/intent/user?screen_name=Develop4AppUp" target="_blank" title="Develop4AppUp on Twitter"><span class="jta-tweet-twitter-bird-icon">&nbsp;</span></a></span><span class="jta-tweet-timestamp"><a class="jta-tweet-timestamp-link" data-timestamp="Tue, Aug 07 2012 18:15:01 +0000" href="http://twitter.com/Develop4AppUp/status/232902684146016257" target="_blank" title="martes, 07 de agosto de 2012 20:15:01">Aug 7 (1 day ago)</a></span></span></div><div class="jta-clear">&nbsp;</div></li><li class="jta-tweet-list-item"><div class="jta-tweet-body "><span class="jta-tweet-text"><span class="jta-tweet-user-name"><span class="jta-tweet-user-screen-name"><a class="jta-tweet-user-screen-name-link" href="http://twitter.com/Develop4AppUp" target="_blank">Develop4AppUp</a></span></span> See the latest Intel has to offer for visual computing. Register at <a href="http://t.co/gwrNRWOw" class="jta-tweet-a jta-tweet-link" target="_blank" rel="nofollow">http://t.co/gwrNRWOw</a> w/ code 8072012 for a free <a href="http://search.twitter.com/search?q=%23SIGGRAPH" class="jta-tweet-a jta-tweet-hashtag" title="#SIGGRAPH" target="_blank" rel="nofollow">#SIGGRAPH</a> expo pass</span><span class="jta-tweet-attributes"><span class="jta-tweet-twitter-bird"><a href="https://twitter.com/intent/user?screen_name=Develop4AppUp" target="_blank" title="Develop4AppUp on Twitter"><span class="jta-tweet-twitter-bird-icon">&nbsp;</span></a></span><span class="jta-tweet-timestamp"><a class="jta-tweet-timestamp-link" data-timestamp="Mon, Aug 06 2012 20:27:40 +0000" href="http://twitter.com/Develop4AppUp/status/232573679798718464" target="_blank" title="lunes, 06 de agosto de 2012 22:27:40">Aug 6 (2 days ago)</a></span></span></div><div class="jta-clear">&nbsp;</div></li></ul></div><!-- Tweets are loaded here -->
+					</div>
+					<div class="socialBottom">
+						<h2>Follow us:</h2>
+						<div class="profile">
+							<a href="https://twitter.com/#%21/develop4appup" target="twitter"><img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/twitter_avatar_1_normal.jpg" alt="follow Intel AppUp Dev Pgm" height="35" width="35"></a>
+							<a href="https://twitter.com/#%21/develop4appup" target="twitter" class="name">Intel AppUp Dev Pgm</a>
+						</div>
+						<div class="profile">
+							<a href="https://twitter.com/#%21/bobduffy" target="twitter"><img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/showbob_normal.jpg" alt="follow Bob Duffy" height="35" width="35"></a>
+							<a href="https://twitter.com/#%21/bobduffy" target="twitter" class="name">Bob Duffy</a>
+						</div>
+						<div class="profile">
+							<a href="https://twitter.com/#%21/fromthefab" target="twitter"><img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/Rhonda_headshot2_normal.jpg" alt="follow Rhonda Peters" height="35" width="35"></a>
+							<a href="https://twitter.com/#%21/fromthefab" target="twitter" class="name">Rhonda Peters</a>
+						</div>
+						<div class="profile last">
+							<a href="https://twitter.com/#%21/Intelappup" target="twitter"><img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/5486_AppUp_TwitterAvatar_normal.jpg" alt="follow Bob Duffy" height="35" width="35"></a>
+							<a href="https://twitter.com/#%21/Intelappup" target="twitter" class="name">Intel AppUp</a>
+						</div>
+					</div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+						</div>
+						<div id="sidebar-footer"></div>
+					</div> <!-- /#sidebar-right-inner, /#sidebar-right -->
+				  <!-- End RHC Section -->
+
+				</div>
+			</div> <!-- /#main-inner, /#main -->
+<!-- End Main Container Section -->
+
+
+  </div> <!-- /#page-inner, /#page -->
+  </div><div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0pt; width: 0pt;"><div><iframe src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/xd_arbiter.htm" name="fb_xdm_frame_http" id="fb_xdm_frame_http"></iframe><iframe src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/xd_arbiter_002.htm" name="fb_xdm_frame_https" id="fb_xdm_frame_https"></iframe></div><div><iframe src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/oauth.htm" class="FB_UI_Hidden" style="border: medium none; overflow: hidden; height: 240px; width: 575px;" name="f3e85724d7265a8" id="f384d70d630c376" scrolling="no"></iframe></div><div></div></div></div>
+  <!-- Begin Footer section -->
+    <div id="footer" class="region region-footer">
+  <div id="footer-inner">
+    
+<style>
+#quicklinks .col {
+    max-width: 140px;
+}
+
+
+#quicklinks {
+    width: 970px;
+}
+</style>
+
+<div id="quicklinks">
+  <div id="abojogram" class="col">
+    <h5><a href="http://appdeveloper.intel.com/es-es/">INICIO</a></h5>
+    <ul>
+        <li><a href="http://appdeveloper.intel.com/es-es/program-overview">Visión general del programa</a></li>
+        <li><a href="http://appdeveloper.intel.com/es-es/sdksandtools">Descargue el SDK</a></li>
+        <li><a href="http://appdeveloper.intel.com/es-es/join">Unirse al programa</a></li>
+        <li><a href="http://appdeveloper.intel.com/es-es/dashboard/myapps">Envíe una aplicación</a></li>
+      </ul>
+  </div>
+
+  <div id="technical-requirements" class="col">
+    <h5><a href="http://appdeveloper.intel.com/es-es/development">DESARROLLO</a></h5>
+    <ul>
+      <li><a href="http://appdeveloper.intel.com/es-es/learn">Aprender</a></li> 
+      <li><a href="http://appdeveloper.intel.com/es-es/design">Diseño</a></li> 
+      <li><a href="http://appdeveloper.intel.com/es-es/build">Creación</a></li> 
+      <li><a href="http://appdeveloper.intel.com/es-es/publish">Publicar</a></li>
+    </ul>
+    
+    <br><br>
+
+    <h5><a href="http://appdeveloper.intel.com/es-es/sdksandtools">SDK Y HERRAMIENTAS</a></h5>
+    <ul>
+      <li><a href="http://appdeveloper.intel.com/es-es/developertools">Herramientas de desarrollador</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/sdksandtools">SDK Intel AppUp</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/test-submission-tools">Herramientas de prueba y envío</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/componentcatalog">Catálogo de componentes</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/ideplugins">Complementos IDE</a></li>
+    </ul>
+  </div>
+  
+  <div id="downloads" class="col">
+    <h5><a href="http://appdeveloper.intel.com/es-es/documentation">DOCUMENTACIÓN</a></h5>
+    <ul>
+      <li><a href="http://appdeveloper.intel.com/es-es/documentation">Examinar la biblioteca</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/documentation?platform%5B1129%5D=1129">Multiplataforma</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/documentation?platform%5B1130%5D=1130">Desarrollo para Windows</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/documentation?platform%5B1210%5D=1210">Desarrollo para Tizen</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/documentation?platform%5B1131%5D=1131">Desarrollo para MeeGo</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/documentation?type%5B1140%5D=1140">Guías para desarrolladores</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/documentation?type%5B1139%5D=1139">Ejemplos de código</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/documentation?type%5B1134%5D=1134">APIs</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/documentation?type%5B1136%5D=1136">Documentación del programa</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/documentation?type%5B1138%5D=1138">Guías descriptivas</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/documentation?type%5B1184%5D=1184">Casos prácticos</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/documentation?type%5B1135%5D=1135">Notas de la versión</a></li>
+    </ul>
+  </div>
+    
+  <div id="community-resources" class="col">
+    <h5><a href="http://appdeveloper.intel.com/es-es/opportunities">OPORTUNIDADES</a></h5>
+    <ul>
+      <li><a href="http://appdeveloper.intel.com/es-es/developerfunding">Financiación para desarrolladores</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/reputation">Programa Black Belt </a></li> 
+      <li><a href="http://appdeveloper.intel.com/es-es/legends">Programa de leyendas</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/affiliatestores">Tiendas asociadas</a></li>
+    </ul>
+  </div>
+
+  <div id="support" class="col">
+    <h5><a href="http://appdeveloper.intel.com/es-es/community">COMUNIDAD</a></h5>
+    <ul>
+      <li><a href="http://appdeveloper.intel.com/es-es/forum">Foros</a></li> 
+      <li><a href="http://appdeveloper.intel.com/es-es/blog">Blog</a></li> 
+      <li><a href="http://appdeveloper.intel.com/es-es/appup-show">Show de Intel AppUp</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/videos">Vídeos</a></li> 
+      <li><a href="http://appdeveloper.intel.com/es-es/reputation">Programa Black Belt </a></li> 
+      <li><a href="http://appdeveloper.intel.com/en-us/events">Eventos</a></li> 
+          </ul>
+  </div>
+  
+  <div id="support" class="col">
+    <h5><a href="http://appdeveloper.intel.com/es-es/support">ASISTENCIA</a></h5>
+    <ul>
+      <li><a href="http://appdeveloper.intel.com/es-es/article/frequently-asked-questions">Preguntas frecuentes</a></li> 
+      <li><a href="http://appdeveloper.intel.com/es-es/forum">Foros</a></li>
+      <li><a href="http://appdeveloper.intel.com/es-es/contact">Contáctenos</a></li>
+    </ul>
+    
+    <br>
+    
+    <h5>SÍGANOS EN</h5>
+    <a href="http://twitter.com/develop4appup" class="twitter"><img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/twitter_icon.jpg" alt="Twitter"></a> 
+    <a href="https://www.facebook.com/IntelAppUpDeveloperProgram"><img src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/facebook_icon.jpg" alt="Facebook"></a> 
+  </div>
+            
+  <div style="clear: both;"></div>
+</div>
+    <div class="footer-divider clear"></div>
+    <div id="block-intel-3" class="block block-intel region-odd odd region-count-3 count-11"><div class="block-inner">
+
+  
+  <div class="content">
+    <ul><li class="leaf first"><a href="http://appdeveloper.intel.com/es-es/sitemap">Mapa del sitio</a></li>
+<li class="leaf"><a href="http://software.intel.com/">Intel® Software Network</a></li>
+<li class="leaf"><a href="http://www.intel.com/sites/sitewide/es_ES/termsofuse.htm" title="">Términos de uso</a></li>
+<li class="leaf"><a href="http://www.intel.com/sites/sitewide/es_ES/tradmarx.htm" title="">Marcas comerciales</a></li>
+<li class="leaf"><a href="http://www.intel.com/sites/sitewide/es_ES/privacy/privacy.htm" title="">Privacidad</a></li>
+<li class="leaf last"><a href="http://www.intel.es/" title="">©Intel Corporation</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+<div id="block-intel_omniture-js" class="block block-intel_omniture region-even even region-count-4 count-12"><div class="block-inner">
+
+  
+  <div class="content">
+    <script type="text/javascript" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/wa_setup.js"></script><script language="JavaScript" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/dfaConfig.js"></script><script type="text/javascript">var wa_pageName = ""; var wa_org4 = "Blog"; var wa_orgX = "Hernán Alijo|"; var wa_custom01 = "Hernán Alijo"; var wa_custom05 = "Blog"; var wa_reportSuites = "intelappdeveloper,intelcorpsw"; var wa_geo = "asmo-na"; var wa_org1 = "sw"; var wa_org2 = "App Developer"; var wa_language = "es-es"; var wa_org3 = "es-es"; var wa_custom11 = "http://appdeveloper.intel.com/es-es/blog?page=6"; var wa_custom43 = "Blog|Hernán Alijo|"; var wa_eCustom28 = "http://appdeveloper.intel.com/es-es/blog/2011/12/15/mis-primeros-pasos-en-html5-trasteando-con-el-canvas"; var wa_urlQueryString = ""; var wa_trackDFA = "n"; </script><script type="text/javascript" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/wa_set_values.js"></script><script type="text/javascript" src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/wa_process.js"></script>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+    <br style="clear:both;">
+
+    <script type="text/javascript">
+      var upd_msg = "Missing updates. Please update your browser.";
+      var upd_url = "http://www.intel.com";
+      var upd_icon = "/'.path_to_theme().'/images/ie/";
+      var incompatible = 0;
+
+      var nVer = navigator.appVersion;
+      var nAgt = navigator.userAgent;
+      var browserName  = navigator.appName;
+      var fullVersion  = ""+parseFloat(navigator.appVersion);
+      var majorVersion = parseInt(navigator.appVersion,10);
+      var nameOffset,verOffset,ix;
+
+      if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
+        browserName = "msie";
+        fullVersion = nAgt.substring(verOffset+5);
+      }
+      // In Opera, the true version is after "Opera"
+      else if ((verOffset=nAgt.indexOf("Opera"))!=-1) {
+        browserName = "opera";
+        fullVersion = nAgt.substring(verOffset+6);
+      }
+      // In Chrome, the true version is after "Chrome"
+      else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {
+        browserName = "chrome";
+        fullVersion = nAgt.substring(verOffset+7);
+      }
+      // In Safari, the true version is after "Safari"
+      else if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
+       browserName = "safari";
+       fullVersion = nAgt.substring(verOffset+7);
+      }
+      // In Firefox, the true version is after "Firefox"
+      else if ((verOffset=nAgt.indexOf("Firefox"))!=-1) {
+       browserName = "firefox";
+       fullVersion = nAgt.substring(verOffset+8);
+      }
+      // In most other browsers, "name/version" is at the end of userAgent
+      else if ((nameOffset=nAgt.lastIndexOf(" ")+1)<(verOffset=nAgt.lastIndexOf("/"))) {
+        browserName = nAgt.substring(nameOffset,verOffset);
+        fullVersion = nAgt.substring(verOffset+1);
+        if (browserName.toLowerCase()==browserName.toUpperCase()) {
+          browserName = navigator.appName;
+        }
+      }
+      // trim the fullVersion string at semicolon/space if present
+      if ((ix=fullVersion.indexOf(";"))!=-1) fullVersion=fullVersion.substring(0,ix);
+      if ((ix=fullVersion.indexOf(" "))!=-1) fullVersion=fullVersion.substring(0,ix);
+
+      majorVersion = parseInt(""+fullVersion,10);
+      if (isNaN(majorVersion)) {
+        fullVersion  = ""+parseFloat(navigator.appVersion);
+        majorVersion = parseInt(navigator.appVersion,10);
+      }
+      if(browserName=="safari" && majorVersion<530) {
+        upd_url = "http://www.apple.com/safari/download";
+        upd_msg = "Safari is missing updates required to view this site. Click here to update...";
+        upd_icon = "/'.path_to_theme().'/images/safari/";
+        incompatible = 1;
+      }
+      if(browserName=="msie" && majorVersion<7) {
+        upd_url = "http://www.microsoft.com/windows/internet-explorer/default.aspx";
+        upd_msg = "Internet Explorer is missing updates required to view this site. Click here to update...";
+        upd_icon = "/'.path_to_theme().'/images/ie/";
+        incompatible = 1;
+      }
+      if(browserName=="firefox" && majorVersion<3) {
+        upd_url = "http://www.mozilla.com";
+        upd_msg = "Firefox is missing updates required to view this site. Click here to update...";
+        upd_icon = "/'.path_to_theme().'/images/mozilla/";
+        incompatible = 1;
+      }
+      if (browserName=="chrome" && majorVersion<3) {
+        upd_url = "http://www.google.com/chrome";
+        upd_msg = "Google Chrome is missing updates required to view this site. Click here to update...";
+        upd_icon = "/'.path_to_theme().'/images/chrome/";
+        incompatible = 1;
+      }
+      var IE6UPDATE_OPTIONS = {
+        icons_path: upd_icon,
+        url : upd_url,
+        message : upd_msg
+      };
+
+    </script>
+  </div> <!-- End Footer Inner -->
+</div> <!-- End Footer -->  <!-- End Footer section -->
+  
+<!-- End Page Section -->
+
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://d1ros97qkrwjf5.cloudfront.net/39/eum/rum.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrf2","beacon-1.newrelic.com","e979e18c2a",160701,"YQYHbEYEW0JVB01QClhMJFtADFpfGztLXBNfEAxXWgxbVmsSUFwS",0,1021,new Date().getTime()])
+
+//--><!]]>
+</script>
+
+
+
+
+
+
+<ul aria-activedescendant="ui-selectmenu-item-696" style="width: 100px; left: 855.5px; top: 74px;" class="ui-selectmenu-menu ui-widget ui-widget-content ui-corner-bottom ui-selectmenu-menu-dropdown" aria-hidden="true" role="listbox" aria-labelledby="edit-lang-dropdown-select-button" id="edit-lang-dropdown-select-menu"><li style="" class="" role="presentation"><a href="#" tabindex="-1" role="option" aria-selected="false">English</a></li><li style="" class="" role="presentation"><a href="#" tabindex="-1" role="option" aria-selected="false">Français</a></li><li style="" class="" role="presentation"><a href="#" tabindex="-1" role="option" aria-selected="false">Deutsch</a></li><li style="" class="" role="presentation"><a href="#" tabindex="-1" role="option" aria-selected="false">Italiano</a></li><li class="ui-corner-bottom ui-selectmenu-item-selected" role="presentation"><a id="ui-selectmenu-item-696" href="#" tabindex="-1" role="option" aria-selected="true">Español</a></li></ul><script src="mis-primeros-pasos-en-html5-trasteando-con-el-canvas_files/rum.js" async="" type="text/javascript"></script></body><!-- End Body section --></html>

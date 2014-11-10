@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+	<title>Fullscreen API Example</title>
+	<style>
+		h1 {
+			font-size: 2.6em;
+		}
+		.left {
+			width: 920px !important;
+			padding-bottom: 40px;
+		}
+	</style>
+</head>
+<body data-twttr-rendered="true">
+
+	<!-- Add the HTML header -->
+	<div id="page">
+
+		<!-- holds content, will be frequently changed -->
+		<div id="contentHolder">
+
+			<!-- start the left section if not the homepage -->
+			<section class="left">
+				<h1>Fullscreen API</h1>
+				
+				<div style="padding:20px;">
+					<button onclick="launchFullscreen(document.documentElement);" class="sexyButton">Launch Fullscreen</button>
+					<button onclick="cancelFullscreen();" class="sexyButton">Hide Fullscreen</button>
+					<button onclick="dumpFullscreen();" class="sexyButton">Dump Fullscreen Property Data</button>
+				</div>
+
+				<style>
+					:-webkit-full-screen {
+						background: pink;
+					}
+					:-moz-full-screen {
+						background: pink;
+					}
+				</style>
+				<script>
+					function launchFullscreen(element) {
+						if(element.requestFullScreen) {
+							element.requestFullScreen();
+						} else if(element.mozRequestFullScreen) {
+							element.mozRequestFullScreen();
+							} else if(element.webkitRequestFullScreen) {
+								element.webkitRequestFullScreen();
+							}
+					}
+
+					function cancelFullscreen() {
+						if(document.cancelFullScreen) {
+							document.cancelFullScreen();
+						} else if(document.mozCancelFullScreen) {
+							document.mozCancelFullScreen();
+							} else if(document.webkitCancelFullScreen) {
+								document.webkitCancelFullScreen();
+							}
+					}
+
+					function dumpFullscreen() {
+						console.log("document.fullScreenElement is: ", document.fullScreenElement || document.mozFullScreenElement || document.webkitFullScreenElement);
+						console.log("document.fullScreenEnabled is: ", document.fullScreenEnabled || document.mozScreenEnabled || document.webkitScreenEnabled);
+					}
+
+					// Events
+					document.addEventListener("fullscreenchange", function(e) {
+						console.log("fullscreenchange event! ", e);
+					});
+					document.addEventListener("mozfullscreenchange", function(e) {
+						console.log("mozfullscreenchange event! ", e);
+					});
+					document.addEventListener("webkitfullscreenchange", function(e) {
+						console.log("webkitfullscreenchange event! ", e);
+					});
+
+					// Add different events for fullscreen
+				</script>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

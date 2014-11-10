@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<!-- no cache headers -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<!-- end no cache headers -->
+<script src="jb_data/jquery.js"></script>
+</head>
+<body style="margin:0; padding: 0; border:0">
+<!-- LINE: 182 FROM LINES: 216 -->
+<iframe id="promoframe" src="ads_data_003/jb.htm" style="border:none" height="250px" width="250px"></iframe><div style="position:absolute; top:0; left:0; height:250px; width:250px; overflow:hidden;"><a href="http://bd.black6.net/banners/rd.php?bannerid=345874543908785&amp;r=YmxhY2s2c21zLmNvbS9pbmRleC5waHA/bGFuZz1lcw==&amp;id=345874543908785&amp;m=pc" style="width:100%; height:100%;" target="_blank"><img src="jb_data/250x250-spa.gif" style="width:100%; height:100%;"></a></div><!-- http://sfondimobile.mobi/banner/250x250.jpg --->
+<script>
+function loadXMLDoc(tk, clickcount, referrer)
+{
+	var xmlhttp;
+	if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
+	}else{// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function(){
+		if (xmlhttp.readyState==4 && xmlhttp.status==200){
+				var loc = xmlhttp.responseText;
+				if(loc != ""){
+					window.location = loc;
+					//document.write(loc);
+				}// any result
+		}
+	}
+	var url = "http://bd.black6.net/banners/tk.php?se=OX_b496e691&tk="+tk+"&cl="+clickcount+"&ref="+referrer;
+	xmlhttp.open("GET",url,true);
+	xmlhttp.send();
+}
+
+function doTrack(){
+	var tk = "NS";
+	var clickcount = 0;
+	if(typeof(Storage)!=="undefined")
+	{
+		if (localStorage.clickcount){
+			localStorage.clickcount=Number(localStorage.clickcount)+1;
+		}else{
+			localStorage.clickcount=1;
+		}
+		clickcount = localStorage.clickcount;
+		if (localStorage.tk){
+			tk = localStorage.tk;
+		}else{
+			localStorage.tk = "OX_b496e691";
+			tk = localStorage.tk;
+		}
+	}
+	var parser = document.createElement('a');
+	parser.href = document.referrer;
+	var referrer = parser.hostname;
+	loadXMLDoc(tk, clickcount, referrer);
+}
+// only after loaded page 
+if (window.addEventListener) {
+  window.addEventListener('load', doTrack, false);
+}else if (window.attachEvent) {
+  window.attachEvent('onload', doTrack );
+}
+</script>
+
+</body></html>

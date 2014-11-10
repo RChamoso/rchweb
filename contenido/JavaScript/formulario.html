@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script type="text/javascript">
+ function validar()
+ {
+  if(document.fomulario.nombre1.value.length=="")
+  {
+   alert('Introduce tu nombre');
+   document.formulario.getElementById('nombre').focus();
+   return(false);
+  }
+  if(document.fomulario.email.value.length=="")
+  {
+   alert('Introduce tu email');
+   document.formulario.email.focus();
+   return(false);
+  }
+  if(/^\w+([\.-]?\w+)*@w+([\.-]?\w+)*(\.\w(2.3))+$/.test(document.formulario.email.value))
+  {
+  }
+  else
+  {
+   alert('La direccion email es incorrecta');
+   document.formulario.email.focus();
+   return(false);
+   
+  }
+  document.formulario.submit();
+ }
+</script>
+
+</head>
+
+<body>
+ <form action="" name="formulario" method="get">
+  Nombre: <br />
+  <input type="text" id="nombre" name="nombre"/><br />
+  email: <br />
+  <input type="text" name="email" /><br />
+  <input type="submit" value="Enviar" onclick="validar()"/>
+ </form>
+
+
+</body>
+</html>

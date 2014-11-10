@@ -1,0 +1,83 @@
+/*  
+Theme Name: ewmBlue
+Theme URI: http://www.elwebmaster.com
+Description: Tema dise&ntilde;ado especialmente para elWebmaster.com.
+Version: 1.0
+Author: Daniela Rodr&iacute;guez
+Author URI: http://www.elwebmaster.com
+
+	Prohibida su copia o reproducci&oacute;n sin permiso de la autora.
+	
+*/
+
+
+#page {
+	width: 100%;
+	border: none;
+	background: none;
+}
+#header {
+	border-bottom: 3px solid #59780a;
+	height: auto;
+	display: none;
+}
+#headerimg {
+	width: auto;
+}
+#headerimg .description{
+	color: #666666;
+	text-align: right;
+	padding-bottom: 3px;
+	right: 0px;
+	position: absolute;
+	left: auto;
+}
+h1 {
+	margin:0px;
+	font: bold 36px/100% "Trebuchet MS", Tahoma, Arial;
+	text-align: right;
+	padding-bottom: 3px;
+}
+h1 a, h1 a:visited{
+	color: #000;
+	text-decoration: none;
+}
+#content {
+	padding: 10px 0px 30px 0px;
+	width: 100%;
+	overflow: visible;
+}
+.post-date {
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #666666;
+	height: auto;
+}
+.post-month, .post-day {
+	color: #666666;
+	display: inline;
+	font-size: 11px;
+	padding: 0px;
+	margin: 0px;
+}
+.post-title {
+	margin: 0px;
+	width: 100%;
+	clear: both;
+}
+.post-cat {
+	float:left;
+	font-size: 11px;
+	padding: 0;
+}
+.post-comments, .post-calendar {
+	float: right;
+	font-size: 11px;
+}
+.noprint {display:none}
+.publiNoPrint {display:none}
+.imprimir {display:none}
+.logoImprimir {display:block; float: left;}
+#comments, #respond, .navigation, #nav, #commentform, #sidebar, #footer, #credits, #relacionados, #menuImprimir {
+	display: none;
+}

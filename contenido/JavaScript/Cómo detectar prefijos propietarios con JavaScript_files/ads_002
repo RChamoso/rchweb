@@ -1,0 +1,41 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = {}; 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=CJaWcqlBXUc_UK42k8AOH84GQDoX40K8Dje76-0bAjbcBEAEg-P-KCygCUKyDiev______wFg1YXYgvgIoAHD1sHfA8gBAakCY24jzwGDtT6oAwGqBJsBT9BfEC5c4vH2qgZwfxGouAtZ74XcMbf94IGbdrDbDIn4Kl9TBgStA1Oo_2Mr6Zl30TqYBCrPBFioAL5DvwgizXbzHodVE6U-rKn6GeW4vAa2a00Jyx9AD3Kss4ONyA2joQ4bKOF-Z9w1g5eQWj-RwacAfIN6BIngGUP_Gx_YDHqu-lYwNUcdyNgTRFuYKi4DO_DhfHV4esnei8mIBgGAB6WpviA&amp;num=1&amp;cid=5Gh0zO7YGPBlRtk_BvK7qzB_&amp;sig=AOD64_3e0avBrfCqFr2MIDES2bLtf8RqBw&amp;client=ca-pub-1883945583732831&amp;adurl=http://formacion2.laboris.net/cursos-formacion.htm%3Fq%3Djavascript%26tid%3Dc12dc3db-867b-4c31-8cc7-51ae9d75c659"; 
+google_ad.visible_url = "JavaScript.formacion.laboris.net"; 
+google_ad.line1 = "Cursos de JavaScript"; 
+google_ad.line2 = "\x26#191;Buscas curso Especializado?"; 
+google_ad.line3 = "Solicita Informaci\x26#243;n. \x26#161;Plazas 2013!"; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_ad = {}; 
+google_ad.n = 2; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=C72IdqlBXUc_UK42k8AOH84GQDoOLsYkCk-f3-iLAjbcBEAIg-P-KCygCUM-qtf3-_____wFg1YXYgvgIoAHlrdf0A8gBAakCY24jzwGDtT6oAwGqBJ4BT9BPMzJc4fH2qgZwfxGouAtZ74XcMbf94IGbdrDbDIn4Kl9TBgStA1Oo_2Mr6Zl30TqYBCrPBFioAL5DvwgizXbzHodVE6U-rKn6GeW4vAa2a00Jyx9AD3Kss4ONyA2joQ4bKOF-Z9w1g5eQWj-RwacAfIN6BImoGZ_98a-A4otDEYno2KzDazPl4VhtKer2ODQUf2WYfAzbRXPwUVyIBgGAB4PSqAs&amp;num=2&amp;cid=5Gh0zO7YGPBlRtk_BvK7qzB_&amp;sig=AOD64_16RmGRvt2QXkB-27q7HVPd9T1ZuA&amp;client=ca-pub-1883945583732831&amp;adurl=http://www2.lectiva.com/cursos-formacion.htm%3Fq%3Djavascript%26tid%3Dc473e91c-2de0-0001-94f7-17e037db1e2e"; 
+google_ad.visible_url = "Cursos-JavaScript.lectiva.com"; 
+google_ad.line1 = "Estudia JavaScript"; 
+google_ad.line2 = "Cursos de JavaScript."; 
+google_ad.line3 = "Todas modalidades. Inf\x26#243;rmate gratis"; 
+google_ad.regionname = ""; 
+google_ads[1] = google_ad; 
+google_info.feedback_url = "http://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.elwebmaster.com/general/como-detectar-prefijos-propietarios-con-javascript%26gl%3DES%26hl%3Des%26client%3Dca-pub-1883945583732831%26ai0%3DCJaWcqlBXUc_UK42k8AOH84GQDoX40K8Dje76-0bAjbcBEAEg-P-KCygCUKyDiev______wFg1YXYgvgIoAHD1sHfA8gBAakCY24jzwGDtT6oAwGqBJsBT9BfEC5c4vH2qgZwfxGouAtZ74XcMbf94IGbdrDbDIn4Kl9TBgStA1Oo_2Mr6Zl30TqYBCrPBFioAL5DvwgizXbzHodVE6U-rKn6GeW4vAa2a00Jyx9AD3Kss4ONyA2joQ4bKOF-Z9w1g5eQWj-RwacAfIN6BIngGUP_Gx_YDHqu-lYwNUcdyNgTRFuYKi4DO_DhfHV4esnei8mIBgGAB6WpviA%26ai1%3DC72IdqlBXUc_UK42k8AOH84GQDoOLsYkCk-f3-iLAjbcBEAIg-P-KCygCUM-qtf3-_____wFg1YXYgvgIoAHlrdf0A8gBAakCY24jzwGDtT6oAwGqBJ4BT9BPMzJc4fH2qgZwfxGouAtZ74XcMbf94IGbdrDbDIn4Kl9TBgStA1Oo_2Mr6Zl30TqYBCrPBFioAL5DvwgizXbzHodVE6U-rKn6GeW4vAa2a00Jyx9AD3Kss4ONyA2joQ4bKOF-Z9w1g5eQWj-RwacAfIN6BImoGZ_98a-A4otDEYno2KzDazPl4VhtKer2ODQUf2WYfAzbRXPwUVyIBgGAB4PSqAs\x26usg\x3dAFQjCNEh-WlnJjOPUHztJyYN5QcYxtzOvg";
+var google_attribution_text = "Gestión anuncios";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

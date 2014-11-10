@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset='windows-1252' />
+	<style type="text/css">
+		*{
+			margin: 0 auto;
+			padding: 0px;
+		}
+		header, nav, section, aside, article, hgroup, footer{
+			display: block;
+		}
+		body{
+			background-color: #000000;
+		}
+		body:before{
+			content: "";
+			left: 0;
+			height: 10px;
+			position: fixed;
+			top: -10px;
+			width: 100%;
+			z-index: 100;
+			box-shadow: 0px 2px 10px rgb(250,250,250);
+			-o-box-shadow: 0px 2px 10px rgb(250,250,250);
+			-moz-box-shadow: 0px 2px 10px rgb(250,250,250);
+			-webkit-box-shadow: 0px 2px 10px rgb(250,250,250);
+		}
+		#principal{
+			background-color: #270BB7;
+			height: 100%;
+			margin: 0 auto;
+			margin-bottom: 35px;
+			margin-top: 20px;
+			padding: 10px;
+			position: relative;
+			text-align: center;
+			width: 960px;
+		}
+		.hoja{
+			color: #FF7905;
+			height: 300px;
+			line-height: 1.5;
+			margin: 60px auto;
+			padding: 2em 1.5em;
+			padding-top: 20px;
+			position: relative;
+			width: 600px;
+			border-radius: 4px;
+			-o-border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+		}
+		.hoja:before, .hoja:after
+		{
+			background: rgba(250, 250, 250, 0.1);
+			bottom: 15px;
+			content: "";
+			left: 7px;
+			max-width:300px;
+			position: absolute;
+			top: 85%;
+			width: 50%;
+			z-index: -1;
+			box-shadow: 0 15px 10px #B3D3D2;
+			-o-box-shadow: 0 15px 10px #B3D3D2;
+			-moz-box-shadow: 0 15px 10px #B3D3D2;
+			-webkit-box-shadow: 0 15px 10px #B3D3D2;
+			transform: rotate(-2deg);
+			-o-transform: rotate(-2deg);
+			-moz-transform: rotate(-2deg);
+			-webkit-transform: rotate(-2deg);
+		}
+		.hoja:after
+		{
+			left: auto;
+			right: 7px;
+			transform: rotate(2deg);
+			-o-transform: rotate(2deg);
+			-moz-transform: rotate(2deg);
+			-webkit-transform: rotate(2deg);
+		}
+		h2.boton {
+			background: #398525;
+			background: linear-gradient(top, #8DD297 0%, #398525 100%);
+			background: -o-linear-gradient(top, #8DD297 0%, #398525 100%);
+			background: -moz-linear-gradient(top, #8DD297 0%, #398525 100%);
+			background: -webkit-linear-gradient(top, #8DD297 0%, #398525 100%);
+			border: 1px solid #5ea617;
+			color: #147032;
+			display: block;
+			font: bold 30px/15px Helvetica, Sans-Serif;
+			height: 30px;
+			margin: 0 auto;
+			margin-bottom: 10px;
+			margin-top: 30px;
+			padding: 20px 0 0 0;
+			text-align: center;
+			text-decoration: none;
+			text-shadow: 0px 1px 2px #b4d1ad;
+			text-transform: uppercase;
+			width: 250px;
+			box-shadow: inset 0px 0px 6px #fff;
+			-o-box-shadow: inset 0px 0px 6px #fff;
+			-moz-box-shadow: inset 0px 0px 6px #fff;
+			-webkit-box-shadow: inset 0px 0px 6px #fff;
+			border-radius: 10px;
+			-o-border-radius: 10px;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+		}
+		h2.boton:hover {
+			background: linear-gradient(bottom, #8DD297 0%, #398525 100%);
+			background: -o-linear-gradient(bottom, #8DD297 0%, #398525 100%);
+			background: -moz-linear-gradient(bottom, #8DD297 0%, #398525 100%);
+			background: -webkit-linear-gradient(bottom, #8DD297 0%, #398525 100%);
+			color: #270BB7;
+		}
+		#boton_microdatos{
+			background: #5C3FFF;
+			display: block;
+			font: bold 20px Helvetica, Sans-Serif;
+			height: 75px;
+			margin: 20px;
+			padding-top: 25px;
+			text-align: center;
+			width: 110px;
+			border-radius: 50px;
+			-o-border-radius: 50px;
+			-moz-border-radius: 50px;
+			-webkit-border-radius: 50px;
+			box-shadow: 0px 0px 15px #000000, 0 0 4px rgba(250, 250, 250, .5) inset;
+			-o-box-shadow: 0px 0px 15px #000000, 0 0 4px rgba(250, 250, 250, .5) inset;
+			-moz-box-shadow: 0px 0px 15px #000000, 0 0 4px rgba(250, 250, 250, .5) inset;
+			-webkit-box-shadow: 0px 0px 15px #000000, 0 0 4px rgba(250, 250, 250, .5) inset;
+			transition: transform 2s, opacity 2s, background 10s, width 10s, height 10s;
+			-o-transition: -o-transform 2s, opacity 2s, background 10s, width 10s, height 10s;
+			-moz-transition: -moz-transform 2s, opacity 2s, background 10s, width 10s, height 10s;
+			-webkit-transition: -webkit-transform 2s, opacity 2s, background 10s, width 10s, height 10s;
+		}
+		#boton_microdatos h1{
+			margin: 0 auto;
+			position: relative;
+		}
+		#boton_microdatos span{
+			display: none;
+		}
+		#boton_microdatos:hover{
+			background: #B3D3D2;
+			color: #270BB7;
+			height: 90px;
+			opacity: .5;
+			width: auto;
+		}
+		#boton_microdatos:hover span{
+			display: block;
+		}
+		article h2{
+			display: block;
+			height: 45px;
+			margin: 0px;
+			padding: 0px;
+			text-align: center;
+			width: 200px;
+		}
+		a {
+			background-color: #3119B7;
+			color: #FF0905;
+			font: bold 18px Helvetica, Sans-Serif;
+			margin-right: 20px;
+			padding: 2px 6px;
+			text-decoration: none;
+		}
+		a:hover {
+			background-color: #FF0905;
+			color: #3119B7;
+		}
+		footer{
+			background: #5C3FFF;
+			display: block;
+			height: 25px;
+			margin-top: 20px;
+			padding: 5px;
+			text-align: center;
+			width: 200px;
+			border-radius: 5px;
+			-o-border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			box-shadow: 0px 0px 15px #000000, 0 0 4px rgba(250, 250, 250, .5) inset;
+			-o-box-shadow: 0px 0px 15px #000000, 0 0 4px rgba(250, 250, 250, .5) inset;
+			-moz-box-shadow: 0px 0px 15px #000000, 0 0 4px rgba(250, 250, 250, .5) inset;
+			-webkit-box-shadow: 0px 0px 15px #000000, 0 0 4px rgba(250, 250, 250, .5) inset;
+		}
+</style>
+</head>
+
+<body>
+
+	<div id="principal" class="hoja">
+
+		<header>
+			<div id="boton_microdatos">
+				<h1>RCH</h1>
+				<span>Diseño y Desarrollo Web</span>
+			</div>
+		</header>
+
+		 <section>
+			<article>
+				<h2 class="boton">Tutoriales</h2>
+				<a href="http://www.w3schools.com/svg/default.asp" target="_blank">W3Schools</a>
+				<a href="http://xml-utils.com/conferencia-svg.html" target="_blank">xml-utils.com</a>
+				<a href="http://www.learnsvg.com/" target="_blank">learn svg</a>
+				<a href="http://www.learnsvg.com/" target="_blank">learn svg</a>
+			</article>
+			<article>
+				<h2 class="boton">Ejemplos</h2>
+				<a href="http://srufaculty.sru.edu/david.dailey/svg/SVGOpen2008/edges_of_plausibility.htm" target="_blank">The Edges of Plausibility</a>
+				<a href="http://www.carto.net/svg/samples/" target="_blank">carto.net</a>
+				<a href="http://code.google.com/p/svg-edit/" target="_blank">svg-edit</a>
+				<a href="http://svg-wow.org/" target="_blank">svg-wow</a>
+				<br style="margin-bottom: 15px;">
+				<a href="http://www.dotuscomus.com/svg/" target="_blank">dotus comus</a>
+				<a href="http://www.dotuscomus.com/pergola/examples.html" target="_blank">Pergola</a>
+				<a href="http://srufaculty.sru.edu/david.dailey/svg/" target="_blank">SVG animation with JavaScript and SMIL</a>
+				<a href="http://raphaeljs.com/" target="_blank">Raphaël</a>
+			</article>
+			<article>
+				<h2 class="boton">Semantica</h2>
+				<a href="http://www.w3.org/Graphics/SVG/" target="_blank">W3C SVG</a>
+				<a href="http://www.w3.org/TR/2000/CR-SVG-20000802/index.html" target="_blank">W3C Scalable Vector Graphics (SVG) 1.0 Specification</a>
+				<a href="http://dev.w3.org/SVG/modules/integration/SVGIntegration.html" target="_blank">SVG Integration 1.0</a>
+				<br style="margin-bottom: 15px;">
+				<a href="http://www.w3.org/TR/2011/PR-SVG11-20110609/" target="_blank">Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+				<a href="http://www.w3.org/TR/2000/CR-SVG-20000802/ecmascript-binding.html" target="_blank">W3C ECMAScript Language Binding for SVG</a>
+				<br style="margin-bottom: 15px;">
+				<a href="http://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html" target="_blank">An SVG Primer for Today's Browsers</a>
+				<a href="http://www.w3.org/TR/SVG-access/" target="_blank">Accessibility Features of SVG</a>
+				<a href="http://xmlgraphics.apache.org/batik/" target="_blank">xmlgraphics apache</a>
+			</article>
+			<article>
+				<h2 class="boton">Editores</h2>
+				<a href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/index.html" target="_blank">Inkscape</a>
+				<a href="http://wiki.openoffice.org/wiki/SVG_Import_Filter" target="_blank">OpenOffice</a>
+				<a href="http://sodipodi.sourceforge.net/" target="_blank">Sodipodi</a>
+				<a href="http://projects.gnome.org/dia/" target="_blank">Dia</a>
+				<a href="http://www.graphviz.org/" target="_blank">Graphviz</a>
+			</article>
+			<article>
+				<h2 class="boton">Otros SMIL</h2>
+				<a href="http://www.w3.org/TR/SMIL/cover.html" target="_blank">Synchronized Multimedia Integration Language (SMIL 3.0)</a>
+			</article>
+		 </section>
+
+		 <footer>
+			Copyright ©
+			<time datetime="2012-10-06">2012</time>.
+		 </footer>
+	</div>
+
+</body>
+</html>

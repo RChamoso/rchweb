@@ -1,0 +1,319 @@
+﻿#fuentesBD h4 {
+  font-family: SemiBold;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#fuentesBD p {
+  background-color: #f5f5f5;
+  font-size: 18px;
+  letter-spacing: 0.5em;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding: 5px;
+}
+#fuentesBD p:hover {
+  font-size: 50px;
+  letter-spacing: 0.2em;
+}
+@font-face {
+  font-family: AftaSansThin-Regular;
+  src: url(../../fuentes/AftaSansThin-Regular.otf) format('truetype');
+}
+@font-face {
+  font-family: AftaSansThin-Italic;
+  src: url(../../fuentes/AftaSansThin-Italic.otf) format('truetype');
+}
+@font-face {
+  font-family: AlphaWood;
+  src: url(../../fuentes/AlphaWood/AlphaWood.ttf) format('truetype');
+}
+@font-face {
+  font-family: Aller_Lt;
+  src: url(../../fuentes/Aller_Lt.ttf) format('truetype');
+}
+@font-face {
+  font-family: Aller_LtIt;
+  src: url(../../fuentes/Aller_It.ttf) format('truetype');
+}
+@font-face {
+  font-family: Aller_Rg;
+  src: url(../../fuentes/Aller_Rg.ttf) format('truetype');
+}
+@font-face {
+  font-family: Aller_It;
+  src: url(../../fuentes/Aller_It.ttf) format('truetype');
+}
+@font-face {
+  font-family: Aller_Bd;
+  src: url(../../fuentes/Aller_Bd.ttf) format('truetype');
+}
+@font-face {
+  font-family: Aller_BdIt;
+  src: url(../../fuentes/Aller_It.ttf) format('truetype');
+}
+@font-face {
+  font-family: AllerDisplay;
+  src: url(../../fuentes/AllerDisplay.ttf) format('truetype');
+}
+@font-face {
+  font-family: Amaranth-Regular;
+  src: url(../../fuentes/Amaranth/Amaranth-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: Amaranth-Italic;
+  src: url(../../fuentes/Amaranth/Amaranth-Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: Amaranth-Bold;
+  src: url(../../fuentes/Amaranth/Amaranth-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: Amaranth-BoldItalic;
+  src: url(../../fuentes/Amaranth/Amaranth-BoldItalic.ttf) format('truetype');
+}
+@font-face {
+  font-family: AnnieUseYourTelescope;
+  src: url(../../fuentes/AnnieUseYourTelescope.ttf) format('truetype');
+}
+@font-face {
+  font-family: Anonymous_Pro;
+  src: url(../../fuentes/Anonymous_Pro.ttf) format('truetype');
+}
+@font-face {
+  font-family: Anonymous_Pro_I;
+  src: url(../../fuentes/Anonymous_Pro_I.ttf) format('truetype');
+}
+@font-face {
+  font-family: Anonymous_Pro_B;
+  src: url(../../fuentes/Anonymous_Pro_B.ttf) format('truetype');
+}
+@font-face {
+  font-family: Anonymous_Pro_BI;
+  src: url(../../fuentes/Anonymous_Pro_B.ttf) format('truetype');
+}
+@font-face {
+  font-family: ArchitectsDaughter;
+  src: url(../../fuentes/ArchitectsDaughter.ttf) format('truetype');
+}
+@font-face {
+  font-family: AveriaSerifLibre-Light;
+  src: url(../../fuentes/Averia_Serif_Libre/AveriaSerifLibre-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: AveriaSerifLibre-LightItalic;
+  src: url(../../fuentes/Averia_Serif_Libre/AveriaSerifLibre-LightItalic.ttf) format('truetype');
+}
+@font-face {
+  font-family: AveriaSerifLibre-Regular;
+  src: url(../../fuentes/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: AveriaSerifLibre-Italic;
+  src: url(../../fuentes/Averia_Serif_Libre/AveriaSerifLibre-Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: AveriaSerifLibre-Bold;
+  src: url(../../fuentes/Averia_Serif_Libre/AveriaSerifLibre-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: AveriaSerifLibre-BoldItalic;
+  src: url(../../fuentes/Averia_Serif_Libre/AveriaSerifLibre-BoldItalic.ttf) format('truetype');
+}
+@font-face {
+  font-family: BaroqueScript;
+  src: url(../../fuentes/BaroqueScript.ttf) format('truetype');
+}
+@font-face {
+  font-family: BPreplay;
+  src: url(../../fuentes/BPreplay.otf) format('truetype');
+}
+@font-face {
+  font-family: BPreplayItalics;
+  src: url(../../fuentes/BPreplayItalics.otf) format('truetype');
+}
+@font-face {
+  font-family: BPreplayBold;
+  src: url(../../fuentes/BPreplayBold.otf) format('truetype');
+}
+@font-face {
+  font-family: BPreplayBoldItalics;
+  src: url(../../fuentes/BPreplayBoldItalics.otf) format('truetype');
+}
+@font-face {
+  font-family: Brie;
+  src: url(../../fuentes/Brie.ttf) format('truetype');
+}
+@font-face {
+  font-family: CandelaBook;
+  src: url(../../fuentes/CandelaBook.otf) format('truetype');
+}
+@font-face {
+  font-family: CandelaItalic;
+  src: url(../../fuentes/CandelaItalic.otf) format('truetype');
+}
+@font-face {
+  font-family: CandelaBold;
+  src: url(../../fuentes/CandelaBold.otf) format('truetype');
+}
+@font-face {
+  font-family: CandelaBoldItalic;
+  src: url(../../fuentes/CandelaBoldItalic.otf) format('truetype');
+}
+@font-face {
+  font-family: Chango-Regular;
+  src: url(../../fuentes/Chango/Chango-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: DaysOne-Regular;
+  src: url(../../fuentes/Days_One/DaysOne-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: DaysOne-Regular;
+  src: url(../../fuentes/Days_One/DaysOne-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: Diamond;
+  src: url(../../fuentes/Diamond/Diamond.ttf) format('truetype');
+}
+@font-face {
+  font-family: Dreamorphans-i;
+  src: url(../../fuentes/Dreamorphans-i.ttf) format('truetype');
+}
+@font-face {
+  font-family: Dreamorphans-b;
+  src: url(../../fuentes/Dreamorphans-b.ttf) format('truetype');
+}
+@font-face {
+  font-family: Dreamorphans-bi;
+  src: url(../../fuentes/Dreamorphans-bi.ttf) format('truetype');
+}
+@font-face {
+  font-family: DroidSans;
+  src: url(../../fuentes/DroidSans.ttf) format('truetype');
+}
+@font-face {
+  font-family: DroidSans-Bold;
+  src: url(../../fuentes/DroidSans-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: EddieRounded;
+  src: url(../../fuentes/EddieRounded.ttf) format('truetype');
+}
+@font-face {
+  font-family: Elfar;
+  src: url(../../fuentes/Elfar.ttf) format('truetype');
+}
+@font-face {
+  font-family: FredokaOne-Regular;
+  src: url(../../fuentes/Fredoka_One/FredokaOne-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: Gabrielle;
+  src: url(../../fuentes/Gabrielle.ttf) format('truetype');
+}
+@font-face {
+  font-family: LobsterTwo-Regular;
+  src: url(../../fuentes/Lobster_Two/LobsterTwo-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: LobsterTwo-Italic;
+  src: url(../../fuentes/Lobster_Two/LobsterTwo-Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: LobsterTwo-Bold;
+  src: url(../../fuentes/Lobster_Two/LobsterTwo-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: LobsterTwo-BoldItalic;
+  src: url(../../fuentes/Lobster_Two/LobsterTwo-BoldItalic.ttf) format('truetype');
+}
+@font-face {
+  font-family: Mexcelle;
+  src: url(../../fuentes/Mexcelle.ttf) format('truetype');
+}
+@font-face {
+  font-family: Mexcelle3D;
+  src: url(../../fuentes/Mexcelle3D.ttf) format('truetype');
+}
+@font-face {
+  font-family: OpenSans-Light;
+  src: url(../../fuentes/OpenSans-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url(../../fuentes/OpenSans-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: OpenSans-Italic;
+  src: url(../../fuentes/OpenSans-Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: OpenSans-Semibold;
+  src: url(../../fuentes/OpenSans-Semibold.ttf) format('truetype');
+}
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url(../../fuentes/OpenSans-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: OpenSans-BoldItalic;
+  src: url(../../fuentes/OpenSans-BoldItalic.ttf) format('truetype');
+}
+@font-face {
+  font-family: OpenSans-ExtraBold;
+  src: url(../../fuentes/OpenSans-ExtraBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: Porcelai;
+  src: url(../../fuentes/Porcelai.ttf) format('truetype');
+}
+@font-face {
+  font-family: PostOffice;
+  src: url(../../fuentes/PostOffice.ttf) format('truetype');
+}
+@font-face {
+  font-family: Riesling;
+  src: url(../../fuentes/Riesling.ttf) format('truetype');
+}
+@font-face {
+  font-family: SetFireToTheRain;
+  src: url(../../fuentes/SetFireToTheRain.ttf) format('truetype');
+}
+@font-face {
+  font-family: Sniglet-Regular;
+  src: url(../../fuentes/Sniglet/Sniglet-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: SwaggerLight;
+  src: url(../../fuentes/SwaggerLight.ttf) format('truetype');
+}
+@font-face {
+  font-family: Swagger;
+  src: url(../../fuentes/Swagger.ttf) format('truetype');
+}
+@font-face {
+  font-family: SwaggerBold;
+  src: url(../../fuentes/SwaggerBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: SweetlyBroken;
+  src: url(../../fuentes/SweetlyBroken.ttf) format('truetype');
+}
+@font-face {
+  font-family: Unifont;
+  src: url(../../fuentes/Unifont.ttf) format('truetype');
+}
+@font-face {
+  font-family: Virgo;
+  src: url(../../fuentes/Virgo.ttf) format('truetype');
+}
+@font-face {
+  font-family: Wedgie;
+  src: url(../../fuentes/Wedgie/Wedgie.ttf) format('truetype');
+}
+@font-face {
+  font-family: Xtrusion;
+  src: url(../../fuentes/Xtrusion/Xtrusion.ttf) format('truetype');
+}

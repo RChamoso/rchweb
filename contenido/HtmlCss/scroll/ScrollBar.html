@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="ScrollBar/style.css">
+</head>
+
+<body class="single single-post postid-9130 single-format-standard user-0">
+	<div class="grid group">
+		<section class="blog-posts grid-2-3">
+			<article class="module" id="post-9130">
+				<h1>Custom Scrollbars in WebKit</h1>
+				<p>Way back in the day, you could <a href="http://www.siteexperts.com/ie5/tips/ts04/page1.asp">customize scrollbars in IE</a> (5.5) with non-standard CSS properties like <code>scrollbar-base-color</code> which you would use on the element that scrolls (like the <code>&lt;body&gt;</code>) and do <a href="http://numerosign.com/assets/images/notebook/q409/ie-scrollbars.gif">totally rad things</a>. IE dropped that.</p>
+				<p>These days, customizing scrollbars is back, but it's WebKit this 
+				time. It's a bit better now, because the properties are vendor-prefixed 
+				(e.g. <code>::-webkit-scrollbar</code>) and use the "<a href="http://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/">Shadow DOM</a>". This has been around for a couple of years. David Hyatt <a href="http://www.webkit.org/blog/363/styling-scrollbars/">blogged it</a> in early 2009 and put together an example page of just about <a href="http://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html">every combination of scrollbar possibilities</a> you could ever want. </p>
+				<h3>The Goods</h3>
+				<h4>The Different Pieces</h4>
+				<p>These are the pseudo elements themselves. The actual parts of the scrollbars.</p>
+				<pre class=" language-css" rel="CSS"><code class=" language-css"><span class="token selector">::-webkit-scrollbar              </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* 1 */</span> <span class="token punctuation">}</span>
+				<span class="token selector">::-webkit-scrollbar-button       </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* 2 */</span> <span class="token punctuation">}</span>
+				<span class="token selector">::-webkit-scrollbar-track        </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* 3 */</span> <span class="token punctuation">}</span>
+				<span class="token selector">::-webkit-scrollbar-track-piece  </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* 4 */</span> <span class="token punctuation">}</span>
+				<span class="token selector">::-webkit-scrollbar-thumb        </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* 5 */</span> <span class="token punctuation">}</span>
+				<span class="token selector">::-webkit-scrollbar-corner       </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* 6 */</span> <span class="token punctuation">}</span>
+				<span class="token selector">::-webkit-resizer                </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* 7 */</span> <span class="token punctuation">}</span></code></pre>
+				<p><img src="ScrollBar/scrollbarparts.png" alt="" title="scrollbarparts" class="alignnone size-full wp-image-9222" height="448" width="570"></p>
+				<h4>The Different States</h4>
+				<p>These are the pseudo class selectors. They allow for more specific 
+				selection of the parts, like when the scrollbar is in different states.</p>
+				<pre class=" language-css" rel="CSS"><code class=" language-css"><span class="token punctuation">:</span><span class="token property">horizontal</span>
+				<span class="token punctuation">:</span><span class="token property">vertical</span>
+				<span class="token punctuation">:</span><span class="token property">decrement</span>
+				<span class="token punctuation">:</span><span class="token property">increment</span>
+				<span class="token punctuation">:</span><span class="token property">start</span>
+				<span class="token punctuation">:</span><span class="token property">end</span> 
+				<span class="token punctuation">:</span><span class="token property">double-button</span>
+				<span class="token punctuation">:</span><span class="token property">single-button</span>
+				<span class="token punctuation">:</span><span class="token property">no-button</span>
+				<span class="token punctuation">:</span><span class="token property">corner-present</span>
+				<span class="token punctuation">:</span>window-inactive</code></pre>
+				<p>I'm going to steal this whole section from <a href="http://www.webkit.org/blog/363/styling-scrollbars/">David's blog post</a> on the WebKit blog because it explains each part well:</p>
+				<blockquote><p><strong>:horizontal</strong> – The horizontal pseudo-class applies to any scrollbar pieces that have a horizontal orientation.</p>
+				<p><strong>:vertical</strong> – The vertical pseudo-class applies to any scrollbar pieces that have a vertical orientation.</p>
+				<p><strong>:decrement</strong> – The decrement pseudo-class applies to 
+				buttons and track pieces. It indicates whether or not the button or 
+				track piece will decrement the view’s position when used (e.g., up on a 
+				vertical scrollbar, left on a horizontal scrollbar).</p>
+				<p><strong>:increment</strong> – The increment pseudo-class applies to 
+				buttons and track pieces. It indicates whether or not a button or track 
+				piece will increment the view’s position when used (e.g., down on a 
+				vertical scrollbar, right on a horizontal scrollbar).</p>
+				<p><strong>:start</strong> – The start pseudo-class applies to buttons and track pieces. It indicates whether the object is placed before the thumb.</p>
+				<p><strong>:end</strong> – The end pseudo-class applies to buttons and track pieces. It indicates whether the object is placed after the thumb.</p>
+				<p><strong>:double-button</strong> – The double-button pseudo-class 
+				applies to buttons and track pieces. It is used to detect whether a 
+				button is part of a pair of buttons that are together at the same end of
+				 a scrollbar. For track pieces it indicates whether the track piece 
+				abuts a pair of buttons.</p>
+				<p><strong>:single-button</strong> – The single-button pseudo-class 
+				applies to buttons and track pieces. It is used to detect whether a 
+				button is by itself at the end of a scrollbar. For track pieces it 
+				indicates whether the track piece abuts a singleton button.</p>
+				<p><strong>:no-button</strong> – Applies to track pieces and indicates 
+				whether or not the track piece runs to the edge of the scrollbar, i.e., 
+				there is no button at that end of the track.</p>
+				<p><strong>:corner-present</strong> – Applies to all scrollbar pieces and indicates whether or not a scrollbar corner is present.</p>
+				<p><strong>:window-inactive </strong>– Applies to all scrollbar pieces 
+				and indicates whether or not the window containing the scrollbar is 
+				currently active. (In recent nightlies, this pseudo-class now applies to
+				 ::selection as well. We plan to extend it to work with any content and 
+				to propose it as a new standard pseudo-class.)</p></blockquote>
+				<h4>All together now</h4>
+				<p>These pseudo elements and pseudo class selectors work together. Here are some random examples:</p>
+				<pre class=" language-css" rel="CSS"><code class=" language-css"><span class="token selector">::-webkit-scrollbar-track-piece:start </span><span class="token punctuation">{</span>
+				   <span class="token comment" spellcheck="true">/* Select the top half (or left half) or scrollbar track individually */</span>
+				<span class="token punctuation">}</span>
+
+				<span class="token selector">::-webkit-scrollbar-thumb:window-inactive </span><span class="token punctuation">{</span>
+				   <span class="token comment" spellcheck="true">/* Select the thumb when the browser window isn't in focus */</span>
+				<span class="token punctuation">}</span>
+
+				<span class="token selector">::-webkit-scrollbar-button:horizontal:decrement:hover </span><span class="token punctuation">{</span>
+				   <span class="token comment" spellcheck="true">/* Select the down or left scroll button when it's being hovered by the mouse */</span>
+				<span class="token punctuation">}</span></code></pre>
+				<h3>Very Simple Example</h3>
+				<p>To make a really simple custom scrollbar we could do this:</p>
+				<pre class=" language-css" rel="CSS"><code class=" language-css"><span class="token selector">::-webkit-scrollbar </span><span class="token punctuation">{</span>
+					<span class="token property">width</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+				 
+				<span class="token selector">::-webkit-scrollbar-track </span><span class="token punctuation">{</span>
+					<span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> inset 0 0 6px rgba(0,0,0,0.3)<span class="token punctuation">;</span> 
+					<span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+				 
+				<span class="token selector">::-webkit-scrollbar-thumb </span><span class="token punctuation">{</span>
+					<span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+					<span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> inset 0 0 6px rgba(0,0,0,0.5)<span class="token punctuation">;</span> 
+				<span class="token punctuation">}</span></code></pre>
+				<p>In which we'd get this on a simple div with vertically overflowing text:</p>
+				<p><img src="ScrollBar/simplecustomscrollbar.png" alt="" title="simplecustomscrollbar" class="alignnone size-full wp-image-9223" height="304" width="276"></p>
+				<h3>In The Wild</h3>
+				<p>Check out the very subtle and nice scrollbars on Tim Van Damme's blog <a href="http://maxvoltar.com/">Maxvoltar</a> (<strong>Update September 2012</strong>: Tim's site no longer uses this design):</p>
+				<p><img src="ScrollBar/Maxvoltar.gif" alt="" title="Maxvoltar" class="alignnone size-full wp-image-9224" height="476" width="570"></p>
+				<p>The particularly nice bit here is that the scrollbar is on the body 
+				element, yet the scrollbar isn't stuck to the top, bottom, or right edge
+				 of the browser window as scroll bars normally are. I made a test page 
+				with copy-and-pasteable code to achieve that a similar effect:</p>
+				<p><a href="http://css-tricks.com/examples/WebKitScrollbars/" class="button">View Demo</a></p>
+				<p>On <a href="http://forrst.com/">Forrst</a>, they use custom scollbars
+				 on code snippets which are also pretty nice. They are less visually 
+				intense and so don't fight as much with the code highlighting.</p>
+				<p><img src="ScrollBar/webkitvsnot.png" alt="" title="webkitvsnot" class="alignnone size-full wp-image-9225" height="219" width="570"></p>
+				<h3>Related</h3>
+				<ul>
+				<li>Dion Almaer has a useful little <a href="http://almaer.com/scrollbar/debug.html">"debug" page</a> for scrollbars with all the parts in bold colors to see what's what. (from <a href="http://almaer.com/blog/creating-custom-scrollbars-with-css-how-css-isnt-great-for-every-task">this article</a>)</li>
+				<li><a href="http://beautifulpixels.com/goodies/create-custom-webkit-scrollbar/">Similar article</a> on Beautiful Pixels.</li>
+				<li><a href="http://numerosign.com/notebook/styling-webkit-scrollbars-with-css3/">Opinions</a> by Daniel Eckhart</li>
+				<li>Google Wave <a href="http://ignorethecode.net/blog/2009/11/15/google_waves_scrollbars/">went kinda overboard</a> with them back when that was still a thing.</li>
+				<p><a href="http://learnboost.github.com/antiscroll/">Plugin</a> for replicating OS X Lion scrollbars.
+				</p></ul>
+			</article>
+		</section>
+	</div>
+</body>
+</html>

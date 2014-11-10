@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+
+	<title> CSS 2.1 und CSS 3 „cursor“ Eigenschaft Test </title>
+
+	<meta name="viewport" content="width=device-width">
+	<style>
+		 body { background:white; color:black; font-family: Arial,Helvetica,sans-serif }
+		 p { font-size:small; margin:0 0 0 3em }
+		 table { width:23em; border-spacing:0 0.4em; margin:2em 1% 0 4%; float:left }
+		 td {
+			 color:red; height:2em; font:small "courier new", monospace; text-shadow:white 0 0 2px;
+			 filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=white);
+			 background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(black));
+			 background: -moz-linear-gradient(left, white, black);
+			 background:   -o-linear-gradient(left, white, black);
+			 background:  linear-gradient(to right, white, black);
+		 }
+		 td a, td span { float:right; color:silver; padding-right:0.5em; text-shadow:none }
+		 td a { color:lightblue; cursor:inherit }
+		 td :visited { color: plum }
+		 img { border: dashed 1px gray }
+	</style>
+
+</head>
+<body>
+
+	<table>
+		<tbody>
+			<tr><th> <a href="http://www.w3.org/TR/CSS2/ui.html#cursor-props">CSS 2.1 Cursors</a></th></tr>
+			<tr style="cursor:crosshair"><td>crosshair</td></tr>
+			<tr style="cursor:default"><td>default</td></tr>
+			<tr style="cursor:help"><td>help</td></tr>
+			<tr style="cursor:move"><td>move</td></tr>
+			<tr style="cursor:pointer"><td>pointer</td></tr>
+			<tr style="cursor:progress"><td>progress</td></tr>
+			<tr style="cursor:text"><td>text</td></tr>
+			<tr style="cursor:wait"><td>wait</td></tr>
+			<tr style="cursor:e-resize"><td>e-resize</td></tr>
+			<tr style="cursor:ne-resize"><td>ne-resize</td></tr>
+			<tr style="cursor:nw-resize"><td>nw-resize</td></tr>
+			<tr style="cursor:n-resize"><td>n-resize</td></tr>
+			<tr style="cursor:se-resize"><td>se-resize</td></tr>
+			<tr style="cursor:sw-resize"><td>sw-resize</td></tr>
+			<tr style="cursor:s-resize"><td>s-resize</td></tr>
+			<tr style="cursor:w-resize"><td>w-resize</td></tr>
+			<tr>
+				<td style="background:none">
+					<img src="cursor_files/blue.txt" alt="CUR"> <img src="cursor_files/red.gif" alt="GIF"> <img src="cursor_files/green.png" alt="PNG">
+				</td>
+			</tr>
+			<tr style="cursor:url(blue.cur), pointer">
+				<td>url(blue.cur), pointer;</td>
+			</tr>
+			<tr style="cursor:url(red.gif), url(blue.cur), pointer">
+				<td>url(red.gif), url(blue.cur), pointer;</td>
+			</tr>
+			<tr><td style="background:none">Erweiterter url() Syntax in CSS3 →</td></tr>
+		</tbody>
+	</table>
+
+	<table>
+		<tbody>
+			<tr><th><small>neu in</small> <a href="http://www.w3.org/TR/css3-ui/#cursor">CSS 3 UI cursor property</a></th></tr>
+			<tr style="cursor:alias"><td>alias</td></tr>
+			<tr style="cursor:cell"><td>cell</td></tr>
+			<tr style="cursor:context-menu"><td>context-menu <span>nicht in Windows</span></td></tr>
+			<tr style="cursor:copy"><td>copy</td></tr>
+			<tr style="cursor:none"><td>none</td></tr>
+			<tr style="cursor:not-allowed"><td>not-allowed</td></tr>
+			<tr style="cursor:no-drop"><td>no-drop <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=275173">Win Bug 275173</a></td></tr>
+			<tr style="cursor:col-resize"><td>col-resize <span>Opera DSK-36966</span></td></tr>
+			<tr style="cursor:row-resize"><td>row-resize <span>Opera DSK-36966</span></td></tr>
+			<tr style="cursor:vertical-text"><td>vertical-text <span>Opera DSK-36966</span></td></tr>
+			<tr style="cursor:all-scroll"><td>all-scroll <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=275174">Win Bug 275174</a></td></tr>
+			<tr style="cursor:nesw-resize"><td>nesw-resize</td></tr>
+			<tr style="cursor:nwse-resize"><td>nwse-resize</td></tr>
+			<tr style="cursor:ns-resize"><td>ns-resize</td></tr>
+			<tr style="cursor:ew-resize"><td>ew-resize</td></tr>
+			<tr style="cursor:zoom-in"><td>zoom-in <span>Opera DSK-36966</span></td></tr>
+			<tr style="cursor:zoom-out"><td>zoom-out <span>Opera DSK-36966</span></td></tr>
+			<tr style="cursor:-moz-zoom-in"><td>-moz-zoom-in<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=204841">Bug 204841</a></td></tr>
+			<tr style="cursor:-moz-zoom-out"><td>-moz-zoom-out<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=204841">Bug 204841</a></td></tr>
+			<tr style="cursor:-webkit-zoom-in"><td>-webkit-zoom-in</td></tr>
+			<tr style="cursor:-webkit-zoom-out"><td>-webkit-zoom-out</td></tr>
+			<tr style="cursor:url(green.png) 5 2, pointer"><td>url(green.png) 5 2, pointer;</td></tr>
+			<tr style="cursor:url(green.png) 5 2, url(blue.cur), pointer"><td>url(green.png) 5 2, url(blue.cur), pointer;</td></tr>
+		</tbody>
+	</table>
+
+	<table style="clear:both">
+		<tbody>
+			<tr><th> Mozilla und WebKit Vendor spezifisch</th></tr>
+			<tr style="cursor:-moz-grab"><td>-moz-grab</td></tr>
+			<tr style="cursor:-moz-grabbing"><td>-moz-grabbing</td></tr>
+			<tr style="cursor:-webkit-grab"><td>-webkit-grab <span>nur Mac</span></td></tr>
+			<tr style="cursor:-webkit-grabbing"><td>-webkit-grabbing <span>nur Mac</span></td></tr>
+		</tbody>
+	</table>
+
+	<table>
+		<tbody>
+			<tr><th> Microsoft (IE) Vendor spezifisch</th></tr>
+			<tr style="cursor:hand"><td>hand <span>→ cursor: pointer</span></td></tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

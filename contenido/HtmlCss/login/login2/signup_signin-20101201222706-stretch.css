@@ -1,0 +1,418 @@
+html, body {
+    background-color: #1C1D1F !important;
+    background-image: none !important;
+}
+
+a {
+    color: #99CC14;
+    text-decoration: none;
+}
+
+#header_wrapper {
+    margin-bottom: .5em;
+}
+#content {
+    position: relative;
+    background: transparent url(https://secure.smugmug.com/img/trial/aurora_bg.jpg) no-repeat top center;
+    width: 960px;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    color: #D7D8DB;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Trebuchet MS",verdana,arial,clean,sans-serif;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+h1 {
+    margin: 0 0 -.05em 0;
+    font-family: "myriad-pro-1","myriad-pro-2","helvetica neue",helvetica,arial,sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    color: #FFF;
+    text-shadow: #3c3e43 0 2px 5px;
+    -webkit-text-shadow: #3c3e43 0 2px 5px;
+    -moz-text-shadow: #3c3e43 0 2px 5px;
+    -webkit-font-smoothing: antialiased;
+}
+.basicHd {
+    padding-top: 30px;
+    height: 96px;
+}
+.giftHd {
+    padding-top: 30px;
+    height: auto;
+    padding-bottom: 10px;
+}
+.giftHd h1 {
+    font-size: 35px;
+}
+h1 span {
+    filter: progid:DXImageTransform.Microsoft.Shadow(Color=#3c3e43, Direction=180,Strength=3);
+}
+html.wf-inactive h1 {
+    font-size: 40px;
+}
+div.boxForm {
+    width: 540px;
+    margin: 0 auto;
+    border: solid 1px #4b4f55;
+    background-color: #20212;
+    -webkit-box-shadow: 0 5px 20px #000;
+    -moz-box-shadow: 0 5px 20px #000;
+    box-shadow: 0 5px 20px #000;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+div.boxForm .hd {
+    height: 43px;
+    line-height: 43px;
+    padding-right: 20px;
+    text-align: right;
+    border-bottom: solid 1px #4b4f55;
+    background: #232427 url(https://secure.smugmug.com/img/trial/signup_form_grey_bar_bg_slice.png) repeat-x;
+} 
+div.boxForm .bd {
+    background: #202124 url(https://secure.smugmug.com/img/trial/dark_grey_noise_bg_slice.png) repeat-x;
+    padding: 30px;
+}
+
+div.boxForm li {
+    clear: both;
+    line-height: 50px;
+    height: 50px;
+    position: relative;
+    list-style: none;
+    text-align: left;
+}
+div.boxForm label {
+    font-size: 18px;
+    line-height: 2;
+    color: white;
+    width: 105px;
+    margin-right: 15px;
+    text-align: right;
+    float: left;
+}
+div.boxForm .inputTextWrapper {
+    outline: 0 none;
+    border: none;
+    width: 260px;
+    height: 20px;
+    padding: 10px;
+    background: transparent url(https://secure.smugmug.com/img/trial/signup_form_sprite-3.png) no-repeat;
+    background-position: 0 0;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image src='https://secure.smugmug.com/img/trial/ie6_form_input.png');  
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    float: left;
+    font-family: helvetica, sans-serif;
+}
+div.boxForm input.inputText {
+    outline: 0 none;
+    border: none;
+    background-color: transparent; 
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    float: left;
+    font-family: helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow:none;
+    -moz-border-radius:0px;
+    -moz-box-shadow:none;
+    background-image:none;
+    border-color:none;
+    border-width:0px;
+    position: relative;
+}
+div.boxForm li.inputFocus div.inputTextWrapper {
+    background-position: 0 -50px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image src='https://secure.smugmug.com/img/trial/ie6_form_input_focus.png');
+}
+
+div.boxForm input.inputSubmit {
+    width: 288px;
+    height: 52px;
+    background: transparent url(https://secure.smugmug.com/img/trial/signup_form_sprite-3.png) no-repeat;
+    background-position: 0 -280px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image src='https://secure.smugmug.com/img/trial/ie6_form_submit.png');
+    display: inline;
+    _float: left;
+    outline: 0 !important;
+}
+div.boxForm input.inputSubmit:hover {
+    background-position: 0 -340px;
+}
+
+div.boxForm input.inputRedeemSubmit {
+    width: 288px;
+    height: 52px;
+    background: transparent url(https://secure.smugmug.com/img/trial/signup_form_sprite-3.png) no-repeat;
+    background-position: 0 -400px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image src='https://secure.smugmug.com/img/trial/ie6_redeem_submit.png');
+    display: inline;
+    _float: left;
+    outline: 0 !important;
+}
+div.boxForm input.inputRedeemSubmit:hover {
+    background-position: 0 -460px;
+}
+
+p.note {
+    clear: both;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: helvetica, sans-serif;
+    padding-top: 1em;
+    margin-bottom: 0;
+}
+
+div.boxForm #NickName {
+    text-align: right;
+    width: 146px;
+}
+div.boxForm #nickNameWrapper{
+    text-align:right;
+}
+div.boxForm .inputSample {
+    left: 279px;
+    position: absolute;
+    text-align: right;
+    top: -3px;
+    width: 111px;
+    color: #aaacb2;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: helvetica, sans-serif;
+}
+div.inputStatus {
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin: 7px 0 0 5px;
+    display: none;
+    background: transparent url(https://secure.smugmug.com/img/trial/signup_form_sprite-3.png) no-repeat 0 -150px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image src='https://secure.smugmug.com/img/trial/ie6_form_status_good.png');    
+}
+li.inputError div.inputStatus {
+    cursor: pointer;
+    background: transparent url(https://secure.smugmug.com/img/trial/signup_form_sprite-3.png) no-repeat -30px -150px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image src='https://secure.smugmug.com/img/trial/ie6_form_status_error.png');
+}
+li.inputGood div.inputStatus, li.inputError div.inputStatus {
+    display: inline;
+}
+div.boxForm li.inputError div.inputTextWrapper {
+    background-position: 0 -100px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image src='https://secure.smugmug.com/img/trial/ie6_form_input_error.png');
+}
+
+div.boxForm li .inputInfo, div.boxForm li .inputInfoError  {
+    color: #453b02;
+    font-size: 12px;
+    font-family: helvetica, sans-serif;
+    font-weight: normal;
+    position: absolute;
+    height: 34px;
+    left: 440px;
+    line-height: 2;
+    text-align: left;
+    top: 6px;
+    width: 250px;
+    display: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image src='https://secure.smugmug.com/img/trial/ie6_form_infobar.png');
+}
+div.boxForm li .inputInfo a, div.boxForm li .inputInfoError a {
+    color: #453b02;
+    text-decoration: underline;
+}
+div.boxForm li .inputInfo .infoLeft, div.boxForm li .inputInfoError .infoLeft {
+    float: left;
+    width: 30px;
+    height: 34px;
+    background: transparent url(https://secure.smugmug.com/img/trial/signup_form_sprite-3.png) no-repeat 0 -200px;
+    _background: none;
+}
+div.boxForm li .inputInfo .infoCenter, div.boxForm li .inputInfoError .infoCenter {
+    float: left;
+    height: 34px;
+    background: transparent url(https://secure.smugmug.com/img/trial/signup_form_sprite-3.png) repeat-x 0 -240px;
+    _background: none;
+}
+
+div.boxForm li .inputInfo .infoRight, div.boxForm li .inputInfoError .infoRight {
+    float: left;
+    width: 15px;
+    height: 34px;
+    background: transparent url(https://secure.smugmug.com/img/trial/signup_form_sprite-3.png) no-repeat -265px -200px;
+    _background: none;
+
+}
+
+div.boxForm li.inputFocus .inputInfo, div.boxForm li.inputError .inputInfoError {
+    display: block;
+}
+
+div.boxForm li.hidden {
+    height: 0px;
+    display: none;
+    line-height: 0px;
+}
+
+.yui-panel {
+        overflow: visible;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        background: none;
+        border: none;
+    }
+
+
+.yui-panel .container-close {
+        top: -8px;
+        right: -9px;
+        background: transparent url(https://secure.smugmug.com/img/trial/end_trial_assets_sprite-3.png) no-repeat -60px -160px;
+        width: 25px;
+        height: 25px;
+    }
+
+.yui-panel .hd {
+        background: transparent url(https://secure.smugmug.com/img/trial/end_trial_payment_bg.jpg) repeat-x 0 -60px;
+        text-align: left;
+        border: none;
+        padding: 0 30px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+
+.yui-panel .bd {
+        background: transparent url(https://secure.smugmug.com/img/trial/end_trial_payment_bg.jpg) no-repeat  0 -210px;
+        border: none;
+    }
+
+.yui-panel .ft {
+        clear: both;
+        border: none;
+        text-align: left;
+        height: 50px;
+        background: transparent url(https://secure.smugmug.com/img/trial/end_trial_assets_sprite-3.png) no-repeat 0 -450px;
+        padding: 0 20px;
+    }
+
+.errorPanel {
+        border: solid 1px #43474B;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .errorPanel .hd {
+        height: 38px;
+        background: transparent url(https://secure.smugmug.com/img/trial/popup_warning_bg_sprite_stripe.png) repeat-x 0 -60px !important;
+        padding: 0;
+    }
+    .errorPanel .hd .warning {
+        float: left;
+        width: 45px;
+        height: 38px;
+        margin-left: 20px;
+        background: transparent url(https://secure.smugmug.com/img/trial/signup_popup_warning_assets_sprite.png) no-repeat;
+
+    }
+    .errorPanel .bd {
+        background: transparent url(https://secure.smugmug.com/img/trial/popup_warning_bg_sprite_stripe.png) repeat-x 0 -96px !important;
+        padding: 0;
+    }
+    .errorPanel .bd h3 {
+        font-family: "myriad-pro-1","myriad-pro-2","helvetica neue",helvetica,arial,sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: #d4d7d8;
+        text-shadow: #333333 0 4px 4px;
+        margin-left: 80px;
+    }
+
+.errorPanel .bd ul {
+        margin: 10px 20px 15px 80px;
+    }
+    .errorPanel .bd ul li  {
+        clear: both;
+        line-height: 2;
+        display: none;
+        font-family: Helvetica;
+        font-size: 13px;
+        color: #979AA0;
+    }
+    .errorPanel.Basic .bd ul li.powerFeature, .errorPanel.Basic .bd ul li.proFeature {
+        display: block;
+    }
+    .errorPanel.Power .bd ul li.proFeature {
+        display: block;
+    }
+    .errorPanel .bd li span {
+        float: left;
+        width: 25px;
+        height: 25px;
+        background: transparent url(https://secure.smugmug.com/img/trial/signup_popup_warning_assets_sprite.png) no-repeat -90px 0;
+    }
+    .errorPanel .ft {
+        height: 49px;
+        background: transparent url(https://secure.smugmug.com/img/trial/popup_warning_bg_sprite_stripe.png) repeat-x 0 0 !important;
+        padding-right: 15px;
+        -webkit-border-radius: 0 !important;
+        -moz-border-radius: 0 !important;
+        border-radius: 0 !important;
+    }
+
+.errorPanel .ft p {
+        font-family: Helvetica;
+        font-size: 12px;
+        color: #97999F;
+        line-height: 50px;
+    }
+    .errorPanel .ft .buttonContinue {
+        height: 35px;
+        width: 90px;
+        background: transparent url(https://secure.smugmug.com/img/trial/signup_popup_warning_assets_sprite.png) no-repeat -250px 0;
+        float: right;
+        margin-left: 5px;
+        margin-top: 11px;
+        cursor: pointer;
+    }
+    .errorPanel .ft .buttonContinue:hover {
+        background-position: -250px -40px;
+    }
+    .errorPanel .ft .buttonCancel {
+        height: 35px;
+        width: 90px;
+        background: transparent url(https://secure.smugmug.com/img/trial/signup_popup_warning_assets_sprite.png) no-repeat -160px 0;
+        float: right;
+        margin-top: 11px;
+        cursor: pointer;
+    }
+    .errorPanel .ft .buttonCancel:hover {
+        background-position: -160px -40px;
+    } 

@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>qTip2 - Pretty powerful tooltips - Demo - jQuery UI Slider</title>
+
+<!--Stylesheets-->
+<link rel="stylesheet" type="text/css" href="http://media1.juggledesign.com/qtip2/css/master.css" />
+<link rel="stylesheet" type="text/css" href="http://craigsworks.com/projects/qtip2/packages/latest/jquery.qtip.min.css" />
+<link rel="stylesheet" type="text/css" href="http://media1.juggledesign.com/qtip2/css/demos.css" />
+<link rel="stylesheet" type="text/css" href="http://media1.juggledesign.com/qtip2/css/ui/ui-lightness/jquery-ui-1.8.7.custom.css"/>
+
+<!--JavaScript - Might want to move these to the footer of the page to prevent blocking-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="http://craigsworks.com/projects/qtip2/packages/latest/jquery.qtip.min.js"></script>
+<script type="text/javascript" src="http://media2.juggledesign.com/qtip2/js/ui/jquery-ui-1.8.7.js"></script>
+</head>
+<body class="demo-ui-slider">
+
+<div id="content" class="preview">
+   
+<style type="text/css">
+/* Remove the default min-width so the value centers nicely */
+.ui-tooltip-slider{
+	min-width: 0px;
+}
+</style>
+
+<div class="box">
+	<h3>Mouse over the slider handle to see the value</h3>
+
+	<div id="demo-slider"></div>
+<div>
+
+<script type="text/javascript" class="example">
+$(document).ready(function()
+{
+	/* Cache a reference to our slider element */
+	var slider = $('#demo-slider')
+
+	/* Create the slider */
+	.slider({
+		slide: function() {
+			/* Grab the slider value and set the tooltip's content.text property as it */
+			var val = slider.slider('option', 'value');
+			handle.qtip('option', 'content.text', '' + val)
+		}
+	}),
+
+	/* Grab and cache the newly created slider handle */
+	handle = $('.ui-slider-handle', slider);
+
+	/* 
+	 * Selector needs changing here to match your elements.
+	 * 
+	 * Notice the second argument to the $() constructor, which tells
+	 * jQuery to use that as the top-level element to seareh down from.
+	 */
+	handle.qtip({
+		content: '' + slider.slider('option', 'value'), // Use the current value of the slider
+		position: {
+			my: 'bottom center',
+			at: 'top center',
+			container: handle // Stick it inside the handle element so it keeps the position synched up
+		},
+		hide: {
+			delay: 1000 // Give it a longer delay so it doesn't hide frequently as we move the handle
+		},
+		style: {
+			classes: 'ui-tooltip-slider',
+			widget: true // Make it Themeroller compatible
+		}
+	});
+});
+</script>
+</div>
+</body>
+</html>

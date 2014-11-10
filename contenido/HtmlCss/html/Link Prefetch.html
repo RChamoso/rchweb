@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class=" history" lang="en" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#" slick-uniqueid="5">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" _curl_movable="true" href="./HTML5 Link Prefetching_files/Flame.git.css">
+</head>
+<body class="single cacheable" data-twttr-rendered="true">
+	<div id="page">
+	<div id="contentHolder">
+	<section class="left"><!--CONTENT-->
+
+	<article>
+		<!-- article title, social widgets, article content -->
+		<h1>HTML5 Link&nbsp;Prefetching</h1>
+
+		<p>One effort shared by both browsers and developers is making the web browsing experience faster. &nbsp;There are many common-known ways to keep your websites fast: &nbsp;using <a href="http://davidwalsh.name/css-sprites">CSS sprites</a> and <a href="http://davidwalsh.name/pngcrush">image optimization</a>, using <a href="http://davidwalsh.name/yslow-htaccess">.htaccess to set file headers for longer caching</a>, javascript file compression, using CDNs, and so on. &nbsp;I've even detailed some of the <a href="http://davidwalsh.name/speeding-website">website optimization efforts used on this website</a>. &nbsp;Firefox introduces a new strategy for website optimization: &nbsp;link prefetching.</p>
+
+<p>What is link prefetching? &nbsp;From the <a href="https://developer.mozilla.org/en/link_prefetching_faq" rel="nofollow">MDN</a>:</p>
+<blockquote><p>Link prefetching is a browser mechanism, which utilizes browser idle time to download or prefetch documents that the user might visit in the near future. A web page provides a set of prefetching hints to the browser, and after the browser is finished loading the page, it begins silently prefetching specified documents and stores them in its cache. When the user visits one of the prefetched documents, it can be served up quickly out of the browser's cache.</p></blockquote>
+<p>Simply put: the browser downloads designated documents (pages, images, etc.) &nbsp;the user will likely visit after the current page. &nbsp;It's even super easy to implement!</p>
+
+<h2>HTML5 Link Prefetch Tag</h2>
+
+<pre class="html lit" style="display: none;">&lt;!-- full page --&gt;
+&lt;link rel="prefetch" href="http://davidwalsh.name/css-enhancements-user-experience" /&gt;
+
+&lt;!-- just an image --&gt;
+&lt;link rel="prefetch" href="http://davidwalsh.name/wp-content/themes/walshbook3/images/sprite.png" /&gt;
+</pre><pre class="standardLighter gitLighter"><span class="co1">&lt;!-- full page --&gt;</span>
+<span class="kw1">&lt;link</span> <span class="kw2">rel</span><span class="kw1">=</span><span class="kw3">"prefetch"</span> <span class="kw2">href</span><span class="kw1">=</span><span class="kw3">"http://davidwalsh.name/css-enhancements-user-experience"</span> <span class="kw1">/&gt;</span>
+
+<span class="co1">&lt;!-- just an image --&gt;</span>
+<span class="kw1">&lt;link</span> <span class="kw2">rel</span><span class="kw1">=</span><span class="kw3">"prefetch"</span> <span class="kw2">href</span><span class="kw1">=</span><span class="kw3">"http://davidwalsh.name/wp-content/themes/walshbook3/images/sprite.png"</span> <span class="kw1">/&gt;</span></pre>
+
+<p>HTML5 prefetching is done via the <span class="tag">LINK</span> tag, specifying "prefetch" as the <span class="attribute">rel</span> and the <span class="attribute">href</span> being the path to the document. &nbsp;Mozilla also answers to a few differently named <span class="tag">LINK</span> <span class="tag">rel</span> attributes:</p>
+
+<pre class="html lit" style="display: none;">&lt;link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css" /&gt;
+&lt;link rel="next" href="2.html" /&gt;
+</pre><pre class="standardLighter gitLighter"><span class="kw1">&lt;link</span> <span class="kw2">rel</span><span class="kw1">=</span><span class="kw3">"prefetch alternate stylesheet"</span> <span class="kw2">title</span><span class="kw1">=</span><span class="kw3">"Designed for Mozilla"</span> <span class="kw2">href</span><span class="kw1">=</span><span class="kw3">"mozspecific.css"</span> <span class="kw1">/&gt;</span>
+<span class="kw1">&lt;link</span> <span class="kw2">rel</span><span class="kw1">=</span><span class="kw3">"next"</span> <span class="kw2">href</span><span class="kw1">=</span><span class="kw3">"2.html"</span> <span class="kw1">/&gt;</span></pre>
+
+<p>HTTPS &nbsp;fetches are also supported.</p>
+
+<h2>When to Prefetch Content</h2>
+
+<p>Whether prefetching is right for <em>your</em> website is up to you. &nbsp;Here are a few ideas:</p>
+<ul>
+<li>When a series of pages is much like a slideshow, load the next 1-3 pages, previous 1-3 pages (assuming they aren't massive).</li>
+<li>Loading images to be used on most pages throughout the website.</li>
+<li>Loading the next page of the search results on your website.</li>
+</ul>
+<h2>Preventing Prefetching</h2>
+
+<p>Firefox allows you to disable link prefetching with the following setting snippet:</p>
+
+<pre class="js lit" style="display: none;">user_pref("network.prefetch-next", false);
+</pre><pre class="standardLighter gitLighter">user_pref<span class="br0">(</span><span class="st0">"network.prefetch-next"</span><span class="sy0">,</span> <span class="kw2">false</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+<h2>Prefetching Notes</h2>
+
+<p>A few more notes about link prefetching:</p>
+<ul>
+<li>Prefetching <em>does</em> work across domains, including pulling cookies from those sites.</li>
+<li>Prefetching can throw off website statistics as the user doesn't technically visit a given page.</li>
+<li>Mozilla Firefox, currently the only browser to support prefetching, has actually supported prefetching since 2003.</li>
+</ul>
+<p>So what do you think? &nbsp;Using spare time to download extra files seems both dangerous and exciting. &nbsp;Let me know your thoughts!</p>	</article>
+
+
+	<!-- comments -->
+
+<!--/CONTENT-->
+</section>
+</div>
+</div></body></html>

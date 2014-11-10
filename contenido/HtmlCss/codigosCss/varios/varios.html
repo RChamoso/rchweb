@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es" class=" js no-flexbox flexbox-legacy canvas canvastext postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache -webkit-">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>19 tips y trucos para CSS - Trazos Web</title>
+
+	<link type="text/css" rel="stylesheet" href="shCore.css" data-inprogress="">
+	<link type="text/css" rel="stylesheet" href="shThemeDefault.css" data-inprogress="">
+</head>
+<body class="single single-post postid-2597 single-format-standard"> 
+	<div id="wrapper" class="clearfix">
+		<div id="main" class="clearfix">
+			<div id="container">
+				<div class="wp-fluid clearfix">
+					<div class="wp-grid clearfix">
+						<div id="content" role="main">
+ 
+							<article id="post-2597" class="post-2597 post type-post status-publish format-standard hentry category-desarrollo-web category-diseno-web tag-desarrollo-web tag-diseno-web post">
+
+								<div class="entry-content">
+ 
+ <p>El CSS es la manera más perfecta de ponerle estilos y efectos a tus diseños web, y ahora con CSS3 trae más posibilidades de afectar y mejorar tus diseños.</p>
+ <p>Es por eso que aquí te traigo algunos tips y trucos para CSS, para que puedas implementarlos fácilmente en tu diseño web.</p>
+ <h2>Cambiar el color de la selección de texto</h2>
+ <p>Cuando seleccionas un texto por defecto el texto se convierte en color blanco y el fondo en color azul, pero que pasa si quieres que esto sea 
+ diferente en tu web. Solo debes pegar esto en tu CSS:</p>
+
+<div id="highlighter_784896" class="syntaxhighlighter  ">
+	 <div class="lines">
+		<div class="line alt1"><table>
+		 <tbody>
+		 <tr>
+		 <td class="number"><code>1</code></td><td class="content"><code class="comments">/* webkit, opera, IE9 */</code></td></tr></tbody></table>
+		</div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">::selection&nbsp;{&nbsp;</code><code class="keyword">background</code><code class="plain">:</code><code class="value">#555</code><code class="plain">;&nbsp;</code><code class="keyword">color</code><code class="plain">:</code><code class="value">#fff</code><code class="plain">;&nbsp;}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="comments">/* mozilla firefox */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">::-moz-selection&nbsp;{&nbsp;</code><code class="keyword">background</code><code class="plain">:</code><code class="value">#555</code><code class="plain">;&nbsp;color&nbsp;</code><code class="value">#fff</code><code class="plain">;&nbsp;}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Letra capital</h2>
+<p>Con este código puedes hacer que la primera letra de un párrafo sea más grande que las demás:</p>
+<div id="highlighter_489927" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">p:first-letter&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="keyword">display</code><code class="plain">:</code><code class="value">block</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="keyword">margin</code><code class="plain">:</code><code class="value">5px</code>&nbsp;<code class="value">0</code>&nbsp;<code class="value">0</code>&nbsp;<code class="value">5px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="keyword">float</code><code class="plain">:</code><code class="value">left</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="keyword">color</code><code class="plain">:</code><code class="value">#FF3366</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="keyword">font-size</code><code class="plain">:</code><code class="value">60px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="keyword">font-family</code><code class="plain">:Georgia;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Enlaces que gradualmente se desvanecen</h2>
+<p>Con este código harás que cuando un usuario ponga el cursor encima de un enlace (en este caso el enlace del título), éste se desvanezca:</p>
+<div id="highlighter_678393" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">h</code><code class="value">2</code>&nbsp;<code class="plain">{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="keyword">font-size</code><code class="plain">:</code><code class="value">24px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="keyword">font-weight</code><code class="plain">:</code><code class="value">bold</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">#262626</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="plain">opacity:&nbsp;</code><code class="value">1.0</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="plain">-webkit-transition:&nbsp;opacity&nbsp;</code><code class="value">0.4</code><code class="plain">s&nbsp;linear;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="plain">h</code><code class="value">2</code>&nbsp;<code class="plain">a&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">#262626</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="plain">h</code><code class="value">2:</code><code class="plain">hover&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="plain">opacity:&nbsp;</code><code class="value">0.7</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Rotar una imagen</h2>
+<p>Este Código CSS te permite rotar una imagen los grados que gustes:</p>
+<div id="highlighter_750991" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">img&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="plain">transform:</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="plain">rotate(</code><code class="value">45</code><code class="plain">deg)</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="plain">scale(</code><code class="value">-1</code><code class="plain">,&nbsp;</code><code class="value">1</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="comments">/* para firefox, safari, chrome, etc. */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="plain">-webkit-transform:</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="plain">rotate(</code><code class="value">45</code><code class="plain">deg)</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="plain">scale(</code><code class="value">-1</code><code class="plain">,&nbsp;</code><code class="value">1</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="plain">-moz-transform:</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="plain">rotate(</code><code class="value">45</code><code class="plain">deg)</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="plain">scale(</code><code class="value">-1</code><code class="plain">,&nbsp;</code><code class="value">1</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="comments">/* para ie */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="plain">filter:&nbsp;progid:DXImageTransform.Microsoft.BasicImage(rotation=</code><code class="value">0.5</code><code class="plain">,&nbsp;mirror=</code><code class="value">1</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="comments">/* opera */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="plain">-o-transform:</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="plain">rotate(</code><code class="value">45</code><code class="plain">deg)</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="plain">scale(</code><code class="value">-1</code><code class="plain">,&nbsp;</code><code class="value">1</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Mover 1px el enlace al hacer clic</h2>
+<p>Con este CSS, al hacer clic en el enlace, el texto de éste se moverá hacia abajo 1px:</p>
+<div id="highlighter_545922" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">a:active&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="keyword">position</code><code class="plain">:&nbsp;</code><code class="value">relative</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="keyword">top</code><code class="plain">:&nbsp;</code><code class="value">1px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>CSS3 Media Queries</h2>
+<p>Este código CSS te permite aplicar estilos especialmente para dispositivos móviles (iPhones, Ipads, Androids, etc):</p>
+<div id="highlighter_120705" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="comments">/* Smartphones (portrait y landscape) ----------- */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="plain">@media&nbsp;only&nbsp;</code><code class="value">screen</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="plain">and&nbsp;(min-device-width&nbsp;:&nbsp;</code><code class="value">320px</code><code class="plain">)</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="plain">and&nbsp;(max-device-width&nbsp;:&nbsp;</code><code class="value">480px</code><code class="plain">)&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="comments">/* Styles */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="comments">/* Smartphones (landscape) ----------- */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="plain">@media&nbsp;only&nbsp;</code><code class="value">screen</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="plain">and&nbsp;(min-width&nbsp;:&nbsp;</code><code class="value">321px</code><code class="plain">)&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="comments">/* Styles */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="comments">/* Smartphones (portrait) ----------- */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="plain">@media&nbsp;only&nbsp;</code><code class="value">screen</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="plain">and&nbsp;(max-width&nbsp;:&nbsp;</code><code class="value">320px</code><code class="plain">)&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="comments">/* Styles */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="comments">/* iPads (portrait y landscape) ----------- */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="plain">@media&nbsp;only&nbsp;</code><code class="value">screen</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content"><code class="plain">and&nbsp;(min-device-width&nbsp;:&nbsp;</code><code class="value">768px</code><code class="plain">)</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>23</code></td><td class="content"><code class="plain">and&nbsp;(max-device-width&nbsp;:&nbsp;</code><code class="value">1024px</code><code class="plain">)&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>24</code></td><td class="content"><code class="comments">/* Styles */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>25</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>26</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>27</code></td><td class="content"><code class="comments">/* iPads (landscape) ----------- */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>28</code></td><td class="content"><code class="plain">@media&nbsp;only&nbsp;</code><code class="value">screen</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>29</code></td><td class="content"><code class="plain">and&nbsp;(min-device-width&nbsp;:&nbsp;</code><code class="value">768px</code><code class="plain">)</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>30</code></td><td class="content"><code class="plain">and&nbsp;(max-device-width&nbsp;:&nbsp;</code><code class="value">1024px</code><code class="plain">)</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>31</code></td><td class="content"><code class="plain">and&nbsp;(orientation&nbsp;:&nbsp;</code><code class="value">landscape</code><code class="plain">)&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>32</code></td><td class="content"><code class="comments">/* Styles */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>33</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>34</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>35</code></td><td class="content"><code class="comments">/* iPads (portrait) ----------- */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>36</code></td><td class="content"><code class="plain">@media&nbsp;only&nbsp;</code><code class="value">screen</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>37</code></td><td class="content"><code class="plain">and&nbsp;(min-device-width&nbsp;:&nbsp;</code><code class="value">768px</code><code class="plain">)</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>38</code></td><td class="content"><code class="plain">and&nbsp;(max-device-width&nbsp;:&nbsp;</code><code class="value">1024px</code><code class="plain">)</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>39</code></td><td class="content"><code class="plain">and&nbsp;(orientation&nbsp;:&nbsp;</code><code class="value">portrait</code><code class="plain">)&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>40</code></td><td class="content"><code class="comments">/* Styles */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>41</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>42</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>43</code></td><td class="content"><code class="comments">/* PCs y portátiles ----------- */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>44</code></td><td class="content"><code class="plain">@media&nbsp;only&nbsp;</code><code class="value">screen</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>45</code></td><td class="content"><code class="plain">and&nbsp;(min-width&nbsp;:&nbsp;</code><code class="value">1224px</code><code class="plain">)&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>46</code></td><td class="content"><code class="comments">/* Styles */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>47</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>48</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>49</code></td><td class="content"><code class="comments">/* Pantallas grandes ----------- */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>50</code></td><td class="content"><code class="plain">@media&nbsp;only&nbsp;</code><code class="value">screen</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>51</code></td><td class="content"><code class="plain">and&nbsp;(min-width&nbsp;:&nbsp;</code><code class="value">1824px</code><code class="plain">)&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>52</code></td><td class="content"><code class="comments">/* Styles */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>53</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>54</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>55</code></td><td class="content"><code class="comments">/* iPhone 4 ----------- */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>56</code></td><td class="content"><code class="plain">@media</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>57</code></td><td class="content"><code class="plain">only&nbsp;</code><code class="value">screen</code>&nbsp;<code class="plain">and&nbsp;(-webkit-min-device-pixel-ratio&nbsp;:&nbsp;</code><code class="value">1.5</code><code class="plain">),</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>58</code></td><td class="content"><code class="plain">only&nbsp;</code><code class="value">screen</code>&nbsp;<code class="plain">and&nbsp;(min-device-pixel-ratio&nbsp;:&nbsp;</code><code class="value">1.5</code><code class="plain">)&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>59</code></td><td class="content"><code class="comments">/* Estilos */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>60</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Configurar el tamaño del texto a 62.5% para convertir fácilmente en EM</h2>
+<p>Si vas a utilizar unidades relativas (ems), declarar 62.5% el tamaño de la fuente de body, te ayudará a facilitar la conversión de px a em.
+ Con esto convertir de px a em solo será cuestión de dividir por 10 el valor en pixéles:</p>
+<div id="highlighter_673060" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">body&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="keyword">font-size</code><code class="plain">:&nbsp;</code><code class="value">62.5%</code><code class="plain">;&nbsp;</code><code class="comments">/* font-size 1em = 10px */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">p&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="keyword">font-size</code><code class="plain">:&nbsp;</code><code class="value">1.2em</code><code class="plain">;&nbsp;</code><code class="comments">/* 1.2em = 12px */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Hacer que el cursor se vuelva un apuntador de enlace</h2>
+<p>Algunos elementos que son cliqueables, no les aparece el apuntador de enlace, o sea, la mano que aparece cuando pones el cursor encima de un enlace.
+ Para hacer que aparezca en estos elementos solo debes poner el siguiente código:</p>
+<div id="highlighter_338531" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">a[href],&nbsp;input[type=</code><code class="string">'submit'</code><code class="plain">],&nbsp;input[type=</code><code class="string">'image'</code><code class="plain">],&nbsp;label[for],&nbsp;select,&nbsp;button,&nbsp;.</code><code class="value">pointer</code>&nbsp;<code class="plain">{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="keyword">cursor</code><code class="plain">:&nbsp;</code><code class="value">pointer</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Quitar la linea de color que rodea los elementos input</h2>
+<p>Por defecto en los navegadores WebKit (Safari, Chrome) los elementos input de un formulario cambian de color en el borde cuando se situa sobre dicho 
+elemento. para evitar esto debes poner el siguiente código CSS:</p>
+<div id="highlighter_808394" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">input[type=</code><code class="string">"text"</code><code class="plain">]:focus,&nbsp;textarea:focus,&nbsp;input[type=</code><code class="string">"search"</code><code class="plain">]:focus {</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="keyword">outline</code><code class="plain">:&nbsp;</code><code class="value">none</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Crear un efecto giratorio y de zoom en las imágenes</h2>
+<p>Con este código CSS puedes hacer que una imagen o un enlace gire 360 grados y tenga un efecto zoom hasta volver a la normalidad:</p>
+<div id="highlighter_177403" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">@-webkit-keyframes&nbsp;rotater&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="value">0%</code>&nbsp;<code class="plain">{&nbsp;-webkit-transform:rotate(</code><code class="value">0</code><code class="plain">)&nbsp;scale(</code><code class="value">1</code><code class="plain">)&nbsp;}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="value">50%</code>&nbsp;<code class="plain">{&nbsp;-webkit-transform:rotate(</code><code class="value">360</code><code class="plain">deg)&nbsp;scale(</code><code class="value">2</code><code class="plain">)&nbsp;}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="value">100%</code>&nbsp;<code class="plain">{&nbsp;-webkit-transform:rotate(</code><code class="value">720</code><code class="plain">deg)&nbsp;scale(</code><code class="value">1</code><code class="plain">)&nbsp;}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="plain">a.advert&nbsp; &nbsp;&nbsp;{&nbsp;</code><code class="keyword">width</code><code class="plain">:</code><code class="value">125px</code><code class="plain">;&nbsp;</code><code class="keyword">height</code><code class="plain">:</code><code class="value">125px</code><code class="plain">;&nbsp;</code><code class="keyword">display</code><code class="plain">:</code><code class="value">block</code><code class="plain">;&nbsp;}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="plain">a.advert:hover&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="comments">/* safari / chrome */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="plain">-webkit-animation-name:rotater;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="plain">-webkit-animation-duration:</code><code class="value">500</code><code class="plain">ms;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="plain">-webkit-animation-iteration-count:</code><code class="value">1</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="plain">-webkit-animation-timing-function:&nbsp;ease-out;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="comments">/* mozilla */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="plain">-moz-transform:rotate(</code><code class="value">360</code><code class="plain">deg)&nbsp;scale(</code><code class="value">2</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="plain">-moz-transition-duration:</code><code class="value">500</code><code class="plain">ms;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="plain">-moz-transition-timing-function:&nbsp;ease-out;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="comments">/* opera */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="plain">-o-transform:rotate(</code><code class="value">360</code><code class="plain">deg)&nbsp;scale(</code><code class="value">2</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content"><code class="plain">-o-transition-duration:</code><code class="value">500</code><code class="plain">ms;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>23</code></td><td class="content"><code class="plain">-p-transition-timing-function:&nbsp;ease-out;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>24</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>25</code></td><td class="content"><code class="comments">/* ie */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>26</code></td><td class="content"><code class="plain">-ms-transform:rotate(</code><code class="value">360</code><code class="plain">deg)&nbsp;scale(</code><code class="value">2</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>27</code></td><td class="content"><code class="plain">-ms-transform-duration:</code><code class="value">500</code><code class="plain">ms;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>28</code></td><td class="content"><code class="plain">-ms-transform-timing-function:&nbsp;ease-out;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>29</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Hacks de CSS dependiendo del navegador</h2>
+<p>Para hacer que los estilos se vena bien en todos los navegadores (sobre todo en IE) existen algunos hacks para hacer código CSS 
+dependiendo de cada navegador:</p>
+<div id="highlighter_204200" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="comments">/***** Hacks de Selectores CSS ******/</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="comments">/* IE6 y anteriores */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="plain">*&nbsp;html&nbsp;#uno&nbsp;&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="comments">/* IE7 */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="plain">*:first-child+html&nbsp;#dos&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="comments">/* IE7, FF, Saf, Opera&nbsp;&nbsp;*/</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="plain">html&gt;body&nbsp;#tres&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="comments">/* IE8, FF, Saf, Opera (Todo menos IE 6,7) */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="plain">html&gt;</code><code class="comments">/**/</code><code class="plain">body&nbsp;#cuatro&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="comments">/* Opera 9.27 y anteriores, safari 2 */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="plain">html:first-child&nbsp;#cinco&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="comments">/* Safari 2-3 */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="plain">html[xmlns*=</code><code class="string">""</code><code class="plain">]&nbsp;body:last-child&nbsp;#seis&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="comments">/* safari 3+, chrome 1+, opera9+, ff 3.5+ */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content"><code class="plain">body:nth-of-type(</code><code class="value">1</code><code class="plain">)&nbsp;#siete&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>23</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>24</code></td><td class="content"><code class="comments">/* safari 3+, chrome 1+, opera9+, ff 3.5+ */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>25</code></td><td class="content"><code class="plain">body:first-of-type&nbsp;#ocho&nbsp;{&nbsp;&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>26</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>27</code></td><td class="content"><code class="comments">/* saf3+, chrome1+ */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>28</code></td><td class="content"><code class="plain">@media&nbsp;</code><code class="value">screen</code>&nbsp;<code class="plain">and&nbsp;(-webkit-min-device-pixel-ratio:</code><code class="value">0</code><code class="plain">)&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>29</code></td><td class="content"><code class="plain">#diez&nbsp;&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>30</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>31</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>32</code></td><td class="content"><code class="comments">/* iPhone / mobile webkit */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>33</code></td><td class="content"><code class="plain">@media&nbsp;</code><code class="value">screen</code>&nbsp;<code class="plain">and&nbsp;(max-device-</code><code class="keyword">width</code><code class="plain">:&nbsp;</code><code class="value">480px</code><code class="plain">)&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>34</code></td><td class="content"><code class="plain">#veintiseis&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>35</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>36</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>37</code></td><td class="content"><code class="comments">/* Safari 2 - 3.1 */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>38</code></td><td class="content"><code class="plain">html[xmlns*=</code><code class="string">""</code><code class="plain">]:root&nbsp;#trece&nbsp;&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>39</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>40</code></td><td class="content"><code class="comments">/* Safari 2 - 3.1, Opera 9.25 */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>41</code></td><td class="content"><code class="plain">*|html[xmlns*=</code><code class="string">""</code><code class="plain">]&nbsp;#catorce&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>42</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>43</code></td><td class="content"><code class="comments">/* Todo menos IE6-8 */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>44</code></td><td class="content"><code class="plain">:root&nbsp;*&gt;&nbsp;#quince&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>45</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>46</code></td><td class="content"><code class="comments">/* IE7 */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>47</code></td><td class="content"><code class="plain">*+html&nbsp;#dieciocho&nbsp;{&nbsp;&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>48</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>49</code></td><td class="content"><code class="comments">/* Solo Firefox. 1+ */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>50</code></td><td class="content"><code class="plain">#veinticuatro,&nbsp;&nbsp;x:-moz-any-link&nbsp;&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>51</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>52</code></td><td class="content"><code class="comments">/* Firefox 3.0+ */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>53</code></td><td class="content"><code class="plain">#veinticinco,&nbsp;&nbsp;x:-moz-any-link,&nbsp;x:</code><code class="value">default</code>&nbsp;&nbsp;<code class="plain">{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code>&nbsp;&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>54</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>55</code></td><td class="content"><code class="comments">/***** Hacks de Atributos ******/</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>56</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>57</code></td><td class="content"><code class="comments">/* IE6 */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>58</code></td><td class="content"><code class="plain">#</code><code class="value">once</code>&nbsp;<code class="plain">{&nbsp;</code><code class="keyword">_color</code><code class="plain">:&nbsp;</code><code class="value">blue</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>59</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>60</code></td><td class="content"><code class="comments">/* IE6, IE7 */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>61</code></td><td class="content"><code class="plain">#doce&nbsp;{&nbsp;*</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">blue</code><code class="plain">;&nbsp;</code><code class="comments">/* or #color: blue */</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>62</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>63</code></td><td class="content"><code class="comments">/* Todo menos IE6 */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>64</code></td><td class="content"><code class="plain">#diecisiete&nbsp;{&nbsp;color</code><code class="comments">/**/</code><code class="plain">:&nbsp;</code><code class="value">blue</code>&nbsp;<code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>65</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>66</code></td><td class="content"><code class="comments">/* IE6, IE7, IE8 */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>67</code></td><td class="content"><code class="plain">#diecinueve&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">blue</code><code class="plain">\</code><code class="value">9</code><code class="plain">;&nbsp;}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>68</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>69</code></td><td class="content"><code class="comments">/* IE7, IE8 */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>70</code></td><td class="content"><code class="plain">#veinte&nbsp;{&nbsp;color</code><code class="comments">/*\**/</code><code class="plain">:&nbsp;</code><code class="value">blue</code><code class="plain">\</code><code class="value">9</code><code class="plain">;&nbsp;}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>71</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>72</code></td><td class="content"><code class="comments">/* IE6, IE7 -- actúa como !important */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>73</code></td><td class="content"><code class="plain">#veintesiete&nbsp;{&nbsp;</code><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">blue</code>&nbsp;<code class="plain">!ie;&nbsp;}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Animar una lista de enlaces</h2>
+<p>Con este código, cuando pasas el cursor encima del enlace de una lista, cada enlace se mueve un poco a la derecha. Realizado enteramente con 
+CSS sin necesidad de jQuery:</p>
+<div id="highlighter_294379" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">#animateList&nbsp;li&nbsp;a&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="keyword">cursor</code><code class="plain">:&nbsp;</code><code class="value">pointer</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">-webkit-transition:&nbsp;padding-</code><code class="value">left</code>&nbsp;<code class="value">250</code><code class="plain">ms&nbsp;ease-out;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">-moz-transition:&nbsp;padding-</code><code class="value">left</code>&nbsp;<code class="value">250</code><code class="plain">ms&nbsp;ease-out;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="plain">#animateList&nbsp;li&nbsp;a:hover&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="keyword">padding-left</code><code class="plain">:&nbsp;</code><code class="value">10px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<p><span class="Apple-style-span" style="font-size: 20px; font-weight: bold;">Transparencia / Opacidad en todos los navegadores</span></p>
+<p>Con este código podrás poner transparencia a elementos de tu diseño y que funciones en todos los navegadores</p>
+<div id="highlighter_737330" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">div&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="comments">/* FF, Safari, Chrome, IE9 y 10 */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">opacity:</code><code class="value">0.7</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="comments">/* IE */</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">-ms-filter:&nbsp;</code><code class="string">"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"</code><code class="plain">;&nbsp;&nbsp;</code><code class="comments">/* IE8 */</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="plain">filter:&nbsp;alpha(opacity=</code><code class="value">70</code><code class="plain">);&nbsp;</code><code class="comments">/* IE 5-7&nbsp;&nbsp;*/</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Estilo para enlaces externos</h2>
+<p>Este código CSS te permite ponerle un estilo especial a los enlaces externos. Por ejemplo, un icono al lado del enlace:</p>
+<div id="highlighter_653607" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">a[href^=</code><code class="string">"http"</code><code class="plain">]&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="keyword">background</code><code class="plain">:&nbsp;</code><code class="value">url</code><code class="plain">(icono.png)&nbsp;</code><code class="value">no-repeat</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="keyword">padding-left</code><code class="plain">:&nbsp;</code><code class="value">10px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Estilo del enlace dependiendo de una palabra predefinida</h2>
+<p>Con este código puedes darle estilo a un enlace dependiendo del texto que contenga la URL del enlace:</p>
+<div id="highlighter_219130" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">a[href*=</code><code class="string">"trazos"</code><code class="plain">]&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">#39486c</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Estilo del enlace dependiendo de extensión del archivo enlazado</h2>
+<p>Con este código puedes ponerle estilos diferentes cuando enlazas un archivo RAR, ZIP, JPG, etc:</p>
+<div id="highlighter_883671" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">a[href$=</code><code class="string">".jpg"</code><code class="plain">]&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">red</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Utilizar fuentes de Google</h2>
+<p>Con este código puedes utilizar cualquier fuente disponible en <a href="http://www.google.com/webfonts" target="_blank">Webfonts de Google</a>:</p>
+<p>Debes agregar el código que te genera la página de Webfonts entre las etiquetas &lt;head&gt; y &lt;/head&gt;:</p>
+<div id="highlighter_930737" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">link</code> <code class="color1">href</code><code class="plain">=</code><code class="string">'<a href="http://fonts.googleapis.com/css?family=Ubuntu:700">http://fonts.googleapis.com/css?family=Ubuntu:700</a>'</code> <code class="color1">rel</code><code class="plain">=</code><code class="string">'stylesheet'</code> <code class="color1">type</code><code class="plain">=</code><code class="string">'text/css'</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+	</div>
+</div>
+<p>y luego este en el archivo de tus estilos CSS:</p>
+<div id="highlighter_729967" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">h</code><code class="value">1</code>&nbsp;<code class="plain">{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="keyword">font-family</code><code class="plain">:&nbsp;</code><code class="string">'Ubuntu'</code><code class="plain">,&nbsp;</code><code class="color1">sans-serif</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Hacer texto con bajo relieve</h2>
+<p>Con este código CSS haces que el texto se vea con un efecto de bajo relieve:</p>
+<div id="highlighter_159112" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">body&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="keyword">background</code><code class="plain">:&nbsp;</code><code class="value">#222222</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="keyword">color</code><code class="plain">:&nbsp;</code><code class="value">#131313</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="keyword">font-size</code><code class="plain">:&nbsp;</code><code class="value">100px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="plain">p&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="keyword">text-align</code><code class="plain">:&nbsp;</code><code class="value">center</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="keyword">text-transform</code><code class="plain">:&nbsp;</code><code class="value">uppercase</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="keyword">text-shadow</code><code class="plain">:&nbsp;</code><code class="value">#2d2f2d</code>&nbsp;<code class="value">2px</code>&nbsp;<code class="value">2px</code>&nbsp;<code class="value">4px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<h2>Tabs animados solo con CSS</h2>
+<p>Con este código puede poner una sección de tabs animados, sin la necesidad de utilizar jQuery.</p>
+<p>Solo debes poner esto en donde quieras que aparezcan los tabs:</p>
+<div id="highlighter_733095" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">div</code>&nbsp;<code class="color1">class</code><code class="plain">=</code><code class="string">"tabs"</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">div</code>&nbsp;<code class="color1">class</code><code class="plain">=</code><code class="string">"tab"</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">input</code>&nbsp;<code class="color1">type</code><code class="plain">=</code><code class="string">"radio"</code>&nbsp;<code class="color1">id</code><code class="plain">=</code><code class="string">"tab-1"</code>&nbsp;<code class="color1">name</code><code class="plain">=</code><code class="string">"tab-group-1"</code>&nbsp;<code class="plain">checked&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">label</code>&nbsp;<code class="color1">for</code><code class="plain">=</code><code class="string">"tab-1"</code><code class="plain">&gt;Tab 1&lt;/</code><code class="keyword">label</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">div</code>&nbsp;<code class="color1">class</code><code class="plain">=</code><code class="string">"content"</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">p</code><code class="plain">&gt;Aquí va algún contenido para el tab 1&lt;/</code><code class="keyword">p</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="plain">&lt;/</code><code class="keyword">div</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="plain">&lt;/</code><code class="keyword">div</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">div</code>&nbsp;<code class="color1">class</code><code class="plain">=</code><code class="string">"tab"</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">input</code>&nbsp;<code class="color1">type</code><code class="plain">=</code><code class="string">"radio"</code>&nbsp;<code class="color1">id</code><code class="plain">=</code><code class="string">"tab-2"</code>&nbsp;<code class="color1">name</code><code class="plain">=</code><code class="string">"tab-group-1"</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">label</code>&nbsp;<code class="color1">for</code><code class="plain">=</code><code class="string">"tab-2"</code><code class="plain">&gt;Tab 2&lt;/</code><code class="keyword">label</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">div</code>&nbsp;<code class="color1">class</code><code class="plain">=</code><code class="string">"content"</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">p</code><code class="plain">&gt;Aquí va algún contenido para el tab 2&lt;/</code><code class="keyword">p</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">img</code>&nbsp;<code class="color1">src</code><code class="plain">=</code><code class="string">"<a href="http://lorempixum.com/200/100/technics/">http://lorempixum.com/200/100/technics/</a>"</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="plain">&lt;/</code><code class="keyword">div</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="plain">&lt;/</code><code class="keyword">div</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>23</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">div</code>&nbsp;<code class="color1">class</code><code class="plain">=</code><code class="string">"tab"</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>24</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">input</code>&nbsp;<code class="color1">type</code><code class="plain">=</code><code class="string">"radio"</code>&nbsp;<code class="color1">id</code><code class="plain">=</code><code class="string">"tab-3"</code>&nbsp;<code class="color1">name</code><code class="plain">=</code><code class="string">"tab-group-1"</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>25</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">label</code>&nbsp;<code class="color1">for</code><code class="plain">=</code><code class="string">"tab-3"</code><code class="plain">&gt;Tab 3&lt;/</code><code class="keyword">label</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>26</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>27</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">div</code>&nbsp;<code class="color1">class</code><code class="plain">=</code><code class="string">"content"</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>28</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">p</code><code class="plain">&gt;Aquí va algún contenido para el tab 3&lt;/</code><code class="keyword">p</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>29</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>30</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">img</code>&nbsp;<code class="color1">src</code><code class="plain">=</code><code class="string">"<a href="http://lorempixum.com/200/100/nightlife/">http://lorempixum.com/200/100/nightlife/</a>"</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>31</code></td><td class="content"><code class="plain">&lt;/</code><code class="keyword">div</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>32</code></td><td class="content"><code class="plain">&lt;/</code><code class="keyword">div</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>33</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>34</code></td><td class="content"><code class="plain">&lt;/</code><code class="keyword">div</code><code class="plain">&gt;</code></td></tr></tbody></table></div>
+	</div>
+</div>
+
+<p>y luego poner esto en el archivo de estilos CSS:</p>
+<div id="highlighter_730183" class="syntaxhighlighter  ">
+	<div class="lines">
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">.tabs&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="keyword">position</code><code class="plain">:&nbsp;</code><code class="value">relative</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="keyword">min-height</code><code class="plain">:&nbsp;</code><code class="value">200px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="keyword">clear</code><code class="plain">:&nbsp;</code><code class="value">both</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="keyword">margin</code><code class="plain">:&nbsp;</code><code class="value">25px</code>&nbsp;<code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="plain">.tab&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="keyword">float</code><code class="plain">:&nbsp;</code><code class="value">left</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="plain">.tab&nbsp;label&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="keyword">background</code><code class="plain">:&nbsp;</code><code class="value">#eee</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="keyword">padding</code><code class="plain">:&nbsp;</code><code class="value">10px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="keyword">border</code><code class="plain">:&nbsp;</code><code class="value">1px</code>&nbsp;<code class="value">solid</code>&nbsp;<code class="value">#ccc</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="keyword">margin-left</code><code class="plain">:&nbsp;</code><code class="value">-1px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="keyword">position</code><code class="plain">:&nbsp;</code><code class="value">relative</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="keyword">left</code><code class="plain">:&nbsp;</code><code class="value">1px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="plain">.tab&nbsp;[type=radio]&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="keyword">display</code><code class="plain">:&nbsp;</code><code class="value">none</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="plain">.content&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content"><code class="keyword">position</code><code class="plain">:&nbsp;</code><code class="value">absolute</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>23</code></td><td class="content"><code class="keyword">top</code><code class="plain">:&nbsp;</code><code class="value">28px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>24</code></td><td class="content"><code class="keyword">left</code><code class="plain">:&nbsp;</code><code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>25</code></td><td class="content"><code class="keyword">background</code><code class="plain">:&nbsp;</code><code class="value">white</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>26</code></td><td class="content"><code class="keyword">right</code><code class="plain">:&nbsp;</code><code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>27</code></td><td class="content"><code class="keyword">bottom</code><code class="plain">:&nbsp;</code><code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>28</code></td><td class="content"><code class="keyword">padding</code><code class="plain">:&nbsp;</code><code class="value">20px</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>29</code></td><td class="content"><code class="keyword">border</code><code class="plain">:&nbsp;</code><code class="value">1px</code>&nbsp;<code class="value">solid</code>&nbsp;<code class="value">#ccc</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>30</code></td><td class="content"><code class="keyword">overflow</code><code class="plain">:&nbsp;</code><code class="value">hidden</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>31</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>32</code></td><td class="content"><code class="plain">.content&nbsp;&gt;&nbsp;*&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>33</code></td><td class="content"><code class="plain">opacity:&nbsp;</code><code class="value">0</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>34</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>35</code></td><td class="content"><code class="plain">-webkit-transform:&nbsp;translate</code><code class="value">3</code><code class="plain">d(</code><code class="value">0</code><code class="plain">,&nbsp;</code><code class="value">0</code><code class="plain">,&nbsp;</code><code class="value">0</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>36</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>37</code></td><td class="content"><code class="plain">-webkit-transform:&nbsp;translateX(</code><code class="value">-100%</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>38</code></td><td class="content"><code class="plain">-moz-transform:&nbsp; &nbsp;&nbsp;translateX(</code><code class="value">-100%</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>39</code></td><td class="content"><code class="plain">-ms-transform:&nbsp; &nbsp; &nbsp;translateX(</code><code class="value">-100%</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>40</code></td><td class="content"><code class="plain">-o-transform:&nbsp; &nbsp; &nbsp;&nbsp;translateX(</code><code class="value">-100%</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>41</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>42</code></td><td class="content"><code class="plain">-webkit-transition:&nbsp;</code><code class="value">all</code>&nbsp;<code class="value">0.6</code><code class="plain">s&nbsp;ease;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>43</code></td><td class="content"><code class="plain">-moz-transition:&nbsp; &nbsp;&nbsp;</code><code class="value">all</code>&nbsp;<code class="value">0.6</code><code class="plain">s&nbsp;ease;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>44</code></td><td class="content"><code class="plain">-ms-transition:&nbsp; &nbsp; &nbsp;</code><code class="value">all</code>&nbsp;<code class="value">0.6</code><code class="plain">s&nbsp;ease;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>45</code></td><td class="content"><code class="plain">-o-transition:&nbsp; &nbsp; &nbsp;&nbsp;</code><code class="value">all</code>&nbsp;<code class="value">0.6</code><code class="plain">s&nbsp;ease;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>46</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>47</code></td><td class="content"><code class="plain">[type=radio]:checked&nbsp;~&nbsp;label&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>48</code></td><td class="content"><code class="keyword">background</code><code class="plain">:&nbsp;</code><code class="value">white</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>49</code></td><td class="content"><code class="keyword">border-bottom</code><code class="plain">:&nbsp;</code><code class="value">1px</code>&nbsp;<code class="value">solid</code>&nbsp;<code class="value">white</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>50</code></td><td class="content"><code class="keyword">z-index</code><code class="plain">:&nbsp;</code><code class="value">2</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>51</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>52</code></td><td class="content"><code class="plain">[type=radio]:checked&nbsp;~&nbsp;label&nbsp;~&nbsp;.content&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>53</code></td><td class="content"><code class="keyword">z-index</code><code class="plain">:&nbsp;</code><code class="value">1</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>54</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>55</code></td><td class="content"><code class="plain">[type=radio]:checked&nbsp;~&nbsp;label&nbsp;~&nbsp;.content&nbsp;&gt;&nbsp;*&nbsp;{</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>56</code></td><td class="content"><code class="plain">opacity:&nbsp;</code><code class="value">1</code><code class="plain">;</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>57</code></td><td class="content">&nbsp;</td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>58</code></td><td class="content"><code class="plain">-webkit-transform:&nbsp;translateX(</code><code class="value">0</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>59</code></td><td class="content"><code class="plain">-moz-transform:&nbsp; &nbsp;&nbsp;translateX(</code><code class="value">0</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>60</code></td><td class="content"><code class="plain">-ms-transform:&nbsp; &nbsp; &nbsp;translateX(</code><code class="value">0</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt1"><table><tbody><tr><td class="number"><code>61</code></td><td class="content"><code class="plain">-o-transform:&nbsp; &nbsp; &nbsp;&nbsp;translateX(</code><code class="value">0</code><code class="plain">);</code></td></tr></tbody></table></div>
+		<div class="line alt2"><table><tbody><tr><td class="number"><code>62</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div>
+	</div>
+</div>
+</div>
+</article>
+ </div></div>
+ 
+
+</div></div>
+</body></html>

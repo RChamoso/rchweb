@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class=" history" lang="en" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#" slick-uniqueid="5">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body class="single cacheable" data-twttr-rendered="true">
+<div id="page">
+<div id="contentHolder">
+<section class="left"><!--CONTENT-->
+
+	<article>
+		<!-- article title, social widgets, article content -->
+		<h1>HTML5′s “email” and “url” Input&nbsp;Types</h1>
+
+<h2>The Syntax</h2>
+
+<p>The syntax is as basic as a text input; &nbsp;instead, you set the type to "email" or "url":</p>
+
+<pre class="html lit" style="display: none;">&lt;!-- email --&gt;
+&lt;input type="email" pattern="[^ @]*@[^ @]*" value=""&gt;
+
+&lt;!-- url --&gt;
+&lt;input type="url" value=""&gt;
+</pre><pre class="standardLighter gitLighter"><span class="co1">&lt;!-- email --&gt;</span>
+<span class="kw1">&lt;input</span> <span class="kw2">type</span><span class="kw1">=</span><span class="kw3">"email"</span> <span class="kw2">pattern</span><span class="kw1">=</span><span class="kw3">"[^ @]*@[^ @]*"</span> value=""<span class="kw1">&gt;</span>
+
+<span class="co1">&lt;!-- url --&gt;</span>
+<span class="kw1">&lt;input</span> <span class="kw2">type</span><span class="kw1">=</span><span class="kw3">"url"</span> value=""<span class="kw1">&gt;</span></pre>
+
+<p>Using the new HTML5 pattern attribute, you can also provide a regular expression to validate the email &nbsp;and URL addresses against. &nbsp;I'll save those specifics for another post.</p>
+
+<h2>The Advantages to Using type="email" and type="url"</h2>
+
+<p>There are a few advantages to using these special INPUT types:</p>
+<ul>
+<li>You may easily style all email INPUT elements with input[type=email]</li>
+<li>You may easily style all url INPUT elements with input[type=url]</li>
+<li>This INPUT type could be considered more semantically correct.</li>
+<li>Mobile accessibility: &nbsp;if your user is browsing with an iPhone and they arrive at a special email input, the iPhone will display a keyboard with the @ symbol provided on the primary screen. &nbsp;If the INPUT is of type "url", the iPhone will display the ".com" button on the primary keyboard screen:<br><br>
+</li>
+</ul>
+<h2>Input on this...Input...Type</h2>
+
+<p>At first I disliked the idea of using different type attribute values per field but after more thought, the accessibility and usability enhancements provided a great boost. &nbsp;What do you think?</p>	
+</article>
+
+</section>
+
+</div>
+</div></body></html>

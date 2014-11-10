@@ -1,0 +1,48 @@
+﻿#BloqueFlotante div {   
+  background: #CCC;   
+  border-radius: 3px;   
+    -o-border-radius: 3px;   
+    -ms-border-radius: 3px;   
+    -moz-border-radius: 3px;   
+    -webkit-border-radius: 3px;   
+  box-shadow: 0px 0px 20px black, inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 2px 0px rgba(255, 255, 255, 0.1);   
+    -o-box-shadow: 0px 0px 20px black, inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 2px 0px rgba(255, 255, 255, 0.1);   
+    -ms-box-shadow: 0px 0px 20px black, inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 2px 0px rgba(255, 255, 255, 0.1);   
+    -moz-box-shadow: 0px 0px 20px black, inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 2px 0px rgba(255, 255, 255, 0.1);   
+    -webkit-box-shadow: 0px 0px 20px black, inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 2px 0px rgba(255, 255, 255, 0.1);   
+  color: #111;   
+  display: inline-block; 
+  margin: 15px;  
+  max-width: 240px;  
+  padding: 15px; 
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.6);   
+} 
+.BloqueFlotante1, .BloqueFlotante2  { 
+  display: none; 
+} 
+.bloque1:hover ~ .BloqueFlotante1 { 
+  background: rgba(0,0,0,0.4); 
+  bottom: 30%; 
+  display: block; 
+  height: auto; 
+  left: 30%; 
+  margin: 0px; 
+  max-width: none; 
+  padding: 0px; 
+  position: fixed; 
+  right: 30%; 
+  top: 30%; 
+} 
+.bloque2:hover ~ .BloqueFlotante2 { 
+  background: rgba(0,0,0,0.4); 
+  display: block; 
+  height: 100px; 
+  left: 50%; 
+  margin: 0px; 
+  margin-left: -150px; 
+  margin-top: -50px; 
+  padding: 0px; 
+  position: fixed; 
+  top: 50%; 
+  width:300px; 
+} 

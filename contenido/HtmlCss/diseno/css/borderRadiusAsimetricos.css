@@ -1,0 +1,74 @@
+﻿.Border-Radius-Div {
+  background: #666;
+  box-shadow: inset 0px 0px 20px black;
+    -o-box-shadow: inset 0px 0px 20px black;
+    -ms-box-shadow: inset 0px 0px 20px black;
+    -moz-box-shadow: inset 0px 0px 20px black;
+    -webkit-box-shadow: inset 0px 0px 20px black;
+  border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+  display: table;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  width: 460px;
+}
+.Border-Radius-Div > div {
+  border: 1px dashed #888;
+  display: inline-block;
+  height: 100px; 
+  margin: 20px;
+  width: 100px;
+}
+.Border-Radius-Div > div > div {
+  background: rgba(255,255,255,0.3);	
+  border: 1px solid #fff;
+  height: 96px; 
+  margin: 1px;
+  width: 96px;
+}
+.Border-Radius-Div .br1 div {
+  border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.Border-Radius-Div .br2 div {
+  border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+.Border-Radius-Div .br3 div {
+  border-radius: 50% 4px;
+    -o-border-radius: 50% 4px;
+    -ms-border-radius: 50% 4px;
+    -moz-border-radius: 50% 4px;
+    -webkit-border-radius: 50% 4px;
+}
+.Border-Radius-Div .br4 div {
+  border-radius: 20px / 50%;
+    -o-border-radius: 20px / 50%;
+    -ms-border-radius: 20px / 50%;
+    -moz-border-radius: 20px / 50%;
+    -webkit-border-radius: 20px / 50%;
+}
+.Border-Radius-Div .br5 div {
+  border-radius: 10px 100% 10px 20px;
+    -o-border-radius: 10px 100% 10px 20px;
+    -ms-border-radius: 10px 100% 10px 20px;
+    -moz-border-radius: 10px 100% 10px 20px;
+    -webkit-border-radius: 10px 100% 10px 20px;
+}
+.Border-Radius-Div .br6 div {
+  border-radius: 10px 10px 50% 50% / 10px 10px 90px 90px;
+    -o-border-radius: 10px 10px 50% 50% / 10px 10px 90px 90px;
+    -ms-border-radius: 10px 10px 50% 50% / 10px 10px 90px 90px;
+    -moz-border-radius: 10px 10px 50% 50% / 10px 10px 90px 90px;
+    -webkit-border-radius: 10px 10px 50% 50% / 10px 10px 90px 90px;
+}

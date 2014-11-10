@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://davidwalsh.name/websocket -->
+<html class=" history" lang="en" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#" slick-uniqueid="5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./WebSocket and Socket.IO_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/text.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/plusone.js" gapi_processed="true"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/widgets.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/css.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/All.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/bsa.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/ga.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/History.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/Fx.Scroll.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/storage.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/comments.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/search.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/syntax.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/ads.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/analytics.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/social.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/mootools-yui-compressed.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/js.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/events.js"></script><script type="text/javascript" charset="utf-8" async="" src="./WebSocket and Socket.IO_files/site.js"></script><meta charset="utf-8"><meta http-equiv="content-type" content="text/html;"><title>WebSocket and Socket.IO</title><meta name="robots" content="index,follow"><meta name="viewport" content="initial-scale=1.0 maximum-scale=1.0 user-scalable=no"><link rel="shortcut icon" href="http://davidwalsh.name/favicon.ico"><link rel="apple-touch-icon" href="http://davidwalsh.name/apple-touch-icon.png"><meta property="og:title" content=" WebSocket and Socket.IO"><meta property="og:image" content="http://davidwalsh.name/wp-content/themes/jack/images/openGraphLogo.png"><meta property="og:site_name" content="David Walsh Blog"><link rel="start" href="http://davidwalsh.name/" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞."><link rel="alternate" type="application/atom+xml" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞. Atom Feed" href="http://davidwalsh.name/feed/atom"><link rel="alternate" type="application/rss+xml" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞. RSS 2.0 Feed" href="http://davidwalsh.name/feed"><link rel="alternate" type="application/rss+xml" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞. Comments RSS 2.0 Feed" href="http://davidwalsh.name/comments/feed"><link rel="alternate" type="application/rdf+xml" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞. RSS 1.0" href="http://davidwalsh.name/feed/rdf"><link rel="alternate" type="text/xml" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞. RSS 0.92 Feed" href="http://davidwalsh.name/feed/rss"><link rel="pingback" href="http://davidwalsh.name/xmlrpc.php"><link rel="search" type="application/opensearchdescription+xml" href="http://davidwalsh.name/opensearch.xml" title="David Walsh Blog Search"><link rel="stylesheet" media="all" href="http://davidwalsh.name/wp-content/themes/jack/css/all.css?v1354028691715"><link rel="stylesheet" href="http://davidwalsh.name/wp-content/themes/jack/css/print.css?v1354028691715" media="print"><noscript>&lt;link rel="stylesheet" type="text/css" href="/wp-content/themes/jack/css/noscript.css?v1354028691715"&gt;</noscript><link rel="alternate" type="application/rss+xml" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞. » WebSocket and Socket.IO Comments Feed" href="http://davidwalsh.name/websocket/feed"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://davidwalsh.name/xmlrpc.php?rsd"><link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://davidwalsh.name/wp-includes/wlwmanifest.xml"><link rel="prev" title="What I’m Thankful For: 2010 Edition" href="http://davidwalsh.name/thanksgiving-2010"><link rel="next" title="Smarter Script Loading with LABjs" href="http://davidwalsh.name/labjs"><meta name="generator" content="WordPress 3.4.2"><link rel="shortlink" href="http://davidwalsh.name/?p=5122"><meta name="description" content="The WebSocket API is the next generation method of asynchronous communication from client to server. WebSocket API server and client can push messages to each other at any given time."><link rel="canonical" href="./WebSocket and Socket.IO_files/WebSocket and Socket.IO.htm">	<!--[if lt IE 9]>
+		<link href="/wp-content/themes/jack/css/ie.css?v1354028691715" rel="stylesheet" type="text/css">
+		<script src="/wp-content/themes/jack/js/lib/html5shiv/src/html5shiv.js?v1354028691715" async></script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" _curl_movable="true" href="./WebSocket and Socket.IO_files/Flame.git.css"><script type="text/javascript" id="_bsap_js_db3b221ddd8cbba67739ae3837520ffe" src="./WebSocket and Socket.IO_files/s_db3b221ddd8cbba67739ae3837520ffe.js" async="async"></script><style type="text/css" id="bsa_css">div.bsap_1278040{width:100%;display:block}div.bsap_1278040 a{width:728px}div.bsap_1278040 a img{padding:0}div.bsap_1278040 a em{font-style:normal}div.bsap_1278040 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;}div.bsap_1278040 img{border:0;clear:right;}div.bsap_1278040 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1278040 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1278040 a{line-height:100%}div.bsap_1278040 a.adhere{width:728px;height:90px;line-height:720%}html>body div.bsap_1278040 a.adhere{width:726px;height:88px}div.bsap_1278040 img.s{height:0;width:0}div.bsap_1280451{width:100%;display:block}div.bsap_1280451 a{width:728px}div.bsap_1280451 a img{padding:0}div.bsap_1280451 a em{font-style:normal}div.bsap_1280451 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1280451 img{border:0;clear:right;}div.bsap_1280451 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1280451 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1280451 a{line-height:100%}div.bsap_1280451 a.adhere{width:728px;height:90px;line-height:720%}html>body div.bsap_1280451 a.adhere{width:726px;height:88px}div.bsap_1280451 img.s{height:0;width:0}div.bsap_1280451{line-height:9px}div.bsap_1280451 .bsap_adhere2,div.bsap_1280451 iframe{float:left}div.bsap_1280451 .bsap_adhere2 a{height:90px;width:20px;background:url(http://s3.buysellads.com/ac/ah20x90_1.gif) no-repeat 0 0;text-indent:-9999px}div.bsap_1236348{width:100%;display:block}div.bsap_1236348 a{width:125px}div.bsap_1236348 a img{padding:0}div.bsap_1236348 a em{font-style:normal}div.bsap_1236348 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0 2px 2px 2px;text-align:center;text-decoration:none;overflow:hidden;}div.bsap_1236348 img{border:0;clear:right;}div.bsap_1236348 a.adhere{color:#666;font-weight:bold;font-size:12px;border:0px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1236348 a.adhere:hover{border:0px solid #999;background:#ddd;color:#333;}div.bsap_1236348 a{line-height:100%}div.bsap_1236348 a.adhere{width:125px;height:125px;line-height:1000%}html>body div.bsap_1236348 a.adhere{width:123px;height:123px}div.bsap_1236348 img.s{height:0;width:0}div.bsap_1278041{width:100%;display:block}div.bsap_1278041 a{width:300px}div.bsap_1278041 a img{padding:0}div.bsap_1278041 a em{font-style:normal}div.bsap_1278041 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;}div.bsap_1278041 img{border:0;clear:right;}div.bsap_1278041 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1278041 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1278041 a{line-height:100%}div.bsap_1278041 a.adhere{width:300px;height:250px;line-height:2000%}html>body div.bsap_1278041 a.adhere{width:298px;height:248px}div.bsap_1278041 img.s{height:0;width:0}</style></head><body class="single cacheable " data-twttr-rendered="true"><script async="" src="./WebSocket and Socket.IO_files/ga(1).js"></script><script>(function(){var e=navigator.userAgent.toLowerCase();z={isDebug:0,loadAds:1,loadStats:1,loadSidebar:1,sidebarCacheMinutes:10,loadSearch:1,isGoogle:e.indexOf("googlebot")!=-1,isMobile:e.match(/ip(?:ad|od|hone)/)||e.match(/(?:webos|android)/),themePath:"/wp-content/themes/jack/",pluginPath:"lib/curl/src/curl/plugin/",lighterPath:"lib/lighterjs/",analyticsId:"UA-2087880-2",d:document,w:window},z.loadSidebar=z.loadSidebar&&!z.isGoogle,z.ajaxPageLoads="pushState"in history&&!z.isGoogle,z.baseUrl=z.themePath+"js",z.hasSessionStorage="sessionStorage"in z.w,z.mootoolsUrl="//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools"+(z.isDebug?"":"-yui-compressed")+".js"})();if(z.loadStats) {var _gaq=[["_setAccount","UA-2087880-2"],["_trackPageview"]];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";s.parentNode.insertBefore(g,s)}(z.d,"script"));}</script><div id="page"><a name="top" id="top"></a><header><div class="centerSite"><nav role="navigation" class="dwb"><ul><li class="home"><a href="http://davidwalsh.name/" accesskey="h"><span>David Walsh Blog</span></a></li><li class="articles"><a href="http://davidwalsh.name/page/1" accesskey="a">articles</a><div class="dropdown"><ul><li><a href="http://davidwalsh.name/page/1">Latest Posts</a></li><li><a href="http://davidwalsh.name/tutorials/features">Features</a></li><li><a href="http://davidwalsh.name/tutorials/tips">Quick Tips</a></li><li><a href="http://davidwalsh.name/s/" rel="nofollow">Script &amp; Style</a></li><li class="sep"></li><li><a href="http://davidwalsh.name/tutorials/html5">HTML5</a></li><li><a href="http://davidwalsh.name/tutorials/css/animations">CSS Animations</a></li><li><a href="http://davidwalsh.name/tutorials/jquery">jQuery</a></li><li><a href="http://davidwalsh.name/tutorials/mootools">MooTools</a></li><li><a href="http://davidwalsh.name/tutorials/php">PHP</a></li><li class="sep"></li><li><a href="http://davidwalsh.name/post-archive">Post Archives</a></li><li><a href="http://davidwalsh.name/guest-post">Submit Guest Post</a></li></ul></div></li><li class="demos"><a href="http://davidwalsh.name/demos" accesskey="d">demos</a><div class="dropdown"><ul><li><a href="http://davidwalsh.name/demos">All Demos</a></li><li><a href="http://davidwalsh.name/demos/jquery">jQuery Demos</a></li><li><a href="http://davidwalsh.name/demos/mootools">MooTools Demos</a></li><li><a href="http://davidwalsh.name/demos/css">CSS Demos</a></li><li><a href="http://davidwalsh.name/demos/html5">HTML5 Demos</a></li></ul></div></li><li class="connect"><a href="http://davidwalsh.name/chat" accesskey="c">connect</a><div class="dropdown"><ul><li><a href="http://feeds.feedburner.com/Bludice" rel="nofollow">RSS Feed</a></li><li><a href="http://twitter.com/davidwalshblog" rel="nofollow">Twitter</a></li><li><a href="http://facebook.com/davidwalshblog" rel="nofollow">Facebook</a></li><li><a href="http://plus.google.com/114538814489633467974" rel="nofollow">Google +</a></li><li><a href="http://linkedin.com/in/davidjameswalsh" rel="nofollow">LinkedIn</a></li><li><a href="http://alpha.app.net/davidwalsh" rel="nofollow">App.Net</a></li><li><a href="http://github.com/darkwing" rel="nofollow">GitHub</a></li><li><a href="http://davidwalsh.name/chat" rel="nofollow">Chat</a></li></ul></div></li><li class="discounts"><a href="http://davidwalsh.name/deals">deals</a></li><li class="about"><a href="http://davidwalsh.name/about">david walsh</a><div class="dropdown"><ul><li><a href="http://davidwalsh.name/about-david-walsh">About Me</a></li><li><a href="http://davidwalsh.name/contact">Contact Me</a></li></ul></div></li></ul><section class="search"><form action="http://google.com/search" id="searchForm"><input type="search" placeholder="Search..." name="q" id="q" accesskey="s" autocomplete="on" required=""><input type="hidden" name="sitesearch" value="davidwalsh.name"></form></section></nav><nav role="navigation" class="sns"><ul><li class="home"><a href="http://davidwalsh.name/"><span>David Walsh Blog</span></a></li><li class="articles"><a href="http://davidwalsh.name/s/" rel="nofollow">articles</a><div class="dropdown"><ul><li><a href="http://davidwalsh.name/s/tag/ajax" rel="nofollow">AJAX</a></li><li><a href="http://davidwalsh.name/s/tag/canvas" rel="nofollow">Canvas</a></li><li><a href="http://davidwalsh.name/s/tag/css" rel="nofollow">CSS</a></li><li><a href="http://davidwalsh.name/s/tag/html5" rel="nofollow">HTML5</a></li><li><a href="http://davidwalsh.name/s/tag/jquery" rel="nofollow">jQuery</a></li><li><a href="http://davidwalsh.name/s/tag/javascript" rel="nofollow">JavaScript</a></li><li><a href="http://davidwalsh.name/s/tag/mootools" rel="nofollow">MooTools</a></li><li><a href="http://davidwalsh.name/s/tag/design" rel="nofollow">Web Design</a></li></ul></div></li><li class="submit"><a href="http://davidwalsh.name/s/submit" rel="nofollow">submit</a></li><li class="customize"><a href="http://davidwalsh.name/s/customize" rel="nofollow">customize</a></li></ul><section class="search"><form action="http://davidwalsh.name/s"><input type="search" placeholder="Search..." name="s" required=""></form></section></nav><div class="centerSite"><div class="headerTitle">The David Walsh Blog<a class="catty" target="_blank" href="http://github.com/darkwing/blog/issues"><strong>BETA</strong> File a bug.</a></div></div></div></header><div id="contentHolder"><section class="left"><!--CONTENT-->
+
+	
+	<!-- top advertisement -->
+	<div class="commentsAds commentsArticleAd ad" data-bsa="1280451|db3b221ddd8cbba67739ae3837520ffe"><div id="bsap_1280451" class="bsap_1280451 bsap"><a href="http://buysellads.com/buy/detail/1687/zone/1280451?utm_source=site_1687&utm_medium=website&utm_campaign=adhere&utm_content=zone_1280451" title="Advertise Here" class="adhere ad1 odd" target="_blank">Advertise Here</a></div></div>
+
+	<!-- start up the article -->
+	<article>
+		<!-- article title, social widgets, article content -->
+		<h1>WebSocket and&nbsp;Socket.IO</h1>
+		<div class="pMeta">Written by <a href="http://davidwalsh.name/" rel="nofollow">David Walsh</a> on November 29, 2010</div>		<div class="social fadeIn" id="social-5122" data-rating="0" data-postid="5122" data-url="http://davidwalsh.name/websocket" data-text="WebSocket and Socket.IO by @davidwalshblog"><span class="twitter"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./WebSocket and Socket.IO_files/tweet_button.1354093195.htm" class="twitter-share-button twitter-count-horizontal" style="width: 109px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe></span><span class="gplus"><div style="height: 20px; width: 90px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial;" id="___plusone_0"><iframe allowtransparency="true" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1354216263957" name="I0_1354216263957" src="./WebSocket and Socket.IO_files/fastbutton.htm" title="+1"></iframe></div></span><span class="facebook"><iframe src="./WebSocket and Socket.IO_files/like.htm" scrolling="no" frameborder="0" style="" allowtransparency="true"></iframe></span><span class="reddit"><iframe src="./WebSocket and Socket.IO_files/button1.htm" scrolling="no" frameborder="0" allowtransparency="true"></iframe></span></div>		<p><a href="http://davidwalsh.name/demo/websockets.zip"><img src="./WebSocket and Socket.IO_files/socketio.jpg" alt="WebSocket Socket.IO"></a></p>
+
+<p>My favorite web technology is quickly becoming the WebSocket API.  WebSocket provides a welcomed alternative to the AJAX technologies we've been making use of over the past few years.  This new API provides a method to push messages from client to server efficiently and with a simple syntax.  Let's take a look at the HTML5 WebSocket API: its use on the client side, server side, and an outstanding wrapper API called Socket.IO.</p>
+
+<div class="actions"><a href="http://davidwalsh.name/demo/websockets.zip" class="demo">View Demo</a><div class="clear"></div></div>
+
+
+<h2>What is the WebSocket API?</h2>
+<p>The WebSocket API is the next generation method of asynchronous communication from client to server.  Communication takes place over single TCP socket using the <code>ws</code> (unsecure) or <code>wss</code> (secure) protocol and can be used by any client or server application.  WebSocket is currently being standardized by the W3C.  WebSocket is currently implemented in Firefox 4, Chrome 4, Opera 10.70, and Safari 5.</p>
+
+<p>What's great about the WebSocket API that server and client can push messages to each other at any given time.  WebSocket is not limited in its nature the way that AJAX (or XHR) is;  AJAX technologies require a request to be made by the client, whereas WebSocket servers and clients can push each other messages.  XHR is also limited by domain;  the WebSocket API allows cross-domain messaging with no fuss.</p>
+
+<p>AJAX technology was a clever usage of a feature not designed to be used the way it is today.  WebSocket was created for the specific purpose of bi-direction message pushing.</p>
+
+
+<h2>WebSocket API Usage</h2>
+<p>Focusing on the client side API only (because each server side language will have its own API), the following snippet opens a connection, creates event listeners for connect, disconnect, and message events, sends a message back to the server, and closes the connection.</p>
+
+<pre class="js lit" style="display: none;">// Create a socket instance
+var socket = new WebSocket('ws://localhost:8080');
+
+// Open the socket
+socket.onopen = function(event) {
+	
+	// Send an initial message
+	socket.send('I am the client and I\'m listening!');
+	
+	// Listen for messages
+	socket.onmessage = function(event) {
+		console.log('Client received a message',event);
+	};
+	
+	// Listen for socket closes
+	socket.onclose = function(event) {
+		console.log('Client notified socket has closed',event);
+	};
+	
+	// To close the socket....
+	//socket.close()
+	
+};
+</pre><pre class="standardLighter gitLighter"><span class="co1">// Create a socket instance</span>
+<span class="kw2">var</span> socket <span class="sy0">=</span> <span class="kw2">new</span> WebSocket<span class="br0">(</span><span class="st0">'ws://localhost:8080'</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Open the socket</span>
+socket.<span class="me0">onopen</span> <span class="sy0">=</span> <span class="kw2">function</span><span class="br0">(</span>event<span class="br0">)</span> <span class="br0">{</span>
+  
+ <span class="co1"> // Send an initial message</span>
+  socket.<span class="me0">send</span><span class="br0">(</span><span class="st0">'I am the client and I\'m listening!'</span><span class="br0">)</span><span class="sy0">;</span>
+  
+ <span class="co1"> // Listen for messages</span>
+  socket.<span class="me0">onmessage</span> <span class="sy0">=</span> <span class="kw2">function</span><span class="br0">(</span>event<span class="br0">)</span> <span class="br0">{</span>
+    console.<span class="me0">log</span><span class="br0">(</span><span class="st0">'Client received a message'</span><span class="sy0">,</span>event<span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="sy0">;</span>
+  
+ <span class="co1"> // Listen for socket closes</span>
+  socket.<span class="me0">onclose</span> <span class="sy0">=</span> <span class="kw2">function</span><span class="br0">(</span>event<span class="br0">)</span> <span class="br0">{</span>
+    console.<span class="me0">log</span><span class="br0">(</span><span class="st0">'Client notified socket has closed'</span><span class="sy0">,</span>event<span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="sy0">;</span>
+  
+ <span class="co1"> // To close the socket....</span>
+ <span class="co1"> //socket.close()</span>
+  
+<span class="br0">}</span><span class="sy0">;</span></pre>
+
+<p>Let's take a look at the individual pieces of the snippet above.  The argument provided to WebSocket represents the URL to the address listening for socket connections.  <code>onopen</code>, <code>onclose</code>, and <code>onmessage</code> methods connect you to events on the socket instance.  Each of these methods provides an event which gives insight as to the state of the socket.  </p><p>The <code>onmessage</code> event provides a data property which contains the body of the message.  The message body must be a string, so serialization/deserialization strategies will be needed to pass more data.</p>
+
+<p>The syntax is extremely simple which makes using WebSockets incredibly easy...unless the client doesn't support WebSocket.  Internet Explorer does not currently support WebSocket.  There are a few fallback transports that you can use if the client doesn't support WebSocket:</p>
+
+<ul>
+	<li><strong>Flash</strong> - Flash can provide a simple alternative.  The obvious drawback is that Flash is not installed on all clients, and in the case of the iPhone/iPad, cannot be.</li>
+	<li><strong>AJAX Long-Polling</strong> - AJAX long-polling has been used for quite a while to simulate WebSocket.  It's a technology that works but isn't optimized for message sending.  I wouldn't call AJAX long-polling a hack but it's simply not an optimal method.</li>
+</ul>
+
+<p>Wouldn't it be great if an API was available that would provide WebSocket event handling, fallback transports, and a server side solution, all within one API?  Luckily <a href="http://devthought.com/" rel="nofollow">Guillermo Rauch</a> has created <a href="http://socket.io/" rel="nofollow">Socket.IO</a>.</p>
+
+
+<h2>WebSocket with Socket.IO</h2>
+<p>Socket.IO is a WebSocket API created by Guillermo Rauch, CTO of <a href="http://learnboost.com/" rel="nofollow">LearnBoost</a> and lead scientist of LearnBoost Labs.  Socket.IO will use feature detection to decide if the connection will be established with WebSocket, AJAX long polling, Flash, etc., making creating realtime apps that work everywhere a snap.  Socket.IO also provides an API for NodeJS which looks very much like the client side API.</p>
+
+
+<h3>Client - Socket.IO Setup</h3>
+<p>Socket.IO is available for download at GitHub.  You can include the <code>socket.io.js</code> file or you can pull Socket.IO from CDN:</p>
+<pre class="html lit" style="display: none;">&lt;script src="http://cdn.socket.io/stable/socket.io.js"&gt;&lt;/script&gt;
+</pre><pre class="standardLighter gitLighter"><span class="kw1">&lt;script</span> <span class="kw2">src</span><span class="kw1">=</span><span class="kw3">"http://cdn.socket.io/stable/socket.io.js"</span><span class="kw1">&gt;</span><span class="kw1">&lt;/script&gt;</span></pre>
+
+<p>With Socket.IO available in the page, it's time to create a Socket:</p>
+<pre class="js lit" style="display: none;">// Create SocketIO instance, connect
+var socket = new io.Socket('localhost',{
+	port: 8080
+});
+socket.connect(); 
+
+// Add a connect listener
+socket.on('connect',function() {
+	console.log('Client has connected to the server!');
+});
+// Add a connect listener
+socket.on('message',function(data) {
+	console.log('Received a message from the server!',data);
+});
+// Add a disconnect listener
+socket.on('disconnect',function() {
+	console.log('The client has disconnected!');
+});
+
+// Sends a message to the server via sockets
+function sendMessageToServer(message) {
+	socket.send(message);
+}
+</pre><pre class="standardLighter gitLighter"><span class="co1">// Create SocketIO instance, connect</span>
+<span class="kw2">var</span> socket <span class="sy0">=</span> <span class="kw2">new</span> io.<span class="me0">Socket</span><span class="br0">(</span><span class="st0">'localhost'</span><span class="sy0">,</span><span class="br0">{</span>
+  port<span class="sy0">:</span> <span class="nu0">8080</span>
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+socket.<span class="me0">connect</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> 
+<span class="co1">
+// Add a connect listener</span>
+socket.<span class="me0">on</span><span class="br0">(</span><span class="st0">'connect'</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  console.<span class="me0">log</span><span class="br0">(</span><span class="st0">'Client has connected to the server!'</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span><span class="co1">
+// Add a connect listener</span>
+socket.<span class="me0">on</span><span class="br0">(</span><span class="st0">'message'</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span>data<span class="br0">)</span> <span class="br0">{</span>
+  console.<span class="me0">log</span><span class="br0">(</span><span class="st0">'Received a message from the server!'</span><span class="sy0">,</span>data<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span><span class="co1">
+// Add a disconnect listener</span>
+socket.<span class="me0">on</span><span class="br0">(</span><span class="st0">'disconnect'</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  console.<span class="me0">log</span><span class="br0">(</span><span class="st0">'The client has disconnected!'</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Sends a message to the server via sockets</span>
+<span class="kw2">function</span> sendMessageToServer<span class="br0">(</span>message<span class="br0">)</span> <span class="br0">{</span>
+  socket.<span class="me0">send</span><span class="br0">(</span>message<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span></pre>
+<p>Socket.IO simplifies the WebSocket API and unifies the APIs of its fallback transports.  Transports include:</p>
+<ul>
+	<li>WebSocket</li>
+	<li>Flash Socket</li>
+	<li>AJAX long-polling</li>
+	<li>AJAX multipart streaming</li>
+	<li>IFrame</li>
+	<li>JSONP polling</li>
+</ul>
+<p>You may set any of the Socket.IO instance's options with a second argument to the constructor.  Options include:</p>
+<ul>
+	<li><code>port</code> - the port to connect to</li>
+	<li><code>transports</code> - an array containing the different transport types in order by preference []</li>
+	<li><code>transportOptions</code> - an object with additional properties to pass to the transport</li>
+</ul>
+		
+<p>Socket.IO also provides the usual connect, disconnect, and message events that the native WebSocket API provides.  Socket also provides an on method which wraps each event type, much the way Node does.</p>
+	
+	
+<h3>NodeJS - Socket.IO Setup</h3>
+<p>The server side solution provided by Socket.IO allows unification of the client and server side APIs.  With Node, you create a typical HTTP server but then pass the server instance to SocketIO.  From there, you create connection, disconnect, and message listeners much the way you did on the client side.</p>
+<p>A sample server side script would look very much like this:</p>
+<pre class="js lit" style="display: none;">// Require HTTP module (to start server) and Socket.IO
+var http = require('http'), io = require('socket.io');
+
+// Start the server at port 8080
+var server = http.createServer(function(req, res){ 
+
+	// Send HTML headers and message
+	res.writeHead(200,{ 'Content-Type': 'text/html' }); 
+	res.end('&lt;h1&gt;Hello Socket Lover!&lt;/h1&gt;');
+});
+server.listen(8080);
+
+// Create a Socket.IO instance, passing it our server
+var socket = io.listen(server);
+
+// Add a connect listener
+socket.on('connection', function(client){ 
+	
+	// Success!  Now listen to messages to be received
+	client.on('message',function(event){ 
+		console.log('Received message from client!',event);
+	});
+	client.on('disconnect',function(){
+		clearInterval(interval);
+		console.log('Server has disconnected');
+	});
+
+});
+</pre><pre class="standardLighter gitLighter"><span class="co1">// Require HTTP module (to start server) and Socket.IO</span>
+<span class="kw2">var</span> http <span class="sy0">=</span> require<span class="br0">(</span><span class="st0">'http'</span><span class="br0">)</span><span class="sy0">,</span> io <span class="sy0">=</span> require<span class="br0">(</span><span class="st0">'socket.io'</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Start the server at port 8080</span>
+<span class="kw2">var</span> server <span class="sy0">=</span> http.<span class="me0">createServer</span><span class="br0">(</span><span class="kw2">function</span><span class="br0">(</span>req<span class="sy0">,</span> res<span class="br0">)</span><span class="br0">{</span> 
+
+ <span class="co1"> // Send HTML headers and message</span>
+  res.<span class="me0">writeHead</span><span class="br0">(</span><span class="nu0">200</span><span class="sy0">,</span><span class="br0">{</span> <span class="st0">'Content-Type'</span><span class="sy0">:</span> <span class="st0">'text/html'</span> <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span> 
+  res.<span class="me0">end</span><span class="br0">(</span><span class="st0">'&lt;h1&gt;Hello Socket Lover!&lt;/h1&gt;'</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+server.<span class="me0">listen</span><span class="br0">(</span><span class="nu0">8080</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Create a Socket.IO instance, passing it our server</span>
+<span class="kw2">var</span> socket <span class="sy0">=</span> io.<span class="me0">listen</span><span class="br0">(</span>server<span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Add a connect listener</span>
+socket.<span class="me0">on</span><span class="br0">(</span><span class="st0">'connection'</span><span class="sy0">,</span> <span class="kw2">function</span><span class="br0">(</span>client<span class="br0">)</span><span class="br0">{</span> 
+  
+ <span class="co1"> // Success!  Now listen to messages to be received</span>
+  client.<span class="me0">on</span><span class="br0">(</span><span class="st0">'message'</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span>event<span class="br0">)</span><span class="br0">{</span> 
+    console.<span class="me0">log</span><span class="br0">(</span><span class="st0">'Received message from client!'</span><span class="sy0">,</span>event<span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+  client.<span class="me0">on</span><span class="br0">(</span><span class="st0">'disconnect'</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span><span class="br0">{</span>
+    clearInterval<span class="br0">(</span>interval<span class="br0">)</span><span class="sy0">;</span>
+    console.<span class="me0">log</span><span class="br0">(</span><span class="st0">'Server has disconnected'</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>You can run the server portion (assuming you have NodeJS installed) from command line with:</p>
+
+<pre class="shell lit" style="display: none;">node socket-server.js</pre><pre class="standardLighter gitLighter">node socket-server.js</pre>
+	
+<p>Now your client and server can push messages back and forth!  Within the NodeJS script, you can create a periodical message sender using some simple JavaScript:</p>
+	
+<pre class="js lit" style="display: none;">// Create periodical which ends a message to the client every 5 seconds
+var interval = setInterval(function() {
+	client.send('This is a message from the server!  ' + new Date().getTime());
+},5000);
+</pre><pre class="standardLighter gitLighter"><span class="co1">// Create periodical which ends a message to the client every 5 seconds</span>
+<span class="kw2">var</span> interval <span class="sy0">=</span> setInterval<span class="br0">(</span><span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  client.<span class="me0">send</span><span class="br0">(</span><span class="st0">'This is a message from the server!  '</span> <span class="sy0">+</span> <span class="kw2">new</span> Date<span class="br0">(</span><span class="br0">)</span>.<span class="me0">getTime</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span><span class="sy0">,</span><span class="nu0">5000</span><span class="br0">)</span><span class="sy0">;</span></pre>
+	
+<p>The server side script will push a message to the client every five seconds!</p>
+
+<h2>dojox.Socket and Socket.IO</h2>
+<p><a href="http://www.persvr.org/">Persevere</a> creator <a href="http://github.com/kriszyp">Kris Zyp</a> has created <code>dojox.Socket</code>.  <code>dojox.Socket</code> wraps the WebSocket API in an API consistent with Dojo and provides a long-polling alternative if the client doesn't support WebSocket. Here's how you can use <code>dojox.Socket</code> on the client side and Socket.IO on the server side:</p>
+
+<pre class="js lit" style="display: none;">var args, ws = typeof WebSocket != 'undefined';
+var socket = dojox.socket(args = {
+	url: ws ? '/socket.io/websocket' : '/socket.io/xhr-polling',
+	headers:{
+		'Content-Type':'application/x-www-urlencoded'
+	},
+	transport: function(args, message){
+		args.content = message; // use URL-encoding to send the message instead of a raw body
+		dojo.xhrPost(args);
+	};
+});
+var sessionId;
+socket.on('message', function(){
+	if (!sessionId){
+		sessionId = message;
+		args.url += '/' + sessionId;
+	}else if(message.substr(0, 3) == '~h~'){
+		// a heartbeat
+	}
+});
+</pre><pre class="standardLighter gitLighter"><span class="kw2">var</span> args<span class="sy0">,</span> ws <span class="sy0">=</span> <span class="kw1">typeof</span> WebSocket <span class="sy0">!</span><span class="sy0">=</span> <span class="st0">'undefined'</span><span class="sy0">;</span>
+<span class="kw2">var</span> socket <span class="sy0">=</span> dojox.<span class="me0">socket</span><span class="br0">(</span>args <span class="sy0">=</span> <span class="br0">{</span>
+  url<span class="sy0">:</span> ws <span class="sy0">?</span> <span class="st0">'/socket.io/websocket'</span> <span class="sy0">:</span> <span class="st0">'/socket.io/xhr-polling'</span><span class="sy0">,</span>
+  headers<span class="sy0">:</span><span class="br0">{</span>
+    <span class="st0">'Content-Type'</span><span class="sy0">:</span><span class="st0">'application/x-www-urlencoded'</span>
+  <span class="br0">}</span><span class="sy0">,</span>
+  transport<span class="sy0">:</span> <span class="kw2">function</span><span class="br0">(</span>args<span class="sy0">,</span> message<span class="br0">)</span><span class="br0">{</span>
+    args.<span class="me0">content</span> <span class="sy0">=</span> message<span class="sy0">;</span><span class="co1"> // use URL-encoding to send the message instead of a raw body</span>
+    dojo.<span class="me0">xhrPost</span><span class="br0">(</span>args<span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="sy0">;</span>
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="kw2">var</span> sessionId<span class="sy0">;</span>
+socket.<span class="me0">on</span><span class="br0">(</span><span class="st0">'message'</span><span class="sy0">,</span> <span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span><span class="br0">{</span>
+  <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">!</span>sessionId<span class="br0">)</span><span class="br0">{</span>
+    sessionId <span class="sy0">=</span> message<span class="sy0">;</span>
+    args.<span class="me0">url</span> <span class="sy0">+</span><span class="sy0">=</span> <span class="st0">'/'</span> <span class="sy0">+</span> sessionId<span class="sy0">;</span>
+  <span class="br0">}</span><span class="kw1">else</span> <span class="kw1">if</span><span class="br0">(</span>message.<span class="me0">substr</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">3</span><span class="br0">)</span> <span class="sy0">=</span><span class="sy0">=</span> <span class="st0">'~h~'</span><span class="br0">)</span><span class="br0">{</span>
+   <span class="co1"> // a heartbeat</span>
+  <span class="br0">}</span>
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span></pre>
+<p><code>dojox.socket.Reconnect</code> has also been created to automatically reconnect if the socket loses connection. Look forward to <code>dojox.Socket</code> debuting in Dojo 1.6.</p>
+	
+<h2>Practical Applications</h2>
+<p>There are many practical applications for WebSocket.  WebSocket is ideal for most client-to-server asynchronous purposes, chat within the browser being the most prominent.  WebSocket is used to day by most many companies because of its efficiency.  Socket.IO is in use by many organizations and was very popular at the Node KnockOut contest.</p>
+	
+	
+<h2>WebSocket Resources</h2>
+<p>There's not a great deal of information available about WebSocket so I've rounded up a few helpful resources:</p>
+<ul>
+<li><a href="http://socket.io/" rel="nofollow">Socket.IO Website</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WebSockets" rel="nofollow">WebSocket on Wikipedia</a></li>
+<li><a href="http://net.tutsplus.com/tutorials/javascript-ajax/start-using-html5-websockets-today/" rel="nofollow">Start Using HTML5 WebSockets Today</a></li>
+<li><a href="http://www.websockets.org/" rel="nofollow">WebSockets.org</a></li>
+<li><a href="http://www.sitepen.com/blog/2010/10/31/dojo-websocket/" rel="nofollow">Dojo WebSocket</a></li>
+<li><a href="http://cometdaily.com/2010/11/04/state-of-websocket-support/" rel="nofollow">State of WebSocket Support</a></li>
+<li><a href="http://testsuites.opera.com/websockets/">Opera WebSockets Test Suite</a></li>
+</ul>
+
+<div class="actions"><a href="http://davidwalsh.name/demo/websockets.zip" class="demo">View Demo</a><div class="clear"></div></div>
+
+<p>Take a moment to download my demo and visit the resources provided above.  The WebSocket API is the future of asynchronous messaging;  Socket.IO is the best available resource for WebSocket in NodeJS and within the browser.  Let me know your thoughts on WebSocket as I'm curious to know if you're as excited as I am by this new API!</p>	</article>
+
+	
+	<!-- promo related block -->
+	<div class="related">
+		<ul><li><a href="http://davidwalsh.name/namespace-mootools">
+						<h4 style="background-image: url(/wp-content/themes/jack/images/mastheadLogo.png);"><span class="title">Create Namespaced Classes with MooTools</span>
+						<span class="overlay"></span></h4>
+					  </a></li><li><a href="http://davidwalsh.name/css-flip">
+						<h4 style="background-image: url(http://davidwalsh.name/demo/css-flip.png);"><span class="title">Create a CSS Flipping Animation</span>
+						<span class="overlay"></span></h4>
+					  </a></li><li><a href="http://davidwalsh.name/html5-apis">
+						<h4 style="background-image: url(/wp-content/themes/jack/images/mastheadLogo.png);"><span class="title">5 HTML5 APIs You Didn't Know Existed</span>
+						<span class="overlay"></span></h4>
+					  </a></li></ul>
+	</div>
+
+	<!-- ad -->
+	<div class="commentsAds ad" data-bsa="1278040|db3b221ddd8cbba67739ae3837520ffe"><div id="bsap_1278040" class="bsap_1278040 bsap"><a href="http://buysellads.com/buy/detail/1687/zone/1278040?utm_source=site_1687&utm_medium=website&utm_campaign=adhere&utm_content=zone_1278040" title="Advertise Here" class="adhere ad1 odd" target="_blank">Advertise Here</a></div></div>
+
+	<!-- comments -->
+	<!-- <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://davidwalsh.name/websocket"
+    dc:identifier="http://davidwalsh.name/websocket"
+    dc:title="WebSocket and&nbsp;Socket.IO"
+    trackback:ping="http://davidwalsh.name/websocket/trackback" />
+</rdf:RDF> -->
+	<a name="comments"></a>
+
+	<h2 class="commentsHeader">Comments</h2>
+		<ol id="comments">
+		<li data-comment="21441">
+				<a name="comment-21441"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author">Ian</span>
+						<a href="http://davidwalsh.name/websocket#comment-21441" class="time">November 29, 2010 @ 12:02 pm</a>
+					</div>
+					<p>WebSocket is one of those things that looks fascinating but I just don’t know much about. I’m not the best Javascript developer, but I want to learn more about API. I’m really interested in how to utilize it from the backend. Thanks for the roundup of resources, I’ve bookmarked some of them!</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar.php" class="avatar"></li>
+<li data-comment="21442">
+				<a name="comment-21442"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author">Christian Wisniewski</span>
+						<a href="http://davidwalsh.name/websocket#comment-21442" class="time">November 29, 2010 @ 12:03 pm</a>
+					</div>
+					<p>Great article!<br>
+Have been already thinking while this came out to use it for a Chat on a small communitysite i’m making.</p>
+<p>Just one little note: You shouldn’t note that Flash would be an alternative and it wouldn’t work on iPhones/iPads, since they are using Mobile Safari which will actually let this API work even without Flash ;)</p>
+<p>Hope to read more stuff about that soon, maybe some code examples for a chat ;)</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(1).php" class="avatar"></li>
+<li data-comment="21449">
+				<a name="comment-21449"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author">Tim</span>
+						<a href="http://davidwalsh.name/websocket#comment-21449" class="time">November 29, 2010 @ 2:35 pm</a>
+					</div>
+					<p>Socket.io and nodejs are both genius, though I can’t seem to come up with a usecase for it other than a chatbox or a feedback-system for clients.<br>
+It’s like thinking the other way around with the server-side scripting to it. Maybe that’s why i’m lacking inspiration of thinking about something really cool.</p>
+<p>Javascript is about thinking out of the box, so this is yet another box to overcome ;-)</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(2).php" class="avatar"></li><ul class="children">
+<li data-comment="21450">
+				<a name="comment-21450"></a>
+				
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://poetro.hu/" rel="external nofollow" class="url">Peter Galiba</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-21450" class="time">November 29, 2010 @ 5:05 pm</a>
+					</div>
+					<p>Think about Google Wave, Twitter, Google Docs, Facebook Wall any other collaborative application that multiple users use at the same time. You can also think of an alert system that runs in your browser, say watching if you received any new messages or mail.</p>
+<p>Btw, there will be no Opera 10.70 only Opera 11.</p>
+
+				</div></div>
+			 <img src="./WebSocket and Socket.IO_files/avatar(3).php" class="avatar"></li>
+<li data-comment="21470">
+				<a name="comment-21470"></a>
+				
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://www.profilepicture.co.uk/" rel="external nofollow" class="url">Phil</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-21470" class="time">December 1, 2010 @ 5:22 am</a>
+					</div>
+					<p>Any application would benefit from this technology, we use Ajax to reduce the clunkiness of our applications through reduced page reloads and as David points out in the article XHR was never really built for what it has been spawned into. Websockets will help bring the desktop application feel into the browser. Really exciting stuff!</p>
+
+				</div></div>
+			 <img src="./WebSocket and Socket.IO_files/avatar(4).php" class="avatar"></li>
+<li data-comment="21631">
+				<a name="comment-21631"></a>
+				
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://filecatalyst.com/" rel="external nofollow" class="url">Greg</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-21631" class="time">December 12, 2010 @ 1:17 am</a>
+					</div>
+					<p>The use cases are many! For example, a web application that monitors tasks and resources on a server-side application. Or really any kind of application that you might want to view continuously updated information for.</p>
+<p>Anybody who doesn’t see the use case may not be doing any sort of polling with AJAX. If you’ve ever set a polling interval to retrieve information, you can instantly see how WebSocket will make this job a lot easier, more interactive, and more elegant. :-)</p>
+<p>Too bad it’s been yanked from Fx4 and Opera for now… looking forward to its happy return.</p>
+
+				</div></div>
+			 <img src="./WebSocket and Socket.IO_files/avatar(5).php" class="avatar"></li>
+<li data-comment="29027">
+				<a name="comment-29027"></a>
+				
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://www.teaminternetmarketing.com/" rel="external nofollow" class="url">Robert</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-29027" class="time">February 4, 2012 @ 9:11 pm</a>
+					</div>
+					<p>Another us is for multi-player games.</p>
+
+				</div></div>
+			 <img src="./WebSocket and Socket.IO_files/avatar(6).php" class="avatar"></li>
+</ul>
+
+<li data-comment="21452">
+				<a name="comment-21452"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://www.visual-blade.com/" rel="external nofollow" class="url">Daquan Wright</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-21452" class="time">November 30, 2010 @ 1:42 am</a>
+					</div>
+					<p>I needed to wait until I got my desktop before I got into AJAX….now this looks amazing. If there are enough resources on it, I’ll spend my time on this instead of AJAX since it looks to be even more amazing.</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(7).php" class="avatar"></li>
+<li data-comment="21453">
+				<a name="comment-21453"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://blog.caplin.com/" rel="external nofollow" class="url">Martin Tyler</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-21453" class="time">November 30, 2010 @ 4:02 am</a>
+					</div>
+					<p>Nice article.</p>
+<p>I’ve written about the problems with WebSocket before – <a href="http://blog.caplin.com/2010/03/02/why-we-dont-need-html5-websocket/" rel="nofollow">http://blog.caplin.com/2010/03/02/why-we-dont-need-html5-websocket/</a></p>
+<p>Something I didn’t touch on in that post though, and something I brought up a couple of times early on in the WebSocket mailing lists was server API..</p>
+<p>Everyone wants to wrap up WebSocket because of various issues with it, so you can have fallback mechanisms. The client end of WebSocket has a well defined API, so implementing fallback mechanisms behind this (or a similar API) is very easy. On the server side there is no API, just the raw protocol to implement. There is no CGI API, no servlet API, nothing to give any reuse or commonality for implementing the server end of a WebSocket application.</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(8).php" class="avatar"></li><ul class="children">
+<li data-comment="21458">
+				<a name="comment-21458"></a>
+				
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://blog.caplin.com/" rel="external nofollow" class="url">Martin Tyler</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-21458" class="time">November 30, 2010 @ 7:12 am</a>
+					</div>
+					<p>In fact this inspired me to write a short blog on the lack of WebSocket server API – <a href="http://blog.caplin.com/2010/11/30/why-no-websocket-server-api/" rel="nofollow">http://blog.caplin.com/2010/11/30/why-no-websocket-server-api/</a></p>
+
+				</div></div>
+			 <img src="./WebSocket and Socket.IO_files/avatar(9).php" class="avatar"></li>
+<li data-comment="21632">
+				<a name="comment-21632"></a>
+				
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://filecatalyst.com/" rel="external nofollow" class="url">Greg</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-21632" class="time">December 12, 2010 @ 1:19 am</a>
+					</div>
+					<p>Martin,</p>
+<p>There are some good implementations with API and examples for Java.</p>
+
+				</div></div>
+			 <img src="./WebSocket and Socket.IO_files/avatar(5).php" class="avatar"></li>
+</ul>
+
+<li data-comment="21454">
+				<a name="comment-21454"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://www.rflab.co.za/testground/yql/" rel="external nofollow" class="url">Q_the_novice</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-21454" class="time">November 30, 2010 @ 4:18 am</a>
+					</div>
+					<p>Thanks David, i have been using Ajax timeouts for a two-player online game and i think webSockets would be perfect for my application.</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(10).php" class="avatar"></li>
+<li data-comment="21464">
+				<a name="comment-21464"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://mathiasbynens.be/" rel="external nofollow" class="url">Mathias Bynens</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-21464" class="time">November 30, 2010 @ 4:22 pm</a>
+					</div>
+					<p>For the WebSockets server to work with the Flash-based fallback, isn’t it also necessary to add a <code class="js lit" style="display: none;">crossdomain.xml</code><pre class="standardLighter gitLighter">crossdomain.<span class="me0">xml</span></pre> file in the root folder, available via port 843? I’m pretty sure it is.</p>
+<p><code class="js lit" style="display: none;">&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd"&gt;
+&lt;cross-domain-policy&gt;
+  &lt;allow-access-from domain="*" to-ports="*"/&gt; 
+&lt;/cross-domain-policy&gt;</code><pre class="standardLighter gitLighter"><span class="sy0">&lt;</span><span class="sy0">?</span>xml version<span class="sy0">=</span><span class="st0">"1.0"</span><span class="sy0">?</span><span class="sy0">&gt;</span>
+<span class="sy0">&lt;</span><span class="sy0">!</span>DOCTYPE cross<span class="sy0">-</span>domain<span class="sy0">-</span>policy SYSTEM <span class="st0">"http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd"</span><span class="sy0">&gt;</span>
+<span class="sy0">&lt;</span>cross<span class="sy0">-</span>domain<span class="sy0">-</span>policy<span class="sy0">&gt;</span>
+  <span class="sy0">&lt;</span>allow<span class="sy0">-</span>access<span class="sy0">-</span>from domain<span class="sy0">=</span><span class="st0">"*"</span> to<span class="sy0">-</span>ports<span class="sy0">=</span><span class="st0">"*"</span><span class="sy0">/</span><span class="sy0">&gt;</span> 
+<span class="sy0">&lt;</span><span class="sy0">/</span>cross<span class="sy0">-</span>domain<span class="sy0">-</span>policy<span class="sy0">&gt;</span></pre></p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(11).php" class="avatar"></li>
+<li data-comment="21493">
+				<a name="comment-21493"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://www.sixtyseconds.co.za/" rel="external nofollow" class="url">Chris the Developer</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-21493" class="time">December 3, 2010 @ 2:13 am</a>
+					</div>
+					<p>@mathias bynens – socket-io-server (developed by the same guys) handles this flash crossdomain.xml issue for you.</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(12).php" class="avatar"></li>
+<li data-comment="22108">
+				<a name="comment-22108"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://blog.surfulater.com/" rel="external nofollow" class="url">Neville Franks</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-22108" class="time">December 25, 2010 @ 8:15 pm</a>
+					</div>
+					<p>I’ve installed Node and Socket.io on a Ubuntu VM and was unable to get David’s sample code to connect to the server. I resolved this by changing socket-client.html:</p>
+<p>     var socket = new io.Socket(localhost, {port: 8080, rememberTransport: false});<br>
+to:<br>
+     var socket = new io.Socket(null, {port: 8080, rememberTransport: false});</p>
+<p>I discovered this after looking at the socket.io/example/chat.html file.</p>
+<p>I hope this is helpful to someone else.</p>
+<p>Neville</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(13).php" class="avatar"></li>
+<li data-comment="22239">
+				<a name="comment-22239"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://conceptfour.com/" rel="external nofollow" class="url">mark</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-22239" class="time">January 8, 2011 @ 2:46 am</a>
+					</div>
+					<p>Looks like you had some serious fun with the bling on your site.  I agree with the first sentence.  Websockets, and the interim fall back solutions that can be done transparently, are incredibly exciting.   It’s been over 10 years in coming, but it’s really gonna happen now.</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(14).php" class="avatar"></li>
+<li data-comment="22633">
+				<a name="comment-22633"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://tylergaw.com/" rel="external nofollow" class="url">Tyler</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-22633" class="time">February 8, 2011 @ 11:51 am</a>
+					</div>
+					<p>Really great article David, super helpful!</p>
+<p>You may want to update how to include the socket.io.js file for the client. The CDN points to version 0.6.0 which is missing a number of features, namely the connecting and connect_failed events. which are pretty helpful. Those events are in v0.6.2. Took some digging around before I noticed the previous version on the CDN.</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(15).php" class="avatar"></li>
+<li data-comment="26221">
+				<a name="comment-26221"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author">Luiz Carlos</span>
+						<a href="http://davidwalsh.name/websocket#comment-26221" class="time">July 25, 2011 @ 11:55 am</a>
+					</div>
+					<p>info  – unhandled socket.io url </p>
+<p>in terminal</p>
+<p>solution ?</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(16).php" class="avatar"></li><ul class="children">
+<li data-comment="28581">
+				<a name="comment-28581"></a>
+				
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author">Carlton Dickson</span>
+						<a href="http://davidwalsh.name/websocket#comment-28581" class="time">January 20, 2012 @ 6:54 pm</a>
+					</div>
+					<p>I had a similar problem and I think this was due to the fact I was pointing to a JS file at <a href="http://cdn.socket.io/stable/socket.io.js" rel="nofollow">http://cdn.socket.io/stable/socket.io.js</a>, but this is for socket.io 0.6.</p>
+<p>Turns out that if your node server is up and running with the code shown at “NodeJS – Socket.IO Setup”, you should be able to access something like <a href="http://localhost:12345/socket.io/socket.io.js" rel="nofollow">http://localhost:12345/socket.io/socket.io.js</a> and you will see the JS being served up from there and that’s what you need to point at.</p>
+<p>Now when I start up my server I only see…</p>
+<p>“info  – socket.io started”</p>
+<p>Also another line has changed slightly</p>
+<p>var socket = new io.Socket(‘localhost’,{<br>
+  port: 8080<br>
+});<br>
+socket.connect(); </p>
+<p>can be written as…</p>
+<p>var socket = io.connect(‘http://localhost:12345′);</p>
+<p>Nice tutorial but think it’s out of date which led to a lot of headbanging this evening :)</p>
+
+				</div></div>
+			 <img src="./WebSocket and Socket.IO_files/avatar(17).php" class="avatar"></li>
+</ul>
+
+<li data-comment="27492">
+				<a name="comment-27492"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author">Sergio</span>
+						<a href="http://davidwalsh.name/websocket#comment-27492" class="time">November 8, 2011 @ 3:59 am</a>
+					</div>
+					<p>Good article.</p>
+<p>I’m absolutely new to websockets. Still I’m reading lot of blogs about node.js, websockets, html5… all of them are using localhost servers.</p>
+<p>Comparing websockets to a classical AJAX POST, websockets needs to know always server IP or name address. Which is the way to solve this using websockets?<br>
+BR,<br>
+Sergio</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(18).php" class="avatar"></li>
+<li data-comment="30839">
+				<a name="comment-30839"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author">Joes</span>
+						<a href="http://davidwalsh.name/websocket#comment-30839" class="time">March 7, 2012 @ 7:34 am</a>
+					</div>
+					<p>Ahem, if this article talks about websockets, where’s SockJS review?</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(19).php" class="avatar"></li>
+<li data-comment="31242">
+				<a name="comment-31242"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author">Akash Saikia</span>
+						<a href="http://davidwalsh.name/websocket#comment-31242" class="time">March 26, 2012 @ 1:44 am</a>
+					</div>
+					<p>Nice article and got a kick start to work with Socket.IO :)<br>
+Thanks.</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(20).php" class="avatar"></li>
+<li data-comment="31304">
+				<a name="comment-31304"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://www.imageworkz.asia/" rel="external nofollow" class="url">AJ</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-31304" class="time">March 28, 2012 @ 3:13 am</a>
+					</div>
+					<p>Hi! I just wanna ask how the code will change if it is to be uploaded in the net. I am quite aware that you should change localhost to your domain name but whenever I upload it and access it through <a href="http://domainname:8080/" rel="nofollow">http://domainname:8080</a> it doesn’t seem to work. Any ideas?</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(21).php" class="avatar"></li>
+<li data-comment="32340">
+				<a name="comment-32340"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author">Matt</span>
+						<a href="http://davidwalsh.name/websocket#comment-32340" class="time">May 22, 2012 @ 11:02 pm</a>
+					</div>
+					<p>Just wondering if I can connect to a websocket in native swf (i.e not embedded in a html page at all): this is due to it being a stagecraft os for a set top box.<br>
+thanks in advance.<br>
+mk</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(22).php" class="avatar"></li>
+<li data-comment="33024">
+				<a name="comment-33024"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://www.innovationtech.co.uk/" rel="external nofollow" class="url">mike</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-33024" class="time">July 18, 2012 @ 9:49 am</a>
+					</div>
+					<p>Some ideas for this technology.</p>
+<p><a href="http://195.234.11.44/playground/node/" rel="nofollow">http://195.234.11.44/playground/node/</a></p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(23).php" class="avatar"></li>
+<li data-comment="36024">
+				<a name="comment-36024"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://johnnyfreeman.us/" rel="external nofollow" class="url">Johnny Freeman</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-36024" class="time">September 19, 2012 @ 4:20 pm</a>
+					</div>
+					<p>Heads up, that CDN link is serving up an extremely outdated version of client socket.io.</p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(24).php" class="avatar"></li>
+<li data-comment="38489">
+				<a name="comment-38489"></a>
+				<div class="arrow"></div>
+				<div class="detail"><div class="detailContent">
+					<div class="meta">
+						<span class="author"><a href="http://gamobo.tk/" rel="external nofollow" class="url">Aditya</a></span>
+						<a href="http://davidwalsh.name/websocket#comment-38489" class="time">October 14, 2012 @ 11:39 am</a>
+					</div>
+					<p>Here is a example of socket.io and HTML5 Canvas app from Node js.</p>
+<p><a href="http://drawme.jit.su/" rel="nofollow">http://drawme.jit.su</a></p>
+
+				</div></div>
+			 <a class="reply" href="javascript:;" title="Reply">Reply</a><img src="./WebSocket and Socket.IO_files/avatar(25).php" class="avatar"></li>
+	</ol>
+
+	<h2 class="noprint">Be Heard</h2>
+	<p class="noprint"><span class="protip">Tip:</span>  Wrap your code in &lt;code&gt; tags...and don't flame others.</p>
+	<div id="commentFormHolder">
+		<div id="commentForm">
+			<form action="http://davidwalsh.name/wp-comments-post.php" id="cForm" method="post">
+								<label>
+					<span class="label">Name:</span>
+					<input placeholder="Name" name="author" tabindex="1" maxlength="50" required="required">
+				</label>
+				<label>
+					<span class="label">Email:</span>
+					<input placeholder="Email" name="email" type="email" tabindex="2" required="required">
+				</label>
+				<label>
+					<span class="label">Website:</span>
+					<input placeholder="Website" name="url" tabindex="2">
+				</label>
+							<textarea id="comment" name="comment" tabindex="4" required="required"></textarea>
+				<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="c864bf87d5"></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;">
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+				<input type="hidden" id="comment_parent" name="comment_parent">
+				<input type="hidden" name="comment_post_ID" value="5122">
+				<input type="submit" name="submit" value="Post Comment!">
+				<a href="javascript:;" id="commentUseEditor">Use Code Editor</a>
+			</form>
+		</div>
+	</div>
+
+			<!-- get the older post -->
+					<a href="http://davidwalsh.name/thanksgiving-2010" class="nextPrevLink" id="prevLink"><div class="relative">
+				<span class="arrow"></span>
+				<span class="label">Older</span>
+				<div class="detail"><span>
+					What I'm Thankful For:  2010 Edition				<span></span></span></div>
+			</div></a>
+		
+		<!-- get the newer post -->
+					<a href="http://davidwalsh.name/labjs" class="nextPrevLink" id="nextLink">
+				<span class="arrow"></span>
+				<span class="label">Newer</span>
+				<div class="detail"><span>
+					Smarter Script Loading with LABjs				<span></span></span></div>
+			</a>
+			
+
+<!--/CONTENT-->
+</section><section class="right fadeIn">
+
+	<!-- dwb sidebar -->
+	<div class="right-dwb">
+		
+		<section class="subscribe"><ul>
+			<li class="rss"><a href="http://davidwalsh.name/feed" rel="nofollow" data-noxhr="true"><span></span>30202 Subscribers</a></li>
+			<li class="twitter"><a href="http://twitter.com/davidwalshblog" rel="nofollow"><span></span>12607 Followers</a></li>
+			<li class="gplus"><a href="http://plus.google.com/u/0/114538814489633467974" rel="nofollow"><span></span>Google +</a></li>
+			<li class="facebook"><a href="http://facebook.com/davidwalshblog" rel="nofollow"><span></span>Facebook</a></li>
+		</ul></section>
+
+		<section class="adContainer boxAds ad" data-bsa="1236348|db3b221ddd8cbba67739ae3837520ffe"><div id="bsap_1236348" class="bsap_1236348 bsap"><a href="http://stats.buysellads.com/click.go?z=1236348&b=1441848&g=&s=&sw=1366&sh=768&br=chrome,23,win&r=0.19507910450920463&link=http://ad.doubleclick.net/jump/N7384.1044586.DAVIDWALSH.NAME/B6808148;sz=125x125;ord=1354216269?" onmouseover="window.status = &#39;http://ad.doubleclick.net/jump/N7384.1044586.DAVIDWALSH.NAME/B6808148;sz=125x125;ord=1354216269?&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="New Relic App Performance Monitoring" id="bsa_1441848" target="_blank"><img src="./WebSocket and Socket.IO_files/B6808148;sz=125x125" width="125" height="125" alt="New Relic App Performance Monitoring"></a><a href="http://stats.buysellads.com/click.go?z=1236348&b=2879696&g=&s=&sw=1366&sh=768&br=chrome,23,win&r=0.14949999772943556&link=http://www.nwoods.com/components/canvas/gojs-overview.htm?utm_source=davidwalsh&utm_medium=m125x125&utm_term=canvas&utm_content=black-fast&utm_campaign=bsa-gojs" onmouseover="window.status = &#39;http://www.nwoods.com/components/canvas/gojs-overview.htm?utm_source=davidwalsh&amp;utm_medium=m125x125&amp;utm_term=canvas&amp;utm_content=black-fast&amp;utm_campaign=bsa-gojs&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad2 even" title="Use GoJS for flowcharts, mindmaps, org charts, networks, UML and ER diagrams." id="bsa_2879696" target="_blank"><img src="./WebSocket and Socket.IO_files/137833-1351867290.png" width="125" height="125" alt="Use GoJS for flowcharts, mindmaps, org charts, networks, UML and ER diagrams."></a><a href="http://stats.buysellads.com/click.go?z=1236348&b=2301264&g=&s=&sw=1366&sh=768&br=chrome,23,win&r=0.321425563422963&link=http://xlinesoft.com/phprunner/buysellads.aspx" onmouseover="window.status = &#39;http://xlinesoft.com/phprunner/buysellads.aspx&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad3 odd" title="PHPRunner. Build web 2.0 applications in minutes." id="bsa_2301264" target="_blank"><img src="./WebSocket and Socket.IO_files/107077-1337177808.jpg" width="125" height="125" alt="PHPRunner. Build web 2.0 applications in minutes."></a><a href="http://stats.buysellads.com/click.go?z=1236348&b=2661222&g=&s=&sw=1366&sh=768&br=chrome,23,win&r=0.40153226256370544&link=http://clk.atdmt.com/SHS/go/416107205/direct/01/" onmouseover="window.status = &#39;http://clk.atdmt.com/SHS/go/416107205/direct/01/&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad4 even" title="stock photos" id="bsa_2661222" target="_blank"><img src="./WebSocket and Socket.IO_files/saved_resource" width="125" height="125" alt="stock photos"></a><a href="http://stats.buysellads.com/click.go?z=1236348&b=2626207&g=&s=&sw=1366&sh=768&br=chrome,23,win&r=0.13821736816316843&link=http://www.kvchosting.com/837.html" onmouseover="window.status = &#39;http://www.kvchosting.com/837.html&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad5 odd" title="KVCHOSTING Rated No.1 HOSTING by David Walsh Blog" id="bsa_2626207" target="_blank"><img src="./WebSocket and Socket.IO_files/122991-1345625609.jpg" width="125" height="125" alt="KVCHOSTING Rated No.1 HOSTING by David Walsh Blog"></a><a href="http://buysellads.com/buy/detail/1687/zone/1236348?utm_source=site_1687&utm_medium=website&utm_campaign=adhere&utm_content=zone_1236348" title="Advertise Here" class="adhere ad6 even" target="_blank">Advertise Here</a></div></section>
+
+		<!-- topics -->
+		<h6><span></span>Popular Topics</h6>
+		<section class="topics"><ul>
+			<li><a href="http://davidwalsh.name/tutorials/htaccess">.htaccess</a></li>
+			<li><a href="http://davidwalsh.name/tutorials/ajax">AJAX</a></li>
+			<li><a href="http://davidwalsh.name/tutorials/canvas">Canvas</a></li>
+			<li><a href="http://davidwalsh.name/tutorials/css">CSS</a></li>
+			<li><a href="http://davidwalsh.name/tutorials/dojo">Dojo</a></li>
+			<li><a href="http://davidwalsh.name/tutorials/html5">HTML5</a></li>
+			<li><a href="http://davidwalsh.name/tutorials/javascript">JavaScript</a></li>
+			<li><a href="http://davidwalsh.name/tutorials/jquery">jQuery</a></li>
+			<li><a href="http://davidwalsh.name/tutorials/mobile">Mobile</a></li>
+			<li><a href="http://davidwalsh.name/tutorials/mootools">MooTools</a></li>
+			<li><a href="http://davidwalsh.name/tutorials/nodejs">Node.js</a></li>
+			<li><a href="http://davidwalsh.name/tutorials/php">PHP</a></li>
+			<li><a href="http://davidwalsh.name/tutorials/wordpress">WordPress</a></li>
+		</ul></section>
+
+		<h6><span></span><a href="http://davidwalsh.name/tutorials/features">Features</a></h6>
+		<section class="featureBlock">
+			<ul><li><a href="http://davidwalsh.name/more-html5-apis"><div class="rays"></div><div class="logo"></div>5 More HTML5 APIs You Didn’t Know&nbsp;Existed</a></li><li><a href="http://davidwalsh.name/browser-camera"><div class="rays"></div><div class="logo"></div>Camera and Video Control with&nbsp;HTML5</a></li><li><a href="http://davidwalsh.name/html5-apis"><div class="rays"></div><div class="logo"></div>5 HTML5 APIs You Didn’t Know&nbsp;Existed</a></li><li><a href="http://davidwalsh.name/css-flip"><div class="rays"></div><div class="logo"></div>Create a CSS Flipping&nbsp;Animation</a></li><li><a href="http://davidwalsh.name/folding-animation"><div class="rays"></div><div class="logo"></div>CSS 3D Folding&nbsp;Animation</a></li></ul>		</section>
+
+		
+		<section class="adContainer rightAdBlock ad" data-bsa="1278041|db3b221ddd8cbba67739ae3837520ffe"><div id="bsap_1278041" class="bsap_1278041 bsap"><a href="http://buysellads.com/buy/detail/1687/zone/1278041?utm_source=site_1687&utm_medium=website&utm_campaign=adhere&utm_content=zone_1278041" title="Advertise Here" class="adhere ad1 odd" target="_blank">Advertise Here</a></div></section>
+
+		
+		<div class="mtAd">
+			<a href="http://dwf.tw/mt" rel="nofollow" class="mtPlug">Hosted by Media Temple</a>
+			<p>
+				This blog is hosted by <a href="http://dwf.tw/mt" rel="nofollow">Media Temple</a>. Affordable. Reliable. Fast. Easy.<br>
+				<a href="http://dwf.tw/mt" rel="nofollow">Save 20% on Media Temple Hosting</a>
+			</p>
+		</div>
+
+	</div>
+
+	<!-- dwb sidebar -->
+	<div class="right-sns">
+		
+		<section class="subscribe"><ul>
+			<li class="rss"><a href="http://davidwalsh.name/s/feed" rel="nofollow" data-noxhr="true"><span></span>Subscribe!</a></li>
+			<li class="twitter"><a href="http://twitter.com/scriptandstyle" rel="nofollow"><span></span>@ScriptAndStyle</a></li>
+			<li class="facebook"><a href="http://facebook.com/scriptnstyle" rel="nofollow"><span></span>Facebook</a></li>
+		</ul></section>
+
+		<section class="adContainer boxAds ad" data-bsa="1278466|db3b221ddd8cbba67739ae3837520ffe"></section>
+
+		<!-- topics -->
+		<h6>Popular Topics</h6>
+		<section class="topics"><ul>
+			<li><a href="http://davidwalsh.name/s/tag/ajax">#ajax</a></li><li><a href="http://davidwalsh.name/s/tag/canvas">#canvas</a></li><li><a href="http://davidwalsh.name/s/tag/css">#css</a></li><li><a href="http://davidwalsh.name/s/tag/dojo">#dojo</a></li><li><a href="http://davidwalsh.name/s/tag/html5">#html5</a></li><li><a href="http://davidwalsh.name/s/tag/jquery">#jquery</a></li><li><a href="http://davidwalsh.name/s/tag/javascript">#javascript</a></li><li><a href="http://davidwalsh.name/s/tag/mobile">#mobile</a></li><li><a href="http://davidwalsh.name/s/tag/mootools">#mootools</a></li><li><a href="http://davidwalsh.name/s/tag/design">#design</a></li>		</ul></section>
+
+		<h6 style="padding-left:60px"><span></span><a href="http://davidwalsh.name/page/1" style="text-decoration:none;">David Walsh Blog</a></h6>
+		<section class="featureBlock">
+			<ul><li><a href="http://davidwalsh.name/more-html5-apis"><div class="rays"></div><div class="logo"></div>5 More HTML5 APIs You Didn’t Know&nbsp;Existed</a></li><li><a href="http://davidwalsh.name/browser-camera"><div class="rays"></div><div class="logo"></div>Camera and Video Control with&nbsp;HTML5</a></li><li><a href="http://davidwalsh.name/html5-apis"><div class="rays"></div><div class="logo"></div>5 HTML5 APIs You Didn’t Know&nbsp;Existed</a></li><li><a href="http://davidwalsh.name/css-flip"><div class="rays"></div><div class="logo"></div>Create a CSS Flipping&nbsp;Animation</a></li><li><a href="http://davidwalsh.name/folding-animation"><div class="rays"></div><div class="logo"></div>CSS 3D Folding&nbsp;Animation</a></li></ul>		</section>
+
+		<div class="inset">
+			<h3>Easier Sharing</h3>
+			<p>
+				Add the  <a href="javascript:(function()%7Bvar%20d=document,w=window,ds=d.getSelection,ws=w.getSelection,ss=d.selection,e=encodeURIComponent;t=(ws)%3Fws():(ds)%3Fds():(ss)%3Fss.createRange().text:'';t=(t.toString().length)%3Ft:prompt('Please%20select%20article%20description%20text.','');if(t)%7Ba='http://localhost:8000/s/submit%3Ftitle='%20+%20e(document.title)%20+%20'%26url='%20+%20e(window.location)%20+%20'%26content=';u=a+e(t);f=function()%7Bx=w.open(u,'nfx','scrollbars=1,toolbar=0,resizable=1,status=1,width=600,height=600');if(!x)w.location.href=u;%7D;if(/Firefox/.test(navigator.userAgent))setTimeout(f,0);else%20f();%7D%7D)();">Script &amp; Style</a>
+				submission bookmarklet to your browser and sharing great tutorials becomes even easier!
+			</p>
+		</div>
+
+	</div>
+
+</section></div><footer><div class="centerSite">© <a href="http://davidwalsh.name/">David Walsh</a>&nbsp;&nbsp;2007-2012.</div></footer><script src="./WebSocket and Socket.IO_files/jsapi"></script><script>google.load("search", "1");function googleCallback() {z.searchLoaded = 1;};google.setOnLoadCallback(googleCallback);z.d.documentElement.className = "";</script><script src="./WebSocket and Socket.IO_files/saved_resource(1)" type="text/javascript"></script><link href="./WebSocket and Socket.IO_files/default+es.css" type="text/css" rel="stylesheet"><script src="./WebSocket and Socket.IO_files/default+es.I.js" type="text/javascript"></script><script src="./WebSocket and Socket.IO_files/curl.js" onload="curl(z,[&#39;site&#39;])" async=""></script></div>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Database Caching 4/13 queries in 0.013 seconds using disk: basic
+Object Caching 553/596 objects using disk: basic
+
+Served from: davidwalsh.name @ 2012-11-29 11:02:16 --><div id="indicator"></div><div class="demoBox"><div class="demoToolbar"> 									<span class="intro">Demo for: 										<a href="javascript:;" onclick="$$(&#39;.demoIframe&#39;).destroy();History.back();return false;">WebSocket and&nbsp;Socket.IO</a> 									</span> 									<a href="javascript:;" class="close data-noxhr" onclick="$$(&#39;.demoIframe&#39;).destroy();History.back();return false;">Close</a>							   </div><div class="demoIframeHolder"><iframe src="about:blank" frameborder="0" class="demoIframe fadeIn" name="IFrame_ha49dvpy" id="IFrame_ha49dvpy"></iframe></div></div></body></html>

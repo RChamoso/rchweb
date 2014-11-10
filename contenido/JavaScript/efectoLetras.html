@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class=" history" lang="en" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#" slick-uniqueid="5">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8"><meta http-equiv="content-type" content="text/html;">
+	<title>dat.gui:  Exceptional JavaScript Interface Controller</title>
+	<link rel="stylesheet" media="all" href="http://davidwalsh.name/wp-content/themes/jack/css/all.css?v1354028691715">
+	<link rel="stylesheet" href="http://davidwalsh.name/wp-content/themes/jack/css/print.css?v1354028691715" media="print">
+</head>
+		
+<body class="single cacheable " data-twttr-rendered="true">
+	<div id="page">
+		<div id="contentHolder">
+			<section class="left"><!--CONTENT-->
+	<!-- start up the article -->
+	<article>
+		<!-- article title, social widgets, article content -->
+		<h1>dat.gui:  Exceptional JavaScript Interface&nbsp;Controller</h1>
+
+<p>We all love trusted JavaScript frameworks like MooTools, jQuery, and Dojo, but there's a big push toward using focused micro-frameworks for smaller purposes. Of course, there are positives and negatives to using them. &nbsp;Positives include smaller JS footprint (especially good for mobile) and less cruft, negatives being that they don't have the community behind them to drive growth and the developer that uses multiple micro-frameworks has to work with inconsistent APIs. &nbsp;To each their own; &nbsp;I don't have a strong feeling either way, as it depends on the project.</p>
+
+<p>One nice resource I recently stumbled upon is <code>dat.gui</code>. <code>dat.gui</code> advertises itself as <em>a lightweight controller library that allows you to easily manipulate variables and fire functions on the fly. &nbsp; </em>That's a pretty general statement but <code>dat.gui</code> appears to be a very general framework. &nbsp;The premise is object and property management within a GUI panel. &nbsp;Let's take a look at how <code>dat.gui</code> can be used.</p>
+
+<div class="actions"><a href="http://davidwalsh.name/demo/dat-gui.php" class="demo">View Demo</a><div class="clear"></div></div>
+
+<p><code>dat.gui</code>'s niche is in listening to and controlling data such that it can be visualized into charts or other graphics. &nbsp;Creating a new DAT.GUI instance provides a new sliding pane for which to add controls to:</p>
+
+<pre class="js lit" style="display: none;">// Create an instance, which also creates a UI pane
+var gui = new DAT.GUI();
+</pre><pre class="standardLighter gitLighter"><span class="co1">// Create an instance, which also creates a UI pane</span>
+<span class="kw2">var</span> gui <span class="sy0">=</span> <span class="kw2">new</span> DAT.<span class="me0">GUI</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>With the pane ready, new controls can be added. &nbsp;Fields can be of type string, number, boolean, or function, with a number slider available depending on options passed to it. &nbsp;Here's how you can create a field of each type:</p>
+
+<pre class="js lit" style="display: none;">
+// My sample abject
+var obj = {
+	name: "David Walsh",
+	num: 23,
+	winner: true
+};
+
+// String field
+gui.add(obj, "name");
+
+// Number field with slider
+gui.add(obj, "num").min(1).max(50).step(1);
+
+// Checkbox field
+gui.add(obj, "winner");
+
+</pre><pre class="standardLighter gitLighter"><span class="co1">// My sample abject</span>
+<span class="kw2">var</span> obj <span class="sy0">=</span> <span class="br0">{</span>
+  name<span class="sy0">:</span> <span class="st0">"David Walsh"</span><span class="sy0">,</span>
+  num<span class="sy0">:</span> <span class="nu0">23</span><span class="sy0">,</span>
+  winner<span class="sy0">:</span> <span class="kw2">true</span>
+<span class="br0">}</span><span class="sy0">;</span>
+<span class="co1">
+// String field</span>
+gui.<span class="me0">add</span><span class="br0">(</span>obj<span class="sy0">,</span> <span class="st0">"name"</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Number field with slider</span>
+gui.<span class="me0">add</span><span class="br0">(</span>obj<span class="sy0">,</span> <span class="st0">"num"</span><span class="br0">)</span>.<span class="me0">min</span><span class="br0">(</span><span class="nu0">1</span><span class="br0">)</span>.<span class="me0">max</span><span class="br0">(</span><span class="nu0">50</span><span class="br0">)</span>.<span class="me0">step</span><span class="br0">(</span><span class="nu0">1</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Checkbox field</span>
+gui.<span class="me0">add</span><span class="br0">(</span>obj<span class="sy0">,</span> <span class="st0">"winner"</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>Since properties are changed directly on the object itself, there's not "setter" and so <code>dat.gui</code> provides a <code>listen</code> function to do just that -- list for changes:</p>
+
+<pre class="js lit" style="display: none;">// Listen to changes within the GUI
+gui.add(obj, "name").onChange(function(newValue) {
+	console.log("Value changed to:  ", newValue);
+});
+
+// Listen to changes outside the GUI - GUI will update when changed from outside
+gui.add(obj, "name").listen();
+</pre><pre class="standardLighter gitLighter"><span class="co1">// Listen to changes within the GUI</span>
+gui.<span class="me0">add</span><span class="br0">(</span>obj<span class="sy0">,</span> <span class="st0">"name"</span><span class="br0">)</span>.<span class="me0">onChange</span><span class="br0">(</span><span class="kw2">function</span><span class="br0">(</span>newValue<span class="br0">)</span> <span class="br0">{</span>
+  console.<span class="me0">log</span><span class="br0">(</span><span class="st0">"Value changed to:  "</span><span class="sy0">,</span> newValue<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Listen to changes outside the GUI - GUI will update when changed from outside</span>
+gui.<span class="me0">add</span><span class="br0">(</span>obj<span class="sy0">,</span> <span class="st0">"name"</span><span class="br0">)</span>.<span class="me0">listen</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>Those are the dead basics of the <code>dat.gui</code> library. &nbsp;Note that I've not yet mentioned what the result looks like. &nbsp;That's because it's up to you to create the visual aspects based on property values. &nbsp;The demo that ships with <code>dat.gui</code> is a very creative dot-based constant animation. &nbsp;The animation magic lies within the&nbsp;FizzyText function. &nbsp;FizzyText is a more sizable function that does the animation, but let's take a look at the <code>dat.gui</code> code:</p>
+
+<pre class="js lit" style="display: none;">var fizzyText = new FizzyText("david walsh");
+var gui = new DAT.GUI();
+
+// Text field
+gui.add(fizzyText, "message");
+
+// Sliders with min + max
+gui.add(fizzyText, "maxSize").min(0.5).max(7);
+gui.add(fizzyText, "growthSpeed").min(0.01).max(1).step(0.05);
+gui.add(fizzyText, "speed", 0.1, 2, 0.05); // shorthand for min/max/step
+
+// Sliders with min, max and increment.
+gui.add(fizzyText, "noiseStrength", 10, 100, 5);
+
+// Boolean checkbox
+gui.add(fizzyText, "displayOutline");
+</pre><pre class="standardLighter gitLighter"><span class="kw2">var</span> fizzyText <span class="sy0">=</span> <span class="kw2">new</span> FizzyText<span class="br0">(</span><span class="st0">"david walsh"</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="kw2">var</span> gui <span class="sy0">=</span> <span class="kw2">new</span> DAT.<span class="me0">GUI</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Text field</span>
+gui.<span class="me0">add</span><span class="br0">(</span>fizzyText<span class="sy0">,</span> <span class="st0">"message"</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Sliders with min + max</span>
+gui.<span class="me0">add</span><span class="br0">(</span>fizzyText<span class="sy0">,</span> <span class="st0">"maxSize"</span><span class="br0">)</span>.<span class="me0">min</span><span class="br0">(</span><span class="nu0">0.5</span><span class="br0">)</span>.<span class="me0">max</span><span class="br0">(</span><span class="nu0">7</span><span class="br0">)</span><span class="sy0">;</span>
+gui.<span class="me0">add</span><span class="br0">(</span>fizzyText<span class="sy0">,</span> <span class="st0">"growthSpeed"</span><span class="br0">)</span>.<span class="me0">min</span><span class="br0">(</span><span class="nu0">0.01</span><span class="br0">)</span>.<span class="me0">max</span><span class="br0">(</span><span class="nu0">1</span><span class="br0">)</span>.<span class="me0">step</span><span class="br0">(</span><span class="nu0">0.05</span><span class="br0">)</span><span class="sy0">;</span>
+gui.<span class="me0">add</span><span class="br0">(</span>fizzyText<span class="sy0">,</span> <span class="st0">"speed"</span><span class="sy0">,</span> <span class="nu0">0.1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">0.05</span><span class="br0">)</span><span class="sy0">;</span><span class="co1"> // shorthand for min/max/step</span>
+<span class="co1">
+// Sliders with min, max and increment.</span>
+gui.<span class="me0">add</span><span class="br0">(</span>fizzyText<span class="sy0">,</span> <span class="st0">"noiseStrength"</span><span class="sy0">,</span> <span class="nu0">10</span><span class="sy0">,</span> <span class="nu0">100</span><span class="sy0">,</span> <span class="nu0">5</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Boolean checkbox</span>
+gui.<span class="me0">add</span><span class="br0">(</span>fizzyText<span class="sy0">,</span> <span class="st0">"displayOutline"</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>Tinker with the pane fields and the animation instantly changes!</p>
+
+<div class="actions"><a href="http://davidwalsh.name/demo/dat-gui.php" class="demo">View Demo</a><div class="clear"></div></div>
+
+<p>JavaScript, more than any other language, seems to provide the most ability to make powerful changes with very little code. &nbsp;<code>dat.gui</code> is proof of that. &nbsp;The demo provided here is the same demo provided within the <code>dat.gui</code> repository, mostly because topping the effect would be a hell of a feat. &nbsp;When you get a few moments, go play around with <code>dat.gui</code> -- it's really ... dat ... good.</p>	</article>
+
+<!--/CONTENT-->
+</section>
+
+</div>
+</div>
+</body></html>

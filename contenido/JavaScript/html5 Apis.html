@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="history" lang="en" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#" slick-uniqueid="5">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html;">
+	<title>HTML5 APIs You Didn't Know Existed</title>
+	<link rel="stylesheet" media="all" href="http://davidwalsh.name/wp-content/themes/jack/css/all.css?v1354028691715">
+	<link rel="stylesheet" type="text/css" _curl_movable="true" href="./HTML5 APIs You Didn't Know Existed_files/Flame.git.css">
+</head>
+<body class="single cacheable" data-twttr-rendered="true">
+	<div id="page">
+	<div id="contentHolder">
+		<section class="left">
+		<!--CONTENT-->
+
+	
+	<!-- start up the article -->
+	<article>
+		<!-- article title, social widgets, article content -->
+		<h1>5 HTML5 APIs You Didn’t Know&nbsp;Existed</h1>
+		<p>When you say or read "HTML5", you half expect exotic dancers and unicorns to walk into the room to the tune of "I'm Sexy and I Know It." &nbsp;Can you blame us though? &nbsp;We watched the fundamental APIs stagnate for so long that a basic feature addition like <a href="http://davidwalsh.name/html5-placeholder">placeholder</a> made us "take a minute." &nbsp;Despite many HTML5 features being implemented in modern browsers, many developers are unaware of some of the smaller, useful APIs available to us. &nbsp;This post exposes those APIs and was written to encourage you to explore the lessor known HTML5 APIs!</p>
+
+<h2><a href="http://davidwalsh.name/classlist">Element.classList</a></h2>
+
+<p>The <a href="http://davidwalsh.name/classlist">classList API</a> provides the basic CSS controls our JavaScript libraries have been giving us for years:</p>
+
+<pre class="js lit" style="display: none;">// Add a class to an element
+myElement.classList.add("newClass");
+
+// Remove a class to an element
+myElement.classList.remove("existingClass");
+
+// Check for existence
+myElement.classList.contains("oneClass");
+
+// Toggle a class
+myElement.classList.toggle("anotherClass");
+</pre><pre class="standardLighter gitLighter"><span class="co1">// Add a class to an element</span>
+myElement.<span class="me0">classList</span>.<span class="me0">add</span><span class="br0">(</span><span class="st0">"newClass"</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Remove a class to an element</span>
+myElement.<span class="me0">classList</span>.<span class="me0">remove</span><span class="br0">(</span><span class="st0">"existingClass"</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Check for existence</span>
+myElement.<span class="me0">classList</span>.<span class="me0">contains</span><span class="br0">(</span><span class="st0">"oneClass"</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Toggle a class</span>
+myElement.<span class="me0">classList</span>.<span class="me0">toggle</span><span class="br0">(</span><span class="st0">"anotherClass"</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>The epitome of a great API addition:&nbsp;simple and intelligent.  <a href="http://davidwalsh.name/classlist">Read this post</a> to learn about a few other classList properties.</p>
+
+<h2><a href="http://davidwalsh.name/html5-context-menu">ContextMenu API</a></h2>
+
+<p>The new <a href="http://davidwalsh.name/html5-context-menu">ContextMenu API</a> is excellent: &nbsp;instead of overriding the browser context menu, the new ContextMenu API allows you to simply add items to the browser's context menu:</p>
+
+<pre class="html lit" style="display: none;">&lt;section contextmenu="mymenu"&gt;
+  &lt;!-- 
+    For the purpose of cleanliness, 
+    I'll put my menu inside the element that will use it 
+  --&gt;
+
+  &lt;!-- add the menu --&gt;
+  &lt;menu type="context" id="mymenu"&gt;
+	  &lt;menuitem label="Refresh Post" onclick="window.location.reload();" icon="/images/refresh-icon.png"&gt;&lt;/menuitem&gt;
+	  &lt;menu label="Share on..." icon="/images/share_icon.gif"&gt;
+	    &lt;menuitem label="Twitter" icon="/images/twitter_icon.gif" onclick="goTo('//twitter.com/intent/tweet?text=' + document.title + ':  ' + window.location.href);"&gt;&lt;/menuitem&gt;
+	    &lt;menuitem label="Facebook" icon="/images/facebook_icon16x16.gif" onclick="goTo('//facebook.com/sharer/sharer.php?u=' + window.location.href);"&gt;&lt;/menuitem&gt;
+	  &lt;/menu&gt;
+	&lt;/menu&gt;
+&lt;/section&gt;
+</pre><pre class="standardLighter gitLighter"><span class="kw1">&lt;section</span> <span class="kw2">contextmenu</span><span class="kw1">=</span><span class="kw3">"mymenu"</span><span class="kw1">&gt;</span>
+  <span class="co1">&lt;!-- 
+    For the purpose of cleanliness, 
+    I'll put my menu inside the element that will use it 
+  --&gt;</span>
+
+  <span class="co1">&lt;!-- add the menu --&gt;</span>
+  <span class="kw1">&lt;menu</span> <span class="kw2">type</span><span class="kw1">=</span><span class="kw3">"context"</span> <span class="kw2">id</span><span class="kw1">=</span><span class="kw3">"mymenu"</span><span class="kw1">&gt;</span>
+    <span class="kw1">&lt;menuitem</span> <span class="kw2">label</span><span class="kw1">=</span><span class="kw3">"Refresh Post"</span> <span class="kw2">onclick</span><span class="kw1">=</span><span class="kw3">"window.location.reload();"</span> <span class="kw2">icon</span><span class="kw1">=</span><span class="kw3">"/images/refresh-icon.png"</span><span class="kw1">&gt;</span><span class="kw1">&lt;/menuitem&gt;</span>
+    <span class="kw1">&lt;menu</span> <span class="kw2">label</span><span class="kw1">=</span><span class="kw3">"Share on..."</span> <span class="kw2">icon</span><span class="kw1">=</span><span class="kw3">"/images/share_icon.gif"</span><span class="kw1">&gt;</span>
+      <span class="kw1">&lt;menuitem</span> <span class="kw2">label</span><span class="kw1">=</span><span class="kw3">"Twitter"</span> <span class="kw2">icon</span><span class="kw1">=</span><span class="kw3">"/images/twitter_icon.gif"</span> <span class="kw2">onclick</span><span class="kw1">=</span><span class="kw3">"goTo('</span>//twitter.com/intent/tweet?<span class="kw2">text</span><span class="kw1">=</span><span class="kw3">' + document.title + '</span>:  ' + window.location.href);"<span class="kw1">&gt;</span><span class="kw1">&lt;/menuitem&gt;</span>
+      <span class="kw1">&lt;menuitem</span> <span class="kw2">label</span><span class="kw1">=</span><span class="kw3">"Facebook"</span> <span class="kw2">icon</span><span class="kw1">=</span><span class="kw3">"/images/facebook_icon16x16.gif"</span> <span class="kw2">onclick</span><span class="kw1">=</span><span class="kw3">"goTo('</span>//facebook.com/sharer/sharer.php?<span class="kw2">u</span><span class="kw1">=</span><span class="kw3">' + window.location.href);"</span><span class="kw1">&gt;</span><span class="kw1">&lt;/menuitem&gt;</span>
+    <span class="kw1">&lt;/menu&gt;</span>
+  <span class="kw1">&lt;/menu&gt;</span>
+<span class="kw1">&lt;/section&gt;</span></pre>
+
+<p>Note that it's best to create your menu markup with JavaScript since JS is required to make item actions work, and you wouldn't want the HTML in the page if JS is turned off.</p>
+
+<h2><a href="http://davidwalsh.name/element-dataset">Element.dataset</a></h2>
+
+<p>The <a href="http://davidwalsh.name/element-dataset">dataset API</a> allows developers to get and set <code>data-</code> attribute values:</p>
+
+<pre class="js lit" style="display: none;">/*  Assuming element:
+
+	&lt;div id="myDiv" data-name="myDiv" data-id="myId" data-my-custom-key="This is the value"&gt;&lt;/div&gt;
+
+*/
+
+// Get the element
+var element = document.getElementById("myDiv");
+
+// Get the id
+var id = element.dataset.id;
+
+// Retrieves "data-my-custom-key"
+var customKey = element.dataset.myCustomKey;
+
+// Sets the value to something else
+element.dataset.myCustomKey = "Some other value";
+
+	// Element becomes:
+	//    &lt;div id="myDiv" data-name="myDiv" data-id="myId" data-my-custom-key="Some other value"&gt;&lt;/div&gt;  
+</pre><pre class="standardLighter gitLighter"><span class="co2">/*  Assuming element:
+
+  &lt;div id="myDiv" data-name="myDiv" data-id="myId" data-my-custom-key="This is the value"&gt;&lt;/div&gt;
+
+*/</span>
+<span class="co1">
+// Get the element</span>
+<span class="kw2">var</span> element <span class="sy0">=</span> document.<span class="me0">getElementById</span><span class="br0">(</span><span class="st0">"myDiv"</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// Get the id</span>
+<span class="kw2">var</span> id <span class="sy0">=</span> element.<span class="me0">dataset</span>.<span class="me0">id</span><span class="sy0">;</span>
+<span class="co1">
+// Retrieves "data-my-custom-key"</span>
+<span class="kw2">var</span> customKey <span class="sy0">=</span> element.<span class="me0">dataset</span>.<span class="me0">myCustomKey</span><span class="sy0">;</span>
+<span class="co1">
+// Sets the value to something else</span>
+element.<span class="me0">dataset</span>.<span class="me0">myCustomKey</span> <span class="sy0">=</span> <span class="st0">"Some other value"</span><span class="sy0">;</span>
+
+ <span class="co1"> // Element becomes:</span>
+ <span class="co1"> //    &lt;div id="myDiv" data-name="myDiv" data-id="myId" data-my-custom-key="Some other value"&gt;&lt;/div&gt;  </span></pre>
+
+<p>Not much more to say; just like classList, simple and effective.</p>
+
+<h2><a href="http://davidwalsh.name/window-postmessage">window.postMessage API</a></h2>
+
+<p>The <a href="http://davidwalsh.name/window-postmessage">postMessage API</a>, which has even been supported in IE8 for years, allows for message sending between windows and IFRAME elements:</p>
+
+<pre class="js lit" style="display: none;">// From window or frame on domain 1, send a message to the iframe which hosts another domain
+var iframeWindow = document.getElementById("iframe").contentWindow;
+iframeWindow.postMessage("Hello from the first window!");
+
+// From inside the iframe on different host, receive message
+window.addEventListener("message", function(event) {
+	// Make sure we trust the sending domain
+	if(event.origin == "http://davidwalsh.name") {
+		// Log out the message
+		console.log(event.data);
+
+		// Send a message back
+		event.source.postMessage("Hello back!");
+	}
+]);
+</pre><pre class="standardLighter gitLighter"><span class="co1">// From window or frame on domain 1, send a message to the iframe which hosts another domain</span>
+<span class="kw2">var</span> iframeWindow <span class="sy0">=</span> document.<span class="me0">getElementById</span><span class="br0">(</span><span class="st0">"iframe"</span><span class="br0">)</span>.<span class="me0">contentWindow</span><span class="sy0">;</span>
+iframeWindow.<span class="me0">postMessage</span><span class="br0">(</span><span class="st0">"Hello from the first window!"</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">
+// From inside the iframe on different host, receive message</span>
+window.<span class="me0">addEventListener</span><span class="br0">(</span><span class="st0">"message"</span><span class="sy0">,</span> <span class="kw2">function</span><span class="br0">(</span>event<span class="br0">)</span> <span class="br0">{</span>
+ <span class="co1"> // Make sure we trust the sending domain</span>
+  <span class="kw1">if</span><span class="br0">(</span>event.<span class="me0">origin</span> <span class="sy0">=</span><span class="sy0">=</span> <span class="st0">"http://davidwalsh.name"</span><span class="br0">)</span> <span class="br0">{</span>
+   <span class="co1"> // Log out the message</span>
+    console.<span class="me0">log</span><span class="br0">(</span>event.<span class="me0">data</span><span class="br0">)</span><span class="sy0">;</span>
+
+   <span class="co1"> // Send a message back</span>
+    event.<span class="me0">source</span>.<span class="me0">postMessage</span><span class="br0">(</span><span class="st0">"Hello back!"</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span>
+<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>Messages may only be strings, but you could always use JSON.stringify and JSON.parse for more meaningful data!</p>
+
+<h2><a href="http://davidwalsh.name/autofocus">autofocus Attribute</a></h2>
+
+<p>The <code>autofocus</code> attribute ensures that a given <code>BUTTON</code>, <code>INPUT</code>, or <code>TEXTAREA</code> element is focused on when the page is ready:</p>
+
+<pre class="html lit" style="display: none;">&lt;input autofocus="autofocus" /&gt;
+&lt;button autofocus="autofocus"&gt;Hi!&lt;/button&gt;
+&lt;textarea autofocus="autofocus"&gt;&lt;/textarea&gt;
+</pre><pre class="standardLighter gitLighter"><span class="kw1">&lt;input</span> <span class="kw2">autofocus</span><span class="kw1">=</span><span class="kw3">"autofocus"</span> <span class="kw1">/&gt;</span>
+<span class="kw1">&lt;button</span> <span class="kw2">autofocus</span><span class="kw1">=</span><span class="kw3">"autofocus"</span><span class="kw1">&gt;</span>Hi!<span class="kw1">&lt;/button&gt;</span>
+<span class="kw1">&lt;textarea</span> <span class="kw2">autofocus</span><span class="kw1">=</span><span class="kw3">"autofocus"</span><span class="kw1">&gt;</span><span class="kw1">&lt;/textarea&gt;</span></pre>
+
+<p>Admittedly the <a href="http://davidwalsh.name/autofocus">autofocus attribute</a> is disorienting for the visually impaired, but on simple search pages, it's the perfect addition.</p>
+
+<p>Browser support for each API differs, so use feature detection before using each API. &nbsp;Take a few moments to read the detailed posts on each feature above -- you'll learn a lot and hopefully get a chance to tinker with each API!</p>	</article>
+
+<!--/CONTENT-->
+</section>
+
+</div>
+</body></html>

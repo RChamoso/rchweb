@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>
+		  It&#8217;s Curtains for Marital Strife Thanks to getUserMedia | HTML5 Doctor    </title>
+    <link rel="stylesheet" href="http://html5doctor.com/wp-content/themes/html5doctor2/style.css" media="screen" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Feed" href="http://html5doctor.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Comments Feed" href="http://html5doctor.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; It&#8217;s Curtains for Marital Strife Thanks to getUserMedia Comments Feed" href="http://html5doctor.com/getusermedia/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://html5doctor.com/wp-content/plugins/contact-form-7/styles.css?ver=3.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://html5doctor.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://html5doctor.com/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://html5doctor.com/xmlrpc.php?rsd" />
+<link rel='prev' title='Server-Sent Events' href='http://html5doctor.com/server-sent-events/' />
+<link rel='next' title='HTML5 Doctor Drop-In Clinic' href='http://html5doctor.com/html5-doctor-drop-in-clinic/' />
+<link rel='canonical' href='http://html5doctor.com/getusermedia/' />
+<link rel='shortlink' href='http://html5doctor.com/?p=4335' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+	  
+  
+	</head>
+<body class="single single-post postid-4335 single-format-standard" id="com-html5doctor">
+<header role="banner">
+    <div class="inner group">
+    <a href="http://html5doctor.com" rel="home"><div>
+        <hgroup>
+        <h1>HTML5 Doctor</h1>
+        <h2>Helping you implement HTML5 today</h2>
+        </hgroup><!-- end hgroup -->
+    </div></a><!-- wrapper div for Firefox 3.x ref: http://01i.jp/html5bll -->
+
+ 	<ul id="menu-top-nav" class="semantic-list"><li id="menu-item-3272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3272"><a href="http://html5doctor.com/about/">About</a></li>
+<li id="menu-item-3275" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3275"><a href="http://feeds2.feedburner.com/html5doctor">RSS</a></li>
+<li id="menu-item-3276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3276"><a href="http://feeds.feedburner.com/HTML5DoctorComments">Comments RSS</a></li>
+<li id="menu-item-3253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3253"><a href="#">Doctor Network</a>
+<ul class="sub-menu">
+	<li id="menu-item-3273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3273"><a href="http://html5gallery.com">HTML5 Gallery</a></li>
+	<li id="menu-item-3580" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3580"><a href="http://docteurhtml5.com/html5/">Docteur HTML5</a></li>
+	<li id="menu-item-3973" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3973"><a href="https://github.com/html5doctor/">HTML5 Doctor on Github</a></li>
+</ul>
+</li>
+</ul>      <!-- end #top-nav -->
+    
+    <nav>
+		<ul id="menu-main_nav" class=""><li id="menu-item-3297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3297"><a href="/">Home</a></li>
+<li id="menu-item-3250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3250"><a href="http://html5doctor.com/article-archive/">Article Archive</a></li>
+<li id="menu-item-3291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3291"><a href="http://html5doctor.com/element-index/">Element Index</a></li>
+<li id="menu-item-3252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3252"><a href="http://html5doctor.com/ask-the-doctor/">Ask the HTML5 Doctor</a></li>
+<li id="menu-item-3968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3968"><a href="http://html5doctor.com/resources/">Resources</a></li>
+</ul>    	<!-- end ul -->
+    	<ul>
+    		<li><form id="search-form" action="/search/" role="search"  method="get">
+    <div>
+    <input type="text" name="q" value="" />
+    <input type="submit" id="search-button" value="Search" />
+        <!--<input id="search-input" class="text" type="text" tabindex="1" value="" name="search-input"/>
+        <input id="search-button" class="button" type="submit" tabindex="2" value="Search"/>-->
+    </div>
+</form></li>
+    	</ul>
+    	<!-- end ul -->	
+    </nav>
+    <!-- end nav -->
+	</div>
+	<!-- end .inner -->
+</header>
+<!-- end header -->
+<div id="content" class="group" role="main">
+    <div class="main">
+        <article class="post group">
+            <header class="post-4335 post type-post status-publish format-standard hentry category-elements category-javascript-apis category-multimedia tag-getusermedia tag-html-5 tag-html5 tag-video tag-webrtc" id="post-4335">
+                 <h1>It&#8217;s Curtains for Marital Strife Thanks to getUserMedia </h1>
+                <small><time datetime="2012-02-07" pubdate>Tuesday, February 7th, 2012</time> by <a href="http://html5doctor.com/author/brucel/" title="Posts by Bruce Lawson" rel="author">Bruce Lawson</a>.</small>
+                <p class="tweet"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="html5doctor">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>
+            </header>
+            <!-- end header -->
+             <ul class="commentlist">
+                        </ul>
+           
+            <div class="entry">
+
+		
+                <p>True story: I was tasked by the lovely Mrs Lawson to buy some curtains that match our carpet during the January sales. I dutifully did so — and had to return to the shop straight away because they didn&#8217;t match at all. Mrs Lawson accompanied me, and with a withering glance at her incompetent mate, immediately found some correctly hued fabric, and all was well.</p>
+
+<p>But what&#8217;s a middle-aged colour-blind bloke to do? I had early in the curtain procurement process decided against cutting a hole in the carpet in order that I may take a sample with me. (All other mistakes aside, this was a correct decision.)</p>
+
+<p>So, in order to ensure that I would never again repeat the mistake, I set out to make an app that would allow me to capture the colour of an image straight from my camera. Of course, it had to be a web app rather than a native app, because we&#8217;re web angels, not proprietary devils.</p>
+
+<section id="intro">
+  <h2><code>getUserMedia</code> <a href="#intro" class="permalink">#</a></h2>
+
+  <p><a href="http://dev.w3.org/2011/webrtc/editor/getusermedia.html"><code>getUserMedia</code></a> is an API that gives a web page access to a user&#8217;s camera and microphone via JavaScript. It&#8217;s supported in Opera Labs (<a href="http://dev.opera.com/articles/view/labs-more-fun-using-the-web-with-getusermedia-and-native-pages/">latest Android build</a>, <a href="http://dev.opera.com/articles/view/getusermedia-access-camera-privacy-ui/">latest desktop builds</a>) and WebKit in <a href="http://tools.google.com/dlpage/chromesxs?platform=win">Chrome Canary</a> builds (<a href="https://sites.google.com/site/webrtc/running-the-demos">instructions</a>).</p>
+
+  <p>Like many other APIs, it&#8217;s not part of the &#8220;real&#8221; HTML5 spec. It started life as the HTML5 <code>&lt;device&gt;</code> element, then got moved into the W3C as part of the <a href="http://www.w3.org/TR/webrtc/">webRTC</a> specifications. But let&#8217;s not taxonomise when we could be having fun.</p>
+
+  <p>The first thing we need to do when using super-cool new UIs is detect whether it&#8217;s supported:</p>
+
+  <figure>
+    <pre><code> if (navigator.getUserMedia) {
+  // do something cool
+} else {
+  // fallback code
+}</code></pre>
+    <figcaption>Basic usage of <code>getUserMedia</code></figcaption>
+  </figure>
+
+  <p>For this article, our &#8220;do something cool&#8221; will be to grab the dominant colour of the current input stream from the camera. As a fallback, we have several options.</p>
+
+  <p>One option, if we&#8217;re using the default Android browser, is to show a form that automatically starts the camera when focussed:</p>
+
+  <figure>
+    <pre><code>&lt;form enctype="multipart/form-data" method="post"&gt;
+  &lt;input type="file" accept="video/*;capture=camera" /&gt;
+&lt;/form&gt;</code></pre>
+    <figcaption>Fallback code for Android</figcaption>
+  </figure>
+
+  <p>There&#8217;s also the <a href="http://www.w3.org/TR/2011/WD-html-media-capture-20110414/#captureparam"><code>capture</code> attribute</a>, a proposed extension from the <a href="http://www.w3.org/TR/html-media-capture/">W3C Device API Media Capture API</a> that tells a user agent where to get the input data. Android extends the <a href="http://dev.w3.org/html5/spec/states-of-the-type-attribute.html#attr-input-accept"><code>accept</code> attribute</a>. See more in <a href="http://davidbcalhoun.com/2011/android-3-0-honeycomb-is-first-to-implement-the-device-api">David Calhoun&#8217;s Device API article</a>. Alternative capture arguments are <code>camcorder</code> (for video), <code>microphone</code>, and <code>filesystem</code>.</p>
+
+  <p>Browsers that don&#8217;t understand the still-draft Media Capture API will simply ignore the <code>capture</code> attrbute and prompt the user to browse to a file on their file system for uploading.</p>
+
+  <p>Users on iOS are out of luck, as their devices don&#8217;t allow access to the file system.</p>
+
+  <section id="differences-from-media-capture">
+    <h3>Differences Between the Media Capture API and <code>getUserMedia</code> <a href="#differences-from-media-capture" class="permalink">#</a></h3>
+
+    <p>Robin Berjon, co-chair of the Device API (DAP) Working Group explains: The markup-only Media Capture API is a simpler, low-hanging-fruit version that can work easily for a lot of use cases. It also has a very simple security model (just a file upload).</p>
+
+    <p>In fact, it works exactly like <code>&lt;input type=file&gt;</code>, except that it knows to allow the user to grab a pic from the camera by default instead of hitting the filesystem. But just like with <code>&lt;input type=file&gt;</code>, once a picture has been taken (i.e., a file selected), you can access it and read from it using the File API, which means you can stuff it in an <code>&lt;img&gt;</code> or a <code>&lt;canvas&gt;</code> and do nasty things to it without annoying any faraway server.</p>
+
+    <p>But of course, if it&#8217;s part of a form and you submit it, it gets submitted just like a regular file upload.</p>
+
+    <p>The thing is, though, it&#8217;s always a snapshot. Even if you use it to take a video (which you can), the page only gets it after you&#8217;ve finished shooting. With <code>getUserMedia</code> (<b>gUM</b>), you get the live stream, which you can modify, record, or stream elsewhere. The gUM approach is more powerful but more complex, and it has more severe security issues.</p>
+  </section>
+</section>
+
+<section id="api">
+  <h2><code>getUserMedia</code> API <a href="#api" class="permalink">#</a></h2>
+
+  <p>Let&#8217;s assume (because we&#8217;re optimists) that your user has a <code>getUserMedia</code>-enabled device. The API is nice and simple, as all Web APIs should be.</p>
+
+  <p><code>navigator.getUserMedia</code> accepts two required arguments and an optional third.</p>
+
+  <p>The first argument tells the device <b>which media you require access to</b>, and it&#8217;s passed as a JavaScript object. So, if you only require access to the microphone, the first argument would be <code>{audio: true}</code>; for video-chatting, you would use <code>{audio: true, video: true}</code>.</p>
+
+  <p>The device decides which camera to use: <q>User agents are encouraged to default to using the user&#8217;s primary or system default camera and/or microphone (as appropriate) to generate the media stream.</q></p>
+
+  <p>A previous version of the specification allowed hints to user agents about which camera to use. The API could specify &#8220;user&#8221; (the front camera on a phone) or &#8220;environment&#8221; (the rear camera on a phone). Debate continues about whether to reinstate this (<a href="http://lists.w3.org/Archives/Public/public-media-capture/2012Jan/0014.html">read the ongoing conversation</a>). One argument against is that letting sites know what cameras a device has could help Dr Malice of Evil Corp. fingerprint users after luring them to his site (which I find to be overly-cautious). <a href="http://lists.w3.org/Archives/Public/public-media-capture/2012Jan/0018.html">Harald Alvestrand poses a conundrum</a>: <q>conferencing units may have a room camera, a document camera and a lectern camera, neither of which is attached to the physical box; which one of these is <q>front</q>?</q></p>
+
+  <p>But let&#8217;s not worry at the moment. Devices with more than one camera generally have a mechanism that allow the user to choose which one is used, so this gives the user control. Note also that the spec says <q>User agents may allow users to use any media source, including pre-recorded media files.</q></p>
+
+  <p>The second argument is the <b>success callback</b>, the function to be executed on success, assuming that the user allows access and the device supports your request.</p>
+
+  <p>There is an optional third argument. This is the <b>failure callback</b>, the function to be executed if something went wrong. It&#8217;s optional, but only optional in the sense that washing your hands before you eat is optional: if you don&#8217;t do it, you leave yourself open to all sorts of bugs and your mum will shout at you.</p>
+
+  <p>Of course, it&#8217;s important to do feature detection before making an API call to ensure that the browser and device are capable, but even if feature detection succeeds, there is still much that can cause failure. For example, the user could deny permission or turn off the camera via a hardware switch, or the device itself could disable the camera.</p>
+
+  <p>So here&#8217;s how we recommend you use the API:</p>
+
+  <figure>
+    <pre><code>navigator.getUserMedia({audio: true, video: true}, success, error);
+
+function success(stream) { 
+  // ... use 'stream' ... 
+} 
+
+function error(){ 
+  // display fallback content 
+}</code></pre>
+    <figcaption>Using the gUM API</figcaption>
+  </figure>
+
+  <p>To check whether it&#8217;s working correctly, we can attach the output of the camera&#8217;s stream to the input of an HTML5 video on the page, like this:</p>
+
+  <figure>
+    <pre><code>&lt;video autoplay&gt;&lt;/video&gt;
+&lt;script&gt;
+if (navigator.getUserMedia) {
+  navigator.getUserMedia({audio: true, video: true}, success, error);
+  function success(stream)
+  { 
+    // ... use 'stream' ...
+    var video = document.getElementsByTagName('video')[0];
+    video.src = stream; 
+  }
+  // ...
+&lt;/script&gt;</code></pre>
+    <figcaption>Streaming captured video to an HTML5 <code>&lt;video&gt;</code> element</figcaption>
+  </figure>
+
+  <section id="differences-between-webkit-and-opera">
+    <h3>Differences Between Webkit and Opera <a href="#differences-between-webkit-and-opera" class="permalink">#</a></h3>
+
+    <p>The two rendering engines that implement getUserMedia do so in two different ways. Hopefully, they&#8217;ll harmonise when the features reach the released browsers.</p>
+
+    <p>The differences:</p>
+
+    <ul>
+      <li>WebKit uses a prefix — <code>navigator.webkitGetUserMedia</code> — while Opera doesn&#8217;t.</li>
+      <li>
+        WebKit implements the options according to an old version of the spec, in which audio and video were passed as strings:
+        <pre><code>navigator.webkitGetUserMedia("video, audio", /* ... */)</code></pre>
+        whereas Opera implements the most recent version of the specification which uses JavaScript objects:
+        <pre><code>navigator.getUserMedia({video: true, audio: true}, /* ... */)</code></pre>
+      </li>
+      <li>
+        WebKit attaches the resulting stream like this:
+        <pre><code>video.src = window.webkitURL.createObjectURL(stream);</code></pre>
+        which is according to the current version of the spec. Opera uses:
+        <pre><code>video.src = stream;</code></pre>
+        and has proposed simplifying the spec (but discussion continues).
+      </li>
+    </ul>
+
+    <p>But this fragmentation, even though it&#8217;s only in experimental browser releases is, like, a total drag, man.</p>
+  </section>
+
+  <section id="gUM-shield">
+    <h3>Introducing The gUM Shield <a href="#gUM-shield" class="permalink">#</a></h3>
+
+    <p>Fortunately, we&#8217;ve got your back. Two of the finest minds I know — actually, two of the finest <em>Mikes</em>, Doctor <a href="http://twitter.com/akamike">Mike Robinson</a> and Opera&#8217;s <a href="http://twitter.com/miketaylr">Mike Taylor</a> — have created a snippet of script that you can copy to shield you from these annoying differences. We&#8217;ve named this <code>getUserMedia</code> syntax normalisation script snippet <a href="https://gist.github.com/f2ac64ed7fc467ccdfe3">The gUM Shield</a>.
+
+    <p>It assumes that there&#8217;s a variable called <var>video</var> to which you&#8217;ve assigned a reference to the <code>&lt;video&gt;</code> element you&#8217;ll stream to. Do this with some mechanism like:</p>
+
+    <pre><code>video = document.getElementById('video');</code></pre>
+
+    <p>Simply <a href="https://gist.github.com/f2ac64ed7fc467ccdfe3">hit the &#8216;Hub</a>, download it, plug it into your script, and <a href="http://jsbin.com/avaxaq/edit#preview">check it out</a>!</p>
+
+    <p>Note that it&#8217;s <em>experimental</em>. Who knows what&#8217;ll happen when Mozilla, Microsoft, and Apple implement it, but please, have a play. Fork it and improve it!</p>
+  </section>
+</section>
+
+<sectino id="exciting">
+  <h2>Doing Exciting Things with the Video Stream <a href="#exciting" class="permalink">#</a></h2>
+
+  <p>So far, we&#8217;re only echoing the video stream. But, as you&#8217;ll know from Tab Atkins&#8217; guest article <a href="http://html5doctor.com/video-canvas-magic/">video + canvas = magic</a>, if we copy the video into a canvas, we can manipulate it:</p>
+
+  <figure>
+    <pre><code>var video = document.querySelector('video');
+var canvas = document.querySelector('canvas');
+var ctx = canvas.getContext('2d');
+
+ctx.drawImage(video, 0, 0, video.width, video.height,
+  0, 0, canvas.width, canvas.height);</code></pre>
+    <figcaption>Canvas and video magic</figcaption>
+  </figure>
+
+  <p>A common mistake is assuming that this somehow establishes a &#8220;live connection&#8221; between the video stream and the canvas. It doesn&#8217;t. It only grabs the current frame. So you need to grab the current frame repeatedly in order to replicate a video. The magical number is 15 times a second (or every 67 milliseconds), but a slower frame rate would probably be okay for this demo:</p>
+
+  <figure>
+    <pre><code>setInterval(function () { 
+  ctx.drawImage(video, 0, 0, video.width, video.height,
+  0, 0, canvas.width, canvas.height);
+}, 1000 / 67);</code></pre>
+    <figcaption>Live updating of <code>&lt;canvas&gt;</code> from a <code>&lt;video&gt;</code></figcaption>
+  </figure>
+
+  <p>See the <a href="http://jsbin.com/ahozok/edit#html,live">working demo</a>.</p>
+
+  <p>What I want to do now is to grab the dominant colour from the canvas. I&#8217;m stealing <a href="http://experimenting.in/exp/real-life-color-picker/">a demo by Shwetank Dixit</a> (who borrowed from <a href="http://www.lokeshdhakar.com/">Lokesh Dhakar</a>&#8216;s <a href="http://www.lokeshdhakar.com/2011/11/03/color-thief/">Color Thief demo</a>). We won&#8217;t look at how it determines the dominant colour (because that&#8217;s nothing to do with getUserMedia).</p>
+
+  <p><a href="http://html5doctor.com/demos/getusermedia/dominantcolor/">Try this in Opera Labs and Chrome Canary</a>!</p>
+
+  <p>Unfortunately, this works splendidly in Opera but it occasionally fails in Chrome, and we&#8217;re not sure why. (We&#8217;ve emailed the Chrome team to ask them.) Apart from the rather anti-climactic end to an article, you shouldn&#8217;t be dismayed by this. <code>getUserMedia</code> is only available in experimental builds that have plenty of work to be done before they hit production.</p>
+
+  <p>Back to our demo. Once you&#8217;ve got the dominant colour, you could prompt the user for a name for that colour (&#8220;carpet&#8221;, for example) and store that in local storage using its name as a key. Then, when you find a pair of curtains in the shop, you can find their dominant colour and easily compare it with that stored against &#8220;carpet&#8221; from earlier.</p>
+
+  <p>And you can return home, confident of delighting the love of your life with your chromatically appropriate choice of soft furnishings. That&#8217;s HTML5: enriching marriages since 2004.</p>
+
+  <img src="http://html5doctor.com/wp-content/uploads/2012/01/getUserMedia1.jpg" alt="woman says &#039;hey daddy-o, the curtains really razz my berries, ya dig?&#039;. Man replies &#039;Baby, I totally dig. Early night?&#039;. A thought bubble shows him thinking &#039;Thank you, getUserMedia&#039;" width="570" height="390" class="aligncenter size-full wp-image-4336" />
+</section>
+
+<section id="harshing-your-mellow">
+  <h2>Harshing Your Mellow <a href="#harshing-your-mellow" class="permalink">#</a></h2>
+
+  <p>Things need refining before web apps with <code>getUserMedia</code> are on a par with native applications. At the moment, there is no way of controlling which camera is to be used (and no agreement that a developer should be able to). The camera&#8217;s <a href="http://lists.whatwg.org/pipermail/whatwg-whatwg.org/2011-July/032471.html">flash mechanism isn&#8217;t programmatically controllable</a>, which could harm the user experience. Most importantly are the privacy implications of web pages being able to access your camera. Opera has an <a href="http://dev.opera.com/articles/view/getusermedia-access-camera-privacy-ui/">experimental privacy UI</a>, but Chrome has no UI yet.</p>
+</section>
+
+<section id="demos">
+  <h2>More Demos <a href="#demos" class="permalink">#</a></h2>
+
+  <p>See Paul Neave&#8217;s <a href="http://neave.com/webcam/html5/">HTML5 Webcam Toy</a> and the links at the foot of my <a href="http://dev.opera.com/articles/view/getusermedia-access-camera-privacy-ui/">Opera Labs article</a>.</p>
+</section>
+
+<section id="thanks">
+  <h2>Thanks <a href="#thanks" class="permalink">#</a></h2>
+
+  <p>Thank for help and code are due to <a href="http://twitter.com/robinberjon">Robin Berjon</a>, <a href="http://twitter.com/shwetank">Shwetank Dixit</a>, <a href="http://twitter.com/ourmaninjapan">Daniel Davis</a>, <a href="http://www.lokeshdhakar.com/">Lokesh Dhakar</a>, <a href="http://twitter.com/miketaylr">Mike Taylor</a>, <a href="http://twitter.com/akamike">Mike Robinson</a>, and <a href="http://twitter.com/richtibbett">Rich Tibbett</a>.</p>
+</section>                        
+            </div>
+            <!-- end .entry -->
+            
+            <aside>
+                <ul class="semantic-list">
+                    <li class="category">
+                        <h3>Category</h3>
+                        <ul class="semantic-list"><li><a href="http://html5doctor.com/category/elements/" title="View all posts in Elements" rel="category tag">Elements</a></li><li><a href="http://html5doctor.com/category/javascript-apis/" title="View all posts in JavaScript APIs" rel="category tag">JavaScript APIs</a></li><li><a href="http://html5doctor.com/category/multimedia/" title="View all posts in multimedia" rel="category tag">multimedia</a></li></ul>
+
+                    </li>
+                    <li class="tags">
+                        <ul class="semantic-list"><li><h3>Tags</h3></li><li><a href="http://html5doctor.com/tag/getusermedia/" rel="tag">getusermedia</a></li><li><a href="http://html5doctor.com/tag/html-5/" rel="tag">HTML 5</a></li><li><a href="http://html5doctor.com/tag/html5/" rel="tag">html5</a></li><li><a href="http://html5doctor.com/tag/video/" rel="tag">video</a></li><li><a href="http://html5doctor.com/tag/webrtc/" rel="tag">webrtc</a></li></ul>                    </li>
+                </ul>
+
+		 
+            </aside>
+            <!-- end aside -->
+            
+            <aside id="author-bio">
+                <h4><a href="http://html5doctor.com/author/brucel/" title="Posts by Bruce Lawson" rel="author">Bruce Lawson</a></h4>
+                <div class="author-blurb author">
+                    <p class="vcard">This article was written by <span class="fn"><a href="http://html5doctor.com/author/brucel/" title="Posts by Bruce Lawson" rel="author">Bruce Lawson</a></span>. Bruce evangelises Open Web Standards for <a href="http://dev.opera.com/">Opera</a> (but opinions here are his own).  Previously, he was technical lead for the Solicitors Regulation Authority site. He is  co-author of  <a href="http://introducinghtml5.com/">Introducing HTML5</a>.
+
+He blogs at <a href="http://brucelawson.co.uk/">brucelawson.co.uk</a> and tweets at <a href="http://www.twitter.com/brucel">@brucel</a>.</p>
+                    <img alt='' src='http://0.gravatar.com/avatar/6f3ec7315ad0715ae2a5f89a52877218?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />                </div>
+            </aside>
+            <!-- end #author-bio -->
+            
+            
+            <section id="comments">
+                
+<!-- You can start editing here. -->
+
+	<h3>5 Responses on the article “It&#8217;s Curtains for Marital Strife Thanks to getUserMedia”</h3>
+
+		<article class="comment even thread-even depth-1" id="comment-22989">
+						<div class="comment-meta">
+		Fabrice says<img alt='' src='http://1.gravatar.com/avatar/78bf1907b33f7f56ef5c92d03173035b?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2012-02-07T14:56:03+00:00" pubdate>February 7, 2012 at 4:39 pm <a class="permalink" href="#comment-22989">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Pretty cool!</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-23243">
+						<div class="comment-meta">
+		<a href='http://eclecticdreams.com' rel='external nofollow' class='url'>Matt Machell</a> says<img alt='' src='http://0.gravatar.com/avatar/adc3289770c03cf2a2843eed908a8ae0?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2012-02-07T14:56:03+00:00" pubdate>February 9, 2012 at 9:56 am <a class="permalink" href="#comment-23243">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>With the demo, would using requestAnimationFrame be more suitable/performant for updating the video stream than a simple setInterval?</p>
+<p>For those unaware of it, there&#8217;s a good article on it over here: <a href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/" rel="nofollow">http://paulirish.com/2011/requestanimationframe-for-smart-animating/</a></p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-23721">
+						<div class="comment-meta">
+		<a href='http://banafederico.com' rel='external nofollow' class='url'>Federico</a> says<img alt='' src='http://1.gravatar.com/avatar/3e9297646b9cb2d449fdffd861526b20?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2012-02-07T14:56:03+00:00" pubdate>February 13, 2012 at 2:58 pm <a class="permalink" href="#comment-23721">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Really cool&#8230; worth playing with</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-23824">
+						<div class="comment-meta">
+		<a href='http://www.nmcmahon.co.uk' rel='external nofollow' class='url'>Niall McMahon</a> says<img alt='' src='http://1.gravatar.com/avatar/54f7c5885a2794fd8453a23b6e391dce?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2012-02-07T14:56:03+00:00" pubdate>February 14, 2012 at 2:08 pm <a class="permalink" href="#comment-23824">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Will be nice once this is supported on Webkit/Safari on iOS devices. I have a web app I want users to be able to upload videos directly from their iPhone and if this worked, that would be fantastic.</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-24810">
+						<div class="comment-meta">
+		Cody says<img alt='' src='http://1.gravatar.com/avatar/917abd6048213a10a381471a03d0891b?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2012-02-07T14:56:03+00:00" pubdate>March 1, 2012 at 9:41 pm <a class="permalink" href="#comment-24810">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Thx for the great article Bruce, it helps a ton!&#8230; and ur HTML5 book&#8230; and its second addition!</p>
+		</div>
+				</article>
+
+ 
+
+
+<div id="form">
+
+<h3>Join the discussion.</h3>
+
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="/getusermedia/#respond" style="display:none;">Click here to cancel reply.</a></small>
+</div>
+
+
+<form action="http://html5doctor.com/wp-comments-post.php" method="post" id="commentform">
+
+
+<p>
+<label for="author">Name (required)</label><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true" required />
+</p>
+
+<p>
+<label for="email">Mail (will not be published) (required)</label><input type="email" name="email" id="email" value="" size="22" tabindex="2" aria-required="true" required />
+</p>
+
+<p>
+<label for="url">Website</label><input type="url" name="url" id="url" value="" size="22" tabindex="3" />
+</p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+<div id="form-code">
+    <h4>Some HTML is ok</h4>
+    <p>You can use these tags:<br><code><span class="tag">&lt;a </span><span class="atn">href</span><span class="tag">=</span><span class="atv">""</span><span class="tag"> </span><span class="atn">title</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;abbr </span><span class="atn">title</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;b&gt;</span></code><br> <code><span class="tag">&lt;blockquote </span><span class="atn">cite</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;cite&gt;</span></code><br> <code><span class="tag">&lt;del </span><span class="atn">datetime</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;em&gt;</span></code><br> <code><span class="tag">&lt;i&gt;</span></code><br> <code><span class="tag">&lt;q </span><span class="atn">cite</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;strong&gt;</span></code></p><p>You can also use <code><span class="tag">&lt;code&gt;</span></code>, and <strong>remember to use <code><span class="pun">&amp;</span><span class="pln">lt</span><span class="pun">;</span></code> and <code><span class="pun">&amp;</span><span class="pln">gt</span><span class="pun">;</span></code> for brackets</strong>.</p>
+</div>
+<p><label class="screenreader" for="comment">Enter comment</label>
+<textarea aria-required="true" required name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input type='hidden' name='comment_post_ID' value='4335' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="6a1fa7c0c6" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+
+</form>
+
+</div>
+
+            </section>
+                <!-- end #comments -->
+                
+        </article>
+        <!-- end .post -->
+    </div>
+    <!-- end .main -->	
+                    
+ 	     <aside class="secondary">
+            
+        <section class="mod ads">
+            <h3>Element Index</h3>
+            <a href="/element-index/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/element-index.png" width="260" height="158" alt="View the HTML5 Element Index" /></a>
+            <p class="btn"><a href="/element-index/">HTML5 Element Index</a></p>
+        </section>
+        <!-- end nav -->
+            
+		            <aside class="mod ads group">
+                <h3>Sponsors</h3>
+                <div id="bsap_1242929" class="bsarocks bsap_ab161e2bf71edb940eeca26a4739f522"></div>
+            </aside>        
+		            <section class="ads mod">
+                <h3><a href="/ask-the-doctor/">Ask the HTML5 Doctor</a></h3>
+                <a href="/ask-the-doctor/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/ask-the-doctor.png" alt="Ask the HTML5 Doctor" /></a>
+                <p class="btn"><a href="/ask-the-doctor/">Ask the HTML5 Doctor</a></p>
+            </section>
+            <!-- end nav -->
+        
+        <nav class="ui-tabs mod">
+          <h3>More HTML5 Doctor</h3>
+          <ul class="ui-tabs-nav group">
+            <li class="ui-tabs-selected"><a href="#articles">Articles</a></li>
+            <li class="ui-tab"><a href="#categories">Categories</a></li>
+            <li class="ui-tab"><a href="#authors">Authors</a></li>
+          </ul>
+          
+          <div class="tab" id="articles">
+              <ul>
+			<li><a href='http://html5doctor.com/css3-pseudo-classes-and-html5-forms/' title='CSS3 Pseudo-Classes and HTML5 Forms'>CSS3 Pseudo-Classes and HTML5 Forms</a></li>
+	<li><a href='http://html5doctor.com/ol-element-attributes/' title='The ol Element and Related Attributes: type, start, value, and reversed'>The ol Element and Related Attributes: type, start, value, and reversed</a></li>
+	<li><a href='http://html5doctor.com/html5-doctor-drop-in-clinic/' title='HTML5 Doctor Drop-In Clinic'>HTML5 Doctor Drop-In Clinic</a></li>
+	<li><a href='http://html5doctor.com/getusermedia/' title='It&#8217;s Curtains for Marital Strife Thanks to getUserMedia'>It&#8217;s Curtains for Marital Strife Thanks to getUserMedia</a></li>
+	<li><a href='http://html5doctor.com/server-sent-events/' title='Server-Sent Events'>Server-Sent Events</a></li>
+              </ul>
+              <p class="btn"><a href="/article-archive/">View article archive</a></p>
+          </div>
+
+
+          <div class="tab" id="categories">
+                <ul>
+                    	<li class="cat-item cat-item-6"><a href="http://html5doctor.com/category/accessibility/" title="View all posts filed under Accessibility">Accessibility</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://html5doctor.com/category/attributes/" title="View all posts filed under Attributes">Attributes</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="http://html5doctor.com/category/boilerplates/" title="View all posts filed under Boilerplates">Boilerplates</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://html5doctor.com/category/browser-compatibility/" title="View all posts filed under Browser Compatibility">Browser Compatibility</a>
+</li>
+	<li class="cat-item cat-item-69"><a href="http://html5doctor.com/category/comment/" title="View all posts filed under Comment">Comment</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="http://html5doctor.com/category/css/" title="View all posts filed under CSS">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://html5doctor.com/category/elements/" title="View all posts filed under Elements">Elements</a>
+</li>
+	<li class="cat-item cat-item-103"><a href="http://html5doctor.com/category/events/" title="View all posts filed under Events">Events</a>
+</li>
+	<li class="cat-item cat-item-108"><a href="http://html5doctor.com/category/forms/" title="View all posts filed under forms">forms</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://html5doctor.com/category/javascript-apis/" title="View all posts filed under JavaScript APIs">JavaScript APIs</a>
+</li>
+	<li class="cat-item cat-item-51"><a href="http://html5doctor.com/category/marketing/" title="View all posts filed under Marketing">Marketing</a>
+</li>
+	<li class="cat-item cat-item-132"><a href="http://html5doctor.com/category/misc/" title="View all posts filed under Misc">Misc</a>
+</li>
+	<li class="cat-item cat-item-128"><a href="http://html5doctor.com/category/multimedia/" title="View all posts filed under multimedia">multimedia</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://html5doctor.com/category/questions/" title="View all posts filed under Questions">Questions</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://html5doctor.com/category/quick-tips/" title="View all posts filed under Quick Tips">Quick Tips</a>
+</li>
+	<li class="cat-item cat-item-135"><a href="http://html5doctor.com/category/reviews/" title="View all posts filed under Reviews">Reviews</a>
+</li>
+	<li class="cat-item cat-item-145"><a href="http://html5doctor.com/category/simplequiz/" title="View all posts filed under Simplequiz">Simplequiz</a>
+</li>
+	<li class="cat-item cat-item-68"><a href="http://html5doctor.com/category/specification-changes/" title="View all posts filed under Specification Changes">Specification Changes</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://html5doctor.com/category/structure/" title="View all posts filed under Structure">Structure</a>
+</li>
+	<li class="cat-item cat-item-38"><a href="http://html5doctor.com/category/validation/" title="View all posts filed under Validation">Validation</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://html5doctor.com/category/wai-aria/" title="View all posts filed under WAI-ARIA">WAI-ARIA</a>
+</li>
+ 
+                </ul>
+          </div>
+          <div class="tab" id="authors">
+                <ul>
+                    <li><a href="http://html5doctor.com/author/brucel/" title="Posts by Bruce Lawson">Bruce Lawson</a></li><li><a href="http://html5doctor.com/author/cennyddb/" title="Posts by Cennydd Bowles">Cennydd Bowles</a></li><li><a href="http://html5doctor.com/author/chrisb/" title="Posts by Chris Bewick">Chris Bewick</a></li><li><a href="http://html5doctor.com/author/iand/" title="Posts by Ian Devlin">Ian Devlin</a></li><li><a href="http://html5doctor.com/author/jacko/" title="Posts by Jack Osborne">Jack Osborne</a></li><li><a href="http://html5doctor.com/author/markb/" title="Posts by Mark Boas">Mark Boas</a></li><li><a href="http://html5doctor.com/author/miker/" title="Posts by Mike Robinson">Mike Robinson</a></li><li><a href="http://html5doctor.com/author/olib/" title="Posts by Oli Studholme">Oli Studholme</a></li><li><a href="http://html5doctor.com/author/peterg/" title="Posts by Peter Gasston">Peter Gasston</a></li><li><a href="http://html5doctor.com/author/remys/" title="Posts by Remy Sharp">Remy Sharp</a></li><li><a href="http://html5doctor.com/author/richc/" title="Posts by Richard Clark">Richard Clark</a></li><li><a href="http://html5doctor.com/author/taba/" title="Posts by Tab Atkins Jnr">Tab Atkins Jnr</a></li><li><a href="http://html5doctor.com/author/toml/" title="Posts by Tom Leadbetter">Tom Leadbetter</a></li>            	            	
+                </ul>
+          </div>
+        </nav>
+        <!-- end .mod -->
+   
+		        <section class="mod" id="hashtag">
+            <h3>What are you up to?</h3>
+            <article><p><a href="http://search.twitter.com/search?q=%23html5">http://search.twitter.com/search?q=%23html5</a></p></article>
+        </section>
+        
+        <section class="ads mod">
+          <h3>Submit your site to the Gallery</h3>
+          <a href="http://html5gallery.com/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/the-gallery.png" alt="HTML5 Gallery" /></a>
+          <p class="btn"><a href="http://html5gallery.com/">Visit the gallery</a></p>
+        </section>
+        <!-- end .mod --> 
+                       
+		        <div class="mod tweet">
+          <h3><a href="http://twitter.com/html5doctor"><span style="font-weight:normal;">@</span>html5doctor</a></h3>
+          <article><p> RT <a href="http://twitter.com/brucel" class="twitter-user">@brucel</a>: You might like HTML5 Nurse <a href="http://t.co/0HD9GV4C" class="twitter-link">http://t.co/0HD9GV4C</a> with some of the best misplaced medical questions we receive. All genuine. <a href="http://twitter.com/html5doctor/statuses/175332094459908097" class="twitter-link">#</a> <span class="twitter-timestamp"><abbr title="2012/03/01 21:30:03">2012/03/01</abbr></span></p></article>
+        </div>
+        <!-- end .mod -->
+
+    </aside>
+    <!-- end .secondary -->                   
+        <aside id="sub-footer" class="sub-footer group">
+        <div>
+            <div class="mod">
+                                <div id="crp_related"><h3>Related Posts:</h3><ul class="related"><li><a href="http://html5doctor.com/how-to-get-all-the-browsers-playing-ball/" rel="bookmark" class="crp_title">How to get all the browsers playing ball</a></li><li><a href="http://html5doctor.com/introducing-web-sql-databases/" rel="bookmark" class="crp_title">Introducing Web SQL Databases</a></li><li><a href="http://html5doctor.com/html5-briefing-notes-journalists-analysts/" rel="bookmark" class="crp_title">HTML5: briefing notes for journalists and analysts</a></li><li><a href="http://html5doctor.com/video-canvas-magic/" rel="bookmark" class="crp_title">video + canvas = magic</a></li><li><a href="http://html5doctor.com/the-video-element/" rel="bookmark" class="crp_title">The video element</a></li></ul></div>                        
+            </div><!-- end .mod -->
+            <div class="mod">
+                <h3>Recent Posts</h3>
+                <ul class="related">
+                                                        <li><a href="http://html5doctor.com/css3-pseudo-classes-and-html5-forms/">CSS3 Pseudo-Classes and HTML5 Forms</a></li>
+                                        <li><a href="http://html5doctor.com/ol-element-attributes/">The <code>ol</code> Element and Related Attributes: <code>type</code>, <code>start</code>, <code>value</code>, and <code>reversed</code></a></li>
+                                        <li><a href="http://html5doctor.com/html5-doctor-drop-in-clinic/">HTML5 Doctor Drop-In Clinic</a></li>
+                                        <li><a href="http://html5doctor.com/getusermedia/">It&#8217;s Curtains for Marital Strife Thanks to getUserMedia</a></li>
+                                        <li><a href="http://html5doctor.com/server-sent-events/">Server-Sent Events</a></li>
+                                                </ul>
+            </div><!-- end .mod -->
+        </div> 
+        <!-- end div -->
+        <div class="ads">
+            <div class="mod">
+                <h3>Recommended</h3>
+                <a href="http://introducinghtml5.com"><img src="http://html5doctor.com/wp-content/themes/html5doctor/img/introducing-html5-ad.jpg" alt="Introducing HTML5 Book by Bruce Lawson and Remy Sharp" /></a>
+                <p class="btn"><a href="http://introducinghtml5.com">Buy this book</a></p>
+            </div>
+        </div>
+        <!-- end .ads -->
+    </aside>
+    <!-- end #sub-footer -->
+	
+
+    
+</div>
+<!-- end #content -->
+
+<footer role="contentinfo">
+	<div class="inner">
+    	<img width="64" height="64" class="w3c-logo" alt="W3C HTML5 logo (not CSS3!)" src="http://html5doctor.com/wp-content/themes/html5doctor2/images/HTML5_Badge_64.png">
+		<p id="copyright">This site is licensed under a <a href="http://creativecommons.org/licenses/by-nc/2.0/uk/" rel="license">Creative Commons Attribution-Non-Commercial 2.0</a> share alike license. Feel free to change, reuse modify and extend it. Some authors will retain their copyright on certain articles.</p>
+        <p>Copyright &copy; 2012 HTML5 Doctor. All rights reserved. Hosted by <a href="http://www.mediatemple.net/go/order/?refdom=richclarkdesign.com">(mt) Media Temple</a>. Branding by <a href="http://olik.co.uk/">Oliver Ker</a>.</p>
+	</div>
+    <!-- end .inner -->
+</footer>
+<!-- end footer -->
+
+    <!-- BuySellAds.com Ad Code -->
+    <script>
+    (function(){
+      var bsa = document.createElement('script');
+         bsa.type = 'text/javascript';
+         bsa.async = true;
+         bsa.src = '//s3.buysellads.com/ac/bsa.js';
+      (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+    })();
+    </script>
+    <!-- END BuySellAds.com Ad Code -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<!-- TODO: move scripts in head to before /body —oli -->
+	   
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/searchhi.js"></script>    
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/prettify.js"></script>    
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/master.js"></script>    
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8916679-1']);
+  _gaq.push(['_setDomainName', 'html5doctor.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 1.190 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2012-03-03 18:42:52 -->
+<!-- super cache -->

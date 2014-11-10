@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<style type="text/css">
+		/* basic menu styles */
+		.block-menu {
+			display: block;
+			background: #000;
+		}
+		.block-menu li {
+			display: inline-block;
+		}
+		.block-menu li a {
+			color: #fff;
+			display: block;
+			text-decoration: none;
+			font-family: 'Passion One',Arial,sans-serif;
+			-webkit-font-smoothing: antialiased;
+			-moz-font-smoothing: antialiased;
+			font-smoothing: antialiased;
+			text-transform: uppercase;
+			overflow: visible;
+			line-height: 20px;
+			font-size: 24px;
+			padding: 15px 10px;
+		}
+		/* animation domination */
+		.three-d {
+			-webkit-perspective: 200px;
+			-moz-perspective: 200px;
+			perspective: 200px;
+			-webkit-transition: all .07s linear;
+			-moz-transition: all .07s linear;
+			transition: all .07s linear;
+			position: relative;
+		}
+		.three-d:not(.active):hover {
+			cursor: pointer;
+		}
+		.three-d:not(.active):hover .three-d-box, 
+		.three-d:not(.active):focus .three-d-box {
+			-moz-transform: translateZ(-25px) rotateX(90deg);
+			-webkit-transform: translateZ(-25px) rotateX(90deg);
+			-o-transform: translateZ(-25px) rotateX(90deg);
+			transform: translateZ(-25px) rotateX(90deg);
+		}
+		.three-d-box {
+			-webkit-transition: all .3s ease-out;
+			-moz-transition: all .3s ease-out;
+			-ms-transition: all .3s ease-out;
+			-o-transition: all .3s ease-out;
+			transition: all .3s ease-out;
+			-webkit-transform: translatez(-25px);
+			-moz-transform: translatez(-25px);
+			-o-transform: translatez(-25px);
+			transform: translatez(-25px);
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			-o-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		.front {
+			-webkit-transform: rotatex(0deg) translatez(25px);
+			-moz-transform: rotatex(0deg) translatez(25px);
+			-o-transform: rotatex(0deg) translatez(25px);
+			transform: rotatex(0deg) translatez(25px);
+		}
+
+		.back {
+			-webkit-transform: rotatex(-90deg) translatez(25px);
+			-moz-transform: rotatex(-90deg) translatez(25px);
+			-o-transform: rotatex(-90deg) translatez(25px);
+			transform: rotatex(-90deg) translatez(25px);
+			color: #FFE7C4;
+		}
+
+		.front, .back {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: black;
+			padding: 15px 10px;
+			color: white;
+			pointer-events: none;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+
+<body>
+	<ul class="block-menu">
+		<li><a href="#" class="three-d">
+			Home
+			<span class="three-d-box"><span class="front">Home</span><span class="back">Home</span></span>
+		</a></li>
+		<li><a href="#" class="three-d">
+			Demos
+			<span class="three-d-box"><span class="front">Demos</span><span class="back">Demos</span></span>
+		</a></li>
+		<li><a href="#" class="three-d">
+			Deals
+			<span class="three-d-box"><span class="front">Deals</span><span class="back">Deals</span></span>
+		</a></li>
+		<li><a href="#" class="three-d">
+			About
+			<span class="three-d-box"><span class="front">About</span><span class="back">About</span></span>
+		</a></li>
+	</ul>
+</body>
+</html>

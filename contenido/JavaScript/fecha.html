@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Documento sin título</title>
+</head>
+
+
+<script type="text/javascript">
+var fecha = new Date();
+/*var hora = fecha.getHours();
+var minutos = fecha.getMinutes();
+var segundos = fecha.getSeconds();*/
+var dia = fecha.getDate();
+var mes = fecha.getMonth();
+var anio = fecha.getFullYear();
+var diaSemana = fecha.getDay();
+
+var nombreMes;
+switch (mes) {
+	case 1:
+		nombreMes = "Enero";
+		break;
+	case 2:
+		nombreMes = "Febrero";
+		break;
+	case 3:
+		nombreMes = "Marzo";
+		break;
+	default:
+		nombreMes = "Desconocido";
+}
+
+var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+var diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+
+document.write("Hoy es " + diasSemana[diaSemana] + ", " + dia + " de " + meses[mes] + " de " + anio);
+reloj();
+function reloj() {
+var fecha = new Date();
+var hora = fecha.getHours();
+var minutos = fecha.getMinutes();
+var segundos = fecha.getSeconds();
+	var actualizaReloj = setTimeout('reloj()', 500);
+	document.getElementById('reloj').textContent = hora + " : " + minutos + " : " + segundos;
+}
+
+</script>
+<body>
+
+<div id='reloj'>
+</div>
+</body>
+</html>

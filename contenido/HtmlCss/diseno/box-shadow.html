@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+	<title> CSS box-shadow "inset" and blur test </title>
+	<style>
+		body {
+			background: khaki;
+			margin: 1em auto; padding:0 3%;
+			max-width: 42em;
+			/* max-width: -moz-min-content; */
+			font: 1em/1.5 "Microsoft Sans Serif", Helvetica, sans-serif;
+		}
+		i { font-weight: normal }
+		h1, div, code { white-space: pre }
+		pre { display:inline-block; white-space:pre-wrap; padding:0 1ex; margin:0 0 1em 0 }
+		div, pre { font-family: "Courier 10 Pitch","Nimbus Mono L",FreeMono,"Courier New",Courier,monospace }
+		div, pre { background: white }
+		div, p code, pre { font-size:0.88em; font-size:0.88rem }
+		p { font-size:small }
+		div { padding: 0.5em; margin: 1.6em 0; text-shadow: 1px 1px rgba(240,230,140,0.4); }
+		hr { border:groove #ffe; border-width:2px 0 0 2px }
+		body > small:first-child {
+			float: right;
+			padding: 0.8em 1.5em 0.9em;
+			border-radius: 50%;
+			box-shadow: 0 0 0.35em 0.2em navy, inset 0 0 0.35em 0.2em navy;
+		}
+		hr + small small { float:right;  padding-bottom:0.6em; opacity:0.5 }
+		#E { width: auto; padding: 2em; 	border-radius: 50%; box-shadow: inset 0.3em 0.3em 0.9em black; }
+		@font-face {
+			font-family: Deutsch-Gotisch;
+			src: url(http://bwvd.de/img/de-gotisch.eot?#) format("embedded-opentype"),
+				 url(http://bwvd.de/img/de-gotisch.ttf) format("truetype");
+		}
+	</style>
+	<script>
+
+		onload= function() {
+		 var S;
+		 var D= document.getElementsByTagName("div");
+		 for(var i=1; S=D[i].firstChild.data; i++)
+		  D[i].style.cssText += "box-shadow:" + S;
+		}
+
+	</script>
+</head>
+
+<body>
+	<h3><span>-webkit-box-shadow</span>, <span>-moz-box-shadow</span>, box-shadow: 
+		<pre>inset? &amp;&amp; [ &lt;offset-x&gt; &lt;offset-y&gt; &lt;blur-radius&gt;? &lt;spread-radius&gt;? &amp;&amp; &lt;color&gt;? ]</pre>
+	</h3>
+
+	<div id="E">
+		border-radius: 50%;
+		box-shadow: inset 0.3em 0.3em 0.9em black;</div>
+	<hr>
+
+	<div style="box-shadow: 0.5em -0.5em 0.4em red, 0.5em 0.5em 0.4em gold, -0.5em 0.5em 0.4em lime, -0.5em -0.5em 0.4em blue;">
+		0.5em -0.5em 0.4em red,
+		0.5em  0.5em 0.4em gold,
+		-0.5em  0.5em 0.4em lime,
+		-0.5em -0.5em 0.4em blue;</div>
+	<hr>
+
+	<div style="box-shadow: 0px 0px 0px 0.5em;">
+		0 0 0 0.5em;</div>
+	<div style="box-shadow: 0px 0px 1em;">
+		0 0 1em;</div>
+	<div style="box-shadow: 1em 0.5em;">
+		1em 0.5em;</div>
+	<div style="box-shadow: 1em 0.5em 1em;">
+		1em 0.5em 1em;</div>
+	<hr>
+
+	<div style="box-shadow: 0.3em 0.3em silver;">
+		0.3em 0.3em silver;</div>
+	<div style="box-shadow: 0.3em 0.3em 0px 0.6em silver;">
+		0.3em 0.3em 0 0.6em silver;</div>
+	<div style="box-shadow: 0px 1.5em 0px -0.7em silver;">
+		0 1.5em 0 -0.7em silver;</div>
+	<div style="box-shadow: 2em 1.5em 0px -0.7em silver;">
+		2em 1.5em 0 -0.7em silver;</div>
+	<hr>
+
+	<div style="box-shadow: 0px 0px 1em maroon;">
+		0 0 1em maroon;</div>
+	<div style="box-shadow: 0px 0px 1em 0.5em maroon;">
+		0 0 1em 0.5em maroon;</div>
+	<div style="margin-top: 3em; box-shadow: 0px 0px 1em 1em maroon;">
+		0 0 1em 1em maroon;</div>
+	<hr>
+
+	<div style="box-shadow: -0.4em -0.4em 1em olive;">
+		-0.4em -0.4em 1em olive;</div>
+	<div style="box-shadow: 0.4em 0.4em 1em olive;">
+		0.4em 0.4em 1em olive;</div>
+	<div style="box-shadow: 0.4em 0.4em 1em -0.2em olive;">
+		0.4em 0.4em 1em -0.2em olive;</div>
+	<div style="box-shadow: 0.4em 0.4em 1em 0.4em olive;">
+		0.4em 0.4em 1em 0.4em olive;</div>
+	<div style="box-shadow: 0px 1.5em 0.5em -1em olive;">
+		0 1.5em 0.5em -1em olive;</div>
+	<hr>
+
+	<div style="box-shadow: 0.2em 0.4em red inset, -1em -0.7em red inset;">
+		inset 0.2em 0.4em red,
+		inset -1em -0.7em red;</div>
+	<div style="box-shadow: 11em 0px red inset;">
+		inset 11em 0 red;</div>
+	<div style="box-shadow: -1em 0px red inset;">
+		inset -1em 0 red;</div>
+	<div style="box-shadow: 13em 0px 3em -3em orange inset, -3em 0px 3em -3em blue inset;">
+		inset 13em 0 3em -3em orange,
+		inset -3em 0 3em -3em blue;	</div>
+	<div style="box-shadow: 11em 0px 2em orange inset;">
+		inset 11em 0 2em orange;</div>
+	<div style="box-shadow: 0px 0.3em red inset;">
+		inset 0 0.3em red;</div>
+	<div style="box-shadow: 0px -1.1em red inset;">
+		inset 0 -1.1em red;</div>
+	<div style="box-shadow: 1em 0px 1em -1em blue inset;">
+		inset 1em 0 1em -1em blue;</div>
+	<div style="box-shadow: 0px 0px 0.5em blue inset;">
+		inset 0 0 0.5em blue;</div>
+	<div style="box-shadow: 0px 0px 2em blue inset;">
+		inset 0 0 2em blue;</div>
+	<div style="box-shadow: 0px 2em 3em -1em green inset;">
+		inset 0 2em 3em -1em green;</div>
+	<div style="box-shadow: 0px 2em 3em -2em green inset;">
+		inset 0 2em 3em -2em green;</div>
+	<div style="box-shadow: 0px 2em 3em -3em green inset;">
+		inset 0 2em 3em -3em green;</div>
+	<div style="box-shadow: 0px 0px 1em khaki inset;">
+		inset 0 0 1em khaki;</div>
+	<div style="box-shadow: 0px 0px 1em khaki inset, 0px 0px 1em khaki inset, 0px 0px 1em khaki inset, 0px 0px 1em khaki inset;">
+		inset 0 0 1em khaki,
+		inset 0 0 1em khaki,
+		inset 0 0 1em khaki,
+		inset 0 0 1em khaki;	</div>
+	<div style="box-shadow: 0px 0px 0.5em 0.5em khaki inset;">
+		inset 0 0 0.5em 0.5em khaki;
+		/* similar to above */</div>
+	<hr>
+
+	<div style="background: none repeat scroll 0% 0% black; color: gold; box-shadow: 0px 0px 0.5em 0.5em khaki inset;">
+		inset 0 0 0.5em 0.5em khaki;
+		/* background: black */</div>
+	<div style="background: none repeat scroll 0% 0% red; padding: 2em; box-shadow: 0px 0px 2em 2em khaki inset;">
+		inset 0 0 2em 2em khaki;
+		/* background: red; padding: 2em */</div>
+	<div style="background: none repeat scroll 0% 0% teal; color: gold; box-shadow: 0px 0px 0.5em 0.5em teal;">
+		0 0 0.5em 0.5em teal;
+		/* background: teal */</div>
+	<div style="padding: 1em; margin-top: 3em; box-shadow: 0px 0px 0.5em 0.5em indigo inset, 0px 0px 0.5em 0.5em indigo;">
+		inset 0 0 0.5em 0.5em indigo,
+		0 0 0.5em 0.5em indigo; 
+		/* padding: 1em */</div>
+	<hr>
+	
+	<div style="box-shadow: 0px 0px 1em black inset, 0px 0px 1em black inset, 0px 0px 1em black inset, 0px 0px 1em black inset;">
+		inset 0 0 1em black, inset 0 0 1em black,
+		inset 0 0 1em black, inset 0 0 1em black;</div>
+	<div style="box-shadow: 0px 0px 0.7em 0.5em black inset;">
+		inset 0 0 0.7em 0.5em black;
+		/* should be very similar to above 
+		in CSS conforming browsers like Firefox 4+ */</div>
+	<div style="box-shadow: 0px 2em 3em -1.5em green inset, 0px -2em 3em -2em blue inset;">
+		inset 0 2em 3em -1.5em green,
+		inset 0 -2em 3em -2em blue;</div>
+	<div style="box-shadow: 1em 1em 2em -1em blue inset;">
+		inset 1em 1em 2em -1em blue;</div>
+	<div style="box-shadow: 1em 1em 2em -1em blue inset, -1em -1em 2em -1em red inset;">
+		inset 1em 1em 2em -1em blue,
+		inset -1em -1em 2em -1em red;</div>
+	<div style="background: none repeat scroll 0% 0% red; box-shadow: 0px 2em 3em -2em white inset, 0px -2em 3em -2.5em black inset;">
+		inset 0 2em 3em -2em white,
+		inset 0 -2em 3em -2.5em black;
+		/* background:red */	</div>
+	<div style="background: none repeat scroll 0% 0% red; box-shadow: 1em 1em 1em -1em white inset, -1em -1em 1em -1em black inset;">
+		inset 1em 1em 1em -1em white,
+		inset -1em -1em 1em -1em black;
+		/* background:red */	</div>
+	<div style="background: none repeat scroll 0% 0% red; box-shadow: -1em -1em 1em -1em black inset, 1em 1em 1em -1em white inset;">
+		inset -1em -1em 1em -1em black,
+		inset 1em 1em 1em -1em white;
+		/* background:red */	</div>
+	<div style="background: none repeat scroll 0% 0% red; box-shadow: -0.3em -0.3em 0.6em rgba(0, 0, 0, 0.5) inset, 0.3em 0.3em 0.6em rgba(255, 255, 255, 0.7) inset;">
+		inset -0.3em -0.3em 0.6em rgba(0,0,0,0.5),
+		inset 0.3em 0.3em 0.6em rgba(256,256,256,0.7);	</div>
+	<div style="background: none repeat scroll 0% 0% red; box-shadow: 0.3em 0.3em 0.6em rgba(255, 255, 255, 0.5) inset, -0.3em -0.3em 0.6em rgba(0, 0, 0, 0.5) inset;">
+		inset 0.3em 0.3em 0.6em rgba(256,256,256,0.5),
+		inset -0.3em -0.3em 0.6em rgba(0,0,0,0.5);	</div>
+	<div style="box-shadow: 0.2em 0.2em 0.7em black, 0px 0px 0.7em red inset;">
+		0.2em 0.2em 0.7em black,
+		inset 0 0 0.7em red;</div>
+</body>
+</html>

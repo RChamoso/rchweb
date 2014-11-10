@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Camera and Video Control with HTML5</title>
+	
+</head>
+<body>
+	<div id="page">
+		<div id="contentHolder">
+			<section class="left">
+				<article>
+					<h1>Camera and Video Control with&nbsp;HTML5</h1>
+					<p>Client-side APIs on mobile and desktop devices are quickly providing 
+					the same APIs. &nbsp;Of course our mobile devices got access to some of 
+					these APIs first, but those APIs are slowly making their way to the 
+					desktop. &nbsp;One of those APIs is the getUserMedia API, providing 
+					developers access to the user's camera. &nbsp;Let me show you how to get
+					 simple camera access from within your browser!</p>
+
+					<div class="actions"><a href="http://davidwalsh.name/demo/camera.php" class="demo">View Demo</a>
+						<div class="clear"></div>
+					</div>
+
+					<h2>The HTML</h2>
+					<p>Please read my note about the HTML structure below:</p>
+
+<pre class="standardLighter gitLighter"><span class="co1">&lt;!--
+  Ideally these elements aren't created until it's confirmed that the 
+  client supports video/camera, but for the sake of illustrating the 
+  elements involved, they are created with markup (not JavaScript)
+--&gt;</span>
+<span class="kw1">&lt;video</span> <span class="kw2">id</span><span class="kw1">=</span><span class="kw3">"video"</span> <span class="kw2">width</span><span class="kw1">=</span><span class="kw3">"640"</span> <span class="kw2">height</span><span class="kw1">=</span><span class="kw3">"480"</span> autoplay<span class="kw1">&gt;</span><span class="kw1">&lt;/video&gt;</span>
+<span class="kw1">&lt;button</span> <span class="kw2">id</span><span class="kw1">=</span><span class="kw3">"snap"</span><span class="kw1">&gt;</span>Snap Photo<span class="kw1">&lt;/button&gt;</span>
+<span class="kw1">&lt;canvas</span> <span class="kw2">id</span><span class="kw1">=</span><span class="kw3">"canvas"</span> <span class="kw2">width</span><span class="kw1">=</span><span class="kw3">"640"</span> <span class="kw2">height</span><span class="kw1">=</span><span class="kw3">"480"</span><span class="kw1">&gt;</span><span class="kw1">&lt;/canvas&gt;</span>
+</pre>
+
+					<p>Each of these elements should be created once confirmation of camera 
+					support is confirmed, but for the sake of this tutorial, I wanted to 
+					show you what the elements look like with basic HTML. &nbsp;Do note that
+					 the dimensions we're working with are 640x480.</p>
+
+					<h2>The JavaScript</h2>
+
+					<p>Since the HTML elements above are already created, the JavaScript portion will look smaller than you think:</p>
+
+<pre class="standardLighter gitLighter"><span class="co1">// Put event listeners into place</span>
+window.<span class="me0">addEventListener</span><span class="br0">(</span><span class="st0">"DOMContentLoaded"</span><span class="sy0">,</span> <span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+ <span class="co1"> // Grab elements, create settings, etc.</span>
+  <span class="kw2">var</span> canvas <span class="sy0">=</span> document.<span class="me0">getElementById</span><span class="br0">(</span><span class="st0">"canvas"</span><span class="br0">)</span><span class="sy0">,</span>
+    context <span class="sy0">=</span> canvas.<span class="me0">getContext</span><span class="br0">(</span><span class="st0">"2d"</span><span class="br0">)</span><span class="sy0">,</span>
+    video <span class="sy0">=</span> document.<span class="me0">getElementById</span><span class="br0">(</span><span class="st0">"video"</span><span class="br0">)</span><span class="sy0">,</span>
+    videoObj <span class="sy0">=</span> <span class="br0">{</span> <span class="st0">"video"</span><span class="sy0">:</span> <span class="kw2">true</span> <span class="br0">}</span><span class="sy0">,</span>
+    errBack <span class="sy0">=</span> <span class="kw2">function</span><span class="br0">(</span>error<span class="br0">)</span> <span class="br0">{</span>
+      console.<span class="me0">log</span><span class="br0">(</span><span class="st0">"Video capture error: "</span><span class="sy0">,</span> error.<span class="me0">code</span><span class="br0">)</span><span class="sy0">;</span> 
+    <span class="br0">}</span><span class="sy0">;</span>
+
+ <span class="co1"> // Put video listeners into place</span>
+  <span class="kw1">if</span><span class="br0">(</span>navigator.<span class="me0">getUserMedia</span><span class="br0">)</span> <span class="br0">{</span><span class="co1"> // Standard</span>
+    navigator.<span class="me0">getUserMedia</span><span class="br0">(</span>videoObj<span class="sy0">,</span> <span class="kw2">function</span><span class="br0">(</span>stream<span class="br0">)</span> <span class="br0">{</span>
+      video.<span class="me0">src</span> <span class="sy0">=</span> stream<span class="sy0">;</span>
+      video.<span class="me0">play</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span><span class="sy0">,</span> errBack<span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span> <span class="kw1">else</span> <span class="kw1">if</span><span class="br0">(</span>navigator.<span class="me0">webkitGetUserMedia</span><span class="br0">)</span> <span class="br0">{</span><span class="co1"> // WebKit-prefixed</span>
+    navigator.<span class="me0">webkitGetUserMedia</span><span class="br0">(</span>videoObj<span class="sy0">,</span> <span class="kw2">function</span><span class="br0">(</span>stream<span class="br0">)</span><span class="br0">{</span>
+      video.<span class="me0">src</span> <span class="sy0">=</span> window.<span class="me0">webkitURL</span>.<span class="me0">createObjectURL</span><span class="br0">(</span>stream<span class="br0">)</span><span class="sy0">;</span>
+      video.<span class="me0">play</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span><span class="sy0">,</span> errBack<span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span>
+<span class="br0">}</span><span class="sy0">,</span> <span class="kw2">false</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+					<p>Once it's been established that the browser supports getUserMedia, a 
+					simple method sets the video element's src to the user's live 
+					camera/webcam. &nbsp;Calling the play method of the video then enacts 
+					the element's live video connection. &nbsp;That's all that's required to
+					 connect your camera to the browser!</p>
+
+					<p>Taking a photo is only marginally more difficult. &nbsp;Simply add a 
+					click listener to a generic button and and draw an image from video!</p>
+
+<pre class="standardLighter gitLighter"><span class="co1">// Trigger photo take</span>
+document.<span class="me0">getElementById</span><span class="br0">(</span><span class="st0">"snap"</span><span class="br0">)</span>.<span class="me0">addEventListener</span><span class="br0">(</span><span class="st0">"click"</span><span class="sy0">,</span> <span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  context.<span class="me0">drawImage</span><span class="br0">(</span>video<span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">640</span><span class="sy0">,</span> <span class="nu0">480</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+					<p>Of course you could add some sexy image filters and make a billion 
+					dollars...but I'll save that for another post. &nbsp;At minimum you 
+					could convert the <a href="http://davidwalsh.name/convert-canvas-image">canvas snapshot to an image</a>&nbsp;though! &nbsp;I'll talk about canvas image filters in the future...</p>
+
+					<div class="actions"><a href="http://davidwalsh.name/demo/camera.php" class="demo">View Demo</a><div class="clear"></div></div>
+
+					<p>Being able to access the camera within the browser without using 
+					third party software is an incredible advancement. &nbsp;Paired with 
+					canvas and a bit of JavaScript, the camera has become quickly and easily
+					 accessible. &nbsp;Not only it the camera accessible, but since canvas 
+					is ultra-flexible, we'll be able to add sexy Instagram-style image 
+					filters in the future. &nbsp;For now, however, simply accessing the 
+					camera in our browser moves us miles ahead. &nbsp;Have fun taking images
+					 within your browser!</p>
+
+				</article>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

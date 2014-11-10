@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>El primer script</title>
+
+<script>
+
+/*		? Si la variable contiene un número, se transforma en false si vale 0 y en true para
+			cualquier otro número (positivo o negativo, decimal o entero).
+		? Si la variable contiene una cadena de texto, se transforma en false si la cadena es
+			vacía ("") y en true en cualquier otro caso.
+*/
+	var mensaje;
+	mensaje = "<javascript>\n\nHola Mundo!\nQué fácil es incluir 'comillas simples'\n  y \"comillas dobles\".\n";
+	alert(mensaje);
+	mensaje = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+	document.write(mensaje[5] + '<br>'); //junio
+	for(j in mensaje){
+		document.write(mensaje[j] + ' - ');
+	}
+	var valores = [true, 5, false, "hola", "adios", 2];
+	if(valores[3] > valores[4]){
+		document.write("<br>'" + valores[3] + "' es mayor que '" + valores[4] + "'" + '<br>');
+	}else{
+		document.write("'" + valores[3] + "' es menor que '" + valores[4] + "'" + '<br>');
+	}
+	document.write(valores + '<br>');
+	document.write("Valor original: " + valores[0] + '<br>' + "Valor negado: " + !valores[0] + '<br>');
+	resultado = valores[1] + valores[5];
+	document.write("Suma - " + valores[1] + "+" + valores[5] + "=" + resultado + '<br>');
+	resultado = valores[1] - valores[5];
+	document.write("Resta - " + valores[1] + "-" + valores[5] + "=" + resultado + '<br>');
+	resultado = valores[1] * valores[5];
+	document.write("Multiplicacion - " + valores[1] + "*" + valores[5] + "=" + resultado + '<br>');
+	resultado = valores[1] / valores[5];
+	document.write("Division - " + valores[1] + "/" + valores[5] + "=" + resultado + '<br>');
+	resultado = valores[1] % valores[5];
+	document.write("Modulo - " + valores[1] + "%" + valores[5] + "=" + resultado + '<br>');
+
+	var numero1 = 5;
+	var numero2 = 8;
+	if(numero1 < numero2) {
+	document.write(numero1 + ' no es mayor que ' + numero2 + '<br>');
+	}
+	if(numero2 >= 0) {
+	document.write(numero2 + ' es positivo' + '<br>');
+	}
+	if(-(numero1) && numero1!= 0) {
+	document.write(numero1 + ' es negativo o distinto de cero' + '<br>');
+	}
+	if(numero1++ < numero2) {
+	document.write('Incrementar en 1 unidad el valor de ' + numero1 + ' no lo hace mayor o igual que ' + numero2 + '<br>');
+	}
+	
+	
+	//  COMPROBAR EL DNI
+	
+	var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+	dni = prompt("introduce el número de tu dni");
+	if(dni <= 0 || dni > 99999999){
+		alert("Numero incorrecto");
+	}else{
+		letra = letras[dni%23];
+		alert("Tu dni es " + dni + letra);
+	}
+	
+	factorial = 1;
+	for(i=5; i>0; i--){
+		factorial = factorial*i;
+	}
+	document.write("factorial de 5 : " + factorial + '<br>');
+
+	function parImpar(numero){
+		if(numero%2 == 0){
+			clase = "El numero es par";
+		}else{
+			clase = "El numero es impar";
+		}
+		return clase;
+	}
+	
+	var miNumero = 24;									//Variable Global
+	resultado = parImpar(miNumero);						//Variable Global
+	document.write(miNumero + " - " + resultado + '<br>');
+	
+	function minusMayusculas(texto){
+		letras = texto.split("");
+		var minus = 0;									// Variable Local
+		Mayus = 0;										// Variable Global
+		for(j in letras){
+			if(letras[j] != " "){
+				if(letras[j] == letras[j].toUpperCase()){
+					Mayus++;
+				}else{
+					minus++;
+				}
+			}
+		}
+		total = [minus, Mayus];
+		return total;
+	}
+	
+	miTexto = "Esto eS uNa PruEba";
+	resultado = minusMayusculas(miTexto);
+	document.write(" Mi Texto : " + miTexto + "<br>Total minusculas : " + resultado[0] + ", y Mayusculas : " + resultado[1] + '<br>');
+	
+
+/*
+En el siguiente ejemplo, se obtienen todos los
+enlaces del primer párrafo de la página:
+var parrafos = document.getElementsByTagName("p");
+var primerParrafo = parrafos[0];
+var enlaces = primerParrafo.getElementsByTagName("a");
+
+si se quiere añadir un párrafo (o cualquier elemento) simple al final de una página HTML
+// Crear nodo de tipo Element
+var parrafo = document.createElement("p");
+// Crear nodo de tipo Text
+var contenido = document.createTextNode("Hola Mundo!");
+// Añadir el nodo Text como hijo del nodo Element
+parrafo.appendChild(contenido);
+// Añadir el nodo Element como hijo de la pagina
+document.body.appendChild(parrafo);
+
+eliminar un nodo del árbol DOM de la página es necesario utilizar la función removeChild():
+var parrafo = document.getElementById("provisional");
+parrafo.parentNode.removeChild(parrafo);
+
+Acceso directo a los atributos
+
+El siguiente ejemplo obtiene de forma directa la dirección a la que enlaza el enlace:  
+var enlace = document.getElementById("enlace");
+alert(enlace.href);
+
+El siguiente ejemplo obtiene el valor de la propiedad margin de la imagen:
+var imagen = document.getElementById("imagen");
+alert(imagen.style.margin);
+<img id="imagen" style="margin:0; border:0;" src="logo.png" />
+
+utiliza el nombre className para acceder al atributo class de XHTML:
+var parrafo = document.getElementById("parrafo");
+alert(parrafo.class); // muestra "undefined"
+alert(parrafo.className); // muestra "normal"
+<p id="parrafo" class="normal">...</p>
+
+Importante
+
+// Asignar una función externa a un evento de un elemento
+document.getElementById("pinchable").onclick = muestraMensaje;
+// Ejecutar una función y guardar su resultado en una propiedad de un elemento
+document.getElementById("pinchable").onclick = muestraMensaje();
+
+Para asegurarse que un
+código JavaScript va a ejecutarse después de que la página se haya cargado
+completamente, sólo es necesario incluir esas instrucciones entre los símbolos { y }:
+window.onload = function() {
+...
+
+forma correcta de obtener el objeto event en
+cualquier navegador:*/
+function manejadorEventos(elEvento) {
+var evento = elEvento || window.event;
+}/*
+Una vez obtenido el objeto event, ya se puede acceder a toda la información relacionada
+con el evento, que depende del tipo de evento producido.
+ejemplo
+function resalta(elEvento) {
+var evento = elEvento || window.event;
+switch(evento.type) {
+case 'mouseover':
+this.style.borderColor = 'black';
+break;
+case 'mouseout':
+this.style.borderColor = 'silver';
+break;
+}
+}
+window.onload = function() {
+document.getElementById("seccion").onmouseover = resalta;
+document.getElementById("seccion").onmouseout = resalta;
+}
+
+El siguiente código de JavaScript permite obtener de forma correcta en cualquier
+navegador el carácter correspondiente a la tecla pulsada:
+function manejador(elEvento) {
+var evento = elEvento || window.event;
+var caracter = evento.charCode || evento.keyCode;
+alert("El carácter pulsado es: " + String.fromCharCode(caracter));
+}
+document.onkeypress = manejador;
+
+deshabilitar el botón de envío después de la primera pulsación.
+<form id="formulario" action="#">
+...
+<input type="button" value="Enviar" onclick="this.disabled=true;
+this.value='Enviando...'; this.form.submit()" />
+</form>
+ejemplo anterior está definido mediante un botón de tipo <input
+type="button" />, ya que el código JavaScript mostrado no funciona correctamente con
+un botón de tipo <input type="submit" />.
+
+limitar el número de caracteres que se
+pueden escribir en un elemento de tipo textarea:
+function limita(maximoCaracteres) {
+var elemento = document.getElementById("texto");
+if(elemento.value.length >= maximoCaracteres ) {
+return false;
+}
+else {
+return true;
+}
+}
+<textarea id="texto" onkeypress="return limita(100);"></textarea>
+
+bloquear algunos caracteres determinados en un cuadro de
+texto.
+function permite(elEvento, permitidos) {
+// Variables que definen los caracteres permitidos
+var numeros = "0123456789";
+var caracteres = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+var numeros_caracteres = numeros + caracteres;
+var teclas_especiales = [8, 37, 39, 46];
+// 8 = BackSpace, 46 = Supr, 37 = flecha izquierda, 39 = flecha derecha
+// Seleccionar los caracteres a partir del parámetro de la función
+switch(permitidos) {
+case 'num':
+permitidos = numeros;
+break;
+case 'car':
+permitidos = caracteres;
+break;
+case 'num_car':
+permitidos = numeros_caracteres;
+break;
+}
+// Obtener la tecla pulsada
+var evento = elEvento || window.event;
+var codigoCaracter = evento.charCode || evento.keyCode;
+var caracter = String.fromCharCode(codigoCaracter);
+// Comprobar si la tecla pulsada es alguna de las teclas especiales
+// (teclas de borrado y flechas horizontales)
+var tecla_especial = false;
+for(var i in teclas_especiales) {
+if(codigoCaracter == teclas_especiales[i]) {
+tecla_especial = true;
+break;
+}
+}
+// Comprobar si la tecla pulsada se encuentra en los caracteres permitidos
+// o si es una tecla especial
+return permitidos.indexOf(caracter) != -1 || tecla_especial;
+}
+// Sólo números
+<input type="text" id="texto" onkeypress="return permite(event, 'num')" />
+// Sólo letras
+<input type="text" id="texto" onkeypress="return permite(event, 'car')" />
+// Sólo letras o números
+<input type="text" id="texto" onkeypress="return permite(event, 'num_car')" />
+
+incorporar la validación a un formulario:
+<form action="" method="" id="" name="" onsubmit="return validacion()">
+...
+</form>
+Y el esquema de la función validacion() es el siguiente:
+function validacion() {
+if (condicion que debe cumplir el primer campo del formulario) {
+// Si no se cumple la condicion...
+alert('[ERROR] El campo debe tener un valor de...');
+return false;
+}
+else if (condicion que debe cumplir el segundo campo del formulario) {
+// Si no se cumple la condicion...
+alert('[ERROR] El campo debe tener un valor de...');
+return false;
+}
+...
+else if (condicion que debe cumplir el último campo del formulario) {
+// Si no se cumple la condicion...
+alert('[ERROR] El campo debe tener un valor de...');
+return false;
+}
+// Si el script ha llegado a este punto, todas las condiciones
+// se han cumplido, por lo que se devuelve el valor true
+return true;
+}
+
+Validar un campo de texto obligatorio
+valor = document.getElementById("campo").value;
+if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+return false;
+}
+Validar un campo de texto con valores numéricos
+valor = document.getElementById("campo").value;
+if( isNaN(valor) ) {
+return false;
+}
+Validar que se ha seleccionado una opción de una lista
+indice = document.getElementById("opciones").selectedIndex;
+if( indice == null || indice == 0 ) {
+return false;
+}
+<select id="opciones" name="opciones">
+<option value="">- Selecciona un valor -</option>
+<option value="1">Primer valor</option>
+<option value="2">Segundo valor</option>
+<option value="3">Tercer valor</option>
+</select>
+Validar una dirección de email
+valor = document.getElementById("campo").value;
+if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor)) ) {
+return false;
+}
+Validar una fecha
+var ano = document.getElementById("ano").value;
+var mes = document.getElementById("mes").value;
+var dia = document.getElementById("dia").value;
+valor = new Date(ano, mes, dia);
+if( !isNaN(valor) ) {
+return false;
+}
+Validar un número de DNI
+valor = document.getElementById("campo").value;
+var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N',
+'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+if( !(/^\d{8}[A-Z]$/.test(valor)) ) {
+return false;
+}
+if(valor.charAt(8) != letras[(valor.substring(0, 8))%23]) {
+return false;
+}
+La primera comprobación asegura que el formato del número introducido es el correcto,
+es decir, que está formado por 8 números seguidos y una letra. Si la letra está al
+principio de los números, la comprobación sería /^[A-Z]\d{8}$/. Si en vez de ocho
+números y una letra, se requieren diez números y dos letras, la comprobación sería
+/^\d{10}[A-Z]{2}$/ y así sucesivamente.
+Validar un número de teléfono
+valor = document.getElementById("campo").value;
+if( !(/^\d{9}$/.test(valor)) ) {
+return false;
+}
+Número 			Expresión regular 				Formato
+900900900		/^\d{9}$/ 						9 cifras seguidas
+900-900-900 	/^\d{3}-\d{3}-\d{3}$/ 			9 cifras agrupadas de 3 en 3 y separadas por guiones
+900 900900 		/^\d{3}\s\d{6}$/				9 cifras, las 3 primeras separadas por un espacio
+900 90 09 00	/^\d{3}\s\d{2}\s\d{2}\s\d{2}$/	9 cifras las 3 primeras separadas por un espacio las siguientes agrupadas de 2 en 2
+(900)900900		/^\(\d{3}\)\s\d{6}$/			9 cifras las 3 primeras encerradas por paréntesis y un espacio de separación respecto del resto
++34 900900900	/^\+\d{2,3}\s\d{9}$/			Prefijo internacional (+ seguido de 2 o 3 cifras) espacio en blanco y 9 cifras consecutivas
+--------------------
+Validar que un checkbox ha sido seleccionado
+elemento = document.getElementById("campo");
+if( !elemento.checked ) {
+return false;
+}
+Si se trata de comprobar que todos los checkbox del formulario han sido seleccionados,
+formulario = document.getElementById("formulario");
+for(var i=0; i<formulario.elements.length; i++) {
+var elemento = formulario.elements[i];
+if(elemento.type == "checkbox") {
+if(!elemento.checked) {
+return false;
+}
+}
+Validar que un radiobutton ha sido seleccionado
+opciones = document.getElementsByName("opciones");
+var seleccionado = false;
+for(var i=0; i<opciones.length; i++) {
+if(opciones[i].checked) {
+seleccionado = true;
+break;
+}
+}
+if(!seleccionado) {
+return false;
+}
+reloj puede mostrar solamente la información de la hora.
+var fechaHora = new Date();
+var horas = fechaHora.getHours();
+var minutos = fechaHora.getMinutes();
+var segundos = fechaHora.getSeconds();
+if(horas < 10) { horas = '0' + horas; }
+if(minutos < 10) { minutos = '0' + minutos; }
+if(segundos < 10) { segundos = '0' + segundos; }
+document.getElementById("reloj").innerHTML = horas+':'+minutos+':'+segundos;
+<div id="reloj" />
+el reloj muestra correctamente la hora:
+20:14:03
+La función setTimeout() permite ejecutar una función una vez que haya transcurrido
+un periodo de tiempo indicado. La definición de la función es:
+muestra el contenido del reloj 1 segundo después de que se cargue la página, solo una vez.
+setTimeout(nombreFuncion, milisegundos);
+se ejecute dentro de 1 segundo
+function muestraReloj() {
+var fechaHora = new Date();
+var horas = fechaHora.getHours();
+var minutos = fechaHora.getMinutes();
+var segundos = fechaHora.getSeconds();
+if(horas < 10) { horas = '0' + horas; }
+if(minutos < 10) { minutos = '0' + minutos; }
+if(segundos < 10) { segundos = '0' + segundos; }
+document.getElementById("reloj").innerHTML = horas+':'+minutos+':'+segundos;
+}
+setTimeout(muestraReloj, 1000);
+<div id="reloj" />
+ejecutar una función de forma periódica
+el codigo anterior +
+window.onload = function() {
+setInterval(muestraReloj, 1000);
+}
+Empleando el objeto Date y sus funciones, es posible construir "cuentras atrás", es decir,
+relojes que muestran el tiempo que falta hasta que se produzca un evento.
+----------------
+calendarios más completo es el desarrollado
+por la empresa DynArch, http://www.dynarch.com/projects/calendar/ y que se puede descargar gratuitamente
+desde http://sourceforge.net/projects/jscalendar/ 
+---------------
+Lightbox
+El código de la versión más reciente se puede descargar gratuitamente en
+http://www.huddletogether.com/projects/lightbox2/
+
+
+Corrección de errores con Internet Explorer
+activar los mensajes de aviso sobre los errores de JavaScript. Para
+activar las notificaciones, se accede al menú Herramientas > Opciones, pestaña
+Opciones Avanzadas y se activa la opción Mostrar una notificación sobre cada
+error de secuencia de comandos
+
+Corrección de errores con Firefox
+Para depurar un script con Firefox, solamente es necesario acceder a la opción Consola
+de error dentro del menú Herramientas
+
+Corrección de errores con Opera
+La consola de errores se accede
+desde el menú Herramientas > Avanzado y la opción Consola de error
+
+
+
+*/
+
+window.onload = function() {
+document.onkeyup = muestraInformacion;
+document.onkeypress = muestraInformacion;
+document.onkeydown = muestraInformacion;
+}
+function muestraInformacion(elEvento) {
+var evento = window.event || elEvento;
+var mensaje = "Tipo de evento: " + evento.type + "<br>" +
+"Propiedad keyCode: " + evento.keyCode + "<br>" +
+"Propiedad charCode: " + evento.charCode + "<br>" +
+"Carácter pulsado: " + String.fromCharCode(evento.charCode);
+info.innerHTML += "<br>--------------------------------------<br>" + mensaje
+}
+
+
+function muestraInformacion(elEvento) {
+var evento = elEvento || window.event;
+//var coordenadaX = evento.clientX;			// ventana del navegador
+//var coordenadaY = evento.clientY;
+//var coordenadaX = evento.screenX;			// pantalla completa del ordenador
+//var coordenadaY = evento.screenY;
+// Detectar si el navegador es Internet Explorer
+var ie = navigator.userAgent.toLowerCase().indexOf('msie')!=-1;
+if(ie) {
+coordenadaX = evento.clientX + document.body.scrollLeft;
+coordenadaY = evento.clientY + document.body.scrollTop;
+}
+else {
+coordenadaX = evento.pageX;					//  posición del ratón respecto del origen de la página
+coordenadaY = evento.pageY;
+}
+alert("Has pulsado el ratón en la posición: " + coordenadaX + ", " +
+coordenadaY);
+}
+document.onclick = muestraInformacion;
+
+/*
+Activar el corrector ortográfico con HTML5
+<textarea id="texto" rows="12" cols="100" spellcheck="false">Texto</textarea> sin javascript
+<button id="validar">Validar la Ortografía</button>
+<button id="novalidar">Quitar la Validación</button>
+var boton = document.getElementById("validar");
+var boton2 = document.getElementById("novalidar");
+var texto = document.getElementById("texto");
+boton.addEventListener("click",function(ev){
+  texto.spellcheck = true;
+  texto.focus();
+},true);
+boton2.addEventListener("click",function(ev){
+  texto.spellcheck = false;
+  texto.focus();
+},true);
+
+
+
+*/
+</script>
+
+</head>
+
+<body>
+
+	<p>Esta página contiene el primer script</p>
+	<a id="enlace" href="http://www.com">Enlace</a>
+	<div id="info"></div>
+
+</body>
+</html>

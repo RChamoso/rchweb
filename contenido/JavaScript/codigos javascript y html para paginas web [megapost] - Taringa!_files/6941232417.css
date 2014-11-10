@@ -1,0 +1,40 @@
+
+.byGoogle.footerAds {
+	border-bottom: 1px dotted #CCC;
+  margin-bottom: 10px;
+}
+
+.byGoogle.footerAds li { 
+ padding: 3px 0;
+ border-bottom: 1px solid #EEE;
+}
+  
+.byGoogle.footerAds a.titleUrl {
+  font-size: 14px;
+  color:#de0d6a;
+  margin-bottom:6px;
+  text-decoration:underline;
+  padding-right: 10px;
+}
+
+.byGoogle.footerAds a.titleUrl,.byGoogle.footerAds a.titleUrl b,.byGoogle.footerAds .urlAds .url {
+	font-family: Georgia,'Times New Roman', Palatino Linotype, Palatino, serif;
+}
+
+.byGoogle.footerAds a.titleUrl:hover {
+  color:#000;
+}
+.byGoogle.footerAds .urlAds .url {
+  color: #000;
+  cursor: pointer;
+}
+.byGoogle.footerAds span.desc {
+  color:#444;
+}
+
+.adsBy {
+	font-size: 12px;
+	text-align: left;
+	font-weight: normal;
+	color: #666;
+}

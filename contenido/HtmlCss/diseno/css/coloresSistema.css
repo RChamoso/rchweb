@@ -1,0 +1,38 @@
+﻿#colores {
+  background-color: hsl(90,50%,30%);
+  padding: 20px 40px;
+}
+#colores p {
+  margin-left: 50px;
+}
+#colores h4 {
+  margin-bottom: 20px;
+}
+.ActiveBorder{ color: ActiveBorder;}
+.ActiveCaption { color: ActiveCaption;}
+.AppWorkspace { color: AppWorkspace;}
+.Background { color: Background;}
+.ButtonFace { color: ButtonFace;}
+.ButtonHighlight { color: ButtonHighlight;}
+.ButtonShadow { color: ButtonShadow;}
+.ButtonText { color: ButtonText;}
+.CaptionText { color: CaptionText;}
+.GrayText { color: GrayText;}
+.Highlight { color: Highlight;}
+.HighlightText { color: HighlightText;}
+.InactiveBorder { color: InactiveBorder;}
+.InactiveCaption { color: InactiveCaption;}
+.InactiveCaptionText { color: InactiveCaptionText;}
+.InfoBackground { color: InfoBackground;}
+.InfoText { color: InfoText;}
+.Menu { color: Menu;}
+.MenuText { color: MenuText;}
+.Scrollbar { color: Scrollbar;}
+.ThreeDDarkShadow { color: ThreeDDarkShadow;}
+.ThreeDFace { color: ThreeDFace;}
+.ThreeDHighlight { color: ThreeDHighlight;}
+.ThreeDLightShadow { color: ThreeDLightShadow;}
+.ThreeDShadow { color: ThreeDShadow;}
+.Window { color: Window;}
+.WindowFrame { color: WindowFrame;}
+.WindowText { color: WindowText;}

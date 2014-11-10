@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>
+		  Methods of communication | HTML5 Doctor    </title>
+    <link rel="stylesheet" href="http://html5doctor.com/wp-content/themes/html5doctor2/style.css" media="screen" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Feed" href="http://html5doctor.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Comments Feed" href="http://html5doctor.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Methods of communication Comments Feed" href="http://html5doctor.com/methods-of-communication/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://html5doctor.com/wp-content/plugins/contact-form-7/styles.css?ver=3.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://html5doctor.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://html5doctor.com/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://html5doctor.com/xmlrpc.php?rsd" />
+<link rel='prev' title='Your Questions #15' href='http://html5doctor.com/your-questions-15/' />
+<link rel='next' title='Two cheers for the W3C&#8217;s HTML5 logo' href='http://html5doctor.com/two-cheers-for-the-w3cs-html5-logo/' />
+<link rel='canonical' href='http://html5doctor.com/methods-of-communication/' />
+<link rel='shortlink' href='http://html5doctor.com/?p=2847' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+	  
+  
+	</head>
+<body class="single single-post postid-2847 single-format-standard" id="com-html5doctor">
+<header role="banner">
+    <div class="inner group">
+    <a href="http://html5doctor.com" rel="home"><div>
+        <hgroup>
+        <h1>HTML5 Doctor</h1>
+        <h2>Helping you implement HTML5 today</h2>
+        </hgroup><!-- end hgroup -->
+    </div></a><!-- wrapper div for Firefox 3.x ref: http://01i.jp/html5bll -->
+
+ 	<ul id="menu-top-nav" class="semantic-list"><li id="menu-item-3272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3272"><a href="http://html5doctor.com/about/">About</a></li>
+<li id="menu-item-3275" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3275"><a href="http://feeds2.feedburner.com/html5doctor">RSS</a></li>
+<li id="menu-item-3276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3276"><a href="http://feeds.feedburner.com/HTML5DoctorComments">Comments RSS</a></li>
+<li id="menu-item-3253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3253"><a href="#">Doctor Network</a>
+<ul class="sub-menu">
+	<li id="menu-item-3273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3273"><a href="http://html5gallery.com">HTML5 Gallery</a></li>
+	<li id="menu-item-3580" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3580"><a href="http://docteurhtml5.com/html5/">Docteur HTML5</a></li>
+	<li id="menu-item-3973" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3973"><a href="https://github.com/html5doctor/">HTML5 Doctor on Github</a></li>
+</ul>
+</li>
+</ul>      <!-- end #top-nav -->
+    
+    <nav>
+		<ul id="menu-main_nav" class=""><li id="menu-item-3297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3297"><a href="/">Home</a></li>
+<li id="menu-item-3250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3250"><a href="http://html5doctor.com/article-archive/">Article Archive</a></li>
+<li id="menu-item-3291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3291"><a href="http://html5doctor.com/element-index/">Element Index</a></li>
+<li id="menu-item-3252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3252"><a href="http://html5doctor.com/ask-the-doctor/">Ask the HTML5 Doctor</a></li>
+<li id="menu-item-3968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3968"><a href="http://html5doctor.com/resources/">Resources</a></li>
+</ul>    	<!-- end ul -->
+    	<ul>
+    		<li><form id="search-form" action="/search/" role="search"  method="get">
+    <div>
+    <input type="text" name="q" value="" />
+    <input type="submit" id="search-button" value="Search" />
+        <!--<input id="search-input" class="text" type="text" tabindex="1" value="" name="search-input"/>
+        <input id="search-button" class="button" type="submit" tabindex="2" value="Search"/>-->
+    </div>
+</form></li>
+    	</ul>
+    	<!-- end ul -->	
+    </nav>
+    <!-- end nav -->
+	</div>
+	<!-- end .inner -->
+</header>
+<!-- end header -->
+<div id="content" class="group" role="main">
+    <div class="main">
+        <article class="post group">
+            <header class="post-2847 post type-post status-publish format-standard hentry category-events category-javascript-apis tag-apis tag-cors tag-eventsource tag-html-5 tag-html5 tag-javascript tag-messaging tag-websockets tag-xhr" id="post-2847">
+                 <h1>Methods of communication </h1>
+                <small><time datetime="2011-01-18" pubdate>Tuesday, January 18th, 2011</time> by <a href="http://html5doctor.com/author/remys/" title="Posts by Remy Sharp" rel="author">Remy Sharp</a>.</small>
+                <p class="tweet"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="html5doctor">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>
+            </header>
+            <!-- end header -->
+             <ul class="commentlist">
+                        </ul>
+           
+            <div class="entry">
+
+		
+                <p>By now, you&#8217;ve surely realised that &#8220;<abbr>HTML</abbr>5&#8221; is so much more than just markup. There&#8217;s also an army of associated JavaScript <abbr>API</abbr>s. Among the ranks are a few new technologies that open up how we communicate between client and server and across documents. Let&#8217;s take a look.</p>
+
+<p>This post will be an overview of the technologies available, how well they&#8217;re currently supported, and, where possible, live demos. I&#8217;m going to touch on the following technologies:</p>
+
+<ul>
+<li><abbr title="XML HTTP Request">XHR</abbr> &amp; <abbr>XHR</abbr>2 with <abbr title="Cross-Origin Resource Sharing">CORS</abbr></li>
+<li>Web Messaging</li>
+<li>Web Sockets</li>
+<li>Server Sent Events</li>
+<li>Web Workers</li>
+</ul>
+
+<p>Before I get on to the <abbr>API</abbr>s, I want to outline a fairly common communication model that several of these <abbr>API</abbr>s use. </p>
+
+<h2 id="a_common_communication_event_model">A common communication event model</h2>
+
+<p>All event handlers (with the exception of <abbr>XHR</abbr>) receive an <code>event</code> object containing a <code>data</code> property. This property includes the data sent as part of the message.</p>
+
+<p>The event model (again with the exception of <abbr>XHR</abbr>) is <em>mostly</em> based around <code>onmessage</code> and <code>postMessage</code> or <code>send</code>. For example:</p>
+
+<pre><code>// in the recipient code
+recipient.onmessage = function (event) {
+  console.log('received message: ' + event.data);
+};
+
+// from the sender code
+recipient.postMessage('hi there'); // or recipient.send('hi there');
+</code></pre>
+
+<p>This is just a common model and isn&#8217;t the exactly the same among all these technologies. The two key similarities are that they use:</p>
+
+<ul>
+<li>a sending method (<code>postMessage</code> or <code>send</code>) on the recipient object, and</li>
+<li>an event handler that listens for the <code>message</code> event and receives an <code>event</code> object containing a <code>data</code> property.</li>
+</ul>
+
+<p>Very importantly, <em>most</em> browsers only support sending strings from sender to recipient, so we often need to <abbr>JSON</abbr> <code>stringify</code> and <code>parse</code> if we want to send anything other than a string.</p>
+
+<h2 id="xhr_xhr2_with_cors"><abbr>XHR</abbr> &amp; <abbr>XHR</abbr>2 with <abbr>CORS</abbr></h2>
+
+<p><abbr>XHR</abbr> can be both synchronous and asynchronous. <abbr>XHR</abbr> is the only <abbr>API</abbr> that (purposely) supports synchronous requests, meaning the execution of code will block until the callback fires. </p>
+
+<p>There&#8217;s nothing particularly new about <abbr>XHR</abbr>, but in <abbr>XHR</abbr>2 we can handle uploads, and there&#8217;s a <code>progress</code> event to tell you how the upload or download is getting on.  </p>
+
+<p>The super shiny new toy in <abbr>XHR</abbr>2 is its support for <a href="http://www.w3.org/TR/cors/">Cross-Origin Resource Sharing</a> (CORS). This means you can make an <abbr>XHR</abbr> request across domains, but <strong>only if the server you&#8217;re connecting to allows it</strong>.</p>
+
+<p>The request is as you&#8217;d expect from <abbr>XHR</abbr>:</p>
+
+<pre><code>var client = new XMLHttpRequest();
+client.onreadystatechange = function () {
+  if (this.readyState == 4 &amp;&amp; this.status == 200) {
+    alert('The most awesome-est person to follow: ' + this.responseText);
+  }
+};
+client.open('GET', '/no-cors');
+client.send();</code></pre>
+
+<p>If our server responds with a <abbr>CORS</abbr> header, however, we can put our <abbr>XHR</abbr> responder on another server. So on the <abbr>URL</abbr> <a href="http://remysharp.com/demo/cors.php">http://remysharp.com/demo/cors.php</a>, I have the following PHP script:</p>
+
+<pre><code>&lt;?php
+header('Access-Control-Allow-Origin: *');
+?&gt;
+@rem
+</code></pre>
+
+<p>This says that anyone can make an <abbr>XHR</abbr> request to this particular script. Now when I run the following code in a browser that supports <abbr>XHR</abbr>2, the cross domain request succeeds!</p>
+
+<pre><code>var client = new XMLHttpRequest();
+client.onreadystatechange = function () {
+  if (this.readyState == 4 &amp;&amp; this.status == 200) {
+    alert('The most awesome-est person to follow: ' + this.responseText);
+  }
+};
+client.open('GET', 'http://remysharp.com/demo/cors.php');
+client.send();</code></pre>
+
+<p>Here&#8217;s a <a href="http://jsbin.com/oxiyi4">live example of CORS</a>. (You can also <a href="http://jsbin.com/oxiyi4/edit">edit it here</a>.)</p>
+
+<p>Note that <abbr>IE</abbr>8 supports <abbr>CORS</abbr>, but not <abbr>XHR</abbr>2 (no surprise there then). You need to use their proprietary (booo!) <code>XDomainRequest</code> object. Nicholas C. Zakas has <a href="http://www.nczonline.net/blog/2010/05/25/cross-domain-ajax-with-cross-origin-resource-sharing/">an excellent article</a> explaining how to handle these differences.</p>
+
+<p><abbr>XHR</abbr> usage is pretty common already, but <abbr>XHR</abbr>2 with <abbr>CORS</abbr> is a winner over <abbr>JSON-P</abbr>, particularly as you have finer control over the request, can handle timeouts, and can handle errors correctly.</p>
+
+<h3 id="support_for_xhr_xhr2_with_cors">Support for <abbr>XHR</abbr> &amp; <abbr>XHR</abbr>2 with <abbr>CORS</abbr></h3>
+
+<ul>
+<li><abbr>XHR</abbr> support is pretty solid nowadays (even though <abbr>IE</abbr>6 uses <code>ActiveXObject</code> to get it going)</li>
+<li><abbr>XHR</abbr>2 with <abbr>CORS</abbr>: Safari &amp; MobileSafari, Firefox 3.5, Chrome and <abbr>IE</abbr>8 (via XDomainRequest)</li>
+</ul>
+
+<h2 id="postmessage">postMessage</h2>
+
+<p>This <abbr>API</abbr> is older, but it&#8217;s very useful if you want to get around the <abbr>XHR</abbr> same-origin rules. If you have an <code>&lt;iframe&gt;</code> document that can accept <code>onmessage</code> events from your origin (i.e., your site), then you can communicate across domains (and origins).</p>
+
+<p>For example, a page that accepts an <code>onmessage</code> event might contain code such as this:</p>
+
+<pre><code>window.onmessage = function (event) {
+  if (event.origin == 'mytrustedsite.com') {
+    alert('my trusted site said: ' + event.data);
+  }
+};
+</code></pre>
+
+<p>Now you can include an <code>&lt;iframe&gt;</code> that contains that code, and using the <code>&lt;iframe&gt;</code> <abbr>DOM</abbr> node, you can post to the <code>&lt;iframe&gt;</code>:</p>
+
+<pre><code>// where iframe is the actual iframe DOM node
+iframe.contentWindow.postMessage("hello there", location.host);
+</code></pre>
+
+<p>This gives you the ability to send strings across two mutually trusted domains. (Remember that you can use <code>JSON.stringify</code> and <code>JSON.parse</code> to convert to an object to and from string format.)</p>
+
+<h3 id="support_for_postmessage">Support for postMessage</h3>
+
+<ul>
+<li>Chrome</li>
+<li>Safari</li>
+<li>Opera</li>
+<li>Firefox</li>
+<li>IE8</li>
+</ul>
+
+<p>Here&#8217;s a <a href="http://html5demos.com/postmessage2">demo using <code>postMessage</code></a>.</p>
+
+<p>There&#8217;s also a project called <a href="http://easyxdm.net/" title="easyXDM - Cross-domain messaging made easy">EasyXDM</a>, which adds cross domain messaging to <abbr>IE</abbr>6 and upwards (along with all the other browsers) through the library&#8217;s abstraction.  Definitely worth a look if this is a route you need to take.</p>
+
+<h2 id="web_sockets">Web Sockets</h2>
+
+<p>It&#8217;s my opinion that Web Sockets replaces Comet. Comet is a way of hacking the browser to giving us real-time server messages. The Web Sockets API provides that natively.</p>
+
+<p>Web Sockets are used to send messages to <em>and</em> from the server — i.e., a bi-directional socket. In contrast to other similar technologies, with Web Sockets, you <em>can</em> go across domains, and you&#8217;re not bound by the same-origin policy. This means you can host your normal &#8220;apps&#8221; server while another server is for streaming content. Or you could host your own pages and connect to a live Twitter stream if your users turn on Web Socket support.</p>
+
+<p>You can only send messages once the socket is open (duh). The communication model looks like this:</p>
+
+<pre><code>var ws = new WebSocket('ws://somesite.com/updates');
+
+ws.onmessage = function (event) {
+  alert(event.data);
+};
+
+ws.onopen = function () {
+  ws.send('yay! we connected!');
+};
+</code></pre>
+
+<p>Once the socket is closed, you can&#8217;t reuse it. Similarly, there&#8217;s no explicit method for opening a socket. That just happens when you create the <code>WebSocket</code> object.</p>
+
+<p>This <abbr>API</abbr> is extremely simple. I most often get asked, &#8220;What do you put on the server side?&#8221; I personally use <a href="http://nodejs.org">Node</a>, but you could use an <a href="http://nginx.net/" title="nginx news">Nginx</a> server or something like <a href="http://www.mortbay.org/" title="jetty - Jetty WebServer">Jetty</a>. I&#8217;m no expert on the latter servers, but I can vouch that a Node-based server is very, very simple to get going. The live demo below also includes a link to the code that I used to run the server.</p>
+
+<p>Check out this <a href="http://html5demos.com/web-socket">demo of Web Sockets</a>.</p>
+
+<h3 id="support_for_web_sockets">Support for Web Sockets</h3>
+
+<ul>
+<li>Chrome</li>
+<li>Safari &amp; MobileSafari</li>
+</ul>
+
+<p>There&#8217;s also an excellent Flash poly-fill called <a href="https://github.com/gimite/web-socket-js/">web-socket-js</a>. Drop this into an application and it provides Web Sockets support as if it were native. I&#8217;ve used this on a few projects of my own, and it works very well.</p>
+
+<p>In early December 2010, there was a security notice posted about Web Sockets, and both Firefox and Opera pulled it from their upcoming releases. Mozilla have said that they expect Web Sockets to be back in Firefox by version 4.0.1.</p>
+
+<h2 id="server_sent_events">Server-Sent Events</h2>
+
+<p>The <a href="http://dev.w3.org/html5/eventsource/">Server-Sent Events</a> <abbr>API</abbr> is something that originated from Opera back in 2006 and is used for pushing events from the server to the client. Note that the client cannot send messages to the server through an <code>EventSource</code> (<abbr>SSE</abbr>) — it can only listen for messages.  </p>
+
+<p>This <abbr>API</abbr> uses the <code>onmessage</code> model. It&#8217;s constructed using the <code>EventSource</code> object and is limited by the same origin rules:</p>
+
+<pre><code>var es = new EventSource('/sse');
+es.onopen = function () {
+  console.log('opened stream');
+};
+
+es.onmessage = function (event) {
+  console.log('new message: ' + event.data);
+};
+</code></pre>
+
+<p>The <abbr>SSE</abbr> automatically connects when you create the object (similar to Web Sockets), and once open will trigger the <code>onopen</code> event. </p>
+
+<p>Here&#8217;s a live <a href="http://node.remysharp.com:8001/sse-client.html">demo of Server-Sent Events</a></p>
+
+<p>Here&#8217;s how this is to work: when a new message is pushed from the server to the client, it triggers the <code>onmessage</code> callback.</p>
+
+<p>The key to your server is ensuring it doesn't close the connection on the client - the browser. Most of the examples around the web are doing this: closing the connection which tells the API to switch in to polling mode (note that this is the exact problem I hit when I first published this article).</p>
+
+<p>When the API is in polling mode, it's no more different from an XHR poll, and the <code>onopen</code> will continually fire.</p>
+
+Al the code the server side can be viewed here: <a href="http://node.remysharp.com:8001/custom-echo.js">custom-echo.js</a> (note that it's running on a <a href="http://nodejs.org/" title="node.js">Node.js</a> server).  There's a bit more code than you'd expect, because it's doing a few things:
+
+1. Handling HTTP requests for files (and therefore is able to serve itself)
+2. Handling the server-sent events and <strong>not</strong> closing the connection
+3. Setting up a Web Socket server, and when a new connection comes in, it sends a server-sent event to all the currently connected sessions.
+
+<h3 id="support_for_server_sent_events">Support for Server-Sent Events</h3>
+
+<ul>
+<li>Opera 11</li>
+<li>Safari &amp; MobileSafari</li>
+<li>Chrome</li>
+</ul>
+
+<h2 id="web_workers">Web Workers</h2>
+
+<p>Web Workers are a way of creating a new thread of execution inside the browser. I&#8217;m including this because you still need to communicate with your Web Workers, and the method of communication is similar to some of those techniques discussed above. Do note, however, that this is not a method communicating from a client (browser) to a server. It&#8217;s more like there&#8217;s another browser window executing a particular block of JavaScript.</p>
+
+<p>As an example of when to use a Web Worker, say you&#8217;re running a lot of JavaScript and the <abbr>UI</abbr> becomes unresponsive. The browser <abbr>UI</abbr> hangs because, in a way, it&#8217;s a &#8220;single-threaded application&#8221;. (Under the hood it isn&#8217;t really, but from a rendering and JavaScript perspective it is). This JavaScript task could be given to a Web Worker so that the <abbr>UI</abbr> can continue functioning.</p>
+
+<p>It&#8217;s vital to understand that a Web Worker lives in a sand-boxed environment that doesn&#8217;t have access to things like the <abbr>DOM</abbr>. What&#8217;s more, you can only communicate with it using the <code>onmessage</code> and <code>postMessage</code> functions.</p>
+
+<p>Our application can create and send messages to a worker using the following code:</p>
+
+<pre><code>var worker = new Worker('bigjob.js');
+worker.onmessage = function (event) {
+  alert('Message from worker: ' + event.data); // remember event.data is a string!
+};
+
+worker.postMessage('task=job1');
+</code></pre>
+
+<p>In the JavaScript file <code>bigjob.js</code>, we run some computationally intensive task and listen for messages in a way similar to what we&#8217;ve done in the previous examples. We can also post messages back to the invoking application:</p>
+
+<pre><code>this.onmessage = function (event) {
+  var job = event.data;
+  if (job == 'task=job1') {
+    job1();
+  } else if (job == 'task=job2') {
+    job2();
+  }
+};
+
+// just a pseudo example
+function job1() {
+  // do some big task
+  while (working) {
+    // continue task
+    this.postMessage('job1 ' + amountComplete + '% complete');
+  }
+  this.postMessage('job1 100% complete');
+}
+</code></pre>
+
+<p>There&#8217;s a lot more to Web Workers than just running a couple of small tasks, and no doubt we <abbr>HTML</abbr>5 Doctors will be posting a detailed article soon. This example just demonstrates how to communicate with Web Workers and how similar that is to the other technologies we&#8217;ve discussed here.</p>
+
+<h3 id="support_for_web_workers">Support for Web Workers</h3>
+
+<ul>
+<li>Chrome</li>
+<li>Safari</li>
+<li>Opera</li>
+<li>Firefox</li>
+</ul>
+
+<h2 id="a_final_word">A final word</h2>
+
+<p>Hopefully you agree that this is just the tip of the iceberg of communicating between client and server in <abbr>HTML</abbr>5. We&#8217;re no longer stuck with the same origin policy we had with vanilla Ajax. In fact, when you think about it, since <abbr>IE</abbr>8, we&#8217;ve actually had decent cross-domain messaging.</p>
+
+<p>I&#8217;m personally most excited about Web Sockets and the support of <abbr>CORS</abbr> in services that have <abbr>API</abbr>s, like Flickr, Twitter, and <abbr>URL</abbr> shorteners. What could you build with this?</p>
+                        
+            </div>
+            <!-- end .entry -->
+            
+            <aside>
+                <ul class="semantic-list">
+                    <li class="category">
+                        <h3>Category</h3>
+                        <ul class="semantic-list"><li><a href="http://html5doctor.com/category/events/" title="View all posts in Events" rel="category tag">Events</a></li><li><a href="http://html5doctor.com/category/javascript-apis/" title="View all posts in JavaScript APIs" rel="category tag">JavaScript APIs</a></li></ul>
+
+                    </li>
+                    <li class="tags">
+                        <ul class="semantic-list"><li><h3>Tags</h3></li><li><a href="http://html5doctor.com/tag/apis/" rel="tag">apis</a></li><li><a href="http://html5doctor.com/tag/cors/" rel="tag">cors</a></li><li><a href="http://html5doctor.com/tag/eventsource/" rel="tag">eventsource</a></li><li><a href="http://html5doctor.com/tag/html-5/" rel="tag">HTML 5</a></li><li><a href="http://html5doctor.com/tag/html5/" rel="tag">html5</a></li><li><a href="http://html5doctor.com/tag/javascript/" rel="tag">javascript</a></li><li><a href="http://html5doctor.com/tag/messaging/" rel="tag">messaging</a></li><li><a href="http://html5doctor.com/tag/websockets/" rel="tag">websockets</a></li><li><a href="http://html5doctor.com/tag/xhr/" rel="tag">xhr</a></li></ul>                    </li>
+                </ul>
+
+		 
+            </aside>
+            <!-- end aside -->
+            
+            <aside id="author-bio">
+                <h4><a href="http://html5doctor.com/author/remys/" title="Posts by Remy Sharp" rel="author">Remy Sharp</a></h4>
+                <div class="author-blurb author">
+                    <p class="vcard">This article was written by <span class="fn"><a href="http://html5doctor.com/author/remys/" title="Posts by Remy Sharp" rel="author">Remy Sharp</a></span>. Remy (<a href="http://twitter.com/rem">@rem</a> on Twitter) is the founder of <a href="http://jqueryfordesigners.com">jQuery for Designers</a> and the <a href="http://full-frontal.org">Full Frontal JavaScript conference</a>, otherwise he's a developer and blogger.
+
+Generally speaking, he's about as crazy about JavaScript, HTML &amp; CSS as a squirrel is about his nuts during the winter.</p>
+                    <img alt='' src='http://0.gravatar.com/avatar/c67399ae31afdbeb26e2ba24e4a31a8c?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />                </div>
+            </aside>
+            <!-- end #author-bio -->
+            
+            
+            <section id="comments">
+                
+<!-- You can start editing here. -->
+
+	<h3>15 Responses on the article “Methods of communication”</h3>
+
+		<article class="comment even thread-even depth-1" id="comment-13927">
+						<div class="comment-meta">
+		<a href='http://www.leggetter.co.uk' rel='external nofollow' class='url'>Phil Leggetter</a> says<img alt='' src='http://0.gravatar.com/avatar/ecc56977271e781991b6172c16248459?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>January 18, 2011 at 7:13 pm <a class="permalink" href="#comment-13927">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Although Comet was <a href="http://infrequently.org/2006/03/comet-low-latency-data-for-the-browser/" rel="nofollow">originally defined</a> as a paradigm for Ajax to allow server to client push that definition, along with the technology, has evolved. In <a href="http://infrequently.org/wp-content/Comet.png" rel="nofollow">Alex Russell&#8217;s diagram</a><a> he lists a &#8220;Comet engine&#8221; and I believe the technology behind the Comet engine doesn&#8217;t have to be JavaScript (in the same way WebSockets isn&#8217;t just for Web Browsers).</a></p>
+<p>The same method of connecting to a server and receiving push updates has been used in many client applications using many technologies. In <a href="http://kwwika.com" rel="nofollow">Kwwika</a> for instance, which uses clustered Comet servers under the hood, we have APIs for JavaScript <strong>and</strong> .NET, Silverlight, ActionScript (Flash), C, Objective-C (iPhone/iPad) and Java. Just because we have these client APIs that connect to our service does this mean that we can&#8217;t call our servers Comet servers. IMHO, no!</p>
+<p>A good Comet server implementation will hide away the underlying communication protocol. The client API will choose the most appropriate means of communication for the client technology and runtime environment (including network) as well as having a fallback strategy e.g. try HTTP Streaming then HTTP long-polling then, if you really have to, fallback to HTTP classic polling.</p>
+<p>The next evolution for Comet servers has been to add support for the WebSocket protocol as one of it&#8217;s communication options. The WebSockets protocol is still under development so my preferred choice of communication would probably still be HTTP Streaming as it&#8217;s more reliable and is less likely to be interfered with by proxies and firewalls (WebSockets rely on HTTP headers which can easily be mangled. HTTPS connections are a solution).</p>
+<p>So, I wouldn&#8217;t put it as you have. Instead of:</p>
+<blockquote cite="http://html5doctor.com/methods-of-communication/"><p>It’s my opinion that Web Sockets replaces Comet. Comet is a way of hacking the browser to giving us real-time server messages. The Web Sockets API provides that natively.</p></blockquote>
+<p>I would instead say:</p>
+<blockquote><p>WebSockets may replace HTTP Streaming as the preferred method of client/server communication.</p></blockquote>
+<p>If WebSockets gets the support it deserves it will win out. The native bi-directional support is a really big deal and I hope that the protocol becomes rock solid and that the Internet Infrastructure quickly updates to make it suitable for all production environments.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-13928">
+						<div class="comment-meta">
+		<a href='http://www.leggetter.co.uk' rel='external nofollow' class='url'>Phil Leggetter</a> says<img alt='' src='http://0.gravatar.com/avatar/ecc56977271e781991b6172c16248459?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>January 18, 2011 at 7:17 pm <a class="permalink" href="#comment-13928">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Whoops! That final quote should&#8217;ve been:</p>
+<blockquote><p>WebSockets may replace HTTP Streaming as the preferred method of client/server communication within Comet.</p></blockquote>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-13930">
+						<div class="comment-meta">
+		<a href='http://annevankesteren.nl/' rel='external nofollow' class='url'>Anne</a> says<img alt='' src='http://0.gravatar.com/avatar/ed3869317f29f4345046d2be2172b072?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>January 18, 2011 at 8:16 pm <a class="permalink" href="#comment-13930">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Hey, I am pretty sure browsers implement server-sent more correctly than you indicate here. What I suspect is happening is that you are closing the connection from the server and therefore the browser reestablishes the specification as you are returning a 2xx response. This is all per the specification.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-13931">
+						<div class="comment-meta">
+		<a href='http://annevankesteren.nl/' rel='external nofollow' class='url'>Anne</a> says<img alt='' src='http://0.gravatar.com/avatar/ed3869317f29f4345046d2be2172b072?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>January 18, 2011 at 8:18 pm <a class="permalink" href="#comment-13931">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Hah, the browser reestablishes the connection, not the specification! :-)</p>
+<p>Testcases for EventSource can be found here: <a href="http://tc.labs.opera.com/apis/EventSource/" rel="nofollow">http://tc.labs.opera.com/apis/EventSource/</a> Also accessible via SVN: <a href="http://tc.labs.opera.com/svn/apis/EventSource/" rel="nofollow">http://tc.labs.opera.com/svn/apis/EventSource/</a></p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-13932">
+						<div class="comment-meta">
+		zcorpan says<img alt='' src='http://1.gravatar.com/avatar/9767673d472c2f27307890c27061bca3?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>January 18, 2011 at 8:21 pm <a class="permalink" href="#comment-13932">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>The problem you&#8217;re most likely seeing with SSE isn&#8217;t that browsers are broken but that your server is closing the connection! Opera 11 should be spec compliant. You just need to keep the connection alive from your end.</p>
+<p>Also, structured clone is supported for window.postMessage and worker.postMessage since Opera 10.60. I think structured clone is supported in other browsers too these days, at least for workers.</p>
+<p>Another friend in the Communications APIs is MessageChannel (supported in Opera and WebKit).</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-13934">
+						<div class="comment-meta">
+		Ian Alderson says<img alt='' src='http://0.gravatar.com/avatar/040b4a484a52fec8cbff61164158830c?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>January 18, 2011 at 10:58 pm <a class="permalink" href="#comment-13934">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Hi. Great blog, but I disagree with your opinion that &#8220;that Web Sockets replaces Comet&#8221;. I believe that Web Sockets are best used within a Comet implementation as the best possible streaming connection technique, rather than as a replacement for Comet. There are various reasons for my belief, but these are the ones that immediately come to mind. In the interests of full disclosure, I work for a company that provides a Comet server, however I believe the following statements are impartial observations of some genuine issues with Web Sockets.</p>
+<p>1. There are Web Socket issues with proxy servers. The protocol looks somewhat like http, however it isn&#8217;t quite http. It smuggles an 8 byte body to the server during the negotiation stage which is likely to cause massive issues with proxy servers. Web proxies love to interfere with HTTP connections and until they are all updated to understand Web Socket protocol (or, more unlikely, if even possible, the Web Socket protocol is changed so that it conforms to http) this is likely to become a more significant barrier than browser support for Web Sockets. In this scenario a Comet library can failover to a non Web Socket connection type.</p>
+<p>2. There is no intrinsic support (at the moment) for heartbeats to keep connection alive. Badly configured firewalls have a wonderful tendency to decide that a connection must be dead if no data has been sent through it for a while, defeating the purpose of a supposed persistent connection. Comet implementations typically already have application level heartbeats to solve this. Obviously a Web Socket implementation can do this too, but you&#8217;re starting on a slippery slope of writing more code to get around their deficiencies &#8211; surely it would be better to use a library that already does this for you (and covers all the scenarios you haven&#8217;t thought of yet).</p>
+<p>3. With Web Sockets you need to write your own reconnection logic, potentially including failover to another server if a connection to the original server cannot be established. This is a very real scenario when dealing with the transient network connectivity of mobile devices. Again Comet implementations will typically handle this for you.</p>
+<p>Web Sockets are absolutely awesome, providing full duplex connection. However the fact that they are low level means that you need to write a reasonable amount of code to make them reliable within a production environment. Couple this with the fact that they aren&#8217;t supported in all browsers, and the most sensible route I can see is to use a library that encapsulates all of this logic for you. if someone decided to write one of these from scratch, rather than using one of the existing Comet libraries, then, for me at least, I would consider it to be a Comet implementation, but one that only happens to use the Web Socket protocol.</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-13963">
+						<div class="comment-meta">
+		<a href='http://www.leggetter.co.uk' rel='external nofollow' class='url'>Phil Leggetter</a> says<img alt='' src='http://0.gravatar.com/avatar/ecc56977271e781991b6172c16248459?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>January 20, 2011 at 5:30 pm <a class="permalink" href="#comment-13963">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Although Comet was <a href="http://infrequently.org/2006/03/comet-low-latency-data-for-the-browser/" rel="nofollow">originally defined</a> as a paradigm for Ajax to allow server to client push that definition, along with the technology, has evolved. In <a href="http://infrequently.org/wp-content/Comet.png" rel="nofollow">Alex Russell’s diagram</a> he lists a “Comet engine” and I believe the technology behind the Comet engine doesn’t have to be JavaScript (in the same way WebSockets isn’t just for Web Browsers).</p>
+<p>The same method of connecting to a server and receiving push updates has been used in many client applications using many technologies. In <a href="http://kwwika.com" rel="nofollow">Kwwika</a> for instance, which uses clustered Comet servers under the hood, we have APIs for JavaScript <strong>and</strong> .NET, Silverlight, ActionScript (Flash), C, Objective-C (iPhone/iPad) and Java. Just because we have these client APIs that connect to our service does this mean that we can’t call our servers Comet servers. IMHO, no!</p>
+<p>A good Comet server implementation will hide away the underlying communication protocol. The client API will choose the most appropriate means of communication for the client technology and runtime environment (including network) as well as having a fallback strategy e.g. try HTTP Streaming then HTTP long-polling then, if you really have to, fallback to HTTP classic polling.</p>
+<p>The next evolution for Comet servers has been to add support for the WebSocket protocol as one of it’s communication options. The WebSockets protocol is still under development so my preferred choice of communication would probably still be HTTP Streaming as it’s more reliable and is less likely to be interfered with by proxies and firewalls (WebSockets rely on HTTP headers which can easily be mangled. HTTPS connections are a solution).</p>
+<p>So, I wouldn’t put it as you have. Instead of:</p>
+<blockquote cite="http://html5doctor.com/methods-of-communication/"><p>It’s my opinion that Web Sockets replaces Comet. Comet is a way of hacking the browser to giving us real-time server messages. The Web Sockets API provides that natively.</p></blockquote>
+<p>I would instead say:</p>
+<blockquote><p>WebSockets may replace HTTP Streaming as the preferred method of client/server communication.</p></blockquote>
+<p>If WebSockets gets the support it deserves it will win out. The native bi-directional support is a really big deal and I hope that the protocol becomes rock solid and that the Internet Infrastructure quickly updates to make it suitable for all production environments.</p>
+<p>Note: This is a resubmission of my comment on January 18th, 2011 at 7:13 pm since the previous one is still awaiting moderation.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-14202">
+						<div class="comment-meta">
+		Ricardo Lucio says<img alt='' src='http://0.gravatar.com/avatar/621fe4ce4cb64d3142a3a61e64c24e84?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>February 11, 2011 at 12:16 pm <a class="permalink" href="#comment-14202">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Regarding the Web Worker, I&#8217;m a little more than a newbie in javascript programmer, and I always thought you could reach multi-thread capabilities within javascript with the usage of the setTimeout() function.</p>
+<p>Can you please clarify that? What are the benefits of WebWorker (besides the context isolation) over the well-known setTimeout() function?</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-14698">
+						<div class="comment-meta">
+		<a href='http://www.seanyeomans.com' rel='external nofollow' class='url'>Sean</a> says<img alt='' src='http://0.gravatar.com/avatar/6639b553cfc185c8dee1356d9592fbf9?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>March 17, 2011 at 1:40 pm <a class="permalink" href="#comment-14698">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Thanks for this summary, this is a subject I am sorely lacking in. This is a great jumping point for research.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-14711">
+						<div class="comment-meta">
+		<a href='http://www.nczonline.net/' rel='external nofollow' class='url'>Nicholas C. Zakas</a> says<img alt='' src='http://0.gravatar.com/avatar/ea077fdc95c2959ca28b052853b4175e?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>March 21, 2011 at 3:35 am <a class="permalink" href="#comment-14711">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Even though Server-Sent Events are only &#8220;officially&#8221; supported in some browsers, it&#8217;s pretty easy to add support in others. In Firefox, for example, you can use progress events on the XHR object to mimic the behavior. Unfortunately, IE will still need to do polling until they support progress events, but it&#8217;s very easy to switch to the correct approach on the server. In my YUI EventSource component, I just add a custom header via JavaScript telling the server that the browser only supports polling, which allows you to write server-side code similar to the example posted here: <a href="http://yuilibrary.com/gallery/show/eventsource" rel="nofollow">http://yuilibrary.com/gallery/show/eventsource</a></p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-14712">
+						<div class="comment-meta">
+		<a href='http://www.nczonline.net/' rel='external nofollow' class='url'>Nicholas C. Zakas</a> says<img alt='' src='http://0.gravatar.com/avatar/ea077fdc95c2959ca28b052853b4175e?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>March 21, 2011 at 3:39 am <a class="permalink" href="#comment-14712">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>@Ricardo &#8211; Web workers are very different than setTimeout(). The setTimeout() function simply tells the browser to wait until later to execute JavaScript &#8211; but it does so on the same thread (called the UI thread, the same one responsible for repaints and reflows). Web workers actually execute outside of the UI thread, so they can be executing at the exact same time as code that manipulates the DOM. Keep in mind that Web Workers cannot access the DOM because they don&#8217;t execute on the UI thread, so you are limited to passing data into and out of a worker. You may want to check out my presentation about JavaScript performance, which has some info about this: <a href="http://www.slideshare.net/nzakas/high-performance-javascript-fronteers-2010" rel="nofollow">http://www.slideshare.net/nzakas/high-performance-javascript-fronteers-2010</a></p>
+		</div>
+				</article>
+		<article class="comment byuser comment-author-remys bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-14716">
+						<div class="comment-meta">
+		<a href='http://remysharp.com/' rel='external nofollow' class='url'>Remy Sharp</a> says<img alt='' src='http://0.gravatar.com/avatar/c67399ae31afdbeb26e2ba24e4a31a8c?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>March 21, 2011 at 11:13 am <a class="permalink" href="#comment-14716">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>@Nicholas &#8211; I&#8217;ve also written an EventSource polyfill that I&#8217;m using in <a href="http://jsconsole.com" rel="nofollow">jsconsole.com> for the </a><a href="http://jsconsole.com/remote-debugging.html" rel="nofollow">remote device debugging</a> that&#8217;s used on the mobile devices that don&#8217;t natively support EventSource &#8211; like the Android 2.2 and Palm Pre.  Exactly as you described, it defaults down to Ajax based polling: <a href="https://github.com/remy/polyfills/blob/master/EventSource.js" rel="nofollow">https://github.com/remy/polyfills/blob/master/EventSource.js</a></p>
+<p>It&#8217;s not 100% perfect, but it definitely mirrors basic usage of EventSource and gives me the device support I needed.</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-16168">
+						<div class="comment-meta">
+		<a href='http://coreyclarkphd.com' rel='external nofollow' class='url'>CClark</a> says<img alt='' src='http://0.gravatar.com/avatar/c254d90bbb33056e9a12dc2c47710365?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>July 12, 2011 at 10:49 pm <a class="permalink" href="#comment-16168">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>I have a question about using server side code (Node.js) and SSE.  It seems once you open a response, you will keep trying to post to the response stream even if it has been closed by the client.  In the code you posted sseConnections is an array that holds every http response object that is created.  Once a browser closes the connection and then starts back up, you will still be sending SSEs to response objects that no longer exist&#8230;</p>
+<p>Is there any way to determine if a response object is still valid?  </p>
+<p>So that if you have 100&#8242;s of people connecting to your site, you will not keep trying to update them once they have closed the browser?</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-18262">
+						<div class="comment-meta">
+		<a href='http://tomkersten.com' rel='external nofollow' class='url'>Tom Kersten</a> says<img alt='' src='http://0.gravatar.com/avatar/c4d9c3442d167f7a23d923ac2a1ac109?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>October 31, 2011 at 4:26 am <a class="permalink" href="#comment-18262">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>@cclark: This is an old comment, but to follow up, if you add a listener for the &#8220;close&#8221; event on the request object, you can do any sort of necessary cleanup.</p>
+<p>For example, to close down a redis pub/sub connection when someone closes their window, you can do the following:</p>
+<p><code><br />
+req.on("close", function() {<br />
+  // close down this pub/sub connection when a client<br />
+  // closes their browser window<br />
+  pub_sub_client.unsubscribe();<br />
+  pub_sub_client.quit();<br />
+});<br />
+</code></p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-20607">
+						<div class="comment-meta">
+		Junior says<img alt='' src='http://1.gravatar.com/avatar/1090633ad2191c013cd76199fb37f12c?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-01-18T14:30:41+00:00" pubdate>December 14, 2011 at 11:02 am <a class="permalink" href="#comment-20607">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Hi all</p>
+<p>Someone to know how to do an Audio Streaming between clients with HTML5?   (In any browser)</p>
+		</div>
+				</article>
+
+ 
+
+
+<div id="form">
+
+<h3>Join the discussion.</h3>
+
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="/methods-of-communication/#respond" style="display:none;">Click here to cancel reply.</a></small>
+</div>
+
+
+<form action="http://html5doctor.com/wp-comments-post.php" method="post" id="commentform">
+
+
+<p>
+<label for="author">Name (required)</label><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true" required />
+</p>
+
+<p>
+<label for="email">Mail (will not be published) (required)</label><input type="email" name="email" id="email" value="" size="22" tabindex="2" aria-required="true" required />
+</p>
+
+<p>
+<label for="url">Website</label><input type="url" name="url" id="url" value="" size="22" tabindex="3" />
+</p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+<div id="form-code">
+    <h4>Some HTML is ok</h4>
+    <p>You can use these tags:<br><code><span class="tag">&lt;a </span><span class="atn">href</span><span class="tag">=</span><span class="atv">""</span><span class="tag"> </span><span class="atn">title</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;abbr </span><span class="atn">title</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;b&gt;</span></code><br> <code><span class="tag">&lt;blockquote </span><span class="atn">cite</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;cite&gt;</span></code><br> <code><span class="tag">&lt;del </span><span class="atn">datetime</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;em&gt;</span></code><br> <code><span class="tag">&lt;i&gt;</span></code><br> <code><span class="tag">&lt;q </span><span class="atn">cite</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;strong&gt;</span></code></p><p>You can also use <code><span class="tag">&lt;code&gt;</span></code>, and <strong>remember to use <code><span class="pun">&amp;</span><span class="pln">lt</span><span class="pun">;</span></code> and <code><span class="pun">&amp;</span><span class="pln">gt</span><span class="pun">;</span></code> for brackets</strong>.</p>
+</div>
+<p><label class="screenreader" for="comment">Enter comment</label>
+<textarea aria-required="true" required name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input type='hidden' name='comment_post_ID' value='2847' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="373651cb16" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+
+</form>
+
+</div>
+
+            </section>
+                <!-- end #comments -->
+                
+        </article>
+        <!-- end .post -->
+    </div>
+    <!-- end .main -->	
+                    
+ 	     <aside class="secondary">
+            
+        <section class="mod ads">
+            <h3>Element Index</h3>
+            <a href="/element-index/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/element-index.png" width="260" height="158" alt="View the HTML5 Element Index" /></a>
+            <p class="btn"><a href="/element-index/">HTML5 Element Index</a></p>
+        </section>
+        <!-- end nav -->
+            
+		            <aside class="mod ads group">
+                <h3>Sponsors</h3>
+                <div id="bsap_1242929" class="bsarocks bsap_ab161e2bf71edb940eeca26a4739f522"></div>
+            </aside>        
+		            <section class="ads mod">
+                <h3><a href="/ask-the-doctor/">Ask the HTML5 Doctor</a></h3>
+                <a href="/ask-the-doctor/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/ask-the-doctor.png" alt="Ask the HTML5 Doctor" /></a>
+                <p class="btn"><a href="/ask-the-doctor/">Ask the HTML5 Doctor</a></p>
+            </section>
+            <!-- end nav -->
+        
+        <nav class="ui-tabs mod">
+          <h3>More HTML5 Doctor</h3>
+          <ul class="ui-tabs-nav group">
+            <li class="ui-tabs-selected"><a href="#articles">Articles</a></li>
+            <li class="ui-tab"><a href="#categories">Categories</a></li>
+            <li class="ui-tab"><a href="#authors">Authors</a></li>
+          </ul>
+          
+          <div class="tab" id="articles">
+              <ul>
+			<li><a href='http://html5doctor.com/css3-pseudo-classes-and-html5-forms/' title='CSS3 Pseudo-Classes and HTML5 Forms'>CSS3 Pseudo-Classes and HTML5 Forms</a></li>
+	<li><a href='http://html5doctor.com/ol-element-attributes/' title='The ol Element and Related Attributes: type, start, value, and reversed'>The ol Element and Related Attributes: type, start, value, and reversed</a></li>
+	<li><a href='http://html5doctor.com/html5-doctor-drop-in-clinic/' title='HTML5 Doctor Drop-In Clinic'>HTML5 Doctor Drop-In Clinic</a></li>
+	<li><a href='http://html5doctor.com/getusermedia/' title='It&#8217;s Curtains for Marital Strife Thanks to getUserMedia'>It&#8217;s Curtains for Marital Strife Thanks to getUserMedia</a></li>
+	<li><a href='http://html5doctor.com/server-sent-events/' title='Server-Sent Events'>Server-Sent Events</a></li>
+              </ul>
+              <p class="btn"><a href="/article-archive/">View article archive</a></p>
+          </div>
+
+
+          <div class="tab" id="categories">
+                <ul>
+                    	<li class="cat-item cat-item-6"><a href="http://html5doctor.com/category/accessibility/" title="View all posts filed under Accessibility">Accessibility</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://html5doctor.com/category/attributes/" title="View all posts filed under Attributes">Attributes</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="http://html5doctor.com/category/boilerplates/" title="View all posts filed under Boilerplates">Boilerplates</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://html5doctor.com/category/browser-compatibility/" title="View all posts filed under Browser Compatibility">Browser Compatibility</a>
+</li>
+	<li class="cat-item cat-item-69"><a href="http://html5doctor.com/category/comment/" title="View all posts filed under Comment">Comment</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="http://html5doctor.com/category/css/" title="View all posts filed under CSS">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://html5doctor.com/category/elements/" title="View all posts filed under Elements">Elements</a>
+</li>
+	<li class="cat-item cat-item-103"><a href="http://html5doctor.com/category/events/" title="View all posts filed under Events">Events</a>
+</li>
+	<li class="cat-item cat-item-108"><a href="http://html5doctor.com/category/forms/" title="View all posts filed under forms">forms</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://html5doctor.com/category/javascript-apis/" title="View all posts filed under JavaScript APIs">JavaScript APIs</a>
+</li>
+	<li class="cat-item cat-item-51"><a href="http://html5doctor.com/category/marketing/" title="View all posts filed under Marketing">Marketing</a>
+</li>
+	<li class="cat-item cat-item-132"><a href="http://html5doctor.com/category/misc/" title="View all posts filed under Misc">Misc</a>
+</li>
+	<li class="cat-item cat-item-128"><a href="http://html5doctor.com/category/multimedia/" title="View all posts filed under multimedia">multimedia</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://html5doctor.com/category/questions/" title="View all posts filed under Questions">Questions</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://html5doctor.com/category/quick-tips/" title="View all posts filed under Quick Tips">Quick Tips</a>
+</li>
+	<li class="cat-item cat-item-135"><a href="http://html5doctor.com/category/reviews/" title="View all posts filed under Reviews">Reviews</a>
+</li>
+	<li class="cat-item cat-item-145"><a href="http://html5doctor.com/category/simplequiz/" title="View all posts filed under Simplequiz">Simplequiz</a>
+</li>
+	<li class="cat-item cat-item-68"><a href="http://html5doctor.com/category/specification-changes/" title="View all posts filed under Specification Changes">Specification Changes</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://html5doctor.com/category/structure/" title="View all posts filed under Structure">Structure</a>
+</li>
+	<li class="cat-item cat-item-38"><a href="http://html5doctor.com/category/validation/" title="View all posts filed under Validation">Validation</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://html5doctor.com/category/wai-aria/" title="View all posts filed under WAI-ARIA">WAI-ARIA</a>
+</li>
+ 
+                </ul>
+          </div>
+          <div class="tab" id="authors">
+                <ul>
+                    <li><a href="http://html5doctor.com/author/brucel/" title="Posts by Bruce Lawson">Bruce Lawson</a></li><li><a href="http://html5doctor.com/author/cennyddb/" title="Posts by Cennydd Bowles">Cennydd Bowles</a></li><li><a href="http://html5doctor.com/author/chrisb/" title="Posts by Chris Bewick">Chris Bewick</a></li><li><a href="http://html5doctor.com/author/iand/" title="Posts by Ian Devlin">Ian Devlin</a></li><li><a href="http://html5doctor.com/author/jacko/" title="Posts by Jack Osborne">Jack Osborne</a></li><li><a href="http://html5doctor.com/author/markb/" title="Posts by Mark Boas">Mark Boas</a></li><li><a href="http://html5doctor.com/author/miker/" title="Posts by Mike Robinson">Mike Robinson</a></li><li><a href="http://html5doctor.com/author/olib/" title="Posts by Oli Studholme">Oli Studholme</a></li><li><a href="http://html5doctor.com/author/peterg/" title="Posts by Peter Gasston">Peter Gasston</a></li><li><a href="http://html5doctor.com/author/remys/" title="Posts by Remy Sharp">Remy Sharp</a></li><li><a href="http://html5doctor.com/author/richc/" title="Posts by Richard Clark">Richard Clark</a></li><li><a href="http://html5doctor.com/author/taba/" title="Posts by Tab Atkins Jnr">Tab Atkins Jnr</a></li><li><a href="http://html5doctor.com/author/toml/" title="Posts by Tom Leadbetter">Tom Leadbetter</a></li>            	            	
+                </ul>
+          </div>
+        </nav>
+        <!-- end .mod -->
+   
+		        <section class="mod" id="hashtag">
+            <h3>What are you up to?</h3>
+            <article><p><a href="http://search.twitter.com/search?q=%23html5">http://search.twitter.com/search?q=%23html5</a></p></article>
+        </section>
+        
+        <section class="ads mod">
+          <h3>Submit your site to the Gallery</h3>
+          <a href="http://html5gallery.com/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/the-gallery.png" alt="HTML5 Gallery" /></a>
+          <p class="btn"><a href="http://html5gallery.com/">Visit the gallery</a></p>
+        </section>
+        <!-- end .mod --> 
+                       
+		        <div class="mod tweet">
+          <h3><a href="http://twitter.com/html5doctor"><span style="font-weight:normal;">@</span>html5doctor</a></h3>
+          <article><p> RT <a href="http://twitter.com/brucel" class="twitter-user">@brucel</a>: You might like HTML5 Nurse <a href="http://t.co/0HD9GV4C" class="twitter-link">http://t.co/0HD9GV4C</a> with some of the best misplaced medical questions we receive. All genuine. <a href="http://twitter.com/html5doctor/statuses/175332094459908097" class="twitter-link">#</a> <span class="twitter-timestamp"><abbr title="2012/03/01 21:30:03">2012/03/01</abbr></span></p></article>
+        </div>
+        <!-- end .mod -->
+
+    </aside>
+    <!-- end .secondary -->                   
+        <aside id="sub-footer" class="sub-footer group">
+        <div>
+            <div class="mod">
+                                <div id="crp_related"><h3>Related Posts:</h3><ul class="related"><li><a href="http://html5doctor.com/server-sent-events/" rel="bookmark" class="crp_title">Server-Sent Events</a></li><li><a href="http://html5doctor.com/native-drag-and-drop/" rel="bookmark" class="crp_title">Native Drag and Drop</a></li><li><a href="http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/" rel="bookmark" class="crp_title">Storing Data the Simple HTML5 Way (and a few tricks you might not have known)</a></li><li><a href="http://html5doctor.com/history-api/" rel="bookmark" class="crp_title">Pushing and Popping with the History API</a></li><li><a href="http://html5doctor.com/designing-a-blog-with-html5/" rel="bookmark" class="crp_title">Designing a blog with html5</a></li></ul></div>                        
+            </div><!-- end .mod -->
+            <div class="mod">
+                <h3>Recent Posts</h3>
+                <ul class="related">
+                                                        <li><a href="http://html5doctor.com/css3-pseudo-classes-and-html5-forms/">CSS3 Pseudo-Classes and HTML5 Forms</a></li>
+                                        <li><a href="http://html5doctor.com/ol-element-attributes/">The <code>ol</code> Element and Related Attributes: <code>type</code>, <code>start</code>, <code>value</code>, and <code>reversed</code></a></li>
+                                        <li><a href="http://html5doctor.com/html5-doctor-drop-in-clinic/">HTML5 Doctor Drop-In Clinic</a></li>
+                                        <li><a href="http://html5doctor.com/getusermedia/">It&#8217;s Curtains for Marital Strife Thanks to getUserMedia</a></li>
+                                        <li><a href="http://html5doctor.com/server-sent-events/">Server-Sent Events</a></li>
+                                                </ul>
+            </div><!-- end .mod -->
+        </div> 
+        <!-- end div -->
+        <div class="ads">
+            <div class="mod">
+                <h3>Recommended</h3>
+                <a href="http://introducinghtml5.com"><img src="http://html5doctor.com/wp-content/themes/html5doctor/img/introducing-html5-ad.jpg" alt="Introducing HTML5 Book by Bruce Lawson and Remy Sharp" /></a>
+                <p class="btn"><a href="http://introducinghtml5.com">Buy this book</a></p>
+            </div>
+        </div>
+        <!-- end .ads -->
+    </aside>
+    <!-- end #sub-footer -->
+	
+
+    
+</div>
+<!-- end #content -->
+
+<footer role="contentinfo">
+	<div class="inner">
+    	<img width="64" height="64" class="w3c-logo" alt="W3C HTML5 logo (not CSS3!)" src="http://html5doctor.com/wp-content/themes/html5doctor2/images/HTML5_Badge_64.png">
+		<p id="copyright">This site is licensed under a <a href="http://creativecommons.org/licenses/by-nc/2.0/uk/" rel="license">Creative Commons Attribution-Non-Commercial 2.0</a> share alike license. Feel free to change, reuse modify and extend it. Some authors will retain their copyright on certain articles.</p>
+        <p>Copyright &copy; 2012 HTML5 Doctor. All rights reserved. Hosted by <a href="http://www.mediatemple.net/go/order/?refdom=richclarkdesign.com">(mt) Media Temple</a>. Branding by <a href="http://olik.co.uk/">Oliver Ker</a>.</p>
+	</div>
+    <!-- end .inner -->
+</footer>
+<!-- end footer -->
+
+    <!-- BuySellAds.com Ad Code -->
+    <script>
+    (function(){
+      var bsa = document.createElement('script');
+         bsa.type = 'text/javascript';
+         bsa.async = true;
+         bsa.src = '//s3.buysellads.com/ac/bsa.js';
+      (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+    })();
+    </script>
+    <!-- END BuySellAds.com Ad Code -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<!-- TODO: move scripts in head to before /body —oli -->
+	   
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/searchhi.js"></script>    
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/prettify.js"></script>    
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/master.js"></script>    
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8916679-1']);
+  _gaq.push(['_setDomainName', 'html5doctor.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.884 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2012-03-03 19:09:21 -->
+<!-- super cache -->

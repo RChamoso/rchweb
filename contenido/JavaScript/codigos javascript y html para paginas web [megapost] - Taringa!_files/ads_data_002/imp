@@ -1,0 +1,42 @@
+var userver_swf_load_8981435 = function (width, height, unique_id, alt_content, pre_html, post_html, flash_url, flash_params, swfobject_url, swo_no_init) {
+
+    var div_id = "userver_div_" + unique_id;
+
+    
+
+    document.writeln(pre_html + "<div style=\"padding:0px; width:" + width + "px; height:" + height + "px; overflow:hidden; display:inline-block;\"><div style=\"padding:0px; visibility:hidden;\" id=\"" + div_id + "\">" + alt_content+ "</div> </div>" + post_html);
+
+    var done = false;
+    var embed_swf = function() {
+    if (done) { return; }
+    var params = {};
+    params.loop = "true";
+    params.quality = "high";
+    params.wmode = "opaque";
+    params.allowScriptAccess = "always";
+    var attributes = {};
+    userver_swfobject.switchOffAutoHideShow();
+    userver_swfobject.embedSWF(flash_url, div_id, width, height, "9.0.0", false, flash_params, params, attributes);
+    if (document.getElementById(div_id)) {
+       document.getElementById(div_id).style.visibility = 'visible';
+    }
+    done = true;
+    }
+
+    if (swo_no_init == 0) {
+        var js = document.createElement('script');
+        var uswf_loaded = false;
+        js.setAttribute('type', 'text/javascript');
+        js.setAttribute('src', swfobject_url);
+        document.getElementsByTagName('head')[0].appendChild(js);
+        js.onreadystatechange = function () { if ((js.readyState == 'loaded' || js.readyState == 'complete') && (!uswf_loaded) ) {  embed_swf(); uswf_loaded = true} };
+        js.onload = function () { if (!uswf_loaded) {embed_swf(); uswf_loaded = true}};
+    }
+
+};
+
+userver_swf_load_8981435(300, 250, 8981435, "<a href=\"http:\/\/ads.creative-serving.com\/click\/skXwofMbzBardu.wNGxlI-HxgPB2GR8UKejUJyyhXmIFRP-wx5hgt-6ZK4efXUZtZV-fJTnsDkAgfYeqb4V4neGGg3tiSnxTPgKJ7QhvybARWcOTSA-PU-rUXoNLjPYape9w2BewUAQ2mgVxN6wnKz46rZS69GcZkw3v9qgJzDr8iUa-kha5OiVwFSASUvqtZIkOezAaM1aW94qk-uUer416s75jIdB5xqhwwoaRvnTIDmUcZoi1VxjgqWkdTBH..zOOenyc4fTVFP8WKm377bnX-5JaMUyyjtGwY7iov0a7nbZg8hSaDxDX8-wFdcVRuCp25XPm--EIKALcyMC3H6DlBpojMjPycbbypM0ixnbyym8P.gLgw05C8z.sFW9i3FNPHgvJZkpUHAyybNhSlYx1sM5rXlEZruYxLPjIBRKuFwpREadV3eaDurb0NGBoQWifTQSdFP2y0VmQHUkklqbdSy0v2xUYoKYi9N0toshyYQ.jpMaUvcsSF8XqdB.l0AXkY5PRKQsMKc90CF1cHeeqNsVYrrYDdnRzz0IgH80o6sxXdWnyrmRUvKhnEjO3bXT8snoncURhgq6mBYFmjOmIQh6VlJ1CUGG4MEN198dAKhKfq14sP35wl64.wWAvOLPH.wF-HIOsvj2ojVKFn4CaBVBEA46ffdkY5Hmwit5mTL8dMP6DiN8rHON3HdecuKxnCe611MM8el9E.Rpi4y45nzp67wvY84V2ov6tLaSmr9MiFETyRemz6IkBW8PZulFv1C0RK.t.4du9TeTFX6r4kHTyuRhGrGyHdBBLfgXrQ58bfgG.E3.Nh9j.5habP1Ic0gCXWA4RmO90wwz.ni.F07XTMBz2VzxCk6HhGhfvidBEuQrvpQMFKcpm0S-18t4YyhJEeZUTf2F9BoeBvwcN-DYdqx0qqKtCU.rhLvSQVJly4wa97A4nFz-Kk2aELREqPq7KfDp4VoZl29cd39LZ2tYV8L.1eYLrKwsuB1UEMOQWqFMr1PTGhG.d9f5WYY9BoBuMe650ode-iQ1SX.JC9HjFc9XiGFcqT76KCR6vbWZJMIZ0dscWsQSoHRwQwwAK-eK5Iv8y3d0XiVfY.b0=\/1\/\" target=\"_blank\"><img style=\"border: 0;\" border=\"0\" width=\"300\" height=\"250\" src=\"http:\/\/static2.creative-serving.com\/cdes_28-02-2013_07253961_300x250_marv3.gif\" alt=\"\"\/><\/a>", "", "", "http:\/\/static2.creative-serving.com\/cdes_google__28-02-2013_300x250_marv3_300x250_flash_32046719.swf", {
+   "clickTag" : "http%3A%2F%2Fads.creative-serving.com%2Fclick%2FskXwofMbzBardu.wNGxlI-HxgPB2GR8UKejUJyyhXmIFRP-wx5hgt-6ZK4efXUZtZV-fJTnsDkAgfYeqb4V4neGGg3tiSnxTPgKJ7QhvybARWcOTSA-PU-rUXoNLjPYape9w2BewUAQ2mgVxN6wnKz46rZS69GcZkw3v9qgJzDr8iUa-kha5OiVwFSASUvqtZIkOezAaM1aW94qk-uUer416s75jIdB5xqhwwoaRvnTIDmUcZoi1VxjgqWkdTBH..zOOenyc4fTVFP8WKm377bnX-5JaMUyyjtGwY7iov0a7nbZg8hSaDxDX8-wFdcVRuCp25XPm--EIKALcyMC3H6DlBpojMjPycbbypM0ixnbyym8P.gLgw05C8z.sFW9i3FNPHgvJZkpUHAyybNhSlYx1sM5rXlEZruYxLPjIBRKuFwpREadV3eaDurb0NGBoQWifTQSdFP2y0VmQHUkklqbdSy0v2xUYoKYi9N0toshyYQ.jpMaUvcsSF8XqdB.l0AXkY5PRKQsMKc90CF1cHeeqNsVYrrYDdnRzz0IgH80o6sxXdWnyrmRUvKhnEjO3bXT8snoncURhgq6mBYFmjOmIQh6VlJ1CUGG4MEN198dAKhKfq14sP35wl64.wWAvOLPH.wF-HIOsvj2ojVKFn4CaBVBEA46ffdkY5Hmwit5mTL8dMP6DiN8rHON3HdecuKxnCe611MM8el9E.Rpi4y45nzp67wvY84V2ov6tLaSmr9MiFETyRemz6IkBW8PZulFv1C0RK.t.4du9TeTFX6r4kHTyuRhGrGyHdBBLfgXrQ58bfgG.E3.Nh9j.5habP1Ic0gCXWA4RmO90wwz.ni.F07XTMBz2VzxCk6HhGhfvidBEuQrvpQMFKcpm0S-18t4YyhJEeZUTf2F9BoeBvwcN-DYdqx0qqKtCU.rhLvSQVJly4wa97A4nFz-Kk2aELREqPq7KfDp4VoZl29cd39LZ2tYV8L.1eYLrKwsuB1UEMOQWqFMr1PTGhG.d9f5WYY9BoBuMe650ode-iQ1SX.JC9HjFc9XiGFcqT76KCR6vbWZJMIZ0dscWsQSoHRwQwwAK-eK5Iv8y3d0XiVfY.b0%3D%2F1%2F",
+   "targetTag" : "_blank"
+}
+, "http:\/\/static2.creative-serving.com\/u-swfobject.js", 0);

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>
+		  Pushing and Popping with the History API | HTML5 Doctor    </title>
+    <link rel="stylesheet" href="http://html5doctor.com/wp-content/themes/html5doctor2/style.css" media="screen" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Feed" href="http://html5doctor.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Comments Feed" href="http://html5doctor.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Pushing and Popping with the History API Comments Feed" href="http://html5doctor.com/history-api/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://html5doctor.com/wp-content/plugins/contact-form-7/styles.css?ver=3.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://html5doctor.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://html5doctor.com/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://html5doctor.com/xmlrpc.php?rsd" />
+<link rel='prev' title='Goodbye time, datetime, and pubdate. Hello data and value.' href='http://html5doctor.com/time-and-data-element/' />
+<link rel='next' title='Video Subtitling and WebVTT' href='http://html5doctor.com/video-subtitling-and-webvtt/' />
+<link rel='canonical' href='http://html5doctor.com/history-api/' />
+<link rel='shortlink' href='http://html5doctor.com/?p=3897' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+	  
+  
+	</head>
+<body class="single single-post postid-3897 single-format-standard" id="com-html5doctor">
+<header role="banner">
+    <div class="inner group">
+    <a href="http://html5doctor.com" rel="home"><div>
+        <hgroup>
+        <h1>HTML5 Doctor</h1>
+        <h2>Helping you implement HTML5 today</h2>
+        </hgroup><!-- end hgroup -->
+    </div></a><!-- wrapper div for Firefox 3.x ref: http://01i.jp/html5bll -->
+
+ 	<ul id="menu-top-nav" class="semantic-list"><li id="menu-item-3272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3272"><a href="http://html5doctor.com/about/">About</a></li>
+<li id="menu-item-3275" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3275"><a href="http://feeds2.feedburner.com/html5doctor">RSS</a></li>
+<li id="menu-item-3276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3276"><a href="http://feeds.feedburner.com/HTML5DoctorComments">Comments RSS</a></li>
+<li id="menu-item-3253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3253"><a href="#">Doctor Network</a>
+<ul class="sub-menu">
+	<li id="menu-item-3273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3273"><a href="http://html5gallery.com">HTML5 Gallery</a></li>
+	<li id="menu-item-3580" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3580"><a href="http://docteurhtml5.com/html5/">Docteur HTML5</a></li>
+	<li id="menu-item-3973" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3973"><a href="https://github.com/html5doctor/">HTML5 Doctor on Github</a></li>
+</ul>
+</li>
+</ul>      <!-- end #top-nav -->
+    
+    <nav>
+		<ul id="menu-main_nav" class=""><li id="menu-item-3297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3297"><a href="/">Home</a></li>
+<li id="menu-item-3250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3250"><a href="http://html5doctor.com/article-archive/">Article Archive</a></li>
+<li id="menu-item-3291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3291"><a href="http://html5doctor.com/element-index/">Element Index</a></li>
+<li id="menu-item-3252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3252"><a href="http://html5doctor.com/ask-the-doctor/">Ask the HTML5 Doctor</a></li>
+<li id="menu-item-3968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3968"><a href="http://html5doctor.com/resources/">Resources</a></li>
+</ul>    	<!-- end ul -->
+    	<ul>
+    		<li><form id="search-form" action="/search/" role="search"  method="get">
+    <div>
+    <input type="text" name="q" value="" />
+    <input type="submit" id="search-button" value="Search" />
+        <!--<input id="search-input" class="text" type="text" tabindex="1" value="" name="search-input"/>
+        <input id="search-button" class="button" type="submit" tabindex="2" value="Search"/>-->
+    </div>
+</form></li>
+    	</ul>
+    	<!-- end ul -->	
+    </nav>
+    <!-- end nav -->
+	</div>
+	<!-- end .inner -->
+</header>
+<!-- end header -->
+<div id="content" class="group" role="main">
+    <div class="main">
+        <article class="post group">
+            <header class="post-3897 post type-post status-publish format-standard hentry category-javascript-apis tag-api tag-history tag-html-5 tag-html5" id="post-3897">
+                 <h1>Pushing and Popping with the History API </h1>
+                <small><time datetime="2011-11-15" pubdate>Tuesday, November 15th, 2011</time> by <a href="http://html5doctor.com/author/miker/" title="Posts by Mike Robinson" rel="author">Mike Robinson</a>.</small>
+                <p class="tweet"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="html5doctor">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>
+            </header>
+            <!-- end header -->
+             <ul class="commentlist">
+                        </ul>
+           
+            <div class="entry">
+
+		
+                <p>Until recently, we developers couldn’t to do much with the state and history of the browser. We could check the number of items in the history and push users forwards and backwards, but this provides little benefit to the user. With the rise of more dynamic web pages, we need more control. Thankfully, HTML5 gives us that control by extending the JavaScript History API.</p>
+<section id="the-point">
+<h2>What’s the point? <a class="permalink" href="#the-point">#</a></h2>
+<p>It goes without saying that URLs are important. They’re <em>the</em> method of accessing the vast collections of information and resources on the web, and more recently, they’ve begun representing the intended state of a web application. You can copy these URLs and share them with your friends or use them to create links from any HTML document. They’re the veins of the web, and they need to be looked after.</p>
+<p>Previously, the JavaScript History API offered some very simple functionality:</p>
+<pre><code>// Check the length of the history stack
+console.log(history.length);
+
+// Send the user agent forward
+console.log(history.forward());
+
+// Send the user agent back
+console.log(history.back());
+
+// Send the user agent back (negative) or forward (positive)
+// by a given number of items
+console.log(history.go(-3));
+</code></pre>
+<p>With dynamic Ajax web applications, where the browser updates the page in parts instead of changing location entirely, it’s difficult to give the user a URL to bookmark or share the current application state. <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-id-attribute">Fragment identifiers</a>, like those used on this article’s headings via the <code>id</code> attribute, provide some state information, but they’re entirely dependent on client-side scripts.</p>
+<p>The changes to the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html">History API</a> are intended to give developers ways to push history items to the browser so the native back and forward actions can cycle through those items. These history items can also hold data that you can later extract to restore the page state.</p>
+<blockquote>
+<p>Pages can <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#dom-history-pushstate" title="dom-history-pushState">add</a> <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#state-object" title="state object">state objects</a> between their entry in the session history and the next (“forward”) entry. These are then <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate" title="event-popstate">returned to the script</a> when the user (or script) goes back in the history, thus enabling authors to use the “navigation” metaphor even in one-page applications.</p>
+<footer>- <cite><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html" title="6.4 Session history and navigation">WHATWG</a></cite></footer>
+</blockquote>
+<p>If the user copies or bookmarks a stateful URL and visits it later, your back-end can be configured to interpret such a URL and jump the user right to the correct page and/or state.</p>
+<p>In this article, I’ll cover the client-side use of the History API, so make sure you set up your server to work with the new URLs. If you’ve already built an accessible website that provide these entry points, you’re laughing!</p>
+<section id="those-fking-hashbangs">
+<h4>Those <em>f#!king</em> hashbangs… <a class="permalink" href="#those-fking-hashbangs">#</a></h4>
+<p>You may have already seen articles fussing over the adoption of the “hashbang” (#!) pattern on sites like <a href="http://twitter.com">Twitter</a>. This technique updates the address bar with a fragment identifier that can then be used by JavaScript to determine which page and state should be displayed.</p>
+<p>This works as a method of creating a bookmarkable, shareable URL for a page’s state in the absense of a standard API. While the Twitter implementation accepts both <code>http://twitter.com/#!/akamike</code> and <code>http://twitter.com/akamike</code>, it has some disadvantages:</p>
+<ul>
+<li>The fragment identifier is only accessible on the client side. This means that only JavaScript can utilise it, so browsers without JavaScript enabled are out of luck.</li>
+<li>As the server does not receive the path following the hashbang, removing that JavaScript drops support for all those URLs. That’s a lot of broken links, so you’re stuck with that JavaScript <em>forever</em>.</li>
+<li>It’s ugly. It’s a hack and it looks like one.</li>
+</ul>
+<p>The hashbang was never intended to be a long-term solution, so don’t rely on it. If you do use hashbangs, be prepared to deal with the consequences (and possible backlash from web purists).</p>
+</section>
+</section>
+<section id="making-history">
+<h2>Making History <a class="permalink" href="#making-history">#</a></h2>
+<p>These examples will build on top of each other. We’ll start with a <a href="http://html5doctor.com/wp-content/uploads/2011/10/history_base.html">basic HTML document</a> with some inline styles and scripts for your convenience.</p>
+<aside class="sidenote">
+<p>For a simple HTTP server, open the command line, <code>cd</code> to the directory you would like to serve, run <code>python -m SimpleHTTPServer 8080</code>, then open <code>localhost:8080</code> in your browser. Alternatively, try a bundled setup like <a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a> or <a href="http://www.mamp.info/en/index.html">MAMP</a>.</p>
+</aside>
+<p>Save this file and open it in your favourite editor. It must be accessed via HTTP, so that means you need either a local server (e.g. <code>http://localhost/</code>) or an online web server you can upload to. <strong>Viewing the file directly using your browser’s Open File function will not work</strong>, since it uses the <code>file://</code> protocol and not HTTP. Also be sure to update the <code>href</code> attributes on each of the navigation links to ensure the correct directory structure is used. Personally, I’m viewing the demo locally at <code>http://localhost/history</code>.</p>
+<p>We’ll be working exclusively within the <code>&lt;script&gt;</code> element at the end of the <code>&lt;body&gt;</code>. The code includes some simple styles and dynamically changes the content as you click the links. In reality, this could be loaded from your server via <code>XMLHttpRequest</code>, but for the purposes of this demonstration I’ve bundled it up into a self-contained file. The important part is that we have a quick-and-dirty dynamic page to work with, so let the fun begin!</p>
+<p>At the moment there, is no bookmarkable URL for the different states of this page. If you click around the navigation items, then click Back in your browser, you won’t be taken back to the previous state and may even be taken away from the page to whatever you viewed before (depending on your browser). It would be nice if you could share “Socks” with your friends, right? We can do that via <code>history.pushState()</code>.</p>
+<p>The <code>history.pushState()</code> method takes three parameters:</p>
+<dl>
+<dt><code>data</code></dt>
+<dd>Some structured data, such as settings or content, assigned to the history item.</dd>
+<dt><code>title</code></dt>
+<dd>The name of the item in the history drop-down shown by the browser’s back and forward buttons. (Note: this is not currently supported by any major browsers.)</dd>
+<dt><code>url</code> <em>(optional)</em></dt>
+<dd>The URL to this state that should be displayed in the address bar.</dd>
+</dl>
+<p>With these parameters, you can define the state of the page, give that state a name, and even provide a bookmarkable address, as if the page had reloaded entirely. Let’s dive right in and add this to the <code>clickHandler</code> function, right above the <code>return</code> statement:</p>
+<figure>
+<pre><code>function clickHandler(e) {
+  /* Snip... */
+
+  // Add an item to the history log
+  history.pushState(data, event.target.textContent, event.target.href);
+
+  return event.preventDefault();
+}
+</code></pre>
+</figure>
+<p>The single line of code we added informs the <code>history</code> object that:</p>
+<ul>
+<li>we want to add an item to the log,</li>
+<li>it should remember the data that we’ve already loaded,</li>
+<li>it should assign a name to this state based on the text of the link we clicked (even though this isn’t used — it’s good to get into the habit of recording a name for the state), and</li>
+<li>it should update the address bar with the <code>href</code> attribute of that link.</li>
+</ul>
+<p>Reload the page in your browser and click a few of the links, keeping an eye on the address bar. Notice how it changes on each click, despite the fact that you aren’t actually navigating away from this page. If you also have a look at your history log, you’ll see a long list of page titles (in this case ”Kittens!” over and over). Provided your server is set up to serve the correct page upon access, the user could copy that URL and paste it into a new browser window to jump straight to that kitten.</p>
+<p>At the moment, clicking the back button will pop you through the history items, but the page won’t react to these changes. That&#8217;s because so far, we’ve only created the history records. How can we allow active users to return to a previous state? We listen to the <code>popstate</code> event.</p>
+</section>
+<section id="historical-events">
+<h2>Historical Events in Navigation <a class="permalink" href="#historical-events">#</a></h2>
+<p>The user agent fires a <code>popstate</code> event when the user navigates through their history, whether backwards or forwards, provided it isn’t taking the user away from the current page. That is, all those <code>pushState</code>s we called will keep the user on the current page, so the <code>popstate</code> event will fire for each history item they pop through.</p>
+<p>Before the closing <code>&lt;/script&gt;</code> tag, add a new listener for the <code>popstate</code> event:</p>
+<figure>
+<pre><code>// Revert to a previously saved state
+window.addEventListener('popstate', function(event) {
+  console.log('popstate fired!');
+
+  updateContent(event.state);
+});
+</code></pre>
+</figure>
+<p>We attach the event listener to the <code>window</code>, which is responsible for firing the event, and pass this event into our handler. We log a message (so we can see when this event is firing), and then we update the content using the state we saved previously. The state is attached to the <code>event</code> object via the <code>state</code> property.</p>
+<p>Open up the page fresh in your browser, click around like before, and then click back. As before, the URL in the address bar changes as you cycle through states, but now the content is also restored back to what it should be. Click forward, and the content is likewise correctly restored.</p>
+<div class="callout warning-block">
+<p>If you look at the developer console in Chrome when you load the page for the first time, you’ll see the <code>popstate</code> event fired immediately, before you’ve even clicked a link. This is because Chrome considers the initial page load to be a change in state, and so it fires the event. In this instance, the <code>state</code> property is <code>null</code>, but thankfully the <code>updateContent</code> function deals with this. Keep this in mind when developing as it could catch you out, especially if other browsers assume this behavior.</p>
+</p></div>
+</section>
+<section id="rewriting-history">
+<h2>Rewriting history <a class="permalink" href="#rewriting-history">#</a></h2>
+<p>Unfortunately, as fantastic as HTML5 is, it doesn’t allow us actual time travel. If it did, I would be going back to my childhood and telling a younger me, “Yes, you should have a slice of cake”. Take that as you will.</p>
+<p>The History API does, however, allow us to make amends to our history log items. For example, we could update the current state in response to fresh user input in a form. We can do this with <code>history.replaceState</code>.</p>
+<p><code>replaceState</code> works just as <code>pushState</code> does, with the exact same parameters, except that it updates the current entry instead of adding a new one. I can think of one situation in our demo where this could be used: the initial page load. If you click back for long enough, you’ll find that going back to the original URL doesn’t provide you the original content. Let’s fix that by adding the following to the bottom of our script:</p>
+<figure>
+<pre><code>// Store the initial content so we can revisit it later
+history.replaceState({
+  content: contentEl.textContent,
+  photo: photoEl.src
+}, document.title, document.location.href);
+</code></pre>
+</figure>
+<p>As this runs when the page loads, it saves the initial page state. We can later load this state when the user browses back to this point via the event listener we set up previously. You can try it out by loading up the page, clicking a few links, and then hitting back until you return to the original URL. The initial content has returned!</p>
+</section>
+<section id="demo">
+<h2>Demo <a class="permalink" href="#demo">#</a></h2>
+<p>I’ve set up a demo of our completed code. I’ve also added a little back-end magic to make our <code>history.pushState</code> URLs work like a real site. Remember that the URLs you push should be live URLs that the user can bookmark and share as real entry points to your site.</p>
+<p class="btn half"><a href="http://html5doctor.com/demos/history/">View the History API demo</a></p>
+</section>
+<section id="browser-support">
+<h2>Browser support <a class="permalink" href="#browser-support">#</a></h2>
+<p>Up-to-date copies of Chrome (5+), Safari (5.0+), Firefox (4.0+), and Opera (11.50+) have support for the new History API. Even some mobile browsers work just fine, like Mobile Safari on iOS 4+. Unfortunately, IE 9 and below lack support, but it <a href="http://msdn.microsoft.com/en-us/ie/hh272905.aspx#_HTML5History">should work in IE 10</a> when it arrives.</p>
+<p>Safari 5.0 sometimes exhibits one oddity: navigating between states causes the loading spinner to appear and stay even when the state has been loaded. This stops when you navigate away using a link or action that does not involve a state saved by the History API.</p>
+<section id="polyfill">
+<h3>Polyfill <a class="permalink" href="#polyfill">#</a></h3>
+<p>A polyfill does exist for the History API. The aptly named <a href="https://github.com/balupton/history.js">History.js</a> uses HTML4’s <code>hashchange</code> event with document fragment identifiers to mimic the history API in older browsers. If one of the hash URLs is used by a modern browser, it uses <code>replaceState</code> to quietly correct the URL.</p>
+<p>It sounds like magic, but make sure you’re aware of the consequences of using fragment identifiers, as mentioned previously in this article. As such, the author of History.js has put together a guide titled <a href="https://github.com/balupton/history.js/wiki/Intelligent-State-Handling">Intelligent State Handling</a>.</p>
+</section>
+</section>
+<section id="closing">
+<h2>Closing thoughts <a class="permalink" href="#closing">#</a></h2>
+<p>URLs go beyond just the browsing session of a user. They’re historically important markers for resources that could very well remain in use for many years to come. Before you embark on developing your site’s JavaScript, you should give thought to the <a href="http://warpspire.com/posts/url-design/">design of your URLs</a>. Make them meaningful and organised. Make sure you can directly access them without JavaScript. Only then should you add your JavaScript to enhance the browsing experience.</p>
+</section>
+                        
+            </div>
+            <!-- end .entry -->
+            
+            <aside>
+                <ul class="semantic-list">
+                    <li class="category">
+                        <h3>Category</h3>
+                        <ul class="semantic-list"><li><a href="http://html5doctor.com/category/javascript-apis/" title="View all posts in JavaScript APIs" rel="category tag">JavaScript APIs</a></li></ul>
+
+                    </li>
+                    <li class="tags">
+                        <ul class="semantic-list"><li><h3>Tags</h3></li><li><a href="http://html5doctor.com/tag/api/" rel="tag">api</a></li><li><a href="http://html5doctor.com/tag/history/" rel="tag">history</a></li><li><a href="http://html5doctor.com/tag/html-5/" rel="tag">HTML 5</a></li><li><a href="http://html5doctor.com/tag/html5/" rel="tag">html5</a></li></ul>                    </li>
+                </ul>
+
+		 
+            </aside>
+            <!-- end aside -->
+            
+            <aside id="author-bio">
+                <h4><a href="http://html5doctor.com/author/miker/" title="Posts by Mike Robinson" rel="author">Mike Robinson</a></h4>
+                <div class="author-blurb author">
+                    <p class="vcard">This article was written by <span class="fn"><a href="http://html5doctor.com/author/miker/" title="Posts by Mike Robinson" rel="author">Mike Robinson</a></span>. A developer at <a href="http://studiolift.com">Lift</a> in Reading, England, you can catch him on <a href="http://twitter.com/akamike">Twitter</a> or occasionally blogging on his own site, <a href="http://akamike.net/">akamike</a>. Beyond the web, Mike is usually gaming or listening to progressive rock.</p>
+                    <img alt='' src='http://1.gravatar.com/avatar/5b123a491d26ed764cdc5f700c54d200?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />                </div>
+            </aside>
+            <!-- end #author-bio -->
+            
+            
+            <section id="comments">
+                
+<!-- You can start editing here. -->
+
+	<h3>10 Responses on the article “Pushing and Popping with the History API”</h3>
+
+		<article class="comment even thread-even depth-1" id="comment-18574">
+						<div class="comment-meta">
+		<a href='http://www.brandbuildercompany.com' rel='external nofollow' class='url'>Brian LePore</a> says<img alt='' src='http://1.gravatar.com/avatar/fa2a8a9f2689d05e62266464a92e2a63?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-11-15T14:09:47+00:00" pubdate>November 15, 2011 at 3:33 pm <a class="permalink" href="#comment-18574">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>I literally *just* discovered this and worked on this for a client two weeks ago. I even contemplated writing a blog about it because of how cool I found this. This really can be a game changer.</p>
+<p>I&#8217;m surprised you did not cover the history.state feature? I believe this is the current spec, though it only works in Firefox. The code used here, while it does work, I thought was part of the original version of the spec. Also, worth mentioning is that you are *supposed* to pass in JavaScript object like in your example. Microsoft&#8217;s IE blog has examples where a string is passed in. I&#8217;ve not tested support on this across browsers, but it&#8217;s worth mentioning.</p>
+<p>I literally cannot tell you how many hours the whole &#8220;Store the initial content so we can revisit it later&#8221; issue turned out to be an issue for me. It seems unintuitive to me that the default state that you come to is not in the history stack.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-20325">
+						<div class="comment-meta">
+		Xavi says<img alt='' src='http://0.gravatar.com/avatar/446aec76b6d3cf690d50b0a40af45404?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-11-15T14:09:47+00:00" pubdate>December 9, 2011 at 1:01 pm <a class="permalink" href="#comment-20325">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>I&#8217;m trying the demo page on Internet Explorer 9 and I can&#8217;t tell any difference to Chrome so it seems to work.</p>
+<p>I&#8217;ll be using this article for a future project, for sure. Thank you!</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-20737">
+						<div class="comment-meta">
+		Raphael Sebbe says<img alt='' src='http://0.gravatar.com/avatar/6e900c634e890c3b593106608988ea23?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-11-15T14:09:47+00:00" pubdate>December 16, 2011 at 6:10 pm <a class="permalink" href="#comment-20737">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Hi Mike,</p>
+<p>thank you for sharing your experience, very informative.</p>
+<p>Could you please elaborate on what you did on the server to handle the fake URLs? Are they manual redirects you inserted, or automatic rewrites? How are they converted?</p>
+<p>Thank you so much!</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-21205">
+						<div class="comment-meta">
+		<a href='http://www.synbydesign.com' rel='external nofollow' class='url'>Eric</a> says<img alt='' src='http://0.gravatar.com/avatar/213ae15efbb12849b3d054da0e956470?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-11-15T14:09:47+00:00" pubdate>January 6, 2012 at 12:09 am <a class="permalink" href="#comment-21205">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Hi Mike,<br />
+I also have the same question as Raphael. What did you do on the back end in order to handle the URLs?</p>
+<p>Thanks!</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-21206">
+						<div class="comment-meta">
+		Raphael Sebbe says<img alt='' src='http://0.gravatar.com/avatar/6e900c634e890c3b593106608988ea23?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-11-15T14:09:47+00:00" pubdate>January 6, 2012 at 8:31 am <a class="permalink" href="#comment-21206">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>In the mean time, I advanced a bit on that same subject. If your web server is Apache, you can configure it to use mod_rewrite, which allows to convert user (or crawler) typed URLs into other server side URLs:</p>
+<p><a href="http://www.mywebsite.com/myproduct/test.html" rel="nofollow">http://www.mywebsite.com/myproduct/test.html</a> -&gt; <a href="http://www.mywebsite.com/index.php?product=myproduct&#038;page=test" rel="nofollow">http://www.mywebsite.com/index.php?product=myproduct&#038;page=test</a></p>
+<p>This is done by adding a number of rules in the .htaccess at the root of your website.</p>
+<p>HTH,</p>
+<p>Raphael</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-23087">
+						<div class="comment-meta">
+		<a href='http://craftedpixelz.co.uk' rel='external nofollow' class='url'>Abid Din</a> says<img alt='' src='http://1.gravatar.com/avatar/97ada94e776833502f7ab185a71f1a9f?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-11-15T14:09:47+00:00" pubdate>February 8, 2012 at 9:28 am <a class="permalink" href="#comment-23087">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Literally, just released my new site which makes use of this technique. It works beautifully! </p>
+<p>It&#8217;s nice to (maybe) be able to do away with hashes and hashbangs on future ajax-based sites.</p>
+<p>I&#8217;m really looking forward to seeing how this gets used as it&#8217;s adopted more widely.</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-23090">
+						<div class="comment-meta">
+		<a href='http://craigmdennis.com' rel='external nofollow' class='url'>Interaction Designer Craig Dennis</a> says<img alt='' src='http://1.gravatar.com/avatar/9f5f73161cfa92493a3d1d974188017d?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-11-15T14:09:47+00:00" pubdate>February 8, 2012 at 10:01 am <a class="permalink" href="#comment-23090">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Great article.</p>
+<p>The only issues arise (as is often the case) with cross-browser implementations of this. The history API may be supported by the browsers you mentioned but with varying degrees of success.</p>
+<p>Check out History.js (note the capital &#8216;H&#8217;) by Ben Lupton here:<a href="https://github.com/balupton/History.js/" rel="nofollow">https://github.com/balupton/History.js/</a> which offers a means to use HTML5 history states while accounting for craoos browser inconsistencies.</p>
+<p>Also, have some fun with this gist too: <a href="https://gist.github.com/854622" rel="nofollow">https://gist.github.com/854622</a></p>
+<p>Again, great article. Really gets down to  the underlying principles.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-23106">
+						<div class="comment-meta">
+		<a href='http://alexcrooks.me' rel='external nofollow' class='url'>Alex</a> says<img alt='' src='http://1.gravatar.com/avatar/3f8fa1b5ae905edd20bbc44232816070?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-11-15T14:09:47+00:00" pubdate>February 8, 2012 at 11:59 am <a class="permalink" href="#comment-23106">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>This is great, but if it doesn&#8217;t work on IE9 or below it&#8217;s pretty useless for production sites currently (without lots of messy hacks and fallbacks!)</p>
+		</div>
+				</article>
+		<article class="comment byuser comment-author-miker bypostauthor even thread-even depth-1" id="comment-24485">
+						<div class="comment-meta">
+		<a href='http://akamike.net' rel='external nofollow' class='url'>Mike Robinson</a> says<img alt='' src='http://1.gravatar.com/avatar/5b123a491d26ed764cdc5f700c54d200?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-11-15T14:09:47+00:00" pubdate>February 20, 2012 at 4:47 pm <a class="permalink" href="#comment-24485">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>@Raphael + Eric:</p>
+<p>My apologises for the late reply! For the purposes of the demo, I used a very basic <a href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html" rel="nofollow">mod_rewrite</a> and PHP setup. </p>
+<p><code>RewriteRule ^(fluffy|socks|whiskers|bob)$ index.php?p=$1 [NC,L]</code></p>
+<p>The above rewrite rule masks the demo URLs and passes it into a single PHP file with a query string of what cat the user is attempting to view. The PHP file then checks <code>$_GET['p']</code> is valid (always sanitise and check your input as appropriate), then using the pre-defined variables I have set for that cat.</p>
+<p>If this were a real application, the requested path could be used to construct database queries (sanitised of course) to pull in more dynamic content. CMS like WordPress use something like this for their &#8220;clean URL&#8221; implementation.</p>
+<p>Hope this helps.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-24508">
+						<div class="comment-meta">
+		Raphael Sebbe says<img alt='' src='http://0.gravatar.com/avatar/6e900c634e890c3b593106608988ea23?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-11-15T14:09:47+00:00" pubdate>February 21, 2012 at 10:21 am <a class="permalink" href="#comment-24508">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Hi Mike,</p>
+<p>thanks for sharing. I had gone through a similar route using mod_rewrite in the mean time within .htaccess.</p>
+<p>Thx!</p>
+		</div>
+				</article>
+
+ 
+
+
+<div id="form">
+
+<h3>Join the discussion.</h3>
+
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="/history-api/#respond" style="display:none;">Click here to cancel reply.</a></small>
+</div>
+
+
+<form action="http://html5doctor.com/wp-comments-post.php" method="post" id="commentform">
+
+
+<p>
+<label for="author">Name (required)</label><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true" required />
+</p>
+
+<p>
+<label for="email">Mail (will not be published) (required)</label><input type="email" name="email" id="email" value="" size="22" tabindex="2" aria-required="true" required />
+</p>
+
+<p>
+<label for="url">Website</label><input type="url" name="url" id="url" value="" size="22" tabindex="3" />
+</p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+<div id="form-code">
+    <h4>Some HTML is ok</h4>
+    <p>You can use these tags:<br><code><span class="tag">&lt;a </span><span class="atn">href</span><span class="tag">=</span><span class="atv">""</span><span class="tag"> </span><span class="atn">title</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;abbr </span><span class="atn">title</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;b&gt;</span></code><br> <code><span class="tag">&lt;blockquote </span><span class="atn">cite</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;cite&gt;</span></code><br> <code><span class="tag">&lt;del </span><span class="atn">datetime</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;em&gt;</span></code><br> <code><span class="tag">&lt;i&gt;</span></code><br> <code><span class="tag">&lt;q </span><span class="atn">cite</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;strong&gt;</span></code></p><p>You can also use <code><span class="tag">&lt;code&gt;</span></code>, and <strong>remember to use <code><span class="pun">&amp;</span><span class="pln">lt</span><span class="pun">;</span></code> and <code><span class="pun">&amp;</span><span class="pln">gt</span><span class="pun">;</span></code> for brackets</strong>.</p>
+</div>
+<p><label class="screenreader" for="comment">Enter comment</label>
+<textarea aria-required="true" required name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input type='hidden' name='comment_post_ID' value='3897' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="b6c1f11608" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+
+</form>
+
+</div>
+
+            </section>
+                <!-- end #comments -->
+                
+        </article>
+        <!-- end .post -->
+    </div>
+    <!-- end .main -->	
+                    
+ 	     <aside class="secondary">
+            
+        <section class="mod ads">
+            <h3>Element Index</h3>
+            <a href="/element-index/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/element-index.png" width="260" height="158" alt="View the HTML5 Element Index" /></a>
+            <p class="btn"><a href="/element-index/">HTML5 Element Index</a></p>
+        </section>
+        <!-- end nav -->
+            
+		            <aside class="mod ads group">
+                <h3>Sponsors</h3>
+                <div id="bsap_1242929" class="bsarocks bsap_ab161e2bf71edb940eeca26a4739f522"></div>
+            </aside>        
+		            <section class="ads mod">
+                <h3><a href="/ask-the-doctor/">Ask the HTML5 Doctor</a></h3>
+                <a href="/ask-the-doctor/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/ask-the-doctor.png" alt="Ask the HTML5 Doctor" /></a>
+                <p class="btn"><a href="/ask-the-doctor/">Ask the HTML5 Doctor</a></p>
+            </section>
+            <!-- end nav -->
+        
+        <nav class="ui-tabs mod">
+          <h3>More HTML5 Doctor</h3>
+          <ul class="ui-tabs-nav group">
+            <li class="ui-tabs-selected"><a href="#articles">Articles</a></li>
+            <li class="ui-tab"><a href="#categories">Categories</a></li>
+            <li class="ui-tab"><a href="#authors">Authors</a></li>
+          </ul>
+          
+          <div class="tab" id="articles">
+              <ul>
+			<li><a href='http://html5doctor.com/css3-pseudo-classes-and-html5-forms/' title='CSS3 Pseudo-Classes and HTML5 Forms'>CSS3 Pseudo-Classes and HTML5 Forms</a></li>
+	<li><a href='http://html5doctor.com/ol-element-attributes/' title='The ol Element and Related Attributes: type, start, value, and reversed'>The ol Element and Related Attributes: type, start, value, and reversed</a></li>
+	<li><a href='http://html5doctor.com/html5-doctor-drop-in-clinic/' title='HTML5 Doctor Drop-In Clinic'>HTML5 Doctor Drop-In Clinic</a></li>
+	<li><a href='http://html5doctor.com/getusermedia/' title='It&#8217;s Curtains for Marital Strife Thanks to getUserMedia'>It&#8217;s Curtains for Marital Strife Thanks to getUserMedia</a></li>
+	<li><a href='http://html5doctor.com/server-sent-events/' title='Server-Sent Events'>Server-Sent Events</a></li>
+              </ul>
+              <p class="btn"><a href="/article-archive/">View article archive</a></p>
+          </div>
+
+
+          <div class="tab" id="categories">
+                <ul>
+                    	<li class="cat-item cat-item-6"><a href="http://html5doctor.com/category/accessibility/" title="View all posts filed under Accessibility">Accessibility</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://html5doctor.com/category/attributes/" title="View all posts filed under Attributes">Attributes</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="http://html5doctor.com/category/boilerplates/" title="View all posts filed under Boilerplates">Boilerplates</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://html5doctor.com/category/browser-compatibility/" title="View all posts filed under Browser Compatibility">Browser Compatibility</a>
+</li>
+	<li class="cat-item cat-item-69"><a href="http://html5doctor.com/category/comment/" title="View all posts filed under Comment">Comment</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="http://html5doctor.com/category/css/" title="View all posts filed under CSS">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://html5doctor.com/category/elements/" title="View all posts filed under Elements">Elements</a>
+</li>
+	<li class="cat-item cat-item-103"><a href="http://html5doctor.com/category/events/" title="View all posts filed under Events">Events</a>
+</li>
+	<li class="cat-item cat-item-108"><a href="http://html5doctor.com/category/forms/" title="View all posts filed under forms">forms</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://html5doctor.com/category/javascript-apis/" title="View all posts filed under JavaScript APIs">JavaScript APIs</a>
+</li>
+	<li class="cat-item cat-item-51"><a href="http://html5doctor.com/category/marketing/" title="View all posts filed under Marketing">Marketing</a>
+</li>
+	<li class="cat-item cat-item-132"><a href="http://html5doctor.com/category/misc/" title="View all posts filed under Misc">Misc</a>
+</li>
+	<li class="cat-item cat-item-128"><a href="http://html5doctor.com/category/multimedia/" title="View all posts filed under multimedia">multimedia</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://html5doctor.com/category/questions/" title="View all posts filed under Questions">Questions</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://html5doctor.com/category/quick-tips/" title="View all posts filed under Quick Tips">Quick Tips</a>
+</li>
+	<li class="cat-item cat-item-135"><a href="http://html5doctor.com/category/reviews/" title="View all posts filed under Reviews">Reviews</a>
+</li>
+	<li class="cat-item cat-item-145"><a href="http://html5doctor.com/category/simplequiz/" title="View all posts filed under Simplequiz">Simplequiz</a>
+</li>
+	<li class="cat-item cat-item-68"><a href="http://html5doctor.com/category/specification-changes/" title="View all posts filed under Specification Changes">Specification Changes</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://html5doctor.com/category/structure/" title="View all posts filed under Structure">Structure</a>
+</li>
+	<li class="cat-item cat-item-38"><a href="http://html5doctor.com/category/validation/" title="View all posts filed under Validation">Validation</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://html5doctor.com/category/wai-aria/" title="View all posts filed under WAI-ARIA">WAI-ARIA</a>
+</li>
+ 
+                </ul>
+          </div>
+          <div class="tab" id="authors">
+                <ul>
+                    <li><a href="http://html5doctor.com/author/brucel/" title="Posts by Bruce Lawson">Bruce Lawson</a></li><li><a href="http://html5doctor.com/author/cennyddb/" title="Posts by Cennydd Bowles">Cennydd Bowles</a></li><li><a href="http://html5doctor.com/author/chrisb/" title="Posts by Chris Bewick">Chris Bewick</a></li><li><a href="http://html5doctor.com/author/iand/" title="Posts by Ian Devlin">Ian Devlin</a></li><li><a href="http://html5doctor.com/author/jacko/" title="Posts by Jack Osborne">Jack Osborne</a></li><li><a href="http://html5doctor.com/author/markb/" title="Posts by Mark Boas">Mark Boas</a></li><li><a href="http://html5doctor.com/author/miker/" title="Posts by Mike Robinson">Mike Robinson</a></li><li><a href="http://html5doctor.com/author/olib/" title="Posts by Oli Studholme">Oli Studholme</a></li><li><a href="http://html5doctor.com/author/peterg/" title="Posts by Peter Gasston">Peter Gasston</a></li><li><a href="http://html5doctor.com/author/remys/" title="Posts by Remy Sharp">Remy Sharp</a></li><li><a href="http://html5doctor.com/author/richc/" title="Posts by Richard Clark">Richard Clark</a></li><li><a href="http://html5doctor.com/author/taba/" title="Posts by Tab Atkins Jnr">Tab Atkins Jnr</a></li><li><a href="http://html5doctor.com/author/toml/" title="Posts by Tom Leadbetter">Tom Leadbetter</a></li>            	            	
+                </ul>
+          </div>
+        </nav>
+        <!-- end .mod -->
+   
+		        <section class="mod" id="hashtag">
+            <h3>What are you up to?</h3>
+            <article><p><a href="http://search.twitter.com/search?q=%23html5">http://search.twitter.com/search?q=%23html5</a></p></article>
+        </section>
+        
+        <section class="ads mod">
+          <h3>Submit your site to the Gallery</h3>
+          <a href="http://html5gallery.com/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/the-gallery.png" alt="HTML5 Gallery" /></a>
+          <p class="btn"><a href="http://html5gallery.com/">Visit the gallery</a></p>
+        </section>
+        <!-- end .mod --> 
+                       
+		        <div class="mod tweet">
+          <h3><a href="http://twitter.com/html5doctor"><span style="font-weight:normal;">@</span>html5doctor</a></h3>
+          <article><p> RT <a href="http://twitter.com/brucel" class="twitter-user">@brucel</a>: You might like HTML5 Nurse <a href="http://t.co/0HD9GV4C" class="twitter-link">http://t.co/0HD9GV4C</a> with some of the best misplaced medical questions we receive. All genuine. <a href="http://twitter.com/html5doctor/statuses/175332094459908097" class="twitter-link">#</a> <span class="twitter-timestamp"><abbr title="2012/03/01 21:30:03">2012/03/01</abbr></span></p></article>
+        </div>
+        <!-- end .mod -->
+
+    </aside>
+    <!-- end .secondary -->                   
+        <aside id="sub-footer" class="sub-footer group">
+        <div>
+            <div class="mod">
+                                <div id="crp_related"><h3>Related Posts:</h3><ul class="related"><li><a href="http://html5doctor.com/server-sent-events/" rel="bookmark" class="crp_title">Server-Sent Events</a></li><li><a href="http://html5doctor.com/how-to-get-all-the-browsers-playing-ball/" rel="bookmark" class="crp_title">How to get all the browsers playing ball</a></li><li><a href="http://html5doctor.com/methods-of-communication/" rel="bookmark" class="crp_title">Methods of communication</a></li><li><a href="http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/" rel="bookmark" class="crp_title">Storing Data the Simple HTML5 Way (and a few tricks you might not have known)</a></li><li><a href="http://html5doctor.com/native-drag-and-drop/" rel="bookmark" class="crp_title">Native Drag and Drop</a></li></ul></div>                        
+            </div><!-- end .mod -->
+            <div class="mod">
+                <h3>Recent Posts</h3>
+                <ul class="related">
+                                                        <li><a href="http://html5doctor.com/css3-pseudo-classes-and-html5-forms/">CSS3 Pseudo-Classes and HTML5 Forms</a></li>
+                                        <li><a href="http://html5doctor.com/ol-element-attributes/">The <code>ol</code> Element and Related Attributes: <code>type</code>, <code>start</code>, <code>value</code>, and <code>reversed</code></a></li>
+                                        <li><a href="http://html5doctor.com/html5-doctor-drop-in-clinic/">HTML5 Doctor Drop-In Clinic</a></li>
+                                        <li><a href="http://html5doctor.com/getusermedia/">It&#8217;s Curtains for Marital Strife Thanks to getUserMedia</a></li>
+                                        <li><a href="http://html5doctor.com/server-sent-events/">Server-Sent Events</a></li>
+                                                </ul>
+            </div><!-- end .mod -->
+        </div> 
+        <!-- end div -->
+        <div class="ads">
+            <div class="mod">
+                <h3>Recommended</h3>
+                <a href="http://introducinghtml5.com"><img src="http://html5doctor.com/wp-content/themes/html5doctor/img/introducing-html5-ad.jpg" alt="Introducing HTML5 Book by Bruce Lawson and Remy Sharp" /></a>
+                <p class="btn"><a href="http://introducinghtml5.com">Buy this book</a></p>
+            </div>
+        </div>
+        <!-- end .ads -->
+    </aside>
+    <!-- end #sub-footer -->
+	
+
+    
+</div>
+<!-- end #content -->
+
+<footer role="contentinfo">
+	<div class="inner">
+    	<img width="64" height="64" class="w3c-logo" alt="W3C HTML5 logo (not CSS3!)" src="http://html5doctor.com/wp-content/themes/html5doctor2/images/HTML5_Badge_64.png">
+		<p id="copyright">This site is licensed under a <a href="http://creativecommons.org/licenses/by-nc/2.0/uk/" rel="license">Creative Commons Attribution-Non-Commercial 2.0</a> share alike license. Feel free to change, reuse modify and extend it. Some authors will retain their copyright on certain articles.</p>
+        <p>Copyright &copy; 2012 HTML5 Doctor. All rights reserved. Hosted by <a href="http://www.mediatemple.net/go/order/?refdom=richclarkdesign.com">(mt) Media Temple</a>. Branding by <a href="http://olik.co.uk/">Oliver Ker</a>.</p>
+	</div>
+    <!-- end .inner -->
+</footer>
+<!-- end footer -->
+
+    <!-- BuySellAds.com Ad Code -->
+    <script>
+    (function(){
+      var bsa = document.createElement('script');
+         bsa.type = 'text/javascript';
+         bsa.async = true;
+         bsa.src = '//s3.buysellads.com/ac/bsa.js';
+      (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+    })();
+    </script>
+    <!-- END BuySellAds.com Ad Code -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<!-- TODO: move scripts in head to before /body —oli -->
+	   
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/searchhi.js"></script>    
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/prettify.js"></script>    
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/master.js"></script>    
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8916679-1']);
+  _gaq.push(['_setDomainName', 'html5doctor.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.920 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2012-03-03 18:34:27 -->
+<!-- super cache -->

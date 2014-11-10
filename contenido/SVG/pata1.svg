@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="501.66049"
+   height="602.77386"
+   id="svg3364"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="Escudo_de_Amescoa_Baja.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0">
+  <defs
+     id="defs3366">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 325 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="550 : 325 : 1"
+       inkscape:persp3d-origin="275 : 216.66667 : 1"
+       id="perspective62" />
+    <linearGradient
+       id="linearGradient8135">
+      <stop
+         style="stop-color:#5d070b;stop-opacity:1;"
+         offset="0"
+         id="stop8137" />
+      <stop
+         id="stop8139"
+         offset="0.5"
+         style="stop-color:#ed1c24;stop-opacity:1;" />
+      <stop
+         style="stop-color:#5d070a;stop-opacity:1;"
+         offset="1"
+         id="stop8141" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4476">
+      <stop
+         style="stop-color:#403800;stop-opacity:1;"
+         offset="0"
+         id="stop4478" />
+      <stop
+         id="stop3321"
+         offset="0.5"
+         style="stop-color:#c8af00;stop-opacity:1;" />
+      <stop
+         style="stop-color:#403900;stop-opacity:1;"
+         offset="1"
+         id="stop4480" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.79384615"
+     inkscape:cx="275"
+     inkscape:cy="325"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1280"
+     inkscape:window-height="753"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     width="550px"
+     height="650px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     showgrid="false"
+     inkscape:window-maximized="0">
+    <sodipodi:guide
+       orientation="vertical"
+       position="-734.01283"
+       id="guide5427" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3369">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Escudo"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-108.82734,-522.61856)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path3152"
+       d="m 378.64842,860.31989 c 0.48693,-0.46938 -15.36101,23.28759 -21.59841,35.66641 3.62212,2.7397 7.13635,2.42633 10.98406,1.82688 1.71575,-0.26731 3.57752,-0.51179 5.69552,-0.41703 4.12064,0.18425 5.14208,6.09724 7.7427,8.50985 -2.80414,-4.59586 -7.17936,-3.23344 -9.47306,-0.99274 -16.10951,-4.67796 -28.57152,8.67253 -33.5811,22.75824 -1.72543,0.704 -7.76257,-0.40546 -9.48858,0.29873 -1.17855,2.18963 7.56614,-12.16757 14.10501,-20.36305 -5.91182,3.37409 -14.06073,8.23821 -19.5135,13.99857 -2.00821,-0.004 -5.35975,-4.84731 -3.52759,-6.90096 2.14785,-2.40749 6.67806,-4.86396 13.44259,-12.69414 -6.25367,0.56362 -11.64522,4.30083 -17.65761,6.1666 -3.37789,0.32215 -6.36855,-0.16676 -9.74638,0.1554 2.27991,-2.34939 2.12351,-4.64642 4.99344,-5.82607 10.30453,-4.23558 23.65786,-2.83852 34.64246,-9.50517 9.19844,-10.40726 15.1783,-22.77067 22.98854,-34.21213 -0.9972,-0.38239 9.81899,1.69729 9.99191,1.53061 z"
+       sodipodi:nodetypes="ccscccccccscccsccs"
+       style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+  </g>
+</svg>

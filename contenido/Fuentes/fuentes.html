@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+	<title>Fuentes</title>
+	<link rel="stylesheet" href="css/fuentes.css" />
+	<link rel="stylesheet" href="css/estiloPantalla.css" />
+	<script src='js/funciones.js'></script>
+	<script src='js/fuentes.js'></script>
+</head>
+
+<body onload='fuentes()'>
+  <div id='contenido'>
+    <a href='http://www.w3.org/TR/2013/CR-css-fonts-3-20131003/' target='blank'>W3C CSS Fonts Module</a>
+    <a href='http://www.w3.org/TR/CSS2/fonts.html' target='blank'>W3C Referencia</a>
+    <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face' target='blank'>Mozilla Referencia</a>
+    <div id='fuentesBD'>
+      <h5>Formatos de fuentes:</h5>
+      <ul>
+        <li>Web Open Font Format (.woff): Para todos los navegadores modernos.</li>
+        <li>Embedded Open Type: Para las versiones antiguas de Internet Explorer (IE &lt;= 8).</li>
+        <li>Fuentes SVG: Para versiones anteriores de iOS Safari (03.02 a 04.01).</li>
+        <li>Fuentes TrueType: Para las versiones anteriores del navegador por defecto de Android.</li>
+      </ul>
+      <h5>
+        <pre>
+          @font-face {
+          font-family: 'abril_fatfaceregular';
+          src: url('abrilfatface-regular-webfont.eot');
+          src: url('abrilfatface-regular-webfont.eot?#iefix') format('embedded-opentype'),
+               url('abrilfatface-regular-webfont.woff') format('woff'),
+               url('abrilfatface-regular-webfont.ttf') format('truetype'),
+               url('abrilfatface-regular-webfont.svg#abril_fatfaceregular') format('svg');
+          font-weight: normal;
+          font-style: normal;
+          }
+        </pre>
+      </h5>
+    </div>
+  </div>
+  <!--div id='ocultar'>
+    <h3><em>HTML:</em></h3>
+    <div id='html' class='codigo'>
+      <pre class='columna1'><code id='htmlLinea'></code></pre>
+      <pre class='columna2'><code id='htmlCodigo'></code></pre>
+    </div>
+    <h3><em>CSS:</em></h3>
+    <div id='css' class='codigo'>
+      <pre class='columna1'><code id='cssLinea'></code></pre>
+      <pre class='columna2'><code id='cssCodigo'></code></pre>
+    </div>
+  </div-->
+</body>
+</html>

@@ -1,0 +1,469 @@
+/*  ESTILOS CSS APLICACION DINYPARK  */
+
+							/* Fuentes Personalizadas */
+@font-face{
+	font-family: Regular;
+	src: url(../fuentes/Ubuntu-R.ttf) format('truetype');
+}
+@font-face{
+	font-family: Bold;
+	src: url(../fuentes/Ubuntu-B.ttf) format('truetype');
+}
+@font-face{
+	font-family: Italic;
+	src: url(../fuentes/Ubuntu-I.ttf) format('truetype');
+}
+@font-face{
+	font-family: BoldItalic;
+	src: url(../fuentes/Ubuntu-BI.ttf) format('truetype');
+}
+
+							/* Estilos Basicos */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+							/* Estilos Principales */
+body{
+/*	position: relative;
+*/	display: block;
+	width: auto;
+	height: auto;
+  	margin: 0px auto;
+	padding: 10px;
+	padding-top: 20px;
+	font-family: Regular;
+	text-align: center;
+	color: white;
+	background-color: #124276;
+	background: -webkit-gradient(radial, center, from(#3084df) 0%, to(#124276) 90%);
+	background: -webkit-radial-gradient(center, circle, #3084df 0%, #124276 90%);
+	background: -moz-radial-gradient(center, circle, #3084df 0%, #124276 90%);
+	background: -o-radial-gradient(center, circle, #3084df 0%, #124276 90%);
+	background: radial-gradient(center, circle, #3084df 0%, #124276 90%);
+	-moz-background-size:cover;
+	background-size:cover;
+}
+a{
+	text-decoration: none;
+}
+
+							/* MENU DE INTERACION CON EL USUARIO */
+nav{
+	position: fixed;
+	display: block;
+	z-index: 300;
+	width: 125px;
+	height: 93%;
+	max-height: 680px;
+	overflow-x: visible;
+	padding: 5px;
+	text-align: center;
+	background-color: rgba(15,50,90,0.5);
+	border-radius: 20px 5px 5px 20px; 
+	-o-border-radius: 20px 5px 5px 20px; 
+	-moz-border-radius: 20px 5px 5px 20px; 
+	-webkit-border-radius: 20px 5px 5px 20px; 
+    -moz-box-shadow: 0 0 1em /*bs*/#a6caf1;
+	-webkit-box-shadow: 0 0 1em /*bs*/#a6caf1;
+    box-shadow: 0 0 1em /*bs*/#a6caf1; 
+}
+/*nav::-webkit-scrollbar {
+    width: 5px;
+}
+nav::-webkit-scrollbar-track {
+	margin-top: 100px;
+	margin-bottom: 100px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+nav::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	height: 10%;
+}
+/*nav::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}*/
+
+#logoempresa{
+	position: relative;
+ 	display: block;
+	height: 70px;
+	width: 75px;
+	padding: 2px;
+	margin: auto;
+	margin-top: 5px;
+	text-align: center;
+	background-color: #ffffff;
+	border: 3px outset #B0B0B0;
+}
+#logoempresa img{
+	height: 68px;
+	width: 73px;
+}
+#producto{
+	position: relative;
+ 	display: block;
+	width: 95px;
+	height: 40px;
+	margin: auto;
+	margin-top: 10px;
+	line-height: 2;
+	color: #ffffff;
+	background-color: #000000;
+	border: 2px solid #B0B0B0;
+	border-radius: 15px 15px 15px 15px; 
+	-o-border-radius: 15px 15px 15px 15px; 
+	-moz-border-radius: 15px 15px 15px 15px; 
+	-webkit-border-radius: 15px 15px 15px 15px;
+	-moz-box-shadow: 0 0 0.5em #a6caf1;
+	-webkit-box-shadow: 0 0 0.5em #a6caf1;
+    box-shadow: 0 0 0.5em #a6caf1;
+}
+#producto span{
+	color: #1b63b1;
+}
+
+							/*  M E N U   A C C I O N E S  */
+#menu{
+	position: relative;
+ 	display: block;
+	height: auto;
+	width: 115px;
+	margin: 0 auto;
+	margin-top: 10px;
+	text-align: center;
+	letter-spacing: 0.1em;
+	line-height: 1.3;
+}
+
+							/* DATOS DE LA CONEXION */
+#usuario{
+	font-family: BoldItalic;
+	text-transform: lowercase;
+	color: #82EDE6;
+}
+/*#conexion{
+	margin-top: 15px;
+	text-transform: uppercase;
+}*/
+
+							/* BOTONES DE SELECCION */
+#menuAccion, #menuPlantas{
+/*	height: auto;*/
+	width: 110px;
+	padding-top: 10px;
+	margin: 0 auto;
+	margin-top: 10px;
+	text-align: center;
+	border: 2px solid #191919;
+	background-color: rgba(42,42,42, 0.8);
+	border-radius: 5px 5px 5px 5px; 
+	-o-border-radius: 5px 5px 5px 5px; 
+	-moz-border-radius: 5px 5px 5px 5px; 
+	-webkit-border-radius: 5px 5px 5px 5px;
+}
+#pilotos, #display, #comunicacion{
+	width: 100px;
+	height: 30px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	padding-top: 5px;
+	border: 1px solid #000000;
+	border-radius: 25px 25px 25px 25px; 
+	-o-border-radius: 25px 25px 25px 25px; 
+	-moz-border-radius: 25px 25px 25px 25px; 
+	-webkit-border-radius: 25px 25px 25px 25px;
+	background: #191919;
+	background: -moz-linear-gradient(top, #6e6e6e, #191919); /* FF3.6 */
+	background: -webkit-gradient(linear, center top, center bottom, color-stop(0, #6e6e6e), color-stop(1, #191919)); /* Safari 4+, Chrome 2+ */
+	background: -webkit-linear-gradient(top, #6e6e6e, #191919); /* Safari 5.1+, Chrome 10+ */
+	background: -o-linear-gradient(top, #6e6e6e, #191919); /* Opera 11.1+ */
+	background: linear-gradient(top, #6e6e6e, #191919);
+	background: -ms-linear-gradient(top, #6e6e6e, #191919); /* IE10+ */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6e6e6e', endColorstr='#191919'); /* IE6,IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#6e6e6e', endColorstr='#191919')"; /* IE8+ */
+}
+#menuPlantas{
+	overflow-x: hidden;
+	height: 190px;
+}
+#menuPlantas::-webkit-scrollbar {
+    width: 5px;
+}
+#menuPlantas::-webkit-scrollbar-track {
+	margin-top: 20px;
+	margin-bottom: 20px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#menuPlantas::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	height: 10%;
+}
+
+#pilotos img{
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+}
+#display img{
+	width: 65px;
+	height: 20px;
+	margin: 0px auto;
+	margin-top: 2px;
+}
+#comunicacion img{
+	width: 65px;
+	height: 20px;
+	margin: 0px auto;
+	margin-top: 2px;
+}
+
+							/*  D I A L O G O  */
+.dialogo{
+	position: relative;
+	display: block;
+	color: #d3e5f8;
+	outline: none;
+}
+.dialogo span{
+	visibility: hidden;
+	position: absolute;
+	top: 10px;
+	left: 247px;
+	z-index: 999;
+	width: 230px;
+	margin-left: -127px;
+	padding: 10px;
+	border: 2px solid #000000;
+	opacity: .9;
+	background-color: rgba(15,50,90,0.8);
+	background-image: -webkit-linear-gradient(rgba(15,50,90,0.8), rgba(194,224,232,0.8));
+	background-image: -moz-linear-gradient(rgba(15,50,90,0.8), rgba(194,224,232,0.8));
+	background-image: -ms-linear-gradient(rgba(15,50,90,0.8), rgba(194,224,232,0.8));
+	background-image: -o-linear-gradient(rgba(15,50,90,0.8), rgba(194,224,232,0.8));
+	background-image: linear-gradient(rgba(15,50,90,0.8), rgba(194,224,232,0.8));
+	background-image: -webkit-gradient(linear, center top, center bottom, color-stop(0, rgba(15,50,90,0.8)), color-stop(1, rgba(194,224,232,0.8))); /* Safari 4+, Chrome 2+ */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(15,50,90,0.8)', endColorstr='rgba(194,224,232,0.8)'); /* IE6,IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(15,50,90,0.8)', endColorstr='rgba(194,224,232,0.8)')"; /* IE8+ */
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+	box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+	text-shadow: #000000 0 0 1em;
+	font-family: BoldItalic;
+}
+.dialogo:hover
+{
+	border: 0; /* IE6 fix */
+	cursor: pointer;
+}
+.dialogo:hover span
+{
+  visibility: visible;
+}
+.dialogo span:before, .dialogo span:after{
+	content: "";
+	position: absolute;
+	z-index: 1000;
+	top: 7px;
+	left: -13px;
+	border-top: 8px solid transparent;
+	border-left: 0;
+	border-right: 10px solid #000000;
+	border-bottom: 8px solid transparent;
+}
+
+							/* SELECCION DE PLANOS */
+.planta{
+	width: 100px;
+	height: 25px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #000000;
+	border-radius: 25px 25px 25px 25px; 
+	-o-border-radius: 25px 25px 25px 25px; 
+	-moz-border-radius: 25px 25px 25px 25px; 
+	-webkit-border-radius: 25px 25px 25px 25px;
+	background: #191919;
+	background-image: -moz-linear-gradient(top, #6e6e6e, #191919); /* FF3.6 */
+	background-image: -webkit-gradient(linear, center top, center bottom, color-stop(0, #6e6e6e), color-stop(1, #191919)); /* Safari 4+, Chrome 2+ */
+	background-image: -webkit-linear-gradient(top, #6e6e6e, #191919); /* Safari 5.1+, Chrome 10+ */
+	background-image: -o-linear-gradient(top, #6e6e6e, #191919); /* Opera 11.1+ */
+	background-image: linear-gradient(top, #6e6e6e, #191919);
+	background-image: -ms-linear-gradient(top, #6e6e6e, #191919); /* IE10+ */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6e6e6e', endColorstr='#191919'); /* IE6,IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#6e6e6e', endColorstr='#191919')"; /* IE8+ */
+}
+.planta h4{
+}
+.uno{
+	color: #bdd3fe;
+	text-shadow: #000000 2px 2px 0;
+}
+.dos{
+	color: #acfbba;
+	text-shadow: #000000 2px 2px 0;
+}
+.tres{
+	color: #fbf89d;
+	text-shadow: #000000 2px 2px 0;
+}
+.cuatro{
+	color: #f5c494;
+	text-shadow: #000000 2px 2px 0;
+}
+
+							/* SELECCION DE LOS BOTONES */
+.boton:active{
+	background: #6e6e6e;
+	background: -moz-linear-gradient(top, #191919, #6e6e6e); /* FF3.6 */
+	background: -webkit-gradient(linear, center top, center bottom, color-stop(0, #191919), color-stop(1, #6e6e6e)); /* Safari 4+, Chrome 2+ */
+	background: -webkit-linear-gradient(top, #191919, #6e6e6e); /* Safari 5.1+, Chrome 10+ */
+	background: -o-linear-gradient(top, #191919, #6e6e6e); /* Opera 11.1+ */
+	background: linear-gradient(top, #191919, #6e6e6e);
+	background: -ms-linear-gradient(top, #191919, #6e6e6e); /* IE10+ */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#191919', endColorstr='#6e6e6e'); /* IE6,IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#191919', endColorstr='#6e6e6e')"; /* IE8+ */
+}
+
+							/* LOGOS DINYCON */
+#logo{
+	position: relative;
+ 	display: block;
+	width: 105.7px;
+	height: 52.3px;
+	margin: auto;
+	margin-top: 15px;
+}
+#logo img{
+	height: 70%;
+	width: 90%;
+	border: 3px inset #B0B0B0;
+}
+#seguir{
+	position: relative;
+ 	display: block;
+	margin-bottom: 5px;
+}
+#seguir img{
+	width: 30px;
+	height: 34px;
+	margin-bottom: 5px;
+	border: none;
+}
+#seguir p{
+	font-family: Bold;
+	margin-bottom: 5px;
+}
+
+/*  *** FIN ****   MENU DE INTERACION CON EL USUARIO */
+
+
+
+							/*  S E C C I O N   P R I N C I P A L   */
+section{
+	position: relative;
+ 	display: block;
+	overflow: hidden;
+}
+#planta1 div{
+	background-color: #bdd3fe;
+}
+#planta2 div{
+	background-color: #acfbba;
+}
+#planta3 div{
+	background-color: #fbf89d;
+}
+#planta4 div{
+	background-color: #f5c494;
+}
+#planta1 h1, #planta1 h2{
+	color: #bdd3fe;
+}
+#planta2 h1, #planta2 h2{
+	color: #acfbba;
+}
+#planta3 h1, #planta3 h2{
+	color: #fbf89d;
+}
+#planta4 h1, #planta4 h2{
+	color: #f5c494;
+}
+#planta1 img{
+	width: 2000px;
+	height: 400px;
+}
+#planta2 img{
+	width: 2000px;
+	height: 400px;
+}
+#planta4 img{
+	width: 1000px;
+	height: 400px;
+}
+.panel{
+	margin-left: 155px;
+/*	padding: 20px;
+	padding-top: 0px;
+*/	overflow-y: hidden;
+	overflow-x: hidden;
+	margin-top: -3000px;
+	position: absolute;
+/*	text-indent: 2em;
+*/	-webkit-transition: all .8s ease-in-out;
+	-moz-transition: all .8s ease-in-out;
+	-o-transition: all .8s ease-in-out;
+	transition: all .8s ease-in-out;
+}
+.panel:target{
+	margin-top: 0%;
+}
+.panel div{
+	padding: 40px;
+	margin-top: 100px;
+	box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+}
+
+hgroup{
+	text-align: left;
+	font-family: BoldItalic;
+	z-index: 200;
+	position: fixed;
+	width: 100%;
+	margin-bottom: 30px;
+	padding: 10px;
+	padding-left: 30px;
+	text-shadow: #000000 0 1px 2px;
+	background: #5c5c5c;
+	background-image: -moz-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+	background-image: -webkit-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+	background-image: -o-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+	background-image: -ms-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+	background-image:  linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+	-moz-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+	box-shadow: 0 2px 0 rgba(0,0,0,.3);
+}
+h1, h2{
+	display: inline;
+	margin-right: 50px;
+}

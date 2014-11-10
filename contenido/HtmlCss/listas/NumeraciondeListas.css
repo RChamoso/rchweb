@@ -1,0 +1,87 @@
+.faq {
+ counter-reset: my-badass-counter;  /* my-badass-counter se puede sustituir en todos por otro nombre */
+}
+.faq dt {
+ position: relative;
+ font: bold 16px Georgia;
+ padding: 4px 0 10px 0;
+}
+.faq dt:before {
+ content: counter(my-badass-counter/*,
+/* lower-roman */				/* (i ii iii) */
+/* disc */						/* (• • •) */
+/* circle */
+/* square */
+/* decimal */					/* (1 2 3) */
+/* decimal-leading-zero */		/* (01, 02, 03) */
+/* lower-roman */				/* (i ii iii) */
+/* upper-roman */				/* (I II III) */
+/* lower-greek */				/* (a ß ?) */
+/* lower-latin */				/* (a b c) */
+/* upper-latin */				/* (A B C) */
+/* armenian */
+/* georgian */
+/* lower-alpha */				/* (a b c) */
+/* upper-alpha */				/* (A B C) */
+ );
+ counter-increment: my-badass-counter;
+ position: absolute;
+ left: 0;
+ top: 0;
+ font: bold 50px/1 Sans-Serif;
+}
+.faq dd {
+ margin: 0 0 50px 0;
+}
+.faq dt, .faq dd {
+ padding-left: 50px;
+}
+
+									/* SEGUNDA PARTE */
+
+#body {
+ width:70em; 
+ max-width:100%;
+ margin:0 auto;
+}
+ol {
+ counter-reset:li;		 /* Initiate a counter */
+ margin-left:0;			 /* Remove the default left margin */
+ padding-left:0;		 /* Remove the default left padding */
+}
+ol > li {
+ position:relative;		 /* Create a positioning context */
+ margin:0 0 6px 2em;	 /* Give each list item a left margin to make room for the numbers */
+ padding:4px 8px;		 /* Add some spacing around the content */
+ list-style:none;		 /* Disable the normal item numbering */
+ border-top:2px solid #666;
+ background:#f6f6f6;
+}
+ol > li:before {
+ content:counter(li);	 /* Use the counter as content */
+ counter-increment:li;	 /* Increment the counter by 1 */
+						 /* Position and style the number */
+ position:absolute;
+ top:-2px;
+ left:-2em;
+ -moz-box-sizing:border-box;
+ -webkit-box-sizing:border-box;
+ box-sizing:border-box;
+ width:2em;
+						 /* Some space between the number and the content in browsers that support
+						 generated content but not positioning it */
+ margin-right:8px;
+ padding:4px;
+ border-top:2px solid #666;
+ color:#fff;
+ background:#666;
+ font-weight:bold;
+ font-family:"Helvetica Neue", Arial, sans-serif;
+ text-align:center;
+}
+li ol, li ul {
+ margin-top:6px;
+}
+ol ol li:last-child {
+ margin-bottom:0;
+}

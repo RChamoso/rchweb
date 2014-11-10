@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+	<title>CANVAS</title>
+	<link rel="stylesheet" href="../../css/estiloPantalla.css" />
+	
+	<script>
+		function definirArea()
+		{
+			areaDibujo = document.getElementById('rectangulo');
+			areaDibujoContexto = areaDibujo.getContext('2d');
+		}
+		function rectangulos()
+		{
+			/* 	
+				context.clearRect(x, y, w, h);			Clears all pixels on the canvas in the given rectangle to transparent black.
+				context.fillRect(x, y, w, h);			Paints the given rectangle onto the canvas, using the current fill style.
+				context.strokeRect(x, y, w, h);			Paints the box that outlines the given rectangle onto the canvas, using the current stroke style.
+			*/
+			areaDibujoContexto.fillStyle = 'rgba(0,0,200,1)';
+			areaDibujoContexto.fillRect(50,50,50,100);
+			areaDibujoContexto.fillStyle = 'rgba(200,0,0,0.8)';
+			areaDibujoContexto.fillRect(75,70,50,100);
+			areaDibujoContexto.fillStyle = 'rgba(0,200,0,0.8)';
+			areaDibujoContexto.fillRect(100,90,50,100);
+		}
+		function triangulos()
+		{
+			areaDibujoContexto.beginPath();
+			areaDibujoContexto.strokeStyle = 'rgba(0,0,200,1)';
+			areaDibujoContexto.moveTo(200,350);
+			areaDibujoContexto.lineTo(125,200);
+			areaDibujoContexto.lineTo(50,350);
+			areaDibujoContexto.closePath();
+			//	Linea
+			areaDibujoContexto.stroke();
+
+			areaDibujoContexto.beginPath();
+			areaDibujoContexto.moveTo(250,350);
+			areaDibujoContexto.lineTo(250,150);
+			areaDibujoContexto.lineTo(400,350);
+			areaDibujoContexto.closePath();
+			//	Relleno
+			areaDibujoContexto.fill();
+		}
+		function curvasBezier()
+		{
+			areaDibujoContexto.beginPath();
+			areaDibujoContexto.fillStyle = 'rgba(200,0,0,1)';
+			areaDibujoContexto.moveTo(75,250);
+			areaDibujoContexto.bezierCurveTo( 75,   247,  70,   235,  50, 235);
+			areaDibujoContexto.bezierCurveTo( 20,   235,  20, 272.5,  20, 272);
+			areaDibujoContexto.bezierCurveTo( 20,   290,  40,   312,  75, 330);
+			areaDibujoContexto.bezierCurveTo(110,   312, 130,   290, 130, 272);
+			areaDibujoContexto.bezierCurveTo(130, 272.5, 130,   235, 100, 235);
+			areaDibujoContexto.bezierCurveTo( 85,   235,  75,   247,  75, 250);
+			areaDibujoContexto.closePath();
+			areaDibujoContexto.fill();
+		}
+		function curvasQuadratic()
+		{
+			areaDibujoContexto.beginPath();
+			areaDibujoContexto.fillStyle = 'rgba(0,200,0,1)';
+			areaDibujoContexto.moveTo(275,125);
+			areaDibujoContexto.bezierCurveTo( 75,   247,  70,   235,  50, 235);
+			areaDibujoContexto.bezierCurveTo( 20,   235,  20, 272.5,  20, 272);
+			areaDibujoContexto.bezierCurveTo( 20,   290,  40,   312,  75, 330);
+			areaDibujoContexto.bezierCurveTo(110,   312, 130,   290, 130, 272);
+			areaDibujoContexto.bezierCurveTo(130, 272.5, 130,   235, 100, 235);
+			areaDibujoContexto.bezierCurveTo( 85,   235,  75,   247,  75, 250);
+			areaDibujoContexto.closePath();
+			areaDibujoContexto.fill();
+		}
+	</script>
+
+</head>
+
+<body>
+  <div id='contenido'>
+    <section>
+      <canvas id='rectangulo' height='500' width='600'>
+        <script>
+          definirArea();
+          rectangulos();
+          triangulos();
+          curvasBezier();
+          curvasQuadratic();
+        </script>
+      </canvas>
+    </section>
+  </div>
+  <div id='ocultar'>
+    <h3><em>HTML:</em></h3>
+    <div id='html' class='codigo'>
+      <pre class='columna1'><code id='htmlLinea'></code></pre>
+      <pre class='columna2'><code id='htmlCodigo'></code></pre>
+    </div>
+    <h3><em>CSS:</em></h3>
+    <div id='css' class='codigo'>
+      <pre class='columna1'><code id='cssLinea'></code></pre>
+      <pre class='columna2'><code id='cssCodigo'></code></pre>
+    </div>
+  </div>
+</body>
+</html>

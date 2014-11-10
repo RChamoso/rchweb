@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>
+		  Storing Data the Simple HTML5 Way (and a few tricks you might not have known) | HTML5 Doctor    </title>
+    <link rel="stylesheet" href="http://html5doctor.com/wp-content/themes/html5doctor2/style.css" media="screen" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Feed" href="http://html5doctor.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Comments Feed" href="http://html5doctor.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Storing Data the Simple HTML5 Way (and a few tricks you might not have known) Comments Feed" href="http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://html5doctor.com/wp-content/plugins/contact-form-7/styles.css?ver=3.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://html5doctor.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://html5doctor.com/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://html5doctor.com/xmlrpc.php?rsd" />
+<link rel='prev' title='The details and summary elements' href='http://html5doctor.com/the-details-and-summary-elements/' />
+<link rel='next' title='Your Questions 18' href='http://html5doctor.com/your-questions-18/' />
+<link rel='canonical' href='http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/' />
+<link rel='shortlink' href='http://html5doctor.com/?p=3600' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+	  
+  
+	</head>
+<body class="single single-post postid-3600 single-format-standard" id="com-html5doctor">
+<header role="banner">
+    <div class="inner group">
+    <a href="http://html5doctor.com" rel="home"><div>
+        <hgroup>
+        <h1>HTML5 Doctor</h1>
+        <h2>Helping you implement HTML5 today</h2>
+        </hgroup><!-- end hgroup -->
+    </div></a><!-- wrapper div for Firefox 3.x ref: http://01i.jp/html5bll -->
+
+ 	<ul id="menu-top-nav" class="semantic-list"><li id="menu-item-3272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3272"><a href="http://html5doctor.com/about/">About</a></li>
+<li id="menu-item-3275" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3275"><a href="http://feeds2.feedburner.com/html5doctor">RSS</a></li>
+<li id="menu-item-3276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3276"><a href="http://feeds.feedburner.com/HTML5DoctorComments">Comments RSS</a></li>
+<li id="menu-item-3253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3253"><a href="#">Doctor Network</a>
+<ul class="sub-menu">
+	<li id="menu-item-3273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3273"><a href="http://html5gallery.com">HTML5 Gallery</a></li>
+	<li id="menu-item-3580" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3580"><a href="http://docteurhtml5.com/html5/">Docteur HTML5</a></li>
+	<li id="menu-item-3973" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3973"><a href="https://github.com/html5doctor/">HTML5 Doctor on Github</a></li>
+</ul>
+</li>
+</ul>      <!-- end #top-nav -->
+    
+    <nav>
+		<ul id="menu-main_nav" class=""><li id="menu-item-3297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3297"><a href="/">Home</a></li>
+<li id="menu-item-3250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3250"><a href="http://html5doctor.com/article-archive/">Article Archive</a></li>
+<li id="menu-item-3291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3291"><a href="http://html5doctor.com/element-index/">Element Index</a></li>
+<li id="menu-item-3252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3252"><a href="http://html5doctor.com/ask-the-doctor/">Ask the HTML5 Doctor</a></li>
+<li id="menu-item-3968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3968"><a href="http://html5doctor.com/resources/">Resources</a></li>
+</ul>    	<!-- end ul -->
+    	<ul>
+    		<li><form id="search-form" action="/search/" role="search"  method="get">
+    <div>
+    <input type="text" name="q" value="" />
+    <input type="submit" id="search-button" value="Search" />
+        <!--<input id="search-input" class="text" type="text" tabindex="1" value="" name="search-input"/>
+        <input id="search-button" class="button" type="submit" tabindex="2" value="Search"/>-->
+    </div>
+</form></li>
+    	</ul>
+    	<!-- end ul -->	
+    </nav>
+    <!-- end nav -->
+	</div>
+	<!-- end .inner -->
+</header>
+<!-- end header -->
+<div id="content" class="group" role="main">
+    <div class="main">
+        <article class="post group">
+            <header class="post-3600 post type-post status-publish format-standard hentry category-javascript-apis tag-api tag-html-5 tag-html5 tag-javascript tag-storage" id="post-3600">
+                 <h1>Storing Data the Simple HTML5 Way (and a few tricks you might not have known) </h1>
+                <small><time datetime="2011-08-23" pubdate>Tuesday, August 23rd, 2011</time> by <a href="http://html5doctor.com/author/remys/" title="Posts by Remy Sharp" rel="author">Remy Sharp</a>.</small>
+                <p class="tweet"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="html5doctor">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>
+            </header>
+            <!-- end header -->
+             <ul class="commentlist">
+                        </ul>
+           
+            <div class="entry">
+
+		
+                <p>Yes indeed people, it&#8217;s your favourite HTML5 Doctor with JavaScript knowledge who lives in Brighton near a golf course! I&#8217;m also shooting for the longest title we&#8217;ve published so far &#8211; and I think I&#8217;m in the lead.</p>
+
+<p>This post is about the Web Storage API. Technically it&#8217;s been shifted out of the HTML5 specification and can now be found in it&#8217;s very own dedicated spec. But if it counts at all &#8211; it <em>used</em> to be part of the Web Applications spec.</p>
+
+<p>Web Storage is a very, <strong>very</strong> simple way to store data in the client &#8211; i.e. the browser. What&#8217;s more, the support is fabulous: IE8 and upwards has support natively, and there&#8217;s lots of good <a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">polyfills</a> in the <a href="http://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">wild already</a>.</p>
+
+<p>This post however will just focus on the features of Web Storage and hopefully show you a trick or two you may not have known about.</p>
+
+<h2>What Web Storage Does</h2>
+
+<p>Using JavaScript, Web Storage makes it possible to easily store arbitrary values in the browser. Storage is different from cookies in that it&#8217;s <em>not shared</em> with the server. It&#8217;s also different from cookies in that it&#8217;s dead simple to work with.</p>
+
+<p>There are two versions of Web Storage: local and session. Local means that it&#8217;s persistent, and session is simply that the data is lost when the session ends (i.e. when you close you browser window or tab). It&#8217;s also worth noting that a session is tied to a single browser window or tab. The session <em>doesn&#8217;t</em> leak out in to other open windows on that same domain.</p>
+
+<p>Any data stored is tied to the document origin, in that it&#8217;s tied to the specific protocol (http or https, etc), the host (html5doctor.com) and the port (usually port 80).</p>
+
+<h2>Get Storing</h2>
+
+<p>The API for <code>localStorage</code> and <code>sessionStorage</code> is exactly the same, and distills down to the following methods:</p>
+
+<ul>
+<li>.setItem(key, value);</li>
+<li>.getItem(key)</li>
+<li>.removeItem(key)</li>
+<li>.clear()</li>
+<li>.key(index)</li>
+<li>.length</li>
+</ul>
+
+<p>You can probably guess what most of those methods do, maybe not the last two, but ignore all that syntax for a moment.</p>
+
+<p>Due to the way that the storage API has been defined, the set/get/remove methods all are getters, setters and deleters. What that means to you is you can use localStorage <a href="http://jsconsole.com/?localStorage.name%20%3D%20'Remy'%3B">as follows</a>:</p>
+
+<pre><code>localStorage.name = 'Remy';
+</code></pre>
+
+<p>If you tried using the link above, this will save a property called &#8220;name&#8221; against localStorage. Completely closing your browser, and going back to <a href="http://jsconsole.com">http://jsconsole.com</a> and <a href="http://jsconsole.com/?console.log(localStorage.name)%3B">test the name property again</a>:</p>
+
+<pre><code>console.log(localStorage.name);
+</code></pre>
+
+<p>Still holds the value doesn&#8217;t it? Pretty easy eh? And no faffing around with cookies, for that, we can be thankful!</p>
+
+<p>Equally deleting data is <a href="http://jsconsole.com/?delete%20localStorage.name%3B%20localStorage.name">very easy</a>:</p>
+
+<pre><code>delete localStorage.name;
+console.log(localStorage.name);
+</code></pre>
+
+<p>You&#8217;ll see the value is undefined. </p>
+
+<p>What&#8217;s happening under the hood is that when you set a property on <code>localStorage</code> (or <code>sessionStorage</code>) it&#8217;s calling the .setItem method. When you get a property, it&#8217;s calling .getItem and when you delete, it&#8217;s calling removeItem. That way you can treat the Web Storage interface as any other regular object in JavaScript, except you&#8217;ll know it&#8217;ll hang around after the page has unloaded.</p>
+
+<h2>Hey everyone! I&#8217;m storing some data!</h2>
+
+<p>That&#8217;s what your browser does when you store some data. It announces it via events. </p>
+
+<p>When you set some data on localStorage or sessionStorage, an event, called &#8220;storage&#8221;, fires on all the other windows on the same origin.</p>
+
+<p>To listen for events the following code is used:</p>
+
+<pre><code>function storageEvent(event) {
+  event = event || window.event; // give IE8 some love
+  alert('Yo people! Something just got stored!');
+}
+
+if (window.attachEvent) { // ::sigh:: IE8 support
+   window.attachEvent('onstorage', storageEvent);
+} else {
+    window.addEventListener('storage', storageEvent, false);
+}
+</code></pre>
+
+<p><small>Note that as IE8 has support, if you don&#8217;t want to use <code>onstorage</code> you&#8217;ll want to double up your event listeners with <code>attachEvent</code>.</small></p>
+
+<p>Clearly a massive alert box isn&#8217;t useful, but what is useful is what you capture inside of the event object:</p>
+
+<ul>
+<li>key &#8211; the property name of the value stored</li>
+<li>newValue &#8211; the newly set value (duh!)</li>
+<li>oldValue &#8211; the previous value before being overwritten by .newValue</li>
+<li>url &#8211; the full url path of the origin of the storage event</li>
+<li>storageArea &#8211; the storage object, either localStorage or sessionStorage</li>
+</ul>
+
+<p>With this information, you can do a lot with the storage event, like perhaps keep tabs that are open synchronised. Here&#8217;s a simple, contrived example of using localStorage to echo a value across different windows on <a href="http://html5demos.com/storage-events">html5demos.com</a>. </p>
+
+<p>Or for a real world example, <a href="http://blog.fontdeck.com/post/8470748087/localstorage">Font Deck recently implemented this very feature</a>, if you change the sample text in one window, all other open tabs (or windows) mirror that <a href="http://fontdeck.com/typefaces/serif/garalde">same sample text</a>.</p>
+
+<h2>Gotchas to watch out for</h2>
+
+<p>The main gotcha with Web Storage is that although the specification <em>used to say</em><sup>&dagger;</sup> that any object type can be stored, in fact all browsers currently coerce to strings. That means if you want to store a JavaScript object (or an array perhaps), you&#8217;ll need to use <a href="http://www.json.org/">JSON</a> to <a href="http://jsbin.com/elicop/edit#preview">encode and decode</a>:</p>
+
+<pre><code>var doctors = [
+  'rem', 
+  'rich_clark', 
+  'brucel', 
+  'jackosborne', 
+  'leads', 
+  'akamike', 
+  'boblet'];
+localStorage.doctors = JSON.stringify(doctors);
+
+// later that evening…
+var html5docs = JSON.parse(localStorage.doctors);
+alert('There be ' + html5docs.length + ' doctors in the house');
+</code></pre>
+
+<p><small>&dagger; Edited thanks to <a href="http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/#comment-17291">feedback</a> from zcorpan</small></p>
+
+<p>When working with storage events, a couple of things to also watch out for &#8211; this is on purpose of course, but still just about qualify for gotcha status:</p>
+
+<ol>
+<li>The event only fires on the <em>other</em> windows &#8211; it won&#8217;t fire on the window that did the storing.</li>
+<li>The event won&#8217;t fire if the data doesn&#8217;t change, i.e. if you store .name = &#8216;Remy&#8217; and set it to &#8216;Remy&#8217; again it won&#8217;t fire the storage event (obviously, since nothing was stored).</li>
+</ol>
+
+<h2>and finally&#8230;</h2>
+
+<p>If you want to use web storage in browsers like IE6 and IE7 (or rather than <em>want</em>: <em>need</em> to in your particular case) &#8211; then there&#8217;s no shortage of polyfills for Web Storage. However be wary that you&#8217;ll need to stick to the regular <code>setItem</code> syntax rather than being able to use the sexy setter/getter syntax &#8211; and I&#8217;ve yet to see a polyfill that supports the storage events.</p>
+
+<p>Maybe that isn&#8217;t a problem for you though &#8211; maybe the sheer simplicity and spiffingness of Web Storage is enough to just support IE8 and above with this enhanced client storage model.</p>
+                        
+            </div>
+            <!-- end .entry -->
+            
+            <aside>
+                <ul class="semantic-list">
+                    <li class="category">
+                        <h3>Category</h3>
+                        <ul class="semantic-list"><li><a href="http://html5doctor.com/category/javascript-apis/" title="View all posts in JavaScript APIs" rel="category tag">JavaScript APIs</a></li></ul>
+
+                    </li>
+                    <li class="tags">
+                        <ul class="semantic-list"><li><h3>Tags</h3></li><li><a href="http://html5doctor.com/tag/api/" rel="tag">api</a></li><li><a href="http://html5doctor.com/tag/html-5/" rel="tag">HTML 5</a></li><li><a href="http://html5doctor.com/tag/html5/" rel="tag">html5</a></li><li><a href="http://html5doctor.com/tag/javascript/" rel="tag">javascript</a></li><li><a href="http://html5doctor.com/tag/storage/" rel="tag">storage</a></li></ul>                    </li>
+                </ul>
+
+		 
+            </aside>
+            <!-- end aside -->
+            
+            <aside id="author-bio">
+                <h4><a href="http://html5doctor.com/author/remys/" title="Posts by Remy Sharp" rel="author">Remy Sharp</a></h4>
+                <div class="author-blurb author">
+                    <p class="vcard">This article was written by <span class="fn"><a href="http://html5doctor.com/author/remys/" title="Posts by Remy Sharp" rel="author">Remy Sharp</a></span>. Remy (<a href="http://twitter.com/rem">@rem</a> on Twitter) is the founder of <a href="http://jqueryfordesigners.com">jQuery for Designers</a> and the <a href="http://full-frontal.org">Full Frontal JavaScript conference</a>, otherwise he's a developer and blogger.
+
+Generally speaking, he's about as crazy about JavaScript, HTML &amp; CSS as a squirrel is about his nuts during the winter.</p>
+                    <img alt='' src='http://0.gravatar.com/avatar/c67399ae31afdbeb26e2ba24e4a31a8c?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />                </div>
+            </aside>
+            <!-- end #author-bio -->
+            
+            
+            <section id="comments">
+                
+<!-- You can start editing here. -->
+
+	<h3>24 Responses on the article “Storing Data the Simple HTML5 Way (and a few tricks you might not have known)”</h3>
+
+		<article class="comment even thread-even depth-1" id="comment-17291">
+						<div class="comment-meta">
+		zcorpan says<img alt='' src='http://1.gravatar.com/avatar/9767673d472c2f27307890c27061bca3?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 3:22 pm <a class="permalink" href="#comment-17291">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>&gt; The main gotcha with Web Storage is that although the specification says that any object type can be stored,</p>
+<p>The spec changed.</p>
+<p>Also, maybe you should mention that Web storage suffers from being racy if the browser uses different processes for different tabs. Which is the reason some browser developers don&#8217;t want anyone to ever use Web Storage. (Cookies suffer from this problem as well, though.)</p>
+		</div>
+				</article>
+		<article class="comment byuser comment-author-remys bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-17292">
+						<div class="comment-meta">
+		<a href='http://remysharp.com/' rel='external nofollow' class='url'>Remy Sharp</a> says<img alt='' src='http://0.gravatar.com/avatar/c67399ae31afdbeb26e2ba24e4a31a8c?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 3:28 pm <a class="permalink" href="#comment-17292">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>@zcorpan &#8211; shame, the browsers should have changed, but I guess we go with what we&#8217;ve got, right?</p>
+<p>Re: &#8220;racy&#8221; &#8211; can you elaborate a little, I don&#8217;t think I follow &#8211; but maybe because I can&#8217;t think of an example of what you mean perhaps.</p>
+<p>Cheers!</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-17295">
+						<div class="comment-meta">
+		<a href='https://twitter.com/#!/KamilTrebunia' rel='external nofollow' class='url'>Kamil Trebunia</a> says<img alt='' src='http://0.gravatar.com/avatar/6aa19478b3027b467f1a819ead33dbe5?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 3:47 pm <a class="permalink" href="#comment-17295">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>I believe that by &#8220;racy&#8221; zcorpan meant &#8220;susceptible to race condition&#8221;.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-17296">
+						<div class="comment-meta">
+		<a href='http://xanthir.com' rel='external nofollow' class='url'>Tab Atkins Jr.</a> says<img alt='' src='http://1.gravatar.com/avatar/37881c0540fb86ebfa6c855e61021527?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 3:56 pm <a class="permalink" href="#comment-17296">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>By &#8220;racy&#8221;, he&#8217;s referring to race conditions, where different things can occur based on the order that supposedly-independent things ran in.</p>
+<p>For example, say you were storing a counter in localStorage, and wanted to increment it.  You might do something simple like this:</p>
+<p>localStorage.foo = localStorage.foo+1;</p>
+<p>In between the time you retrieved the value and stored the modified value, another tab running in a different process might have stored a *different value* there, which you would overwrite.  That means lost increments on your counter!</p>
+<p>Of course, the time window in this example is miniscule, but more realistic examples are easy to imagine where you pull out a bit of data, do some expensive computation that takes a couple cycles, then store it back.  There&#8217;s a greater possibility for problems there.</p>
+<p>Of course, the exact same problem exists with cookies, which doesn&#8217;t seem to have bothered people much, so this probably isn&#8217;t a big deal in practice.  Every once in a while you might have data corruption, is all.</p>
+<p>Other techs like IndexedDB solve this problem by implementing proper transactions and write-locks and such, but they&#8217;re not nearly as simple as localStorage.</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-17297">
+						<div class="comment-meta">
+		<a href='http://adactio.com/' rel='external nofollow' class='url'>Jeremy Keith</a> says<img alt='' src='http://1.gravatar.com/avatar/5ad82c5ba0264363974af89deb743c20?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 4:01 pm <a class="permalink" href="#comment-17297">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>It strikes me that this is the perfect solution to that &#8220;God damn it! I just lost everything I was typing into a textarea!&#8221; problem. It would be a nice enhancement for the browsers that support Web Storage (storing the contents of the textarea periodically) and for browsers that don&#8217;t &#8230;well, that&#8217;s the current situation for typing things into textareas on the web anyway.</p>
+<p>Someone&#8217;s probably made a WordPress extension already, right?</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-17299">
+						<div class="comment-meta">
+		<a href='http://titaniumappdeveloper.com' rel='external nofollow' class='url'>Conor Clafferty</a> says<img alt='' src='http://1.gravatar.com/avatar/1a7a6dbfef8a9e2f3555bce44508b3c0?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 4:09 pm <a class="permalink" href="#comment-17299">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>// Resubmitted to show code blocks</p>
+<p>This race condition isn’t a problem, see sixrevisions article:<br />
+<a href="http://sixrevisions.com/html/introduction-web-storage/" rel="nofollow">http://sixrevisions.com/html/introduction-web-storage/</a><br />
+under the heading “Web Storage Events”</p>
+<p>By racy he means that it will cause a race condition. The concern is as browsers now implement multithreading, threads can cause problems when saving data. Here’s a good example</p>
+<pre><code>var myarray = [a,b];
+var first = myarray.splice(0,1);
+localStorage.first = first;</code></pre>
+<p>You would expect the following:</p>
+<pre><code>localStorage.first == a; //true</code></pre>
+<p>When a race condition occurs we could find that this happens</p>
+<pre><code>localStorage.first == b; //true</code></pre>
+<p>As one thread splices myarray and is de-scheduled, another thread runs the same code segment and effectively reads myarray as only having 1 element, b, and as such assigns it to first.</p>
+		</div>
+				</article>
+		<article class="comment byuser comment-author-remys bypostauthor even thread-even depth-1" id="comment-17300">
+						<div class="comment-meta">
+		<a href='http://remysharp.com/' rel='external nofollow' class='url'>Remy Sharp</a> says<img alt='' src='http://0.gravatar.com/avatar/c67399ae31afdbeb26e2ba24e4a31a8c?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 4:24 pm <a class="permalink" href="#comment-17300">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Sorry chaps &#8211; I should have clarified, I know zcorpan was referring to a race condition &#8211; I just couldn&#8217;t see where.</p>
+<p>Thank you @tabatkins and @Connor for giving us a few examples.</p>
+<p>I think the key is what Tab said:</p>
+<blockquote><p>Other techs like IndexedDB solve this problem by implementing proper transactions and write-locks and such, but they’re not nearly as simple as localStorage.</p></blockquote>
+<p>If race conditions are a problem (or you think they&#8217;re going to be a problem), you need a more advanced storage mechanism than web storage.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-17301">
+						<div class="comment-meta">
+		<a href='http://www.onderhond.com/' rel='external nofollow' class='url'>Niels Matthijs</a> says<img alt='' src='http://1.gravatar.com/avatar/37372c3acc31affca29886c1a9cbc13b?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 4:50 pm <a class="permalink" href="#comment-17301">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Any info on how all of this (possibly) degrades and whether people can choose to disallow a site from using local storage?</p>
+		</div>
+				</article>
+		<article class="comment byuser comment-author-remys bypostauthor even thread-even depth-1" id="comment-17302">
+						<div class="comment-meta">
+		<a href='http://remysharp.com/' rel='external nofollow' class='url'>Remy Sharp</a> says<img alt='' src='http://0.gravatar.com/avatar/c67399ae31afdbeb26e2ba24e4a31a8c?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 4:55 pm <a class="permalink" href="#comment-17302">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>@Neils &#8211; for degrading, get yourself a polyfill &#8211; web storage polyfills are pretty well established now and work just fine in old browsers like <em>Netscape 1 point who uses this</em> (link at the start of the article).</p>
+<p>As for disallowing &#8211; you can prevent cookies, but I&#8217;ve personally not found a way to prevent localStorage (I&#8217;m sure there is, but browsers bury it pretty deep nowadays).  That said, if you&#8217;re supporting Firefox 3.6, and the user has disabled cookies, web storage won&#8217;t work either &#8211; I can&#8217;t say the whether the functionality  is the same in FF6 or not.  If that&#8217;s the case, you need to detect for cookies and proceed from there.  That&#8217;s what I do in JS Bin: <a href="https://github.com/remy/jsbin/blob/master/js/chrome/storage.js" rel="nofollow">https://github.com/remy/jsbin/blob/master/js/chrome/storage.js</a> &#8211; note that sessionStorage, the variable in JS Bin&#8217;s code is <em>locally scoped</em> and not the native implementation until around line 23.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-17303">
+						<div class="comment-meta">
+		<a href='http://paulirish.com' rel='external nofollow' class='url'>Paul Irish</a> says<img alt='' src='http://0.gravatar.com/avatar/6cfbd373bb1dd5f26c066c1fc7e68288?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 5:32 pm <a class="permalink" href="#comment-17303">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>@Jeremy,  Disqus actually already saves your draft comments in localStorage, which I agree is super handy. I know Chrome will restore all form field data it can (i think only if those elements are in the original markup). </p>
+<p>But yeah localStorage works great for forms; some sites cache your email/username and populate the login form with it each time to save you a few keystrokes.</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-17304">
+						<div class="comment-meta">
+		<a href='http://rodneyrehm.de' rel='external nofollow' class='url'>Rodney Rehm</a> says<img alt='' src='http://1.gravatar.com/avatar/1fe89044eef1cf027c146e8d7969d8ee?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 5:44 pm <a class="permalink" href="#comment-17304">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Hey @rem,</p>
+<p>nice article, didn&#8217;t know the storage event. It might even be used to allow communication between otherwise unlinked browser windows / tabs. So instead of using a SharedWorker (Chrome only, atm.) to broker events, you could work something out with these events. nice.</p>
+<p>Regarding your »…and I’ve yet to see a polyfill that supports the storage events.« have a look at <a href="http://medialize.github.com/jQuery-browserEvent/" rel="nofollow">http://medialize.github.com/jQuery-browserEvent/</a> (gloryfied proof of concept) &#8211; where I tried to enable cross window communication down to IE6. One might take this approach to enable the events. A bit chicken/eggy, though.</p>
+<p>Cheers,<br />
+Rod</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-17306">
+						<div class="comment-meta">
+		<a href='http://twitter.com/CrabDude' rel='external nofollow' class='url'>Adam Crabtree</a> says<img alt='' src='http://1.gravatar.com/avatar/dacce60c70e3e5f5269458532d3bc865?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 6:31 pm <a class="permalink" href="#comment-17306">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>I&#8217;d add that the localStorage setter (localStorage.item = &#8216;someValue&#8217;) is up to 2x faster than setItem:</p>
+<p><a href="http://jsperf.com/localstorage-getitem-setitem-vs-getter-setter" rel="nofollow">http://jsperf.com/localstorage-getitem-setitem-vs-getter-setter</a></p>
+<p>Also, a small gotcha some may face is:</p>
+<p>typeof localStorage.undefinedItem === &#8220;undefined&#8221;<br />
+localStorage.getItem(&#8216;undefinedItem&#8217;) === null</p>
+<p>Additionally, since WebKit&#8217;s localStorage stores strings encoded as UTF-16, it only holds 2.5MB worth of UTF-8 encoded strings, compared to the 5MB of other non-WebKit browsers.</p>
+<p><a href="http://code.google.com/p/chromium/issues/detail?id=58985#hc15" rel="nofollow">http://code.google.com/p/chromium/issues/detail?id=58985#hc15</a><br />
+<a href="http://stackoverflow.com/questions/2747285/html5-localstorage-restrictions-and-limits" rel="nofollow">http://stackoverflow.com/questions/2747285/html5-localstorage-restrictions-and-limits</a><br />
+<a href="http://jsfiddle.net/brucealdridge/j6KdJ/" rel="nofollow">http://jsfiddle.net/brucealdridge/j6KdJ/</a></p>
+<p>Check for the &#8220;QUOTA_EXCEEDED_ERR&#8221; exception in this case:</p>
+<p><a href="http://dev.w3.org/html5/webstorage/#the-storage-interface" rel="nofollow">http://dev.w3.org/html5/webstorage/#the-storage-interface</a></p>
+<p>Additionally, as stated in the chromium issue above&#8217;s comments, localStorage performance degrades as size increases and is considered slower than IndexedDB, though with the benefit of a FAR SIMPLER API and broader browser support (IE8, FF3.5, S4, Chr4, O10.5).</p>
+<p><a href="https://developer.mozilla.org/en/dom/storage#Browser_Compatibility" rel="nofollow">https://developer.mozilla.org/en/dom/storage#Browser_Compatibility</a></p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-17308">
+						<div class="comment-meta">
+		zcorpan says<img alt='' src='http://1.gravatar.com/avatar/9767673d472c2f27307890c27061bca3?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 23, 2011 at 10:09 pm <a class="permalink" href="#comment-17308">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>&gt; So instead of using a SharedWorker (Chrome only, atm.)</p>
+<p>Opera supports shared workers too. :-)</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-17311">
+						<div class="comment-meta">
+		<a href='https://projectit.com' rel='external nofollow' class='url'>Patrick Thompson</a> says<img alt='' src='http://1.gravatar.com/avatar/1d7e5162e3960cb220bf87cefbaf3f8a?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 24, 2011 at 1:30 am <a class="permalink" href="#comment-17311">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Is this really a simpler way to achieve what Kissmetrics was discovered doing using an indirect cookies mechanism, see <a href="http://online.wsj.com/article/SB20001424053111903480904576508382675931492.html" rel="nofollow">Latest in Web Tracking: Stealthy &#8216;Supercookies&#8217;</a>?</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-17319">
+						<div class="comment-meta">
+		<a href='http://www.sarfraznawaz.wordpress.com' rel='external nofollow' class='url'>Sarfraz Ahmed</a> says<img alt='' src='http://1.gravatar.com/avatar/3b4af6fbcb37d41021119636bc1a2e12?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 24, 2011 at 11:17 am <a class="permalink" href="#comment-17319">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Hey Remy nice post.</p>
+<p>I think you can store object, numbers, xml notes in the localStorage and also be able to support IE6+ with great piece of javascript code, jStorage:</p>
+<p> <a href="http://www.jstorage.info" rel="nofollow">http://www.jstorage.info</a></p>
+<p>I liked the idea of localStroage and came up with this useful too, HTML5Sticky:</p>
+<p><a href="http://sarfraznawaz2005.kodingen.com/html5sticky/" rel="nofollow">http://sarfraznawaz2005.kodingen.com/html5sticky/</a></p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-17323">
+						<div class="comment-meta">
+		<a href='http://stevesouders.com/' rel='external nofollow' class='url'>Steve Souders</a> says<img alt='' src='http://0.gravatar.com/avatar/e737655e74af388f97a983d4b57d5155?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 24, 2011 at 7:45 pm <a class="permalink" href="#comment-17323">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Not knowing available size is a gotcha. For example, Jeremy Keith suggests using localStorage as a backup for textArea content. If storing all the content generates a QUOTA_EXCEEDED_ERR exception, then I&#8217;d prefer to store as much content as possible. But since there&#8217;s no API to determine what&#8217;s available I have to use trial and error with various sizes.</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-17329">
+						<div class="comment-meta">
+		<a href='http://everlong.org/' rel='external nofollow' class='url'>JulienW</a> says<img alt='' src='http://0.gravatar.com/avatar/a2b625f331361a7110da59a907d79e95?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 25, 2011 at 9:12 am <a class="permalink" href="#comment-17329">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>During testing, I found some behaviour is not consistent accross browsers when using  sessionStorage and opening a link in a new tab.</p>
+<p>- Chrome and Firefox copy sessionStorage content in the new page, but don&#8217;t share it<br />
+- Safari doesn&#8217;t copy it at all<br />
+- Opera copies and shares (ie if you modify it in one page, it will reflect in the other).</p>
+<p>(note: this is the behaviour at the end of 2010, I didn&#8217;t test since then).</p>
+<p>As I understand the specification, the good behaviour is the one from Chrome and Firefox.</p>
+<p>Other gotchas :<br />
+- localStorage is shared using the &#8220;origin&#8221;, ie scheme + host + port. It means any page on the same origin will have access to the same localStorage<br />
+- on the other hand, if your website/application use different subdomains and/or scheme (think http and https), then you won&#8217;t have access to the same data.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-17388">
+						<div class="comment-meta">
+		<a href='http://www.bizzylabs.com' rel='external nofollow' class='url'>bizzyLabs</a> says<img alt='' src='http://0.gravatar.com/avatar/66d4a66764e5d24de66787af86cbe472?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>August 28, 2011 at 7:36 pm <a class="permalink" href="#comment-17388">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Very nice article and I haven&#8217;t implemented this yet so I may be wrong by asking the following question but how secure is Local Storage? If by chance I save lets say an unencrypted username in local storage by using something like.</p>
+<p><code>localStorage.username = 'bizzy';</code></p>
+<p>Lets say I run that code on my own website and then the visitor goes to another website and they use the same localStorage.username value to try and retrieve username, is the other website able to retrieve it?</p>
+<p>As you said you need to supply a URL so there is no cross-connection behaviour like this but maybe the other website owner is clever and uses the referrer URL and maybe that URL was the one that stored the data.</p>
+<p>Basically could I access a stored value on my website using a URL and value that was stored on another website?</p>
+<p>I know you could just as easily encrypt all your data before putting it in localStorage to avoid any possible malicious activity from another webmaster but I like to think about all these little possible security quirks from time to time.</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-17442">
+						<div class="comment-meta">
+		justgrumpy says<img alt='' src='http://0.gravatar.com/avatar/cab6438ef18b0bef5e23684ba0bb84ba?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>September 1, 2011 at 5:12 am <a class="permalink" href="#comment-17442">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>I have found that the following does not actually work with IE8:</p>
+<p>    window.attachEvent(&#8216;onstorage&#8217;, storageEvent);</p>
+<p>It instead needs to be:</p>
+<p>    document.attachEvent(&#8216;onstorage&#8217;, storageEvent);</p>
+<p>Also, the properties, key, storageArea, oldValue, and newValue are all undefined with IE8. Only the url property gets a value.</p>
+<p>So, the onstorage event can be fired with IE8, but the event does not contain any useful information about what has changed.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-17476">
+						<div class="comment-meta">
+		<a href='http://xujianye.com' rel='external nofollow' class='url'>Prince Xu</a> says<img alt='' src='http://0.gravatar.com/avatar/69f7b42c21dab90464c455ae85de9af7?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>September 5, 2011 at 2:54 am <a class="permalink" href="#comment-17476">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Great article~and impressive examples<br />
+I wonder if I can translate it into Chinese and share it with my friends?~</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-17689">
+						<div class="comment-meta">
+		<a href='http://www.monclerdaunenjackenshop.net' rel='external nofollow' class='url'>Alin</a> says<img alt='' src='http://0.gravatar.com/avatar/eb67e83dc3b6a7ee8b5a83602bc70b9d?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>September 21, 2011 at 4:04 am <a class="permalink" href="#comment-17689">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Im Jahr 1957, um zu verhindern, Abfüllung Mangelware und steigende Arbeitsproduktivität, hat <a href="http://www.monclerdaunenjackenshop.net" rel="nofollow">moncler</a> mehr Rohstoffe zog nach Grenoble. Moncler 1964 Terray von den Sponsoren eingerichtet Niederlassungen in Alaska.</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-17928">
+						<div class="comment-meta">
+		Taku Ito says<img alt='' src='http://1.gravatar.com/avatar/569c3b7696af8deb380bc82c03c3e782?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>October 6, 2011 at 5:15 am <a class="permalink" href="#comment-17928">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Hi Remy.  I want to know one thing about accessing storage property.</p>
+<p>I&#8217;ve found out that when you checking property which is undefined key in storage,<br />
+you get different result between by-using &#8220;.getItem()&#8221; and by-accessing getter.<br />
+Also, some browser returns different results from other.</p>
+<p>&#8212;-<br />
+e.g.<br />
+(expecting value sessionStorage.undefined_session_property has never been set in previous activity.)</p>
+<p>source:<br />
+<code><br />
+console.log("SessionStorage.getItem('undefined_property'): ",sessionStorage.getItem('undefined_session_property'));<br />
+console.log("SessionStorage.undefined_property: ",sessionStorage.undefined_session_property);<br />
+</code></p>
+<p>result for Google(14), Safari(5.1), Opera(11.51) &amp; IE8,9<br />
+<code><br />
+SessionStorage.getItem('undefined_property'):  null<br />
+SessionStorage.undefined_property:  undefined<br />
+</code></p>
+<p>result for FireFox (7.0.1)<br />
+<code><br />
+SessionStorage.getItem('undefined_property'): null<br />
+SessionStorage.undefined_property: null<br />
+</code></p>
+<p>&#8212;-<br />
+I got same result with LocalStorage too.</p>
+<p>Is this one of those unexpected-specification thing that developers have to deal with?</p>
+		</div>
+				</article>
+		<article class="comment even thread-even depth-1" id="comment-18064">
+						<div class="comment-meta">
+		Rod L says<img alt='' src='http://1.gravatar.com/avatar/bf274c9312e64f4931dc69db868b6c39?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>October 14, 2011 at 8:53 pm <a class="permalink" href="#comment-18064">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>The above describes &#8220;local&#8221; Web Storage as persistent. Is local data  cleared by clearing the browser cache?</p>
+		</div>
+				</article>
+		<article class="comment odd alt thread-odd thread-alt depth-1" id="comment-18113">
+						<div class="comment-meta">
+		gauss says<img alt='' src='http://0.gravatar.com/avatar/624d5f7caced78486e491038a9d37880?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />        	<time datetime="2011-08-23T15:00:36+00:00" pubdate>October 18, 2011 at 10:41 am <a class="permalink" href="#comment-18113">#</a></time>
+        </div>
+
+		<div class="comment-body">
+						<p>Very nice article.</p>
+<p>Tky</p>
+		</div>
+				</article>
+
+ 
+
+
+<div id="form">
+
+<h3>Join the discussion.</h3>
+
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/#respond" style="display:none;">Click here to cancel reply.</a></small>
+</div>
+
+
+<form action="http://html5doctor.com/wp-comments-post.php" method="post" id="commentform">
+
+
+<p>
+<label for="author">Name (required)</label><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true" required />
+</p>
+
+<p>
+<label for="email">Mail (will not be published) (required)</label><input type="email" name="email" id="email" value="" size="22" tabindex="2" aria-required="true" required />
+</p>
+
+<p>
+<label for="url">Website</label><input type="url" name="url" id="url" value="" size="22" tabindex="3" />
+</p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+<div id="form-code">
+    <h4>Some HTML is ok</h4>
+    <p>You can use these tags:<br><code><span class="tag">&lt;a </span><span class="atn">href</span><span class="tag">=</span><span class="atv">""</span><span class="tag"> </span><span class="atn">title</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;abbr </span><span class="atn">title</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;b&gt;</span></code><br> <code><span class="tag">&lt;blockquote </span><span class="atn">cite</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;cite&gt;</span></code><br> <code><span class="tag">&lt;del </span><span class="atn">datetime</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;em&gt;</span></code><br> <code><span class="tag">&lt;i&gt;</span></code><br> <code><span class="tag">&lt;q </span><span class="atn">cite</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;strong&gt;</span></code></p><p>You can also use <code><span class="tag">&lt;code&gt;</span></code>, and <strong>remember to use <code><span class="pun">&amp;</span><span class="pln">lt</span><span class="pun">;</span></code> and <code><span class="pun">&amp;</span><span class="pln">gt</span><span class="pun">;</span></code> for brackets</strong>.</p>
+</div>
+<p><label class="screenreader" for="comment">Enter comment</label>
+<textarea aria-required="true" required name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input type='hidden' name='comment_post_ID' value='3600' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="c0a62fc1b6" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+
+</form>
+
+</div>
+
+            </section>
+                <!-- end #comments -->
+                
+        </article>
+        <!-- end .post -->
+    </div>
+    <!-- end .main -->	
+                    
+ 	     <aside class="secondary">
+            
+        <section class="mod ads">
+            <h3>Element Index</h3>
+            <a href="/element-index/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/element-index.png" width="260" height="158" alt="View the HTML5 Element Index" /></a>
+            <p class="btn"><a href="/element-index/">HTML5 Element Index</a></p>
+        </section>
+        <!-- end nav -->
+            
+		            <aside class="mod ads group">
+                <h3>Sponsors</h3>
+                <div id="bsap_1242929" class="bsarocks bsap_ab161e2bf71edb940eeca26a4739f522"></div>
+            </aside>        
+		            <section class="ads mod">
+                <h3><a href="/ask-the-doctor/">Ask the HTML5 Doctor</a></h3>
+                <a href="/ask-the-doctor/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/ask-the-doctor.png" alt="Ask the HTML5 Doctor" /></a>
+                <p class="btn"><a href="/ask-the-doctor/">Ask the HTML5 Doctor</a></p>
+            </section>
+            <!-- end nav -->
+        
+        <nav class="ui-tabs mod">
+          <h3>More HTML5 Doctor</h3>
+          <ul class="ui-tabs-nav group">
+            <li class="ui-tabs-selected"><a href="#articles">Articles</a></li>
+            <li class="ui-tab"><a href="#categories">Categories</a></li>
+            <li class="ui-tab"><a href="#authors">Authors</a></li>
+          </ul>
+          
+          <div class="tab" id="articles">
+              <ul>
+			<li><a href='http://html5doctor.com/css3-pseudo-classes-and-html5-forms/' title='CSS3 Pseudo-Classes and HTML5 Forms'>CSS3 Pseudo-Classes and HTML5 Forms</a></li>
+	<li><a href='http://html5doctor.com/ol-element-attributes/' title='The ol Element and Related Attributes: type, start, value, and reversed'>The ol Element and Related Attributes: type, start, value, and reversed</a></li>
+	<li><a href='http://html5doctor.com/html5-doctor-drop-in-clinic/' title='HTML5 Doctor Drop-In Clinic'>HTML5 Doctor Drop-In Clinic</a></li>
+	<li><a href='http://html5doctor.com/getusermedia/' title='It&#8217;s Curtains for Marital Strife Thanks to getUserMedia'>It&#8217;s Curtains for Marital Strife Thanks to getUserMedia</a></li>
+	<li><a href='http://html5doctor.com/server-sent-events/' title='Server-Sent Events'>Server-Sent Events</a></li>
+              </ul>
+              <p class="btn"><a href="/article-archive/">View article archive</a></p>
+          </div>
+
+
+          <div class="tab" id="categories">
+                <ul>
+                    	<li class="cat-item cat-item-6"><a href="http://html5doctor.com/category/accessibility/" title="View all posts filed under Accessibility">Accessibility</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://html5doctor.com/category/attributes/" title="View all posts filed under Attributes">Attributes</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="http://html5doctor.com/category/boilerplates/" title="View all posts filed under Boilerplates">Boilerplates</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://html5doctor.com/category/browser-compatibility/" title="View all posts filed under Browser Compatibility">Browser Compatibility</a>
+</li>
+	<li class="cat-item cat-item-69"><a href="http://html5doctor.com/category/comment/" title="View all posts filed under Comment">Comment</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="http://html5doctor.com/category/css/" title="View all posts filed under CSS">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://html5doctor.com/category/elements/" title="View all posts filed under Elements">Elements</a>
+</li>
+	<li class="cat-item cat-item-103"><a href="http://html5doctor.com/category/events/" title="View all posts filed under Events">Events</a>
+</li>
+	<li class="cat-item cat-item-108"><a href="http://html5doctor.com/category/forms/" title="View all posts filed under forms">forms</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://html5doctor.com/category/javascript-apis/" title="View all posts filed under JavaScript APIs">JavaScript APIs</a>
+</li>
+	<li class="cat-item cat-item-51"><a href="http://html5doctor.com/category/marketing/" title="View all posts filed under Marketing">Marketing</a>
+</li>
+	<li class="cat-item cat-item-132"><a href="http://html5doctor.com/category/misc/" title="View all posts filed under Misc">Misc</a>
+</li>
+	<li class="cat-item cat-item-128"><a href="http://html5doctor.com/category/multimedia/" title="View all posts filed under multimedia">multimedia</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://html5doctor.com/category/questions/" title="View all posts filed under Questions">Questions</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://html5doctor.com/category/quick-tips/" title="View all posts filed under Quick Tips">Quick Tips</a>
+</li>
+	<li class="cat-item cat-item-135"><a href="http://html5doctor.com/category/reviews/" title="View all posts filed under Reviews">Reviews</a>
+</li>
+	<li class="cat-item cat-item-145"><a href="http://html5doctor.com/category/simplequiz/" title="View all posts filed under Simplequiz">Simplequiz</a>
+</li>
+	<li class="cat-item cat-item-68"><a href="http://html5doctor.com/category/specification-changes/" title="View all posts filed under Specification Changes">Specification Changes</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://html5doctor.com/category/structure/" title="View all posts filed under Structure">Structure</a>
+</li>
+	<li class="cat-item cat-item-38"><a href="http://html5doctor.com/category/validation/" title="View all posts filed under Validation">Validation</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://html5doctor.com/category/wai-aria/" title="View all posts filed under WAI-ARIA">WAI-ARIA</a>
+</li>
+ 
+                </ul>
+          </div>
+          <div class="tab" id="authors">
+                <ul>
+                    <li><a href="http://html5doctor.com/author/brucel/" title="Posts by Bruce Lawson">Bruce Lawson</a></li><li><a href="http://html5doctor.com/author/cennyddb/" title="Posts by Cennydd Bowles">Cennydd Bowles</a></li><li><a href="http://html5doctor.com/author/chrisb/" title="Posts by Chris Bewick">Chris Bewick</a></li><li><a href="http://html5doctor.com/author/iand/" title="Posts by Ian Devlin">Ian Devlin</a></li><li><a href="http://html5doctor.com/author/jacko/" title="Posts by Jack Osborne">Jack Osborne</a></li><li><a href="http://html5doctor.com/author/markb/" title="Posts by Mark Boas">Mark Boas</a></li><li><a href="http://html5doctor.com/author/miker/" title="Posts by Mike Robinson">Mike Robinson</a></li><li><a href="http://html5doctor.com/author/olib/" title="Posts by Oli Studholme">Oli Studholme</a></li><li><a href="http://html5doctor.com/author/peterg/" title="Posts by Peter Gasston">Peter Gasston</a></li><li><a href="http://html5doctor.com/author/remys/" title="Posts by Remy Sharp">Remy Sharp</a></li><li><a href="http://html5doctor.com/author/richc/" title="Posts by Richard Clark">Richard Clark</a></li><li><a href="http://html5doctor.com/author/taba/" title="Posts by Tab Atkins Jnr">Tab Atkins Jnr</a></li><li><a href="http://html5doctor.com/author/toml/" title="Posts by Tom Leadbetter">Tom Leadbetter</a></li>            	            	
+                </ul>
+          </div>
+        </nav>
+        <!-- end .mod -->
+   
+		        <section class="mod" id="hashtag">
+            <h3>What are you up to?</h3>
+            <article><p><a href="http://search.twitter.com/search?q=%23html5">http://search.twitter.com/search?q=%23html5</a></p></article>
+        </section>
+        
+        <section class="ads mod">
+          <h3>Submit your site to the Gallery</h3>
+          <a href="http://html5gallery.com/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/the-gallery.png" alt="HTML5 Gallery" /></a>
+          <p class="btn"><a href="http://html5gallery.com/">Visit the gallery</a></p>
+        </section>
+        <!-- end .mod --> 
+                       
+		        <div class="mod tweet">
+          <h3><a href="http://twitter.com/html5doctor"><span style="font-weight:normal;">@</span>html5doctor</a></h3>
+          <article><p> RT <a href="http://twitter.com/brucel" class="twitter-user">@brucel</a>: You might like HTML5 Nurse <a href="http://t.co/0HD9GV4C" class="twitter-link">http://t.co/0HD9GV4C</a> with some of the best misplaced medical questions we receive. All genuine. <a href="http://twitter.com/html5doctor/statuses/175332094459908097" class="twitter-link">#</a> <span class="twitter-timestamp"><abbr title="2012/03/01 21:30:03">2012/03/01</abbr></span></p></article>
+        </div>
+        <!-- end .mod -->
+
+    </aside>
+    <!-- end .secondary -->                   
+        <aside id="sub-footer" class="sub-footer group">
+        <div>
+            <div class="mod">
+                                <div id="crp_related"><h3>Related Posts:</h3><ul class="related"><li><a href="http://html5doctor.com/methods-of-communication/" rel="bookmark" class="crp_title">Methods of communication</a></li><li><a href="http://html5doctor.com/server-sent-events/" rel="bookmark" class="crp_title">Server-Sent Events</a></li><li><a href="http://html5doctor.com/how-to-get-all-the-browsers-playing-ball/" rel="bookmark" class="crp_title">How to get all the browsers playing ball</a></li><li><a href="http://html5doctor.com/history-api/" rel="bookmark" class="crp_title">Pushing and Popping with the History API</a></li><li><a href="http://html5doctor.com/native-drag-and-drop/" rel="bookmark" class="crp_title">Native Drag and Drop</a></li></ul></div>                        
+            </div><!-- end .mod -->
+            <div class="mod">
+                <h3>Recent Posts</h3>
+                <ul class="related">
+                                                        <li><a href="http://html5doctor.com/css3-pseudo-classes-and-html5-forms/">CSS3 Pseudo-Classes and HTML5 Forms</a></li>
+                                        <li><a href="http://html5doctor.com/ol-element-attributes/">The <code>ol</code> Element and Related Attributes: <code>type</code>, <code>start</code>, <code>value</code>, and <code>reversed</code></a></li>
+                                        <li><a href="http://html5doctor.com/html5-doctor-drop-in-clinic/">HTML5 Doctor Drop-In Clinic</a></li>
+                                        <li><a href="http://html5doctor.com/getusermedia/">It&#8217;s Curtains for Marital Strife Thanks to getUserMedia</a></li>
+                                        <li><a href="http://html5doctor.com/server-sent-events/">Server-Sent Events</a></li>
+                                                </ul>
+            </div><!-- end .mod -->
+        </div> 
+        <!-- end div -->
+        <div class="ads">
+            <div class="mod">
+                <h3>Recommended</h3>
+                <a href="http://introducinghtml5.com"><img src="http://html5doctor.com/wp-content/themes/html5doctor/img/introducing-html5-ad.jpg" alt="Introducing HTML5 Book by Bruce Lawson and Remy Sharp" /></a>
+                <p class="btn"><a href="http://introducinghtml5.com">Buy this book</a></p>
+            </div>
+        </div>
+        <!-- end .ads -->
+    </aside>
+    <!-- end #sub-footer -->
+	
+
+    
+</div>
+<!-- end #content -->
+
+<footer role="contentinfo">
+	<div class="inner">
+    	<img width="64" height="64" class="w3c-logo" alt="W3C HTML5 logo (not CSS3!)" src="http://html5doctor.com/wp-content/themes/html5doctor2/images/HTML5_Badge_64.png">
+		<p id="copyright">This site is licensed under a <a href="http://creativecommons.org/licenses/by-nc/2.0/uk/" rel="license">Creative Commons Attribution-Non-Commercial 2.0</a> share alike license. Feel free to change, reuse modify and extend it. Some authors will retain their copyright on certain articles.</p>
+        <p>Copyright &copy; 2012 HTML5 Doctor. All rights reserved. Hosted by <a href="http://www.mediatemple.net/go/order/?refdom=richclarkdesign.com">(mt) Media Temple</a>. Branding by <a href="http://olik.co.uk/">Oliver Ker</a>.</p>
+	</div>
+    <!-- end .inner -->
+</footer>
+<!-- end footer -->
+
+    <!-- BuySellAds.com Ad Code -->
+    <script>
+    (function(){
+      var bsa = document.createElement('script');
+         bsa.type = 'text/javascript';
+         bsa.async = true;
+         bsa.src = '//s3.buysellads.com/ac/bsa.js';
+      (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+    })();
+    </script>
+    <!-- END BuySellAds.com Ad Code -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<!-- TODO: move scripts in head to before /body —oli -->
+	   
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/searchhi.js"></script>    
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/prettify.js"></script>    
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/master.js"></script>    
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8916679-1']);
+  _gaq.push(['_setDomainName', 'html5doctor.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.765 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2012-03-03 18:45:56 -->
+<!-- super cache -->

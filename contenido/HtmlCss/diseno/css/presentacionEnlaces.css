@@ -1,0 +1,20 @@
+﻿#presentacionEnlaces a[href^='http'] {
+  color: black;
+}
+#presentacionEnlaces a[href$='.png'] {
+  color: red;
+}
+#presentacionEnlaces a[href$='.png']:before {
+  background: black;
+  border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+  color: white;
+  content: 'PNG';
+  font-family: sans-serif;
+  font-size: 11px;
+  padding: 2px;
+  margin-right: 5px;
+}

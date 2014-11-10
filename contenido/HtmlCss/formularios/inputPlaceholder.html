@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class=" history" lang="en" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#" slick-uniqueid="5">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html;">
+</head>
+<body class="single cacheable " data-twttr-rendered="true">
+	<div id="page">
+		<div id="contentHolder">
+			<section class="left"><!--CONTENT-->
+	
+	<article>
+		<h1>HTML5 Placeholder Styling with&nbsp;CSS</h1>
+
+<p>Last week I showed you how you could <a href="http://davidwalsh.name/css-selection">style selected text with CSS</a>. I've searched for more interesting CSS style properties and found another:  <code>INPUT</code> placeholder styling. Let me show you how to style placeholder text within <code>INPUT</code>elements with some unique CSS code.</p>
+
+<div class="actions"><a href="http://davidwalsh.name/demo/placeholder-style.php" class="demo">View Demo</a><div class="clear"></div></div>
+
+<h2>The CSS</h2>
+
+<p>Firefox employs a different pattern than Safari and Chrome. Each property name is self-explanatory though:</p>
+
+<pre class="css lit" style="display: none;">/* all */
+::-webkit-input-placeholder	{ color:#f00; }
+input:-moz-placeholder { color:#f00; }
+
+/* individual: webkit */
+#field2::-webkit-input-placeholder { color:#00f; }
+#field3::-webkit-input-placeholder { color:#090; background:lightgreen; text-transform:uppercase; }
+#field4::-webkit-input-placeholder { font-style:italic; text-decoration:overline; letter-spacing:3px; color:#999; }
+
+/* individual: mozilla */
+#field2::-moz-placeholder { color:#00f; }
+#field3::-moz-placeholder { color:#090; background:lightgreen; text-transform:uppercase; }
+#field4::-moz-placeholder { font-style:italic; text-decoration:overline; letter-spacing:3px; color:#999; }
+</pre><pre class="standardLighter gitLighter"><span class="co1">/* all */</span>
+<span class="se0">::-webkit-input-placeholder  </span>{ <span class="kw1">color</span>:<span class="kw3">#f00</span>; }
+<span class="se0">input:-moz-placeholder </span>{ <span class="kw1">color</span>:<span class="kw3">#f00</span>; }
+
+<span class="co1">/* individual: webkit */</span>
+<span class="se0">#field2::-webkit-input-placeholder </span>{ <span class="kw1">color</span>:<span class="kw3">#00f</span>; }
+<span class="se0">#field3::-webkit-input-placeholder </span>{ <span class="kw1">color</span>:<span class="kw3">#090</span>; <span class="kw1">background</span>:lightgreen; <span class="kw1">text-transform</span>:<span class="kw3">uppercase</span>; }
+<span class="se0">#field4::-webkit-input-placeholder </span>{ <span class="kw1">font-style</span>:<span class="kw3">italic</span>; <span class="kw1">text-decoration</span>:<span class="kw3">overline</span>; <span class="kw1">letter-spacing</span>:<span class="nu0">3px</span>; <span class="kw1">color</span>:<span class="kw3">#999</span>; }
+
+<span class="co1">/* individual: mozilla */</span>
+<span class="se0">#field2::-moz-placeholder </span>{ <span class="kw1">color</span>:<span class="kw3">#00f</span>; }
+<span class="se0">#field3::-moz-placeholder </span>{ <span class="kw1">color</span>:<span class="kw3">#090</span>; <span class="kw1">background</span>:lightgreen; <span class="kw1">text-transform</span>:<span class="kw3">uppercase</span>; }
+<span class="se0">#field4::-moz-placeholder </span>{ <span class="kw1">font-style</span>:<span class="kw3">italic</span>; <span class="kw1">text-decoration</span>:<span class="kw3">overline</span>; <span class="kw1">letter-spacing</span>:<span class="nu0">3px</span>; <span class="kw1">color</span>:<span class="kw3">#999</span>; }</pre><div class="prefixNotice" title="Safari &amp; Chrome: -webkit, Firefox -moz, Internet Explorer: -ms, Opera -o">Some CSS properties may need to be <a href="http://davidwalsh.name/vendor-prefixes">vendor-prefixed</a>.</div>
+
+<p>You will only want to employ the most basic of styles to the placeholder. Color, font-style, and font-variant are probably the styles you will want to employ. Go too far with your placeholder styling and you may create the animated GIF of input styles.  Note that Mozilla Firefox doesn't support placeholder styling until version 4.</p>
+
+<div class="actions"><a href="http://davidwalsh.name/demo/placeholder-style.php" class="demo">View Demo</a><div class="clear"></div></div>
+
+<p>Styling elements with the placeholder attribute is something you don't need to do but could be just another one of those small details that sets your website apart from other websites. Hopefully IE9 and Opera soon follow suit in allowing styling of placeholder text within INPUT elements...or expose their API for doing so!</p>	
+</article>
+
+</section>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,18 @@
+﻿.objetosEquidistantes {
+  border: 10px solid black;
+  height: 125px;
+  min-width: 600px;
+  text-align: justify;
+}
+.objetosEquidistantes div {
+  background: red;
+  display: inline-block;
+  height: 125px;
+  text-align: center;
+  width: 150px;
+}
+.objetosEquidistantes:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}

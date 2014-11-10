@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+</head>
+
+<body class="page page-id-16145 page-child parent-pageid-3222 page-template page-template-page-snippet-php user-0">
+
+  <div class="page-wrap">
+
+<div class="snippets-wrap">
+
+	<div class="grid group">
+
+		<section class="blog-posts grid-2-3">
+
+			<article class="module" id="post-16145">
+
+		    <h1>Prevent Long URL’s From Breaking Out of Container</h1>
+
+		    <p class="meta">
+					Last updated on:
+					<time datetime="2012-03-14">March 14, 2012</time>
+				</p>
+
+				<p>Or any long bit of text, really.</p>
+<p><img src="commentbreak.png" alt="" title="commentbreak" class="alignnone size-full wp-image-16146" height="172" width="856"></p>
+<pre class=" language-css" rel="CSS"><code class=" language-css"><span class="token selector">.comment-text </span><span class="token punctuation">{</span>
+   <span class="token property">word-wrap</span><span class="token punctuation">:</span> break-word<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p><img src="fixed.png" alt="" title="fixed" class="alignnone size-full wp-image-16147" height="205" width="829"></p>
+<p>A more robust browser support, you'll need more (<a href="http://blog.kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/">via</a>): </p>
+<pre class=" language-css" rel="CSS"><code class=" language-css"><span class="token property">-ms-word-break</span><span class="token punctuation">:</span> break-all<span class="token punctuation">;</span>
+     <span class="token property">word-break</span><span class="token punctuation">:</span> break-all<span class="token punctuation">;</span>
+
+     // Non standard for webkit
+     <span class="token property">word-break</span><span class="token punctuation">:</span> break-word<span class="token punctuation">;</span>
+
+<span class="token property">-webkit-hyphens</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+   <span class="token property">-moz-hyphens</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+        <span class="token property">hyphens</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span></code></pre>
+<p>The above works in Internet Explorer 8+, Firefox 6+, iOS 4.2, Safari 5.1+ and Chrome 13+.</p>
+
+        
+			</article>
+		</section>
+	</div>
+</div>
+  </div>
+
+
+</body></html>

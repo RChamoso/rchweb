@@ -1,0 +1,170 @@
+﻿.boton3D {
+  padding: 20px;
+  text-align: center;
+}
+.boton3D input {
+  cursor: pointer;
+  font-family: SemiBold;
+  font-size: 20px;
+  margin: 10px 20px;
+  padding: 4px 30px;
+  position: relative;
+  width: auto;
+}
+.Boton1 {
+  background: #999;
+  border: 1px solid #FFF;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 0px #909090, 0px 2px 0px #8c8c8c, 0px 3px 0px #888, 0px 4px 0px #848484,
+              0px 5px 0px #808080, 0px 6px 0px #7c7c7c, 0px 7px 0px #787878, 0px 8px 0px #747474,
+              0px 9px 0px #707070, 0px 10px 0px #FFF, 0px 11px 10px #000, inset 0px 0px 10px #000;
+    -o-box-shadow: 0px 1px 0px #909090, 0px 2px 0px #8c8c8c, 0px 3px 0px #888, 0px 4px 0px #848484,
+                   0px 5px 0px #808080, 0px 6px 0px #7c7c7c, 0px 7px 0px #787878, 0px 8px 0px #747474,
+                   0px 9px 0px #707070, 0px 10px 0px #FFF, 0px 11px 10px #000, inset 0px 0px 10px #000;
+    -ms-box-shadow: 0px 1px 0px #909090, 0px 2px 0px #8c8c8c, 0px 3px 0px #888, 0px 4px 0px #848484,
+                    0px 5px 0px #808080, 0px 6px 0px #7c7c7c, 0px 7px 0px #787878, 0px 8px 0px #747474,
+                    0px 9px 0px #707070, 0px 10px 0px #FFF, 0px 11px 10px #000, inset 0px 0px 10px #000;
+    -moz-box-shadow: 0px 1px 0px #909090, 0px 2px 0px #8c8c8c, 0px 3px 0px #888, 0px 4px 0px #848484,
+                     0px 5px 0px #808080, 0px 6px 0px #7c7c7c, 0px 7px 0px #787878, 0px 8px 0px #747474,
+                     0px 9px 0px #707070, 0px 10px 0px #FFF, 0px 11px 10px #000, inset 0px 0px 10px #000;
+    -webkit-box-shadow: 0px 1px 0px #909090, 0px 2px 0px #8c8c8c, 0px 3px 0px #888, 0px 4px 0px #848484,
+                        0px 5px 0px #808080, 0px 6px 0px #7c7c7c, 0px 7px 0px #787878, 0px 8px 0px #747474,
+                        0px 9px 0px #707070, 0px 10px 0px #FFF, 0px 11px 10px #000, inset 0px 0px 10px #000;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #000, -1px -1px 1px #666;
+}
+.Boton1:hover {
+  box-shadow: 0px 1px 0px #909090, 0px 2px 0px #8c8c8c, 0px 3px 0px #888, 0px 4px 0px #848484,
+              0px 5px 0px #808080, 0px 6px 0px #FFF, 0px 7px 10px #000, inset 0px 0px 10px #000;
+    -o-box-shadow: 0px 1px 0px #909090, 0px 2px 0px #8c8c8c, 0px 3px 0px #888, 0px 4px 0px #848484,
+                   0px 5px 0px #808080, 0px 6px 0px #FFF, 0px 7px 10px #000, inset 0px 0px 10px #000;
+    -ms-box-shadow: 0px 1px 0px #909090, 0px 2px 0px #8c8c8c, 0px 3px 0px #888, 0px 4px 0px #848484,
+                    0px 5px 0px #808080, 0px 6px 0px #FFF, 0px 7px 10px #000, inset 0px 0px 10px #000;
+    -moz-box-shadow: 0px 1px 0px #909090, 0px 2px 0px #8c8c8c, 0px 3px 0px #888, 0px 4px 0px #848484,
+                     0px 5px 0px #808080, 0px 6px 0px #FFF, 0px 7px 10px #000, inset 0px 0px 10px #000;
+    -webkit-box-shadow: 0px 1px 0px #909090, 0px 2px 0px #8c8c8c, 0px 3px 0px #888, 0px 4px 0px #848484,
+                        0px 5px 0px #808080, 0px 6px 0px #FFF, 0px 7px 10px #000, inset 0px 0px 10px #000;
+  top: 4px;
+}
+.Boton2 {
+  background: #a6fbf5;
+  border: 1px solid #28c2b8;
+  border-radius: 8px / 50%;		
+    -o-border-radius: 8px / 50%;
+    -ms-border-radius: 8px / 50%;
+    -moz-border-radius: 8px / 50%;
+    -webkit-border-radius: 8px / 50%;
+  box-shadow: 0px 1px 0px hsl(180,100%,40%), 0px 2px 0px hsl(180,100%,38%), 0px 3px 0px hsl(180,100%,37%), 0px 4px 0px hsl(180,100%,36%),
+              0px 5px 0px hsl(180,100%,35%), 0px 6px 0px hsl(180,100%,34%), 0px 7px 0px hsl(180,100%,33%), 0px 8px 0px hsl(180,100%,32%),
+              0px 9px 0px hsl(180,100%,31%), 0px 10px 0px hsl(180,100%,20%), 0px 11px 10px #000, inset 0px -5px 6px rgba(28,242,228,0.4);	
+    -o-box-shadow: 0px 1px 0px hsl(180,100%,40%), 0px 2px 0px hsl(180,100%,38%), 0px 3px 0px hsl(180,100%,37%), 0px 4px 0px hsl(180,100%,36%),
+                0px 5px 0px hsl(180,100%,35%), 0px 6px 0px hsl(180,100%,34%), 0px 7px 0px hsl(180,100%,33%), 0px 8px 0px hsl(180,100%,32%),
+                0px 9px 0px hsl(180,100%,31%), 0px 10px 0px hsl(180,100%,20%), 0px 11px 10px #000, inset 0px -5px 6px rgba(28,242,228,0.4);	
+    -ms-box-shadow: 0px 1px 0px hsl(180,100%,40%), 0px 2px 0px hsl(180,100%,38%), 0px 3px 0px hsl(180,100%,37%), 0px 4px 0px hsl(180,100%,36%),
+                0px 5px 0px hsl(180,100%,35%), 0px 6px 0px hsl(180,100%,34%), 0px 7px 0px hsl(180,100%,33%), 0px 8px 0px hsl(180,100%,32%),
+                0px 9px 0px hsl(180,100%,31%), 0px 10px 0px hsl(180,100%,20%), 0px 11px 10px #000, inset 0px -5px 6px rgba(28,242,228,0.4);	
+    -moz-box-shadow: 0px 1px 0px hsl(180,100%,40%), 0px 2px 0px hsl(180,100%,38%), 0px 3px 0px hsl(180,100%,37%), 0px 4px 0px hsl(180,100%,36%),
+                0px 5px 0px hsl(180,100%,35%), 0px 6px 0px hsl(180,100%,34%), 0px 7px 0px hsl(180,100%,33%), 0px 8px 0px hsl(180,100%,32%),
+                0px 9px 0px hsl(180,100%,31%), 0px 10px 0px hsl(180,100%,20%), 0px 11px 10px #000, inset 0px -5px 6px rgba(28,242,228,0.4);	
+    -webkit-box-shadow: 0px 1px 0px hsl(180,100%,40%), 0px 2px 0px hsl(180,100%,38%), 0px 3px 0px hsl(180,100%,37%), 0px 4px 0px hsl(180,100%,36%),
+                0px 5px 0px hsl(180,100%,35%), 0px 6px 0px hsl(180,100%,34%), 0px 7px 0px hsl(180,100%,33%), 0px 8px 0px hsl(180,100%,32%),
+                0px 9px 0px hsl(180,100%,31%), 0px 10px 0px hsl(180,100%,20%), 0px 11px 10px #000, inset 0px -5px 6px rgba(28,242,228,0.4);	
+  color: #04e5d6;
+  text-shadow: 1px 1px 0px #FFF, -1px -1px 0px #06b6aa;		
+}
+.Boton2:hover {	
+  box-shadow: 0px 1px 0px hsl(180,100%,40%), 0px 2px 0px hsl(180,100%,37%), 0px 3px 0px hsl(180,100%,35%), 0px 4px 0px hsl(180,100%,33%),
+              0px 5px 0px hsl(180,100%,31%), 0px 6px 0px hsl(180,100%,20%), 0px 7px 10px #000, inset 0px -5px 6px rgba(28,242,228,0.4);	
+    -o-box-shadow: 0px 1px 0px hsl(180,100%,40%), 0px 2px 0px hsl(180,100%,37%), 0px 3px 0px hsl(180,100%,35%), 0px 4px 0px hsl(180,100%,33%),
+                   0px 5px 0px hsl(180,100%,31%), 0px 6px 0px hsl(180,100%,20%), 0px 7px 10px #000, inset 0px -5px 6px rgba(28,242,228,0.4);	
+    -ms-box-shadow: 0px 1px 0px hsl(180,100%,40%), 0px 2px 0px hsl(180,100%,37%), 0px 3px 0px hsl(180,100%,35%), 0px 4px 0px hsl(180,100%,33%),
+                    0px 5px 0px hsl(180,100%,31%), 0px 6px 0px hsl(180,100%,20%), 0px 7px 10px #000, inset 0px -5px 6px rgba(28,242,228,0.4);	
+    -moz-box-shadow: 0px 1px 0px hsl(180,100%,40%), 0px 2px 0px hsl(180,100%,37%), 0px 3px 0px hsl(180,100%,35%), 0px 4px 0px hsl(180,100%,33%),
+                     0px 5px 0px hsl(180,100%,31%), 0px 6px 0px hsl(180,100%,20%), 0px 7px 10px #000, inset 0px -5px 6px rgba(28,242,228,0.4);	
+    -webkit-box-shadow: 0px 1px 0px hsl(180,100%,40%), 0px 2px 0px hsl(180,100%,37%), 0px 3px 0px hsl(180,100%,35%), 0px 4px 0px hsl(180,100%,33%),
+                        0px 5px 0px hsl(180,100%,31%), 0px 6px 0px hsl(180,100%,20%), 0px 7px 10px #000, inset 0px -5px 6px rgba(28,242,228,0.4);	
+  top: 4px;	
+}
+.Boton3 {
+  background: #ff7996;
+  border: 1px solid #cb072e;
+  border-radius: 24px;
+    -o-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -webkit-border-radius: 24px;
+  box-shadow: 0px 1px 0px hsl(348,100%,40%), 0px 2px 0px hsl(348,100%,38%), 0px 3px 0px hsl(348,100%,37%), 0px 4px 0px hsl(348,100%,36%),
+              0px 5px 0px hsl(348,100%,35%), 0px 6px 0px hsl(348,100%,34%), 0px 7px 0px hsl(348,100%,33%), 0px 8px 0px hsl(348,100%,32%),
+              0px 9px 0px hsl(348,100%,31%), 0px 10px 0px hsl(348,100%,20%), 0px 11px 10px #000, inset 0px -5px 6px rgba(194,13,50,0.6);	
+    -o-box-shadow: 0px 1px 0px hsl(348,100%,40%), 0px 2px 0px hsl(348,100%,38%), 0px 3px 0px hsl(348,100%,37%), 0px 4px 0px hsl(348,100%,36%),
+                   0px 5px 0px hsl(348,100%,35%), 0px 6px 0px hsl(348,100%,34%), 0px 7px 0px hsl(348,100%,33%), 0px 8px 0px hsl(348,100%,32%),
+                   0px 9px 0px hsl(348,100%,31%), 0px 10px 0px hsl(348,100%,20%), 0px 11px 10px #000, inset 0px -5px 6px rgba(194,13,50,0.6);	
+    -ms-box-shadow: 0px 1px 0px hsl(348,100%,40%), 0px 2px 0px hsl(348,100%,38%), 0px 3px 0px hsl(348,100%,37%), 0px 4px 0px hsl(348,100%,36%),
+                    0px 5px 0px hsl(348,100%,35%), 0px 6px 0px hsl(348,100%,34%), 0px 7px 0px hsl(348,100%,33%), 0px 8px 0px hsl(348,100%,32%),
+                     0px 9px 0px hsl(348,100%,31%), 0px 10px 0px hsl(348,100%,20%), 0px 11px 10px #000, inset 0px -5px 6px rgba(194,13,50,0.6);	
+    -moz-box-shadow: 0px 1px 0px hsl(348,100%,40%), 0px 2px 0px hsl(348,100%,38%), 0px 3px 0px hsl(348,100%,37%), 0px 4px 0px hsl(348,100%,36%),
+                     0px 5px 0px hsl(348,100%,35%), 0px 6px 0px hsl(348,100%,34%), 0px 7px 0px hsl(348,100%,33%), 0px 8px 0px hsl(348,100%,32%),
+                     0px 9px 0px hsl(348,100%,31%), 0px 10px 0px hsl(348,100%,20%), 0px 11px 10px #000, inset 0px -5px 6px rgba(194,13,50,0.6);	
+    -webkit-box-shadow: 0px 1px 0px hsl(348,100%,40%), 0px 2px 0px hsl(348,100%,38%), 0px 3px 0px hsl(348,100%,37%), 0px 4px 0px hsl(348,100%,36%),
+                        0px 5px 0px hsl(348,100%,35%), 0px 6px 0px hsl(348,100%,34%), 0px 7px 0px hsl(348,100%,33%), 0px 8px 0px hsl(348,100%,32%),
+                        0px 9px 0px hsl(348,100%,31%), 0px 10px 0px hsl(348,100%,20%), 0px 11px 10px #000, inset 0px -5px 6px rgba(194,13,50,0.6);	
+  color: #cb072e;
+  text-shadow: 1px 1px 0px #FFF, -1px -1px 0px #ff0033;		
+}
+.Boton3:hover {	
+  box-shadow: 0px 1px 0px hsl(348,100%,40%), 0px 2px 0px hsl(348,100%,37%), 0px 3px 0px hsl(348,100%,35%), 0px 4px 0px hsl(348,100%,33%),
+              0px 5px 0px hsl(348,100%,31%), 0px 6px 0px hsl(348,100%,20%), 0px 7px 10px #000, inset 0px -5px 6px rgba(194,13,50,0.6);		
+    -o-box-shadow: 0px 1px 0px hsl(348,100%,40%), 0px 2px 0px hsl(348,100%,37%), 0px 3px 0px hsl(348,100%,35%), 0px 4px 0px hsl(348,100%,33%),
+                   0px 5px 0px hsl(348,100%,31%), 0px 6px 0px hsl(348,100%,20%), 0px 7px 10px #000, inset 0px -5px 6px rgba(194,13,50,0.6);		
+    -ms-box-shadow: 0px 1px 0px hsl(348,100%,40%), 0px 2px 0px hsl(348,100%,37%), 0px 3px 0px hsl(348,100%,35%), 0px 4px 0px hsl(348,100%,33%),
+                    0px 5px 0px hsl(348,100%,31%), 0px 6px 0px hsl(348,100%,20%), 0px 7px 10px #000, inset 0px -5px 6px rgba(194,13,50,0.6);		
+    -moz-box-shadow: 0px 1px 0px hsl(348,100%,40%), 0px 2px 0px hsl(348,100%,37%), 0px 3px 0px hsl(348,100%,35%), 0px 4px 0px hsl(348,100%,33%),
+                     0px 5px 0px hsl(348,100%,31%), 0px 6px 0px hsl(348,100%,20%), 0px 7px 10px #000, inset 0px -5px 6px rgba(194,13,50,0.6);		
+    -webkit-box-shadow: 0px 1px 0px hsl(348,100%,40%), 0px 2px 0px hsl(348,100%,37%), 0px 3px 0px hsl(348,100%,35%), 0px 4px 0px hsl(348,100%,33%),
+                        0px 5px 0px hsl(348,100%,31%), 0px 6px 0px hsl(348,100%,20%), 0px 7px 10px #000, inset 0px -5px 6px rgba(194,13,50,0.6);		
+  top: 4px;
+}
+.Boton4 {
+  background: #333;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-bottom-right-radius: 30px;
+    -o-border-bottom-right-radius: 30px;
+    -ms-border-bottom-right-radius: 30px;
+    -moz-border-bottom-right-radius: 30px;
+    -webkit-border-bottom-right-radius: 30px;
+  box-shadow: 0px 1px 0px hsl(0,0%,38%), 1px 2px 0px hsl(0,0%,37%), 1px 3px 0px hsl(0,0%,36%), 2px 4px 0px hsl(0,0%,35%),
+              2px 5px 0px hsl(0,0%,34%), 3px 6px 0px hsl(0,0%,33%), 4px 7px 0px hsl(0,0%,32%), 4px 7px 10px #000,
+              inset 0px -5px 4px #444;
+    -o-box-shadow: 0px 1px 0px hsl(0,0%,38%), 1px 2px 0px hsl(0,0%,37%), 1px 3px 0px hsl(0,0%,36%), 2px 4px 0px hsl(0,0%,35%),
+                   2px 5px 0px hsl(0,0%,34%), 3px 6px 0px hsl(0,0%,33%), 4px 7px 0px hsl(0,0%,32%), 4px 7px 10px #000,
+                   inset 0px -5px 4px #444;
+    -ms-box-shadow: 0px 1px 0px hsl(0,0%,38%), 1px 2px 0px hsl(0,0%,37%), 1px 3px 0px hsl(0,0%,36%), 2px 4px 0px hsl(0,0%,35%),
+                    2px 5px 0px hsl(0,0%,34%), 3px 6px 0px hsl(0,0%,33%), 4px 7px 0px hsl(0,0%,32%), 4px 7px 10px #000,
+                    inset 0px -5px 4px #444;
+    -moz-box-shadow: 0px 1px 0px hsl(0,0%,38%), 1px 2px 0px hsl(0,0%,37%), 1px 3px 0px hsl(0,0%,36%), 2px 4px 0px hsl(0,0%,35%),
+                     2px 5px 0px hsl(0,0%,34%), 3px 6px 0px hsl(0,0%,33%), 4px 7px 0px hsl(0,0%,32%), 4px 7px 10px #000,
+                     inset 0px -5px 4px #444;
+    -webkit-box-shadow: 0px 1px 0px hsl(0,0%,38%), 1px 2px 0px hsl(0,0%,37%), 1px 3px 0px hsl(0,0%,36%), 2px 4px 0px hsl(0,0%,35%),
+                        2px 5px 0px hsl(0,0%,34%), 3px 6px 0px hsl(0,0%,33%), 4px 7px 0px hsl(0,0%,32%), 4px 7px 10px #000,
+                        inset 0px -5px 4px #444;
+  color: #999;
+  text-shadow: 1px 1px 0px #000;
+}
+.Boton4:hover {
+  box-shadow: 0px 1px 0px hsl(0,0%,38%), 1px 1px 0px hsl(0,0%,36%), 1px 2px 0px hsl(0,0%,34%), 2px 3px 0px hsl(0,0%,32%),
+              2px 4px 10px #000, inset 0px -5px 4px #444;
+    -o-box-shadow: 0px 1px 0px hsl(0,0%,38%), 1px 1px 0px hsl(0,0%,36%), 1px 2px 0px hsl(0,0%,34%), 2px 3px 0px hsl(0,0%,32%),
+                   2px 4px 10px #000, inset 0px -5px 4px #444;
+    -ms-box-shadow: 0px 1px 0px hsl(0,0%,38%), 1px 1px 0px hsl(0,0%,36%), 1px 2px 0px hsl(0,0%,34%), 2px 3px 0px hsl(0,0%,32%),
+                    2px 4px 10px #000, inset 0px -5px 4px #444;
+    -moz-box-shadow: 0px 1px 0px hsl(0,0%,38%), 1px 1px 0px hsl(0,0%,36%), 1px 2px 0px hsl(0,0%,34%), 2px 3px 0px hsl(0,0%,32%),
+                     2px 4px 10px #000, inset 0px -5px 4px #444;
+    -webkit-box-shadow: 0px 1px 0px hsl(0,0%,38%), 1px 1px 0px hsl(0,0%,36%), 1px 2px 0px hsl(0,0%,34%), 2px 3px 0px hsl(0,0%,32%),
+                        2px 4px 10px #000, inset 0px -5px 4px #444;
+  left: 2px;
+  top: 3px;
+}

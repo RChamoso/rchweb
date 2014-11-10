@@ -1,0 +1,1 @@
+define(function(){var e={};return{subscribe:function(t,n){var r;return e[t]||(e[t]={queue:[]}),r=e[t].queue.push(n),function(t){return{remove:function(){delete e[t]}}}(r)},publish:function(t,n){var r;if(!e[t]||!e[t].queue.length)return;r=e[t].queue;for(x=0;x<r.length;x++)r[x](n||{})}}});

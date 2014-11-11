@@ -16,7 +16,7 @@ function iniciarJSON() {
 function cargarJSON() {
 	//  Cargar el archivo JSON
 	xmlhttp = new XMLHttpRequest();
-	//    var url = "contenidoMenu.json";
+	//var url = "../json/contenidoMenu.json";
 	var url = "../json/datos_out.json";
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
@@ -391,6 +391,7 @@ function mostrarUltimosArticulos(fecha) {							//	Muestra la fecha de los últi
 		var anno = nuevaFecha.getFullYear();
 //		var hora = nuevaFecha.toLocaleTimeString(); 	//	esto muestra hh:mm:ss
 		nuevaFecha = anno + '-' + mes + '-' + dia + ' ' + hora + ':' + minutos;
+		linea.setAttribute('data-posicion', fecha[i].direccion);
 		linea.textContent = nuevaFecha;
 //		linea.textContent = nuevaFecha.getFullYear() + '/' + nuevaFecha.getMonth() + '/' + nuevaFecha.getDate() + ' ' + nuevaFecha.getHours() + ':' + nuevaFecha.getMinutes();
 		ultimosArticulos.appendChild(linea);
@@ -446,6 +447,7 @@ function agregarObjeto(tipo, idNumero) {
 			menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])][posicion[4]].push(objeto);
 			break;
 	}
+	botonGuardar.setAttribute('style', 'background-color: hsl(5, 100%, 60%); color: hsl(0, 100%, 0%);');
 /*	var dia = elementoNuevo('p');
 		dia.textContent = 'dia' + ': ';
 		dia.style = 'margin-left:' + margen + 'px;';
@@ -480,13 +482,14 @@ function eliminarObjeto(idNumero) {
 	var longitud = posicion.length;
 	switch (longitud) {
 		case 2:
-			delete menuJSON[posicion[0]][parseInt(posicion[1])];
+			menuJSON[posicion[0]].splice([parseInt(posicion[1])],1);
 			break;
 		case 4:
-			delete menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])];
+			menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]].splice([parseInt(posicion[3])],1);
 			break;
 		case 6:
-			delete menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])][posicion[4]][parseInt(posicion[5])];
+			menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])][posicion[4]].splice([parseInt(posicion[5])],1);
 			break;
 	}
+	botonGuardar.setAttribute('style', 'background-color: hsl(5, 100%, 60%); color: hsl(0, 100%, 0%);');
 }

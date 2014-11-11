@@ -30,6 +30,9 @@
   margin: 0 auto;
   padding: 0;
 }
+html {
+	overflow: hidden;
+}
 a {
   display: block;
 }

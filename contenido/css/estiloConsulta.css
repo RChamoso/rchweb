@@ -7,29 +7,29 @@
 */
 @font-face {
 	font-family: Regular;
-	src: url(../fuentes/OpenSans-Regular.ttf) format('truetype');
-  src:  url(../fuentes/OpenSans-Regular.ttf);
-  src:  url(../fuentes/OpenSans-Regular.eot);
-  src:  url(../fuentes/OpenSans-Regular.eot?#iefix) format('embedded-opentype'),
-        url(../fuentes/OpenSans-Regular.woff) format('woff'),
-        url(../fuentes/OpenSans-Regular.ttf) format('truetype'),
-        url(../fuentes/OpenSans-Regular.svg#abril_fatfaceregular) format('svg');
+	src: url(../../fuentes/OpenSans-Regular.ttf) format('truetype');
+  src:  url(../../fuentes/OpenSans-Regular.ttf);
+  src:  url(../../fuentes/OpenSans-Regular.eot);
+  src:  url(../../fuentes/OpenSans-Regular.eot?#iefix) format('embedded-opentype'),
+        url(../../fuentes/OpenSans-Regular.woff) format('woff'),
+        url(../../fuentes/OpenSans-Regular.ttf) format('truetype'),
+        url(../../fuentes/OpenSans-Regular.svg#abril_fatfaceregular) format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
 	font-family: Bold;
-	src: url(../fuentes/OpenSans-Bold.ttf) format('truetype');
+	src: url(../../fuentes/OpenSans-Bold.ttf) format('truetype');
 }
 @font-face {
   font-family: fontTitulo;
-  src:  url(../fuentes/Gabrielle.ttf);
-  src:  url(../fuentes/Gabrielle.eot);
-  src:  url(../fuentes/Gabrielle.eot?#iefix) format('embedded-opentype'),
-        url(../fuentes/Gabrielle.woff) format('woff'),
-        url(../fuentes/Gabrielle.ttf) format('truetype'),
-        url(../fuentes/Gabrielle.otf) format('otf'),
-        url(../fuentes/Gabrielle.svg#abril_fatfaceregular) format('svg');
+  src:  url(../../fuentes/Gabrielle.ttf);
+  src:  url(../../fuentes/Gabrielle.eot);
+  src:  url(../../fuentes/Gabrielle.eot?#iefix) format('embedded-opentype'),
+        url(../../fuentes/Gabrielle.woff) format('woff'),
+        url(../../fuentes/Gabrielle.ttf) format('truetype'),
+        url(../../fuentes/Gabrielle.otf) format('otf'),
+        url(../../fuentes/Gabrielle.svg#abril_fatfaceregular) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -40,12 +40,12 @@
 @font-face {
 	font-family: ExtraBold;
 	src: url(../fuentes/OpenSans-ExtraBold.ttf) format('truetype');
-}
+}*/
 @font-face {
 	font-family: RegularItalic;
-	src: url(../fuentes/OpenSans-Italic.ttf) format('truetype');
+	src: url(../../fuentes/OpenSans-Italic.ttf) format('truetype');
 }
-@font-face {
+/*@font-face {
 	font-family: BoldItalic;
 	src: url(../fuentes/OpenSans-BoldItalic.ttf) format('truetype');
 }
@@ -293,6 +293,66 @@ li {
   height: 62px;
 	padding: 5px 10px;
 }
+#ultimosArticulos {
+	border: 1px solid #D8D8D8;
+	margin-bottom: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 100px 10px 50px 10px;
+	text-align: justify;
+}
+.ultimosArticulos {
+	border-radius: 10px;
+		-o-border-radius: 10px;
+		-ms-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	box-shadow: 1px 1px 1px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
+		-o-box-shadow: 1px 1px 1px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
+		-ms-box-shadow: 1px 1px 1px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
+		-moz-box-shadow: 1px 1px 1px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
+		-webkit-box-shadow: 1px 1px 1px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
+	display: inline-block;
+	height: 350px;
+	margin: 15px;
+	overflow: hidden;
+	text-align: center;
+	width: 260px;
+}
+.ultimosArticulos:hover {
+	box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
+		-o-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
+		-ms-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
+		-moz-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
+		-webkit-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
+}
+#ultimosArticulos object, #ultimosArticulos embed {
+	margin-top: 10px;
+	overflow: hidden;
+}
+#ultimosArticulos h4 {
+	background-color: hsl(270, 75%, 81%);
+	color: hsl(270, 75%, 30%);
+	margin: 5px 2px 0px;
+	padding: 4px 5px;
+}
+#ultimosArticulos p {
+	background-color: hsl(270, 75%, 87%);
+	color: hsl(270, 75%, 30%);
+	font-size: 0.8em;
+	margin: 0px 2px;
+	padding: 4px 5px 0px;
+}
+#ultimosArticulos .fecha {
+	border-radius: 0 0 8px 8px;
+		-o-border-radius: 0 0 8px 8px;
+		-ms-border-radius: 0 0 8px 8px;
+		-moz-border-radius: 0 0 8px 8px;
+		-webkit-border-radius: 0 0 8px 8px;
+	font-family: RegularItalic;
+	font-size: 0.8em;
+	padding: 0px 5px 7px 0px;
+}
 #subMenu, #subMenu  li {
   display: inline-block;
 }
@@ -329,9 +389,6 @@ li {
 }
 .subMenu, .articulos article {
 	display: none;
-}
-.separador {
-	clear: both;
 }
 #hoja div, #articulos article > h3  {
 	background-color: hsl(225,0%,95%);

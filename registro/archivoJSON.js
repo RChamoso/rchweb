@@ -16,8 +16,8 @@ function iniciarJSON() {
 function cargarJSON() {
 	//  Cargar el archivo JSON
 	xmlhttp = new XMLHttpRequest();
-	//var url = "../json/contenidoMenu.json";
-	var url = "../json/datos_out.json";
+	var url = "../json/contenidoMenu.json";
+	//var url = "../json/datos_out.json";
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 	xmlhttp.onreadystatechange = function() {

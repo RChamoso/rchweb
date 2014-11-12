@@ -157,9 +157,13 @@ li {
   width: 50px;
 }
 #header h1 {
+	color: hsl(270, 75%, 70%);
+	letter-spacing: 0.08em;
+	font-size: 2.4em;
   margin-left: 20px;
   padding-left: 5px;
   position: absolute;
+	text-shadow: -1px -1px hsl(270, 30%, 80%), 1px 1px hsl(270, 30%, 10%);
   top: 12px;
 }
 #header h1, header span {
@@ -210,7 +214,12 @@ li {
 	cursor: pointer;
 }
 #tituloArticulo {
-  color: hsl(0, 0%, 100%);
+	color: hsl(270, 75%, 70%);
+	letter-spacing: 0.05em;
+	font-size: 2em;
+  margin-left: 20px;
+  padding-left: 5px;
+	text-shadow: -1px -1px hsl(270, 30%, 80%), 1px 1px hsl(270, 30%, 10%);
 }
 .menuActual {
   color: hsl(270, 25%, 90%);
@@ -326,9 +335,24 @@ li {
 		-moz-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
 		-webkit-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
 }
-#ultimosArticulos object, #ultimosArticulos embed {
+#ultimosArticulos object, #ultimosArticulos embed, #ultimosArticulos div {
+	background-color: hsl(270, 75%, 87%);
+	box-shadow: -1px -1px hsl(270, 75%, 80%), 1px 1px hsl(270, 75%, 93%);
+		-o-box-shadow: -1px -1px hsl(270, 75%, 80%), 1px 1px hsl(270, 75%, 93%);
+		-ms-box-shadow: -1px -1px hsl(270, 75%, 80%), 1px 1px hsl(270, 75%, 93%);
+		-moz-box-shadow: -1px -1px hsl(270, 75%, 80%), 1px 1px hsl(270, 75%, 93%);
+		-webkit-box-shadow: -1px -1px hsl(270, 75%, 80%), 1px 1px hsl(270, 75%, 93%);
 	margin-top: 10px;
 	overflow: hidden;
+}
+#ultimosArticulos div {
+	height: 250px;
+	width: 240px;
+}
+#ultimosArticulos div h3 {
+	color: hsl(270, 75%, 30%);
+	font-size: 2em;
+	margin: 20px 15px;
 }
 #ultimosArticulos h4 {
 	background-color: hsl(270, 75%, 81%);

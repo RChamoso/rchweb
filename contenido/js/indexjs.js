@@ -2,12 +2,14 @@
 var articuloAnterior = '';
 var disenoAnterior = '';
 var menuAnterior = '';
+var ruta = [];
 
 function inicio() {                     // Elementos ID Globales
   contenido = elementoId('articulos');
   encabezadoArticulo = elementoId('encabezadoArticulo');
   botonMostrar = elementoId('abrirSubMenu');
   elementoNav = elementoId('menuPrincipal');
+	divUltimosArticulos = elementoId('ultimosArticulos');
 
   anchoPrincipal();
   window.onresize = function(){ocultarScroll();};
@@ -29,9 +31,13 @@ function anchoPrincipal() {             //  Calcular el ancho de la pantalla
     var anchoSubMenu = window.innerWidth - anchoScroll - anchoNav - 5;
     encabezadoSubMenu.style.width = anchoSubMenu + 'px';
   menuPrincipal();
+	buscarArticulos(menuJSON);
+	ordenarFechas();
 }
 
 function menuPrincipal() {              //  Generar el Menu Principal y Submenu
+	var fechaArticulo = '';
+	var fechaActual = '';
   var listaMenu = menuJSON.listaMenu;
   var idMenuPrincipal = elementoId('opcionesMenu');
   for (var i in listaMenu) {
@@ -48,31 +54,41 @@ function menuPrincipal() {              //  Generar el Menu Principal y Submenu
       subMenu.setAttribute('class', 'subMenu');
       var opcionesSubMenu = listaMenu[i].contenido;
       for (var j in opcionesSubMenu) {
-        var opcionSubMenuLi = elementoNuevo('li');
-          var tipoFuncion = opcionesSubMenu[j].funcion;
-          var funcionSubMenu = '';
-          switch (tipoFuncion) {
-            case 'mostrarFuncion' :
-            case 'codigosAscii' :
-            case 'mostrarBloques' :
-              funcionSubMenu = opcionesSubMenu[j].funcion + '("' + opcionesSubMenu[j].subTitulo + '", "' + opcionesSubMenu[j].enlace + '", "' + opcionesSubMenu[j].titulo + '");';
-            break;
-            case 'nuevaVentana' :
-// revisar xq false
-              funcionSubMenu = opcionesSubMenu[j].funcion + '("' + opcionesSubMenu[j].enlace + '", false);';
-              opcionSubMenuLi.setAttribute('class', 'nuevaVentana');
-            break;
-            case 'mostrarSubMenu' :
-              funcionSubMenu = opcionesSubMenu[j].funcion + '("' + opcionesSubMenu[j].titulo + '", "' + i + '", "' + j + '");';
-            break;
-          }
-          opcionSubMenuLi.setAttribute('onclick',funcionSubMenu);
-          opcionSubMenuLi.textContent = opcionesSubMenu[j].titulo;
-        subMenu.appendChild(opcionSubMenuLi);
-      }
+				if (((opcionesSubMenu[j].fecha) && (opcionesSubMenu[j].fecha.dia !== '')) || (!opcionesSubMenu[j].fecha)) {
+					if ((opcionesSubMenu[j].fecha) && (opcionesSubMenu[j].fecha.dia !== '')) {
+						var fecha = opcionesSubMenu[j].fecha.dia + ' ' + opcionesSubMenu[j].fecha.hora;
+						var fechaArticulo = new Date(fecha);
+						fechaActual = new Date();
+					}
+					if ((fechaActual >= fechaArticulo) || (!opcionesSubMenu[j].fecha)) {		//	Muestra solo los articulos que tienen fecha actual
+						var opcionSubMenuLi = elementoNuevo('li');
+							var tipoFuncion = opcionesSubMenu[j].funcion;
+							var funcionSubMenu = '';
+							switch (tipoFuncion) {
+								case 'mostrarFuncion' :
+								case 'codigosAscii' :
+								case 'mostrarBloques' :
+									funcionSubMenu = opcionesSubMenu[j].funcion + '("' + opcionesSubMenu[j].subTitulo + '", "' + opcionesSubMenu[j].enlace + '", "' + opcionesSubMenu[j].titulo + '");';
+								break;
+								case 'nuevaVentana' :
+		// revisar xq false
+									funcionSubMenu = opcionesSubMenu[j].funcion + '("' + opcionesSubMenu[j].enlace + '", false);';
+									opcionSubMenuLi.setAttribute('class', 'nuevaVentana');
+								break;
+								case 'mostrarSubMenu' :
+									funcionSubMenu = opcionesSubMenu[j].funcion + '("' + opcionesSubMenu[j].titulo + '", "' + i + '", "' + j + '");';
+								break;
+							}
+							opcionSubMenuLi.setAttribute('onclick',funcionSubMenu);
+							opcionSubMenuLi.textContent = opcionesSubMenu[j].titulo;
+						subMenu.appendChild(opcionSubMenuLi);
+					}
+				}
+			}
     idMenuPrincipal.appendChild(subMenu);
   }
   ocultarScroll();
+	
 }
 
 function ocultarScroll() {              //  Oculta el Scroll del Menu
@@ -97,6 +113,7 @@ function borrarSubMenu() {              //  Borra el Submenu de la Seccion de Ar
 function mostrarArticulos(articulo,menuActual) {  //  Muestra el contenido de los Articulos
   borrarSubMenu();
   ocultarContenido();
+	ocultarUltimosArticulos();
   var articuloDiv = elementoId("seccionArticulo");
   var menuDiv = elementoId(menuActual);
   var elementoAnterior = menuDiv.previousSibling;
@@ -118,7 +135,8 @@ function mostrarArticulos(articulo,menuActual) {  //  Muestra el contenido de lo
     elementoAnterior.setAttribute('class','menuActual');
     menuAnterior = menuActual;
   } else {
-    articuloDiv.style.display = 'none';
+//    articuloDiv.style.display = 'none';
+		mostrarUltimosArticulos();
     menuDiv.style.display = 'none';
     elementoAnterior.setAttribute('class','');
     menuAnterior = '';
@@ -131,6 +149,16 @@ function mostrarContenido() {           //  Muestra el bloque de Seccion
 
 function ocultarContenido() {           //  Oculta el bloque de Seccion
   contenido.style.display = 'none';
+}
+
+function mostrarUltimosArticulos() {           //  Muestra el bloque de Seccion
+	divUltimosArticulos.style.display = 'block';
+	var articuloH1 = elementoId("tituloArticulo");
+	articuloH1.textContent = 'Ultimos Artículos';
+}
+
+function ocultarUltimosArticulos() {           //  Oculta el bloque de Seccion
+	divUltimosArticulos.style.display = 'none';
 }
 
 function mostrarBloques(subTitulo, bloque) {    //  Muestra los bloques del Html
@@ -172,6 +200,9 @@ function mostrarFuncion(texto,dato,subTitulo){  //  Muestra Enlaces externos
 function tituloArticulo(subTitulo) {            //  Titulo Principal de la Seccion
   var articuloH1 = elementoId("tituloArticulo");
   var contenidoTitulo = articuloH1.textContent;
+	if (contenidoTitulo === 'Ultimos Artículos') {
+		contenidoTitulo = '';
+	}
   var indice = contenidoTitulo.indexOf(" >>");
   if (indice != -1) {
     contenidoTitulo = contenidoTitulo.substring(indice,0);
@@ -191,21 +222,28 @@ function mostrarSubMenu(subTitulo,i,j) {        //  Genera el Contenido del Subm
   var divSubMenu = elementoId("subMenu");
 // falta elemento <ul>
   for (var k in opcionesSubMenu) {
-    var funcionSubMenu = '';
-    var tipoFuncion = opcionesSubMenu[k].subTitulo;
-    if (tipoFuncion !=  '') {
-      funcionSubMenu = opcionesSubMenu[k].funcion + '("' + opcionesSubMenu[k].subTitulo + '", "' + opcionesSubMenu[k].enlace + '", "");';
-    } else {
-      funcionSubMenu = opcionesSubMenu[k].funcion + '("' + opcionesSubMenu[k].enlace + '", true);';
-    }
-    var opcionSubMenu = elementoNuevo('li');
-    if (opcionesSubMenu[k].funcion == 'nuevaVentana') {
-      opcionSubMenu.setAttribute('class', 'nuevaVentana2');
-    }
-    opcionSubMenu.textContent = opcionesSubMenu[k].titulo;
-    opcionSubMenu.setAttribute('onclick',funcionSubMenu);
-    divSubMenu.appendChild(opcionSubMenu);
-  }
+		if ((opcionesSubMenu[k].fecha) && (opcionesSubMenu[k].fecha.dia !== '')) {
+			var fecha = opcionesSubMenu[k].fecha.dia + ' ' + opcionesSubMenu[k].fecha.hora;
+			var fechaArticulo = new Date(fecha);
+			var fechaActual = new Date();
+			if (fechaActual >= fechaArticulo) {		//	Muestra solo los articulos que tienen fecha actual
+				var funcionSubMenu = '';
+				var tipoFuncion = opcionesSubMenu[k].subTitulo;
+				if (tipoFuncion !=  '') {
+					funcionSubMenu = opcionesSubMenu[k].funcion + '("' + opcionesSubMenu[k].subTitulo + '", "' + opcionesSubMenu[k].enlace + '", "");';
+				} else {
+					funcionSubMenu = opcionesSubMenu[k].funcion + '("' + opcionesSubMenu[k].enlace + '", true);';
+				}
+				var opcionSubMenu = elementoNuevo('li');
+				if (opcionesSubMenu[k].funcion == 'nuevaVentana') {
+					opcionSubMenu.setAttribute('class', 'nuevaVentana2');
+				}
+				opcionSubMenu.textContent = opcionesSubMenu[k].titulo;
+				opcionSubMenu.setAttribute('onclick',funcionSubMenu);
+				divSubMenu.appendChild(opcionSubMenu);
+			}
+		}
+	}
   abrirSubMenu();
 }
 

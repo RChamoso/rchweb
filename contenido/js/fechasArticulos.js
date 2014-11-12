@@ -1,0 +1,129 @@
+﻿var fechaJSON = [];
+var m = 0;
+var ruta = [];
+function buscarArticulos(objeto) {										//	Busca todos los articulos que tienen fecha
+	for (i in objeto) {
+		var tipoElemento = typeof(objeto[i]);
+		ruta.push(i);																		//	agrega el identificador del elemento del objeto
+		if (i === 'fecha') {
+			if (objeto[i].dia !== '') {
+				var direccion = ruta.toString();
+				crearFechas(objeto[i].dia + ' ' + objeto[i].hora, direccion);
+			}
+			ruta.pop();																		//	elimina el identificador del objeto para el siguiente
+		} else if (tipoElemento === 'object') {
+			buscarArticulos(objeto[i]);											//	vuelve a llamar esta función
+			ruta.pop();																		//	elimina el identificador del objeto para el siguiente
+		} else {
+			ruta.pop();																		//	elimina el identificador del objeto para el siguiente
+		}
+	}
+}
+function crearFechas(a, b) {													//	Crea el nuevo objeto articulos con fecha
+	a = Date.parse(a);
+	fechaJSON[m] = {};
+	fechaJSON[m].fecha = a;
+	fechaJSON[m].direccion = b;
+	m++;
+}
+function ordenarFechas() {														//	Ordena todas las fechas de mayor a menor y selecciona las 11 primeras.
+	var longitud = fechaJSON.length;
+	for (var j=0; j<longitud-1; j++) {
+		for (var k=j+1; k<longitud; k++) {
+			if (fechaJSON[j].fecha < fechaJSON[k].fecha) {
+				var fechaMayor = fechaJSON[j];
+				fechaJSON[j] = fechaJSON[k];
+				fechaJSON[k] = fechaMayor;
+			}
+		}
+	}
+	fechaJSON.splice(11, fechaJSON.length);							//	selecciona los primeros 11 articulos
+	ultimosArticulos();
+}
+function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artículos
+	var ruta2 = '';
+	var titulo = '';
+	var subTitulo = '';
+	var menu = '';
+	var funcion = '';
+	var articuloH1 = elementoId("tituloArticulo");
+	articuloH1.textContent = 'Ultimos Artículos';
+//	var ultimosArticulos = elementoId('ultimosArticulos');
+	for (var i=0; i<fechaJSON.length; i++) {
+		var nuevaFecha = new Date(fechaJSON[i].fecha);
+		var fechaActual = new Date();
+		if (fechaActual >= nuevaFecha) {		//	Muestra solo los articulos que tienen fecha actual
+			var articulo = elementoNuevo('article');
+			articulo.setAttribute('class', 'ultimosArticulos');
+			var dia = nuevaFecha.getDate().toString();
+			if (dia.length == 1) {
+				dia = '0' + dia;
+			}
+			var mes = (nuevaFecha.getMonth() + 1).toString();
+			if (mes.length == 1) {
+				mes = '0' + mes;
+			}
+			var hora = nuevaFecha.getHours().toString();
+			if (hora.length == 1) {
+				hora = '0' + hora;
+			}
+			var minutos = nuevaFecha.getMinutes().toString();
+			if (minutos.length == 1) {
+				minutos = '0' + minutos;
+			}
+			var anno = nuevaFecha.getFullYear();
+			nuevaFecha = dia + '-' + mes + '-' + anno + ' ' + hora + ':' + minutos;
+			var posicion = fechaJSON[i].direccion;
+			posicion = posicion.split(',');
+			var longitud = posicion.length;
+			switch (longitud) {
+				case 5:
+					ruta2 = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])].enlace;
+					titulo = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])].titulo;
+					funcion = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])].funcion;
+					subTitulo = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])].subTitulo;
+					menu = menuJSON[posicion[0]][parseInt(posicion[1])].titulo;
+					break;
+				case 7:
+					ruta2 = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])][posicion[4]][parseInt(posicion[5])].enlace;
+					titulo = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])][posicion[4]][parseInt(posicion[5])].titulo;
+					funcion = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])][posicion[4]][parseInt(posicion[5])].funcion;
+					subTitulo = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])][posicion[4]][parseInt(posicion[5])].subTitulo;
+					menu = menuJSON[posicion[0]][parseInt(posicion[1])].titulo + ' >> ' + menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])].titulo;
+					break;
+			}
+			if (funcion !== 'nuevaVentana') {
+				var objeto = elementoNuevo('object');
+				var objetoEmb = elementoNuevo('embed');
+				objeto.setAttribute('data', ruta2);
+				objetoEmb.setAttribute('src', ruta2);
+				objetoEmb.setAttribute('type', 'text/html');
+				objetoEmb.setAttribute('height', '250');
+				objetoEmb.setAttribute('width', '240');
+				objeto.appendChild(objetoEmb);
+				objeto.setAttribute('height', '250');
+				objeto.setAttribute('width', '240');
+			} else {
+				var objeto = elementoNuevo('div');
+				var objetoH = elementoNuevo('h3');
+				objetoH.textContent = titulo;
+				objeto.appendChild(objetoH);
+				var objetoP = elementoNuevo('p');
+				objetoP.textContent = 'Se visualiza en otra ventana';
+				objeto.appendChild(objetoP);
+			}
+			articulo.appendChild(objeto);
+			var campoSubTitulo = elementoNuevo('h4');
+			campoSubTitulo.textContent = subTitulo;
+			articulo.appendChild(campoSubTitulo);
+			var ubicacion = elementoNuevo('p');
+			ubicacion.textContent = menu;
+			articulo.appendChild(ubicacion);
+			var campoFecha = elementoNuevo('p');
+			campoFecha.setAttribute('class', 'fecha');
+			campoFecha.textContent = nuevaFecha;
+			articulo.appendChild(campoFecha);
+			divUltimosArticulos.appendChild(articulo);
+		}
+	}
+}

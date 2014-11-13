@@ -43,12 +43,16 @@ function ordenarFechas() {														//	Ordena todas las fechas de mayor a me
 function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artículos
 	var ruta2 = '';
 	var titulo = '';
+	var tituloPpal = '';
 	var subTitulo = '';
 	var menu = '';
+	var subMenu = '';
+	var subMenuPpal = '';
+	var pos1 = '';
+	var pos2 = '';
 	var funcion = '';
 	var articuloH1 = elementoId("tituloArticulo");
-	articuloH1.textContent = 'Ultimos Artículos';
-//	var ultimosArticulos = elementoId('ultimosArticulos');
+	articuloH1.textContent = 'Artículos Recientes';
 	for (var i=0; i<fechaJSON.length; i++) {
 		var nuevaFecha = new Date(fechaJSON[i].fecha);
 		var fechaActual = new Date();
@@ -72,7 +76,7 @@ function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artí
 				minutos = '0' + minutos;
 			}
 			var anno = nuevaFecha.getFullYear();
-			nuevaFecha = dia + '-' + mes + '-' + anno + ' ' + hora + ':' + minutos;
+			nuevaFecha = String.fromCharCode(8986) + ' ' + dia + '-' + mes + '-' + anno + ' ' + hora + ':' + minutos;
 			var posicion = fechaJSON[i].direccion;
 			posicion = posicion.split(',');
 			var longitud = posicion.length;
@@ -82,17 +86,29 @@ function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artí
 					titulo = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])].titulo;
 					funcion = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])].funcion;
 					subTitulo = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])].subTitulo;
-					menu = menuJSON[posicion[0]][parseInt(posicion[1])].titulo;
+					subMenu = menuJSON[posicion[0]][parseInt(posicion[1])].subMenu;
+					tituloPpal = menuJSON[posicion[0]][parseInt(posicion[1])].titulo;
+					pos1 = posicion[1];
+					pos2 = posicion[3];
+					menu = tituloPpal;
 					break;
 				case 7:
 					ruta2 = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])][posicion[4]][parseInt(posicion[5])].enlace;
 					titulo = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])][posicion[4]][parseInt(posicion[5])].titulo;
 					funcion = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])][posicion[4]][parseInt(posicion[5])].funcion;
 					subTitulo = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])][posicion[4]][parseInt(posicion[5])].subTitulo;
-					menu = menuJSON[posicion[0]][parseInt(posicion[1])].titulo + ' >> ' + menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])].titulo;
+					subMenu = menuJSON[posicion[0]][parseInt(posicion[1])].subMenu;
+					tituloPpal = menuJSON[posicion[0]][parseInt(posicion[1])].titulo;
+					subMenuPpal = menuJSON[posicion[0]][parseInt(posicion[1])][posicion[2]][parseInt(posicion[3])].titulo;
+					pos1 = posicion[1];
+					pos2 = posicion[3];
+					menu = tituloPpal + ' ' + String.fromCharCode(187) + ' ' + subMenuPpal;
 					break;
 			}
+			var funcionClick = '';
 			if (funcion !== 'nuevaVentana') {
+				funcionClick = 'mostrarUltimoArt("' + tituloPpal + '", "' + subMenuPpal + '", "' + titulo + '", "' + subTitulo + '", "' + subMenu + '", "' + pos1 + '", "' + pos2 + '", "' + ruta2 + '");';
+				articulo.setAttribute('onclick',funcionClick);
 				var objeto = elementoNuevo('object');
 				var objetoEmb = elementoNuevo('embed');
 				objeto.setAttribute('data', ruta2);
@@ -104,6 +120,9 @@ function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artí
 				objeto.setAttribute('height', '250');
 				objeto.setAttribute('width', '240');
 			} else {
+				funcionClick = funcion + '("' + ruta2 + '", false);';
+				articulo.setAttribute('class', 'nuevaVentana ultimosArticulos');
+				articulo.setAttribute('onclick',funcionClick);
 				var objeto = elementoNuevo('div');
 				var objetoH = elementoNuevo('h3');
 				objetoH.textContent = titulo;
@@ -126,4 +145,10 @@ function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artí
 			divUltimosArticulos.appendChild(articulo);
 		}
 	}
+}
+function mostrarUltimoArt(tituloPpal, subMenuPpal, titulo, subTitulo, subMenu, pos1, pos2, ruta2) {
+	mostrarArticulos(tituloPpal, subMenu);
+	mostrarSubMenu(subMenuPpal, pos1, pos2);
+	ocultarSubMenu();
+	mostrarFuncion(subTitulo, ruta2, '');
 }

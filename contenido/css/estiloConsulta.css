@@ -299,7 +299,7 @@ li {
 #encabezadoArticulo {
   background-color: hsl(270, 75%, 50%);
 	color: #032A66;
-  height: 62px;
+  height: 75px;
 	padding: 5px 10px;
 }
 #ultimosArticulos {
@@ -334,6 +334,7 @@ li {
 		-ms-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
 		-moz-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
 		-webkit-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
+	cursor: pointer;
 }
 #ultimosArticulos object, #ultimosArticulos embed, #ultimosArticulos div {
 	background-color: hsl(270, 75%, 87%);
@@ -398,7 +399,7 @@ li {
 	cursor: pointer;
 }
 #articulos article {
-  margin-top: 65px;
+  margin-top: 80px;
 }
 .articulos {
 	background-color: #fff;
@@ -437,7 +438,7 @@ li {
 aside {
   height: auto;
   float: right;
-  margin-top: 130px;
+  margin-top: 145px;
   text-align: center;
   width: 170px;
 }

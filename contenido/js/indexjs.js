@@ -68,15 +68,15 @@ function menuPrincipal() {              //  Generar el Menu Principal y Submenu
 								case 'mostrarFuncion' :
 								case 'codigosAscii' :
 								case 'mostrarBloques' :
-									funcionSubMenu = opcionesSubMenu[j].funcion + '("' + opcionesSubMenu[j].subTitulo + '", "' + opcionesSubMenu[j].enlace + '", "' + opcionesSubMenu[j].titulo + '");';
+									funcionSubMenu = tipoFuncion + '("' + opcionesSubMenu[j].subTitulo + '", "' + opcionesSubMenu[j].enlace + '", "' + opcionesSubMenu[j].titulo + '");';
 								break;
 								case 'nuevaVentana' :
 		// revisar xq false
-									funcionSubMenu = opcionesSubMenu[j].funcion + '("' + opcionesSubMenu[j].enlace + '", false);';
+									funcionSubMenu = tipoFuncion + '("' + opcionesSubMenu[j].enlace + '", false);';
 									opcionSubMenuLi.setAttribute('class', 'nuevaVentana');
 								break;
 								case 'mostrarSubMenu' :
-									funcionSubMenu = opcionesSubMenu[j].funcion + '("' + opcionesSubMenu[j].titulo + '", "' + i + '", "' + j + '");';
+									funcionSubMenu = tipoFuncion + '("' + opcionesSubMenu[j].titulo + '", "' + i + '", "' + j + '");';
 								break;
 							}
 							opcionSubMenuLi.setAttribute('onclick',funcionSubMenu);
@@ -108,6 +108,7 @@ function borrarSubMenu() {              //  Borra el Submenu de la Seccion de Ar
   for(var j = 0; j<totalNodos; j++){
     divSubMenu.removeChild(nodos[0]);
   }
+  botonMostrar.style.display = 'none';
 }
 
 function mostrarArticulos(articulo,menuActual) {  //  Muestra el contenido de los Articulos
@@ -154,7 +155,7 @@ function ocultarContenido() {           //  Oculta el bloque de Seccion
 function mostrarUltimosArticulos() {           //  Muestra el bloque de Seccion
 	divUltimosArticulos.style.display = 'block';
 	var articuloH1 = elementoId("tituloArticulo");
-	articuloH1.textContent = 'Ultimos Artículos';
+	articuloH1.textContent = 'Artículos Recientes';
 }
 
 function ocultarUltimosArticulos() {           //  Oculta el bloque de Seccion
@@ -200,15 +201,15 @@ function mostrarFuncion(texto,dato,subTitulo){  //  Muestra Enlaces externos
 function tituloArticulo(subTitulo) {            //  Titulo Principal de la Seccion
   var articuloH1 = elementoId("tituloArticulo");
   var contenidoTitulo = articuloH1.textContent;
-	if (contenidoTitulo === 'Ultimos Artículos') {
+	if (contenidoTitulo === 'Artículos Recientes') {
 		contenidoTitulo = '';
 	}
-  var indice = contenidoTitulo.indexOf(" >>");
+  var indice = contenidoTitulo.indexOf(' ' + String.fromCharCode(187));
   if (indice != -1) {
     contenidoTitulo = contenidoTitulo.substring(indice,0);
   }
   if (subTitulo != "") {
-    contenidoTitulo += " >> " + subTitulo;
+    contenidoTitulo += ' ' + String.fromCharCode(187) + ' ' + subTitulo;
   }
   articuloH1.textContent = contenidoTitulo;
 }
@@ -228,8 +229,8 @@ function mostrarSubMenu(subTitulo,i,j) {        //  Genera el Contenido del Subm
 			var fechaActual = new Date();
 			if (fechaActual >= fechaArticulo) {		//	Muestra solo los articulos que tienen fecha actual
 				var funcionSubMenu = '';
-				var tipoFuncion = opcionesSubMenu[k].subTitulo;
-				if (tipoFuncion !=  '') {
+				var tipoFuncion = opcionesSubMenu[k].funcion;
+				if (tipoFuncion !=  'nuevaVentana') {
 					funcionSubMenu = opcionesSubMenu[k].funcion + '("' + opcionesSubMenu[k].subTitulo + '", "' + opcionesSubMenu[k].enlace + '", "");';
 				} else {
 					funcionSubMenu = opcionesSubMenu[k].funcion + '("' + opcionesSubMenu[k].enlace + '", true);';
@@ -239,7 +240,7 @@ function mostrarSubMenu(subTitulo,i,j) {        //  Genera el Contenido del Subm
 					opcionSubMenu.setAttribute('class', 'nuevaVentana2');
 				}
 				opcionSubMenu.textContent = opcionesSubMenu[k].titulo;
-				opcionSubMenu.setAttribute('onclick',funcionSubMenu);
+				opcionSubMenu.setAttribute('onclick', funcionSubMenu);
 				divSubMenu.appendChild(opcionSubMenu);
 			}
 		}
@@ -248,7 +249,7 @@ function mostrarSubMenu(subTitulo,i,j) {        //  Genera el Contenido del Subm
 }
 
 function ocultarSubMenu() {                     //  Oculta el Submenu de la Seccion
-  encabezadoArticulo.style.height = '62px';
+  encabezadoArticulo.style.height = '75px';
   botonMostrar.style.display = 'block';
 }
 
@@ -260,9 +261,9 @@ function abrirSubMenu() {                       //  Muestra el Submenu de la Sec
 
 function nuevaVentana(dato, subMenu) {          //  Abrir una Ventana Nueva
   if (!subMenu) {
-    tituloArticulo("");
-    borrarSubMenu();
-    ocultarContenido();
+//    tituloArticulo("");
+//    borrarSubMenu();
+//    ocultarContenido();
   }
   window.open(dato, "nuevo");
 }

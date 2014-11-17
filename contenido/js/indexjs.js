@@ -13,6 +13,10 @@ function inicio() {                     // Elementos ID Globales
 
   anchoPrincipal();
   window.onresize = function(){ocultarScroll();};
+  window.onresize = function(){anchoPrincipal();};
+  menuPrincipal();
+	buscarArticulos(menuJSON);
+	ordenarFechas();
 }
 
 function anchoPrincipal() {             //  Calcular el ancho de la pantalla
@@ -25,14 +29,11 @@ function anchoPrincipal() {             //  Calcular el ancho de la pantalla
     var anchoAside = elementoAside.offsetWidth;
 
   var cuerpoPrincipal = elementoId('cuerpoPrincipal');
-    var anchoTotal = window.innerWidth - anchoScroll - anchoNav - anchoAside;
-    cuerpoPrincipal.style.width = anchoTotal + 'px';
+    var anchoTotal = window.innerWidth - anchoScroll - anchoNav - anchoAside - 25;
+    cuerpoPrincipal.style.width = anchoTotal/16 + 'rem';
   var encabezadoSubMenu = elementoId('encabezadoSubMenu');
     var anchoSubMenu = window.innerWidth - anchoScroll - anchoNav - 5;
-    encabezadoSubMenu.style.width = anchoSubMenu + 'px';
-  menuPrincipal();
-	buscarArticulos(menuJSON);
-	ordenarFechas();
+    encabezadoSubMenu.style.width = anchoSubMenu/16 + 'rem';
 }
 
 function menuPrincipal() {              //  Generar el Menu Principal y Submenu
@@ -249,7 +250,7 @@ function mostrarSubMenu(subTitulo,i,j) {        //  Genera el Contenido del Subm
 }
 
 function ocultarSubMenu() {                     //  Oculta el Submenu de la Seccion
-  encabezadoArticulo.style.height = '75px';
+  encabezadoArticulo.style.height = '4.37rem';
   botonMostrar.style.display = 'block';
 }
 

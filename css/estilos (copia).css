@@ -1,0 +1,306 @@
+﻿/*
+        estilos.css de la Web "RChWeb.net"
+        Desarrollo y Diseño: Roberto Chamoso Garcia
+        Contacto: robchamoso@gmail.com
+        Año 2014
+        versión 2014.07
+*/
+/* ********** Fuentes Personalizadas ********** */
+@font-face {
+  font-family: Regular;
+  src:  url(../fuentes/OpenSans-Regular.eot);
+  src:  url(../fuentes/OpenSans-Regular.eot?#iefix) format('embedded-opentype'),
+        url(../fuentes/OpenSans-Regular.woff) format('woff'),
+        url(../fuentes/OpenSans-Regular.ttf) format('truetype'),
+        url(../fuentes/OpenSans-Regular.svg#abril_fatfaceregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: fontTitulo;
+  src:  url(../fuentes/tituloSerif.eot);
+  src:  url(../fuentes/tituloSerif.eot?#iefix) format('embedded-opentype'),
+        url(../fuentes/tituloSerif.woff) format('woff'),
+        url(../fuentes/tituloSerif.ttf) format('truetype'),
+        url(../fuentes/tituloSerif.otf) format('otf'),
+        url(../fuentes/tituloSerif.svg#abril_fatfaceregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* ********** Estilos Basicos ********** */
+*  {
+  padding: 0;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+a:after { 
+   content: "";
+   display: block; 
+   clear: both;
+}
+.dch  {
+  float: right;
+}
+.izq  {
+  float: left;
+}
+.ocultar {
+  display: none;
+}
+.separador {
+  clear: both;
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inlineBlock {
+  display: inline-block;
+}
+/* Para que no se colapse un elemento que sólo contiene elementos flotantes */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/* IE6/7 support */
+.clearfix {
+  *zoom: 1;
+}
+body {
+  background-color: #000000;
+  color: #ffffff;
+  display: block;
+  font-family: Regular;
+  overflow: hidden;
+  width: 100%;
+}
+#body {
+  background-color: #ffffff;
+  border: 1px solid #ff0000;
+  bottom: 0px;
+  color: #000000;
+  display: block;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+}
+header, footer {
+  border: 1px solid #ff0000;
+}
+nav, aside {
+  border: 1px solid #00ff00;
+}
+section {
+  border: 1px solid #0000ff;
+}
+nav, section, aside {
+  vertical-align: top;
+}
+footer {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+/*  transformaciones  */
+#body {
+  transform-origin: 50% 100% 0px;
+}
+#header {
+  transform-origin: 0px 0px 0px;
+}
+#nav {
+  transform-origin: 0px 50% 0px;
+}
+#section {
+  transform-origin: 50% 100% 0px;
+}
+#aside {
+  transform-origin: 100% 50% 0px;
+}
+#canvas {
+  border: 1px solid #000000;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+#mensaje {
+  display: none;
+  font-family: fontTitulo;
+/*  font-size: 5em;*/
+  left: 0;
+  top: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+#logo, #logo h5, #mensaje p, h1, h2 {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+/*  Boton encendido/apagado  */
+#boton {
+  bottom: 100px;
+  display: none;
+  margin-top: 1px;
+  position: absolute;
+  right: 10px;
+}
+#logo h5, #mensaje p {
+  color: hsl(270, 90%, 20%);
+}
+input[type=checkbox]  {
+  display: none;
+}
+input[type=checkbox] + label  {
+  background-color: #67B04F;
+  color: #ffffff;
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  text-transform: uppercase;
+  width: 80px;
+}
+input[type=checkbox] + label, input[type=checkbox] + label p {
+  transition: all 10ms ease;
+    -o-transition: all 10ms ease;
+    -moz-transition: all 10ms ease;
+    -webkit-transition: all 10ms ease;
+}
+input[type=checkbox]:checked + label  {
+  background-color: #DB574D;
+}
+input[type=checkbox] + label:before, input[type=checkbox] + label:after, input[type=checkbox] + label p  {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  width: 50%;
+}
+input[type=checkbox] + label:before {
+  content: attr(data-text-true);
+}
+input[type=checkbox] + label:after {
+  content: attr(data-text-false);
+}
+input[type=checkbox] + label p  {
+  background-color: #db574d;
+  color: #000000;
+  height: 80%;
+  left: 5%;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  position: absolute;
+  width: 45%;
+}
+input[type=checkbox]:checked + label p  {
+  left: 50%;
+}
+@media only screen and (max-width: 239px) {
+  code {
+    font-size: 0.5em;
+  }
+  #mensaje {
+    font-size: 1em;
+  }
+  #mensaje a, #mensaje p {
+    font-size: 0.5em;
+  }
+}
+@media only screen and (min-width:240px) and (max-width:420px) {
+  code {
+    font-size: 0.7em;
+  }
+  #mensaje {
+    font-size: 1.5em;
+  }
+  #mensaje a, #mensaje p {
+    font-size: 0.7em;
+  }
+}
+@media only screen and (min-width:421px) and (max-width:640px) {
+  code {
+    font-size: 1em;
+  }
+  #mensaje {
+    font-size: 2em;
+  }
+  #mensaje a, #mensaje p {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  code {
+    font-size: 1.6em;
+  }
+  #mensaje {
+    font-size: 3.5em;
+  }
+  #mensaje a, #mensaje p {
+    font-size: 0.8em;
+  }
+  input[type=checkbox] + label  {
+    font-size: 1em;
+  }
+  input[type=checkbox] + label p  {
+    font-size: 2.7em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  code {
+    font-size: 1.8em;
+  }
+  #mensaje {
+    font-size: 5em;
+  }
+  #mensaje a, #mensaje p {
+    font-size: 0.6em;
+  }
+  input[type=checkbox] + label  {
+    font-size: 1.2em;
+  }
+  input[type=checkbox] + label p  {
+    font-size: 2.9em;
+  }
+}
+@media only screen and (min-width: 1824px) {
+  code {
+    font-size: 2.7em;
+  }
+  #mensaje {
+    font-size: 7.5em;
+  }
+  #mensaje a, #mensaje p {
+    font-size: 0.9em;
+  }
+  input[type=checkbox] + label  {
+    font-size: 1.8em;
+  }
+  input[type=checkbox] + label p  {
+    font-size: 3.3em;
+  }
+}

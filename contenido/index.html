@@ -54,6 +54,8 @@
     xmlhttp.send();
     //----------------
   </script>
+	<!-- Boton G+ -->
+	<script src="https://apis.google.com/js/platform.js" defer> { lang: 'es' } </script>
 
 </head>
 
@@ -77,9 +79,12 @@
 		<article id='seccionArticulo' class='seccion'>
 			<header id='encabezadoSubMenu'>
 				<hgroup id='encabezadoArticulo'>
-					<h1 id='tituloArticulo'></h1>
-          <div id='abrirSubMenu'>mostrar menú <span onclick='abrirSubMenu();'>&#9660;</span></div>
-					<div id='subMenu' onclick='ocultarSubMenu();'></div>
+					<h1 id='tituloArticulo' class='inline'></h1>
+					<div class='googlePlus dch inline'>
+						<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+					</div>
+          <div id='abrirSubMenu' class='separador'>mostrar menú <span onclick='abrirSubMenu();'>&#9660;</span></div>
+					<div id='subMenu' class='separador' onclick='ocultarSubMenu();'></div>
 				</hgroup>
 			</header>
 			<section id='ultimosArticulos'>
@@ -98,6 +103,7 @@
             <h3 id='titulo'></h3>
             <!--a id='nuevaVentana' href='' target="_blank" title='pestaña nueva'>&#9094;</a-->
             <a id='nuevaVentana' href='' target="_blank" title='pestaña nueva'>&#10144;</a>
+						<p id='fechaArticulo'></p>
           </div>
 					<object id='contenidoObject' data='' width='100%' height='500'>
 						<embed id='contenido' type='text/html' src='' width='100%' height='500'></embed>
@@ -210,15 +216,160 @@
 		</article>
 	</section>
 
-<!--div id='foot'>
-</div-->
-    <aside id='aside'>
-      <img height="auto" src="https://storage.googleapis.com/support-kms-prod/SNP_1DA7588EEB5450EE2A22C2B2F0A6458A61C0_2922342_en_v1"/>
-    </aside>
+	<aside id='aside'>
+		<iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&npa=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=herramiparael-21&o=30&p=8&l=as1&m=amazon&f=ifr&ref=tf_til&asins=8498804817" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+		<iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=herramiparael-21&o=30&p=8&l=as1&asins=1490381600&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&npa=1&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+		<iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=herramiparael-21&o=30&p=8&l=as1&asins=8441531935&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&npa=1&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+		<iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=herramiparael-21&o=30&p=11&l=ur1&category=kindle&banner=1AZH6V5K92VBZPR4EGG2&f=ifr" width="120" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+		<!--img height="auto" src="https://storage.googleapis.com/support-kms-prod/SNP_1DA7588EEB5450EE2A22C2B2F0A6458A61C0_2922342_en_v1"/-->
+	</aside>
 
-	<!--footer>
-		<time datetime="2010-11-08">2010</time>.
-	</footer-->
+  <footer id='footer'>
+    <div id='condiciones'>
+      <a rel='section' href='#terminosCondiciones' title='mostrar terminos de las Condiciones de Uso'>Condiciones de Uso</a>
+    </div>
+    <div id='cookies'>
+      <a rel='section' href='#politicaCookies' title='mostrar Pol&iacute;tica de Cookies'>Pol&iacute;tica de Cookies</a>
+    </div>
+    <div id='contacto'>
+      <a rel='contact' href='mailto:robchamoso@gmail.com' target='_blank' title='contacto' itemprop="email" itemscope itemtype="http://schema.org/Person">
+        <span class='inlineBlock'>&#9993; </span> 
+        <span class='inlineBlock' itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span>
+      </a>
+    </div>
+  </footer>
+
+  <aside>
+    <div id='aceptarCookies'>
+      <h4 class='inline'>Pol&iacute;tica de Cookies</h4>
+      <p class='inline'>Esta web utiliza cookies de terceros para ofrecer al visitante una forma m&aacute;s c&oacute;moda y eficiente al navegar.
+        Al utilizar esta web aceptas la 
+        <a rel='section' href='#politicaCookies' title='mostrar Pol&iacute;tica de Cookies'>Pol&iacute;tica de Cookies.</a> 
+      </p>
+      <button class='inline dch' title='Continuar navegando por la web' onclick='document.getElementById("aceptarCookies").setAttribute("style","bottom:-200px;")'>Continuar</button>
+    </div>
+    <div class='separador'></div>
+    
+    <div id='terminosCondiciones' class='cajaLuz'>
+      <div class='cajaLuzContenido'>
+        <a class='cerrar' rel='section' href='#footer' title='cerrar'>&#10008;</a>
+        <span>cerrar</span>
+        <div class='contenidoFooter'>
+          <h3>CONDICIONES DE USO</h3>
+          <p>Las presentes condiciones son los t&eacute;rminos y condiciones con los que Usted (el Usuario) y 
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span> regulan el uso y
+              disfrute de la web www.rchweb.net. Ser usuario de la web www.rchweb.net implica que Usted. reconoce haber le&iacute;do y aceptado las
+              presentes condiciones y lo que se derive de la normativa legal aplicable en esta materia. Si Usted no est&aacute; de acuerdo con estas
+              condiciones le rogamos que no contin&uacute;e usando la web de 
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span>(www.rchweb.net).</p>
+          <h5>OBJETO DE LA WEB</h5>
+          <p>El portal www.rchweb.net proporciona el acceso a multitud de informaci&oacute;n, servicios, programas o datos en Internet
+              pertenecientes a <span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span> o a sus licenciantes a los
+              que el usuario pueda tener acceso. El usuario asume la responsabilidad del uso del portal. En cualquier caso, 
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span> no ser&aacute; responsable de las opiniones
+              vertidas por los usuarios a trav&eacute;s de los foros, chats, u otras herramientas de participaci&oacute;n.</p>
+          <h5>PROPIEDAD INTELECTUAL E INDUSTRIAL</h5>
+          <p><span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span> por s&iacute; o como cesionaria, es titular
+              de todos los derechos de propiedad intelectual e industrial de su p&aacute;gina web, as&iacute; como de los elementos contenidos en la
+              misma (a t&iacute;tulo enunciativo, im&aacute;genes, sonido, audio, v&iacute;deo, software o textos; marcas o logotipos, combinaciones
+              de colores, estructura y dise&ntilde;o, selecci&oacute;n de materiales usados, software necesario para su funcionamiento, acceso y uso,
+              etc.), o bien de sus licenciantes.</p>
+          <p>Todos los derechos reservados. En virtud de lo dispuesto en los art&iacute;culos 8 y 32.1, p&aacute;rrafo segundo, de la Ley de Propiedad
+              Intelectual, quedan expresamente prohibidas la reproducci&oacute;n, la distribuci&oacute;n y la comunicaci&oacute;n p&uacute;blica,
+              incluida su modalidad de puesta a disposici&oacute;n, de la totalidad o parte de los contenidos de esta p&aacute;gina web, con fines
+              comerciales, en cualquier soporte y por cualquier medio t&eacute;cnico, sin la autorizaci&oacute;n de 
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span>. El usuario se compromete a respetar los
+              derechos de Propiedad Intelectual e Industrial titularidad de 
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span>. Podr&aacute; visualizar los elementos del
+              portal e incluso imprimirlos, copiarlos y almacenarlos en el disco duro de su ordenador o en cualquier otro soporte f&iacute;sico
+              siempre y cuando sea, &uacute;nica y exclusivamente, para su uso personal y privado.</p>
+          <p>Las fuentes de letras y los flat-icon utilizados en esta p&aacute;gina son de libre uso.</p>
+          <p>El logotipo (imagen) mostrado en la cabecera y p&iacute;e de p&aacute;gina, y las imagenes de fondo, estan registrados bajo la licencia
+            <a id='licenciaEnalce' rel='license' href='http://creativecommons.org/licenses/by-nc-nd/3.0/' target='_blank' title='Licencia Creative Commons'>
+              Creative Commons Reconocimiento-NoComercial-SinObraDerivada 3.0 Unported License.</a>
+          </p>
+          <p>Todos los nombres propios de Software, Empresas y Productos son marcas registradas y no se utilizan en este sitio con
+              fines comerciales.</p>
+          <p>Las fotograf&iacute;as, canciones y videos mostrados en este sitio tienen sus propios derechos de autor.</p>
+          <h5>ENLACES</h5>
+          <p><span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span> no ejerc&eacute; ning&uacute;n tipo de control
+              sobre los enlaces o hiperv&iacute;nculos hac&iacute;a otros sitios de Internet. En ning&uacute;n caso 
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span> asumir&aacute; responsabilidad alguna por los
+              contenidos de alg&uacute;n enlace perteneciente a un sitio web ajeno, ni garantizar&aacute; la disponibilidad t&eacute;cnica, calidad,
+              fiabilidad, exactitud, amplitud, veracidad, validez y constitucionalidad de cualquier material o informaci&oacute;n contenida en ninguno
+              de dichos hiperv&iacute;nculos u otros sitios de Internet. Igualmente la inclusi&oacute;n de estas conexiones externas no
+              implicar&aacute; ning&uacute;n tipo de asociaci&oacute;n, fusi&oacute;n o participaci&oacute;n con las entidades conectadas.</p>
+          <h5>RESPONSABILIDAD</h5>
+          <p><span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span> no se hace responsable de los da&ntilde;os y
+              perjuicios que se produzcan por fallos o malas configuraciones del software instalado en el ordenador del Usuario, fallos en la
+              transmisi&oacute;n y defectos del fabricante de software. Esta web est&aacute; preparada por defecto para ser visualizada en los
+              navegadores que cumplan los est&aacute;ndares web y para cualquier sistema operativo.
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span> no responde de la falta de visualizaci&oacute;n
+              de informaci&oacute;n relevante que pudieran producirse en otro tipo de combinaci&oacute;n posible de navegadores y/o sistemas operativos.</p>
+          <p>Usted es el &uacute;nico responsable de lo que suceda en su propio Equipo, y deber&aacute; tomar las medidas de seguridad adecuadas para
+              proteger la informaci&oacute;n alojada en el mismo, para evitar p&eacute;rdidas o da&ntilde;os causados por descargas desde la Web 
+              respecto a la informaci&oacute;n a la que pueda acceder el usuario a trav&eacute;s de la web, debido a las diferentes fuentes de
+              obtenci&oacute;n de la misma y su proceso de grabaci&oacute;n, 
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span> no garantiza la correcci&oacute;n absoluta
+              de la misma y por ello el Usuario no podr&aacute; exigir responsabilidad alguna por da&ntilde;os y perjuicios derivados de errores en la
+              informaci&oacute;n suministrada.</p>
+          <h5>MODIFICACIONES</h5>
+          <p><span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span> podr&aacute; variar las presentes condiciones
+              en cualquier momento, aunque no es intenci&oacute;n que sea frecuente, publicando en esta misma p&aacute;gina las fechas de las
+              modificaciones y entrando en vigor de forma inmediata. Si por cambio legislativo o resoluci&oacute;n judicial deja de ser aplicable una
+              parte de las presentes condiciones, dichas cl&aacute;usulas ser&aacute;n anuladas, pero las dem&aacute;s ser&aacute;n perfectamente
+              v&aacute;lidas y permanecer&aacute;n en vigor. El hecho de continuar usando esta Web implica que Usted acepta estas condiciones y se
+              compromete a aceptar las modificaciones realizadas en las mismas, oblig&aacute;ndose a revisar esta p&aacute;gina con frecuencia.
+              En caso de no aceptar estas condiciones, no debe seguir visitando la Web de 
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span>(www.rchweb.net).</p>
+        </div>
+      </div>
+    </div>
+
+    <div id='politicaCookies' class='cajaLuz'>
+      <div class='cajaLuzContenido'>
+        <a rel='section' class='cerrar' href='#footer' title='cerrar'>&#10008;</a>
+        <span>cerrar</span>
+        <div class='contenidoFooter'>
+          <h3>Pol&iacute;tica de Cookies</h3>
+          <p>Se denomina cookie a un segmento de datos que son almacenados en el navegador del usuario con la finalidad de ofrecer mayor informaci&oacute;n
+              al servidor web acerca de &eacute;ste, permitiendo as&iacute; recordar determinados par&aacute;metros e informaci&oacute;n sobre el usuario,
+              consiguiendo una mayor personalizaci&oacute;n y an&aacute;lisis sobre el comportamiento del mismo.</p>
+          <p>La cookies utilizadas en esta web son de Terceros, esto quiere decir que www.rchweb.net no utiliza cookies propias, correspondientes a las
+              aplicaciones de Panoramio, Flickr, Google, Youtube, Myspace y Reverbnation. En caso de no querer recibir cookies, por favor configure su
+              navegador de Internet para que las borre del disco duro de su ordenador, las bloquee o le avise en caso de instalaci&oacute;n de las mismas.
+              Para continuar sin cambios en la configuraci&oacute;n de las cookies, simplemente contin&uacute;e en la p&aacute;gina web.</p>
+          <h5>Tipos de Cookies</h5>
+          <p>Existen diferentes tipos de cookies, las cuales pueden ser clasificadas seg&uacute;n su finalidad a la hora de obtener informaci&oacute;n
+              acerca del usuario:</p>
+          <ul>
+            <li><span>Cookies t&eacute;cnicas:</span> Son aquellas que resultan imprescindibles para permitir al usuario la navegaci&oacute;n a
+                trav&eacute;s de una p&aacute;gina web, como por ejemplo, las que permiten almacenar los datos de un pedido online.</li>
+            <li><span>Cookies de personalizaci&oacute;n:</span> Este tipo permite personalizar las funciones o contenidos del sitio web en funci&oacute;n
+                de los datos obtenidos del navegador. Mediante estas cookies podemos presentar un sitio web en el mismo idioma del navegador usado para
+                visitar la web.</li>
+            <li><span>Cookies de an&aacute;lisis:</span> Se utilizan con fines estad&iacute;sticos &uacute;nicamente. Un claro ejemplo podr&iacute;a ser
+                las cookies generadas por el script de seguimiento de Google Analytics.</li>
+            <li><span>Cookies publicitarias y de publicidad comportamental:</span> Son todas aquellas que tienen como objetivo mejorar la eficacia de
+                los espacios publicitarios. As&iacute;, la red publicitaria de Google o los adservers incluyen este tipo de tecnolog&iacute;as para dar
+                el servicio deseado a sus clientes.</li>
+          </ul>
+          <h5>C&oacute;mo deshabilitar las Cookies en los navegadores m&aacute;s usados</h5>
+          <ul id='navegadores'>
+            <li><span>Chrome:</span> Configuraci&oacute;n &#8594; Mostrar opciones avanzadas &#8594; Privacidad &#8594; Configuraci&oacute;n de
+                contenido.</li>
+            <li>Para m&aacute;s informaci&oacute;n, puede consultar el soporte de Google o la Ayuda del navegador.</li>
+            <li><span>Internet Explorer:</span> Herramientas &#8594; Opciones de Internet &#8594; Privacidad &#8594; Configuraci&oacute;n.</li>
+            <li>Para m&aacute;s informaci&oacute;n, puede consultar el soporte de Microsoft o la Ayuda del navegador.</li>
+            <li><span>Firefox:</span> Herramientas &#8594; Opciones &#8594; Privacidad &#8594; Historial &#8594; Configuraci&oacute;n Personalizada.</li>
+            <li>Para m&aacute;s informaci&oacute;n, puede consultar el soporte de Mozilla o la Ayuda del navegador.</li>
+            <li><span>Safari:</span> Preferencias &#8594; Seguridad.</li>
+            <li>Para m&aacute;s informaci&oacute;n, puede consultar el soporte de Apple o la Ayuda del navegador.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </aside>
 
 </body>
 </html>

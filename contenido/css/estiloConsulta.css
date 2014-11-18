@@ -173,7 +173,7 @@ li {
 	padding-left: 5px;
 	padding-left: 0.3rem;
 	position: absolute;
-	text-shadow: -1px -1px hsl(270, 30%, 80%), 1px 1px hsl(270, 30%, 10%);
+	text-shadow: -1px -1px hsl(270, 30%, 75%), 2px 2px hsl(270, 30%, 10%);
 	top: 12px;
 	top: 0.75rem;
 }
@@ -196,7 +196,7 @@ li {
 	margin-right: 1rem;*/
 	margin-top: 5px;
 	margin-top: 0.31rem;
-	text-shadow: -1px -1px hsl(120, 100%, 40%), 1px 1px hsl(120, 100%, 10%);
+	text-shadow: -1px -1px hsl(120, 100%, 40%), 2px 2px hsl(120, 100%, 10%);
 /*	text-shadow: -1px -1px hsl(270, 30%, 80%), 1px 1px hsl(270, 30%, 10%);*/
 }
 #ocultarScroll {
@@ -247,6 +247,10 @@ li {
 	padding-left: 5px;
 	padding-left: 0.31rem;
 	text-shadow: -1px -1px hsl(270, 30%, 80%), 1px 1px hsl(270, 30%, 10%);
+}
+.googlePlus {
+	margin-top: 5px;
+	margin-top: 0.31rem;
 }
 .menuActual {
 	background-color: hsl(270, 75%, 30%);
@@ -383,29 +387,47 @@ li {
 	width: 16.25rem;
 }
 .ultimosArticulos:hover {
-	box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
-		-o-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
-		-ms-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
-		-moz-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
-		-webkit-box-shadow: 1px 1px 15px hsl(270, 75%, 80%), -1px -1px hsl(270, 75%, 93%);
+	box-shadow: 1px 1px 25px hsl(270, 75%, 60%), -1px -1px hsl(270, 75%, 93%);
+		-o-box-shadow: 1px 1px 25px hsl(270, 75%, 60%), -1px -1px hsl(270, 75%, 93%);
+		-ms-box-shadow: 1px 1px 25px hsl(270, 75%, 60%), -1px -1px hsl(270, 75%, 93%);
+		-moz-box-shadow: 1px 1px 25px hsl(270, 75%, 60%), -1px -1px hsl(270, 75%, 93%);
+		-webkit-box-shadow: 1px 1px 25px hsl(270, 75%, 60%), -1px -1px hsl(270, 75%, 93%);
 	cursor: pointer;
 }
 #ultimosArticulos object, #ultimosArticulos embed, #ultimosArticulos div {
 	background-color: hsl(270, 75%, 87%);
-	box-shadow: -1px -1px hsl(270, 75%, 80%), 1px 1px hsl(270, 75%, 93%);
-		-o-box-shadow: -1px -1px hsl(270, 75%, 80%), 1px 1px hsl(270, 75%, 93%);
-		-ms-box-shadow: -1px -1px hsl(270, 75%, 80%), 1px 1px hsl(270, 75%, 93%);
-		-moz-box-shadow: -1px -1px hsl(270, 75%, 80%), 1px 1px hsl(270, 75%, 93%);
-		-webkit-box-shadow: -1px -1px hsl(270, 75%, 80%), 1px 1px hsl(270, 75%, 93%);
-	margin-top: 10px;
-	margin-top: 0.31rem;
-	overflow: hidden;
-}
-#ultimosArticulos div {
+/*	box-shadow: -1px -1px hsl(270, 75%, 80%), 1px 1px hsl(270, 75%, 93%);*/
+	box-shadow: -1px -1px hsl(270, 75%, 70%), -1px 0 hsl(270, 75%, 70%), 0 -1px hsl(270, 75%, 70%),
+							-2px -2px hsl(270, 75%, 80%), -2px 0 hsl(270, 75%, 80%), 0 -2px hsl(270, 75%, 80%),
+							 1px  1px hsl(270, 75%, 91%),  1px 0 hsl(270, 75%, 91%), 0  1px hsl(270, 75%, 91%),
+							 2px  2px hsl(270, 75%, 95%),  2px 0 hsl(270, 75%, 95%), 0  2px hsl(270, 75%, 95%);
+		-o-box-shadow: -1px -1px hsl(270, 75%, 70%), -1px 0 hsl(270, 75%, 70%), 0 -1px hsl(270, 75%, 70%),
+									 -2px -2px hsl(270, 75%, 80%), -2px 0 hsl(270, 75%, 80%), 0 -2px hsl(270, 75%, 80%),
+									  1px  1px hsl(270, 75%, 91%),  1px 0 hsl(270, 75%, 91%), 0  1px hsl(270, 75%, 91%),
+									  2px  2px hsl(270, 75%, 95%),  2px 0 hsl(270, 75%, 95%), 0  2px hsl(270, 75%, 95%);
+		-ms-box-shadow: -1px -1px hsl(270, 75%, 70%), -1px 0 hsl(270, 75%, 70%), 0 -1px hsl(270, 75%, 70%),
+										-2px -2px hsl(270, 75%, 80%), -2px 0 hsl(270, 75%, 80%), 0 -2px hsl(270, 75%, 80%),
+										 1px  1px hsl(270, 75%, 91%),  1px 0 hsl(270, 75%, 91%), 0  1px hsl(270, 75%, 91%),
+										 2px  2px hsl(270, 75%, 95%),  2px 0 hsl(270, 75%, 95%), 0  2px hsl(270, 75%, 95%);
+		-moz-box-shadow: -1px -1px hsl(270, 75%, 70%), -1px 0 hsl(270, 75%, 70%), 0 -1px hsl(270, 75%, 70%),
+										 -2px -2px hsl(270, 75%, 80%), -2px 0 hsl(270, 75%, 80%), 0 -2px hsl(270, 75%, 80%),
+										  1px  1px hsl(270, 75%, 91%),  1px 0 hsl(270, 75%, 91%), 0  1px hsl(270, 75%, 91%),
+										  2px  2px hsl(270, 75%, 95%),  2px 0 hsl(270, 75%, 95%), 0  2px hsl(270, 75%, 95%);
+		-webkit-box-shadow: -1px -1px hsl(270, 75%, 70%), -1px 0 hsl(270, 75%, 70%), 0 -1px hsl(270, 75%, 70%),
+												-2px -2px hsl(270, 75%, 80%), -2px 0 hsl(270, 75%, 80%), 0 -2px hsl(270, 75%, 80%),
+												 1px  1px hsl(270, 75%, 91%),  1px 0 hsl(270, 75%, 91%), 0  1px hsl(270, 75%, 91%),
+												 2px  2px hsl(270, 75%, 95%),  2px 0 hsl(270, 75%, 95%), 0  2px hsl(270, 75%, 95%);
 	height: 250px;
 	height: 15.62rem;
+	margin-top: 7px;
+	margin-top: 0.44rem;
+	overflow: hidden;
 	width: 240px;
 	width: 15rem;
+}
+#ultimosArticulos div {
+	margin-bottom: 10px;
+	margin-bottom: 0.62rem;
 }
 #ultimosArticulos div h3 {
 	color: hsl(270, 75%, 30%);
@@ -441,7 +463,7 @@ li {
 	padding: 0 5px 7px 0;
 	padding: 0 0.31rem 0.43rem 0;
 }
-#subMenu, #subMenu  li {
+#subMenu  li {
 	display: inline-block;
 }
 #subMenu {
@@ -507,14 +529,22 @@ li {
 #hoja a {
 	font-size: 30px;
 	font-size: 1.87rem;
+	height: 35px;
+	height: 2.18rem;
 	margin-left: 10px;
 	margin-left: 0.62rem;
+	margin-top: -10px;
+	margin-top: -0.62rem;
+}
+#fechaArticulo {
+	font-family: RegularItalic;
+	font-size: 0.8rem;
 }
 #contenidoObject, #contenido, #articulos article:not(#hoja) {
 	padding: 45px 5px 5px;
 	padding: 2.81rem 0.31rem 0.31rem;
 }
-aside {
+#aside {
 	height: auto;
 	float: right;
 	margin-top: 145px;
@@ -643,6 +673,137 @@ aside {
 #frenteCajaLuz a {
 	color: hsl(0, 0%, 80%);
 }
+/* ********** Estilos Footer ********** */
+footer {
+  background-color: hsl(270, 50%, 50%);
+	bottom: 0;
+	display: block;
+	height: 40px;
+	height: 2.5rem;
+	padding-top: 8px;
+	padding-top: 0.5rem;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	z-index: 4500;
+}
+footer div {
+  display: inline-block;
+  margin: 0 40px 10px 40px;
+  margin: 0 2.5rem 0.62rem 2.5rem;
+}
+footer div:hover, footer div:active, footer div:focus {
+  cursor: pointer;
+}
+footer a {
+	color: hsl(270, 75%, 70%);
+}
+#contacto a {
+  font-family: fontTitulo;
+  font-size: 18px;
+  font-size: 1.12rem;
+}
+/* ********** Estilos Cookies ********** */
+#aceptarCookies {
+  background-color: hsl(0, 0%, 0%);
+  bottom: 0;
+	color: hsl(0, 0%, 100%);
+  display: block;
+  font-size: 0.8rem;
+  padding: 5px 15px;
+  padding: 0.31rem 0.94rem;
+  position: fixed;
+  width: 100%;
+  z-index: 5000;
+}
+#aceptarCookies p  a {
+  font-style: italic;
+}
+#aceptarCookies > button {
+  background-color: hsl(270, 50%, 40%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+  margin-left: 20px;
+  margin-left: 1.25rem;
+  padding: 0 5px;
+  padding: 0 0.31rem;
+}
+#aceptarCookies > button:hover, #aceptarCookies > button:active, #aceptarCookies > button:focus {
+  background-color: hsl(270, 50%, 60%);
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+}
+/* ********** Estilos Aside ********** */
+.cajaLuz {
+  background-color: hsla(0, 0%, 0%, 0.8);
+  bottom: 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  overflow: auto;
+	padding: 10%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.cajaLuzContenido {
+  background-color: hsla(270, 75%, 30%, 0.8);
+  display: block;
+	padding: 30px;
+  text-align: justify;
+}
+.cajaLuzContenido h3, .cajaLuzContenido h5 {
+  margin-bottom: 15px;
+}
+.cajaLuzContenido p {
+  background-color: hsl(270, 50%, 40%);
+  margin-bottom: 15px;
+  margin-left: 15px;
+  padding: 8px;
+}
+.cajaLuz:target {
+  display: block;
+}
+.cerrar {
+  background-color: hsla(270, 50%, 50%, 0.8);
+  border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+	margin-top: -50px;
+	padding: 15px;
+  position: absolute;
+	right: 9%;
+}
+.cerrar ~ span {
+  display: none;
+	margin-top: -35px;
+  position: absolute;
+	right: 1%;
+}
+.cerrar:hover ~ span, .cerrar:active ~ span, .cerrar:focus ~ span {
+  display: block;
+}
+#politicaCookies ul {
+  background-color: hsl(270, 50%, 40%);
+  margin-bottom: 15px;
+  margin-left: 15px;
+  padding: 8px 50px;
+}
+#politicaCookies li {
+  margin-bottom: 5px;
+}
+#politicaCookies span {
+  font-style: italic;
+  font-weight: bold;
+  margin-right: 10px;
+}
+#navegadores li:nth-child(even) {
+  list-style: none;
+  margin-bottom: 10px;
+}
 /*	***********	Estilos Responsive Design	*********** */
 /*	***********	Estilos Movil Antiguo	*********** */
 @media only screen and (max-width: 298px) {
@@ -679,9 +840,13 @@ aside {
 		margin-top: -8px;
 		margin-top: -0.5rem;
 	}
-	aside {
+	#aside {
 		width: 160px;
 		width: 10rem;
+	}
+	footer {
+		margin-left: 145px;
+		margin-left: 10rem;
 	}
 }
 /*	***********	Estilos Movil (2)	*********** */
@@ -724,9 +889,13 @@ aside {
 		margin-top: -8px;
 		margin-top: -0.5rem;
 	}
-	aside {
+	#aside {
 		width: 96px;
 		width: 6rem;
+	}
+	footer {
+		margin-left: 112px;
+		margin-left: 7rem;
 	}
 }
 /*	***********	Estilos Tablet	*********** */
@@ -768,9 +937,13 @@ aside {
 		margin-top: -8px;
 		margin-top: -0.5rem;
 	}
-	aside {
+	#aside {
 		width: 160px;
 		width: 10rem;
+	}
+	footer {
+		margin-left: 145px;
+		margin-left: 10rem;
 	}
 }
 /*	***********	Estilos Monitor	*********** */
@@ -812,8 +985,12 @@ aside {
 		margin-top: -4px;
 		margin-top: -0.25rem;
 	}
-	aside {
+	#aside {
 		width: 170px;
 		width: 10.62rem;
+	}
+	footer {
+		margin-left: 170px;
+		margin-left: 10.62rem;
 	}
 }

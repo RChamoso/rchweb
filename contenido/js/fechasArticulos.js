@@ -59,14 +59,16 @@ function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artí
 		if (fechaActual >= nuevaFecha) {		//	Muestra solo los articulos que tienen fecha actual
 			var articulo = elementoNuevo('article');
 			articulo.setAttribute('class', 'ultimosArticulos');
-			var dia = nuevaFecha.getDate().toString();
+			nuevaFecha = calcularFecha(nuevaFecha);
+/*			var dia = nuevaFecha.getDate().toString();
 			if (dia.length == 1) {
 				dia = '0' + dia;
 			}
-			var mes = (nuevaFecha.getMonth() + 1).toString();
+			/*var mes = (nuevaFecha.getMonth() + 1).toString();
 			if (mes.length == 1) {
 				mes = '0' + mes;
-			}
+			}*/
+/*			var mes = meses[nuevaFecha.getMonth()];
 			var hora = nuevaFecha.getHours().toString();
 			if (hora.length == 1) {
 				hora = '0' + hora;
@@ -76,8 +78,8 @@ function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artí
 				minutos = '0' + minutos;
 			}
 			var anno = nuevaFecha.getFullYear();
-			nuevaFecha = String.fromCharCode(8986) + ' ' + dia + '-' + mes + '-' + anno + ' ' + hora + ':' + minutos;
-			var posicion = fechaJSON[i].direccion;
+			nuevaFecha = String.fromCharCode(8986) + ' ' + hora + ':' + minutos + ' - ' + dia + ' ' + mes + ' ' + anno;
+*/			var posicion = fechaJSON[i].direccion;
 			posicion = posicion.split(',');
 			var longitud = posicion.length;
 			switch (longitud) {
@@ -107,18 +109,18 @@ function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artí
 			}
 			var funcionClick = '';
 			if (funcion !== 'nuevaVentana') {
-				funcionClick = 'mostrarUltimoArt("' + tituloPpal + '", "' + subMenuPpal + '", "' + titulo + '", "' + subTitulo + '", "' + subMenu + '", "' + pos1 + '", "' + pos2 + '", "' + ruta2 + '");';
+				funcionClick = 'mostrarUltimoArt("' + tituloPpal + '", "' + subMenuPpal + '", "' + titulo + '", "' + subTitulo + '", "' + subMenu + '", "' + pos1 + '", "' + pos2 + '", "' + ruta2 + '", "' + nuevaFecha + '");';
 				articulo.setAttribute('onclick',funcionClick);
 				var objeto = elementoNuevo('object');
 				var objetoEmb = elementoNuevo('embed');
 				objeto.setAttribute('data', ruta2);
 				objetoEmb.setAttribute('src', ruta2);
 				objetoEmb.setAttribute('type', 'text/html');
-				objetoEmb.setAttribute('height', '250');
-				objetoEmb.setAttribute('width', '240');
+//				objetoEmb.setAttribute('height', '250');
+//				objetoEmb.setAttribute('width', '240');
 				objeto.appendChild(objetoEmb);
-				objeto.setAttribute('height', '250');
-				objeto.setAttribute('width', '240');
+//				objeto.setAttribute('height', '250');
+//				objeto.setAttribute('width', '240');
 			} else {
 				funcionClick = funcion + '("' + ruta2 + '", false);';
 				articulo.setAttribute('class', 'nuevaVentana ultimosArticulos');
@@ -146,9 +148,9 @@ function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artí
 		}
 	}
 }
-function mostrarUltimoArt(tituloPpal, subMenuPpal, titulo, subTitulo, subMenu, pos1, pos2, ruta2) {
+function mostrarUltimoArt(tituloPpal, subMenuPpal, titulo, subTitulo, subMenu, pos1, pos2, ruta2, fecha) {
 	mostrarArticulos(tituloPpal, subMenu);
 	mostrarSubMenu(subMenuPpal, pos1, pos2);
 	ocultarSubMenu();
-	mostrarFuncion(subTitulo, ruta2, '');
+	mostrarFuncion(subTitulo, ruta2, '', fecha);
 }

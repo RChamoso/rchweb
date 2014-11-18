@@ -1,0 +1,1115 @@
+/*
+        estilos.css de la Web "RChWeb.net/RobertoChamoso"
+        Desarrollo y Diseño: Roberto Chamoso Garcia
+        Contacto: robchamoso@gmail.com
+        Año 2014
+        versión 2014.08
+*/
+/* ********** Fuentes Personalizadas ********** */
+@font-face {
+  font-family: Regular;
+  src:  url(../fuentes/Aller_Lt.ttf);
+  src:  url(../fuentes/Aller_Lt.eot);
+  src:  url(../fuentes/Aller_Lt.eot?#iefix) format('embedded-opentype'),
+        url(../fuentes/Aller_Lt.woff) format('woff'),
+        url(../fuentes/Aller_Lt.ttf) format('truetype'),
+        url(../fuentes/Aller_Lt.svg#abril_fatfaceregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: fontTitulo;
+  src:  url(../fuentes/Gabrielle.ttf);
+  src:  url(../fuentes/Gabrielle.eot);
+  src:  url(../fuentes/Gabrielle.eot?#iefix) format('embedded-opentype'),
+        url(../fuentes/Gabrielle.woff) format('woff'),
+        url(../fuentes/Gabrielle.ttf) format('truetype'),
+        url(../fuentes/Gabrielle.otf) format('otf'),
+        url(../fuentes/Gabrielle.svg#abril_fatfaceregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: subTitulo;
+  src:  url(../fuentes/OpenSans-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: WebHostingHub;
+  src:  url(../fuentes/webhostinghub-glyphs.ttf);
+  src:  url(../fuentes/webhostinghub-glyphs.eot);
+  src:  url(../fuentes/webhostinghub-glyphs.eot?#iefix) format('embedded-opentype'),
+        url(../fuentes/webhostinghub-glyphs.woff) format('woff'),
+        url(../fuentes/webhostinghub-glyphs.ttf) format('truetype'),
+        url(../fuentes/webhostinghub-glyphs.svg#abril_fatfaceregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Flaticon;
+  src:  url(../fuentes/flaticon.ttf);
+  src:  url(../fuentes/flaticon.eot);
+  src:  url(../fuentes/flaticon.eot?#iefix) format('embedded-opentype'),
+        url(../fuentes/flaticon.woff) format('woff'),
+        url(../fuentes/flaticon.ttf) format('truetype'),
+        url(../fuentes/flaticon.svg#abril_fatfaceregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* ********** Estilos Basicos ********** */
+*  {
+  margin: 0 auto;
+  padding: 0;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html {
+  font-size: 120%;
+  height: 100%;
+  width: 100%;
+}
+a {
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  text-decoration: none;
+}
+a:hover, a:active, a:focus { 
+  cursor: pointer;
+}
+a:after { 
+  clear: both;
+  content: "";
+  display: block; 
+}
+a:link, a:visited {
+  color: hsl(0, 0%, 100%);
+}
+.dch  {
+  float: right;
+}
+.izq  {
+  float: left;
+}
+.ocultar {
+  display: none;
+}
+.separador {
+  clear: both;
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inlineBlock {
+  display: inline-block;
+}
+.absolute {
+  position: absolute;
+}
+.sangria {
+  margin-top: 15px;
+  text-indent: 50px;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.center {
+  text-align: center;
+}
+.enlace {
+  border-bottom: 1px dashed hsl(270, 75%, 30%);
+  padding-bottom: 2px;
+}
+body {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  display: block;
+  font-family: Regular;
+  width: 100%;
+}
+/* ********** Estilos Header y Nav ********** */
+header, nav {
+  background-color: hsl(270, 75%, 30%);
+  font-family: fontTitulo;
+  letter-spacing: 0.03em;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+header {
+  padding: 5px 10px;
+  width: 100%;
+}
+header h1 {
+  position: absolute;
+  top: 12px;
+}
+nav {
+  transition: all 1s ease-in 0s;
+    -o-transition: all 1s ease-in 0s;
+    -moz-transition: all 1s ease-in 0s;
+    -webkit-transition: all 1s ease-in 0s;
+  z-index: 1100;
+}
+nav li {
+  display: inline-block;
+  font-size: 36px;
+  position: relative;
+  transition: all 1s ease-out 1s;
+    -o-transition: all 1s ease-out 1s;
+    -moz-transition: all 1s ease-out 1s;
+    -webkit-transition: all 1s ease-out 1s;
+  transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+nav li p, nav li span {
+  backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  display: inline-block;
+}
+nav li span {
+  background-color: hsl(270, 75%, 30%);
+}
+nav li p {
+  background-color: hsl(270, 75%, 30%);
+  height: 45px;
+}
+/* ********** Estilos Articulos/Section ********** */
+article {
+  background-color: hsl(270, 50%, 50%);
+  font-size: 26px;
+  font-size-adjust: 0.5;
+  letter-spacing: 0.2px;
+  text-align: justify;
+}
+.primerParrafo {
+  margin-top: 50px;
+}
+article h4 {
+  background-color: hsl(270, 75%, 30%);
+  border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+  display: inline-block;
+  font-family: fontTitulo;
+  font-size: 30px;
+  margin: 35px 0 15px 0;
+  transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+}
+article h5 {
+  margin-top: 15px;
+  padding: 15px 20px;
+}
+article p  {
+  line-height: 1.2em;
+  margin-bottom: 15px;
+}
+article ul {
+  font-size: 20px;
+}
+article li {
+  list-style: none;
+}
+article li p {
+  margin-bottom: 10px;
+}
+/* ********** Estilos Imagenes Fondo ********** */
+.section:after {
+  background-attachment: fixed;
+  background-position: center 70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+  content: '';
+  display: block;
+  width: 100%;
+}
+#aficion:after {
+  background-image: url(../images/Donostia.jpg);
+}
+/* ********** Estilos Perfil ********** */
+#perfil img {
+  border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+  height: 120px;
+  left: 0;
+  margin-left: -7px;
+  margin-top: -21px;
+  position: absolute;
+  top: 0;
+  z-index: 500;
+}
+#perfil ul {
+  border-left: 1px dotted hsl(0, 0%, 100%);
+  padding-left: 15px;
+}
+#perfil li a {
+  font-size: 30px;
+}
+.hexagono {
+  background-color: hsl(300, 100%, 25%);
+  height: 82.5px;
+  position: relative;
+  width: 150px;
+}
+.hexagono:before {
+  border-bottom: 37.5px solid hsl(300, 100%, 25%);
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  content: "";
+  height: 0px;
+  left: 0px;
+  position: absolute;
+  top: -37px;
+  width: 0px;
+}
+.hexagono:after {
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-top: 37.5px solid hsl(300, 100%, 25%);
+  bottom: -37px;
+  content: "";
+  height: 0px;
+  left: 0px;
+  position: absolute;
+  width: 0px;
+}
+/* ********** Estilos Proyectos ********** */
+.imagenesWeb p {
+  font-family: subTitulo;
+  font-size: 12px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.imagenesWeb:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.imgWeb {
+  transition-duration: 0.9s;
+    -o-transition-duration: 0.9s;
+    -ms-transition-duration: 0.9s;
+    -moz-transition-duration: 0.9s;
+    -webkit-transition-duration: 0.9s;
+}
+.imgWeb div {
+  background-color: hsl(0, 100%, 0%);
+  cursor: pointer;
+  height: 100%;
+  opacity: 0.6;
+  position: absolute;
+  transition-duration: 0.9s;
+    -o-transition-duration: 0.9s;
+    -ms-transition-duration: 0.9s;
+    -moz-transition-duration: 0.9s;
+    -webkit-transition-duration: 0.9s;
+  width: 100%;
+}
+.imgWeb:hover div, .imgWeb:active div, .imgWeb:focus div {
+  height: 0%;
+  margin-top: 130px;
+}
+/* ********** Estilos Redes Sociales ********** */
+.redes {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 35px;
+  position: relative;
+}
+.redes span {
+  display: none;
+}
+.redes:before, .redes:after {
+  color: hsl(270, 50%, 60%);
+  position: relative;
+}
+.redes:before {
+  background-color: hsl(270, 50%, 50%);
+  padding: 0 16px;
+  transition: color 1s ease-out 1s;
+    -o-transition: color 1s ease-out 1s;
+    -ms-transition: color 1s ease-out 1s;
+    -moz-transition: color 1s ease-out 1s;
+    -webkit-transition: color 1s ease-out 1s;
+  z-index: 50;
+}
+.redes:after {
+  font-family: Regular;
+  font-size: 17px;
+  position: absolute;
+  top: 60px;
+  transition: visibility 2s ease-out 1s, top 2s ease-out 1s, color 3s ease-out 1s;
+    -o-transition: visibility 2s ease-out 1s, top 2s ease-out 1s, color 3s ease-out 1s;
+    -ms-transition: visibility 2s ease-out 1s, top 2s ease-out 1s, color 3s ease-out 1s;
+    -moz-transition: visibility 2s ease-out 1s, top 2s ease-out 1s, color 3s ease-out 1s;
+    -webkit-transition: visibility 2s ease-out 1s, top 2s ease-out 1s, color 3s ease-out 1s;
+  visibility: hidden;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: WebHostingHub;
+  font-size: 58px;
+  -moz-font-size: 120px;
+  top: 6px;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before {
+  font-family: Flaticon;
+  font-size: 58px;
+}
+.flaticon-google110:before { content: "\e009"; }
+.flaticon-facebook44:before { content: "\e007"; }
+.flaticon-twitter37:before { content: "\e013"; }
+.flaticon-linkedin21:before { content: "\e00c"; }
+.flaticon-wikipedia5:before { content: "\e014"; }
+.flaticon-youtube30:before { content: "\e015"; }
+.flaticon-reverbnation1:before { content: "\e010"; }
+.flaticon-my8:before { content: "\e00d"; }
+.icon-panoramio:before { content: '\f617'; }
+.flaticon-picasa5:before { content: "\e00e"; }
+.flaticon-flickr18:before { content: "\e008"; }
+.flaticon-delicious9:before { content: "\e003"; }
+
+.flaticon-google110:after { content: 'Google+'; }
+.flaticon-facebook44:after { content: 'Facebook'; }
+.flaticon-twitter37:after { content: 'Twitter'; }
+.flaticon-linkedin21:after { content: 'Linkedin'; }
+.flaticon-wikipedia5:after { content: 'Wikipedia'; }
+.flaticon-youtube30:after { content: 'Youtube'; }
+.flaticon-reverbnation1:after { content: 'Reverbnation'; }
+.flaticon-my8:after { content: 'Myspace'; }
+.icon-panoramio:after { content: 'Panoramio'; }
+.flaticon-picasa5:after { content: 'Picasa'; }
+.flaticon-flickr18:after { content: 'Flickr'; }
+.flaticon-delicious9:after { content: 'Delicious'; }
+
+.flaticon-google110:hover:before, .flaticon-google110:active:before, .flaticon-google110:focus:before,
+.flaticon-google110:hover:after,  .flaticon-google110:active:after,  .flaticon-google110:focus:after {
+  color: hsl(5, 95%, 35%);
+}
+.flaticon-facebook44:hover:before, .flaticon-facebook44:active:before, .flaticon-facebook44:focus:before,
+.flaticon-facebook44:hover:after,  .flaticon-facebook44:active:after,  .flaticon-facebook44:focus:after {
+  color: hsl(230, 90%, 25%);
+}
+.flaticon-twitter37:hover:before, .flaticon-twitter37:active:before, .flaticon-twitter37:focus:before,
+.flaticon-twitter37:hover:after,  .flaticon-twitter37:active:after,  .flaticon-twitter37:focus:after {
+  color: hsl(210, 85%, 50%);
+}
+.flaticon-linkedin21:hover:before, .flaticon-linkedin21:active:before, .flaticon-linkedin21:focus:before,
+.flaticon-linkedin21:hover:after,  .flaticon-linkedin21:active:after,  .flaticon-linkedin21:focus:after {
+  color: hsl(225, 90%, 30%);
+}
+.flaticon-wikipedia5:hover:before, .flaticon-wikipedia5:active:before, .flaticon-wikipedia5:focus:before,
+.flaticon-wikipedia5:hover:after,  .flaticon-wikipedia5:active:after,  .flaticon-wikipedia5:focus:after {
+  color: hsl(200, 10%, 70%);
+}
+.flaticon-youtube30:hover:before, .flaticon-youtube30:active:before, .flaticon-youtube30:focus:before,
+.flaticon-youtube30:hover:after,  .flaticon-youtube30:active:after,  .flaticon-youtube30:focus:after {
+  color: hsl(0, 80%, 40%);
+}
+.flaticon-reverbnation1:hover:before, .flaticon-reverbnation1:active:before, .flaticon-reverbnation1:focus:before,
+.flaticon-reverbnation1:hover:after,  .flaticon-reverbnation1:active:after,  .flaticon-reverbnation1:focus:after {
+  color: hsl(5, 90%, 40%);
+}
+.flaticon-my8:hover:before, .flaticon-my8:active:before, .flaticon-my8:focus:before,
+.flaticon-my8:hover:after,  .flaticon-my8:active:after,  .flaticon-my8:focus:after {
+  color: hsl(0, 0%, 0%);
+}
+.icon-panoramio:hover:before, .icon-panoramio:active:before, .icon-panoramio:focus:before,
+.icon-panoramio:hover:after,  .icon-panoramio:active:after,  .icon-panoramio:focus:after {
+  color: hsl(225, 90%, 30%);
+}
+.flaticon-picasa5:hover:before, .flaticon-picasa5:active:before, .flaticon-picasa5:focus:before,
+.flaticon-picasa5:hover:after,  .flaticon-picasa5:active:after ,  .flaticon-picasa5:focus:after {
+  color: hsl(135, 60%, 20%);
+}
+.flaticon-flickr18:hover:before, .flaticon-flickr18:active:before, .flaticon-flickr18:focus:before,
+.flaticon-flickr18:hover:after,  .flaticon-flickr18:active:after,  .flaticon-flickr18:focus:after {
+  color: hsl(225, 90%, 30%);
+}
+.flaticon-delicious9:hover:before, .flaticon-delicious9:active:before, .flaticon-delicious9:focus:before,
+.flaticon-delicious9:hover:after,  .flaticon-delicious9:active:after,  .flaticon-delicious9:focus:after {
+   color: hsl(210, 85%, 50%);
+}
+.flaticon-google110:hover:after,     .flaticon-google110:active:after,     .flaticon-google110:active:after,
+.flaticon-facebook44:hover:after,    .flaticon-facebook44:active:after,    .flaticon-facebook44:active:after,
+.flaticon-twitter37:hover:after,     .flaticon-twitter37:active:after,     .flaticon-twitter37:active:after,
+.flaticon-linkedin21:hover:after,    .flaticon-linkedin21:active:after,    .flaticon-linkedin21:active:after,
+.flaticon-wikipedia5:hover:after,    .flaticon-wikipedia5:active:after,    .flaticon-wikipedia5:active:after,
+.flaticon-youtube30:hover:after,     .flaticon-youtube30:active:after,     .flaticon-youtube30:active:after,
+.flaticon-reverbnation1:hover:after, .flaticon-reverbnation1:active:after, .flaticon-reverbnation1:active:after,
+.flaticon-my8:hover:after,           .flaticon-my8:active:after,           .flaticon-my8:active:after,
+.flaticon-picasa5:hover:after,       .flaticon-picasa5:active:after,       .flaticon-picasa5:active:after,
+.flaticon-flickr18:hover:after,      .flaticon-flickr18:active:after,      .flaticon-flickr18:active:after,
+.flaticon-delicious9:hover:after,    .flaticon-delicious9:active:after,    .flaticon-delicious9:active:after {
+  top: 70px;
+  visibility: visible;
+}
+.icon-panoramio:hover:after, .icon-panoramio:active:after, .icon-panoramio:focus:after {
+  top: 80px;
+  visibility: visible;
+}
+/* ********** Estilos Aficion ********** */
+#aficion section {
+  margin-bottom: 50px;
+}
+#aficion ul {
+  color: hsl(270, 50%, 85%);
+  font-family: subTitulo;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+#aficion ul span {
+  font-style: oblique;
+}
+#tituloFotografia, #tituloMusica {
+  display: block;
+  margin-bottom: 50px;
+}
+#tituloFotografia {
+  width: 195px;
+}
+#tituloMusica {
+  width: 140px;
+}
+.iconPanoramio, .iconFlickr, .iconYoutube, .iconMySpace, .iconReverbnation {
+  position: relative;
+  text-align: center;
+}
+/* ********** Estilos Footer ********** */
+footer {
+  background-color: hsl(270, 50%, 50%);
+  letter-spacing: 0.2px;
+  text-align: justify;
+}
+footer div {
+  display: inline-block;
+}
+footer:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+footer div {
+  margin-bottom: 10px;
+}
+footer div:hover, footer div:active, footer div:focus {
+  cursor: pointer;
+}
+#contacto a {
+  font-family: fontTitulo;
+  font-size: 18px;
+}
+/* ********** Estilos Cookies ********** */
+#aceptarCookies {
+  background-color: hsl(0, 0%, 0%);
+  bottom: 0;
+  display: block;
+  font-size: 14px;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+#aceptarCookies h4 {
+  margin-bottom: 10px;
+}
+#aceptarCookies p  a {
+  font-style: italic;
+}
+#aceptarCookies > button {
+  background-color: hsl(270, 50%, 40%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+  margin-left: 20px;
+  padding: 5px;
+}
+#aceptarCookies > button:hover, #aceptarCookies > button:active, #aceptarCookies > button:focus {
+  background-color: hsl(270, 50%, 60%);
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+}
+/* ********** Estilos Aside ********** */
+.cajaLuz {
+  background-color: hsla(0, 0%, 0%, 0.8);
+  bottom: 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.cajaLuzContenido {
+  background-color: hsla(270, 75%, 30%, 0.8);
+  display: block;
+  text-align: justify;
+}
+.cajaLuzContenido h3, .cajaLuzContenido h5 {
+  margin-bottom: 15px;
+}
+.cajaLuzContenido p {
+  background-color: hsl(270, 50%, 40%);
+  margin-bottom: 15px;
+  margin-left: 15px;
+  padding: 8px;
+}
+.cajaLuz:target {
+  display: block;
+}
+.cerrar {
+  background-color: hsla(270, 50%, 50%, 0.8);
+  border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+  position: absolute;
+}
+.cerrar ~ span {
+  display: none;
+  position: absolute;
+}
+.cerrar:hover ~ span, .cerrar:active ~ span, .cerrar:focus ~ span {
+  display: block;
+}
+#politicaCookies ul {
+  background-color: hsl(270, 50%, 40%);
+  margin-bottom: 15px;
+  margin-left: 15px;
+  padding: 8px 50px;
+}
+#politicaCookies li {
+  margin-bottom: 5px;
+}
+#politicaCookies span {
+  font-style: italic;
+  font-weight: bold;
+  margin-right: 10px;
+}
+#navegadores li:nth-child(even) {
+  list-style: none;
+  margin-bottom: 10px;
+}
+/* ********** Estilos Responsive Design ********** */
+
+/* ********** Estilos RD- Imagenes ********** */
+@media only screen and (min-width:299px) and (max-width:480px) and (orientation: landscape) {
+  .section:after { height: 300px; }
+  #perfil:after { background-image: url(../images/responsiveDesignMovilL2.png); }
+  #proyectos:after        { background-image: url(../images/BilbaoMovilL2.jpg); }
+  #redesSociales:after { background-image: url(../images/SevillaMovilL2.jpg); }
+}
+@media only screen and (min-width:299px) and (max-width:480px) and (orientation: portrait) {
+  .section:after { height: 300px; }
+  #perfil:after { background-image: url(../images/responsiveDesignMovilP2.png); }
+  #proyectos:after        { background-image: url(../images/BilbaoMovilP2.jpg); }
+  #redesSociales:after { background-image: url(../images/SevillaMovilP2.jpg); }
+}
+@media only screen and (min-width:481px) and (max-width:640px) and (orientation: landscape) {
+  .section:after { height: 300px; }
+  #perfil:after { background-image: url(../images/responsiveDesignMovilL.png); }
+  #proyectos:after        { background-image: url(../images/BilbaoMovilL.jpg); }
+  #redesSociales:after { background-image: url(../images/SevillaMovilL.jpg); }
+}
+@media only screen and (min-width:481px) and (max-width:640px) and (orientation: portrait) {
+  .section:after { height: 300px; }
+  #perfil:after             { background-image: url(../images/responsiveDesignMovilP.png); }
+  #proyectos:after        { background-image: url(../images/BilbaoMovilP.jpg); }
+  #redesSociales:after { background-image: url(../images/SevillaMovilP.jpg); }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) and (orientation: landscape) {
+  .section:after { height: 300px; }
+  #perfil:after             { background-image: url(../images/responsiveDesignTabletL.png); }
+  #proyectos:after        { background-image: url(../images/BilbaoTabletL.jpg); }
+  #redesSociales:after { background-image: url(../images/SevillaTabletL.jpg); }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) and (orientation: portrait) {
+  .section:after { height: 500px; }
+  #perfil:after             { background-image: url(../images/responsiveDesignTabletP.png); }
+  #proyectos:after        { background-image: url(../images/BilbaoTabletP.jpg); }
+  #redesSociales:after { background-image: url(../images/SevillaTabletP.jpg); }
+}
+@media only screen and (min-width: 1025px) {
+  .section:after { height: 500px; }
+  #perfil:after             { background-image: url(../images/responsiveDesign.png); }
+  #proyectos:after        { background-image: url(../images/Bilbao.jpg); }
+  #redesSociales:after { background-image: url(../images/Sevilla.jpg); }
+}
+/* ********** Estilos Movil Antiguo ********** */
+@media only screen and (max-width: 290px) {
+  header, nav, section, aside, footer  {
+    display: none;
+  }
+}
+/* ********** Estilos Movil(1/2) ********** */
+@media only screen and (min-width:299px) and (max-width:640px) {
+  header object {
+    height: 45px;
+    width: 45px;
+  }
+  nav {
+    top: 3px;
+  }
+  nav li p {
+    color: hsl(270, 50%, 90%);
+    position: relative;
+  }
+  #menu span {
+    position: relative;
+    top: -10px;
+  }
+  .menu span {
+    display: none;
+  }
+  .section:after {
+    background-position: center 58px;
+  }
+  #aficion section {
+    text-align: center;
+  }
+  #aficion section div {
+    display: block;
+  }
+  #aficion ul {
+    display: inline-block;
+    position: relative;
+    top: -20px;
+  }
+  #picasa, #wiki {
+    position: relative;
+  }
+  .iconPanoramio, .iconFlickr, .iconYoutube, .iconMySpace, .iconReverbnation {
+    top: 10px;
+  }
+  #picasa ul {
+    top: -12px;
+  }
+  #wiki ul {
+    top: 3px;
+  }
+  footer {
+    padding: 20px;
+  }
+}
+/* ********** Estilos Movil(1/2) y Tablet ********** */
+@media only screen and (min-width:299px) and (max-width:1024px) {
+  nav {
+    height: 55px;
+  }
+  #menu {
+    position: relative;
+    width: 50px;
+    z-index: 100;
+  }
+  #menu:hover, #menu:active, #menu:focus {
+    cursor: pointer;
+  }
+  #menu span {
+    width: 50px;
+  }
+  nav:hover, nav:active, nav:focus {
+    cursor: pointer;
+    right: 0;
+  }
+  .imagenesWeb {
+    text-align: center;
+  }
+  .imagenesWeb li:nth-child(6) {
+    display: none;
+  }
+  .imgWeb {
+    transform: scale(1);
+      -o-transform: scale(1);
+      -ms-transform: scale(1);
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+  }
+  #redesSociales article {
+    text-align: left;
+  }
+  #aficion ul {
+    font-size: 16px;
+  }
+  footer {
+    font-size: 20px;
+  }
+  #contacto span {
+    font-size: 30px;
+  }
+}
+/* ********** Estilos Movil(1) ********** */
+@media only screen and (min-width:299px) and (max-width:480px) {
+  header h1 {
+    font-family: fontTitulo;
+    font-size: 26px;
+    margin-left: 5px;
+    top: 12px;
+  }
+  nav {
+    font-family: Regular;
+    left: auto;
+    right: -400px;
+    width: 460px;
+  }
+  nav ul {
+    position: relative;
+  }
+  nav li {
+    margin-left: 5px;
+    text-align: center;
+    width: 70px;
+  }
+  nav li p {
+    font-size: 16px;
+  }
+  nav li:nth-child(4) {
+    top: 4px;
+  }
+  nav:hover, nav:active, nav:focus {
+    left: -115px;
+  }
+  #menu {
+    display: inline-block;
+    left: -35px;
+    top: 8px;
+  }
+  .menu {
+    top: -12px;
+  }
+  article {
+    padding: 60px 10px 50px 10px;
+  }
+  #perfil h3 {
+    margin: 50px 20px 20px 0;
+  }
+  #perfil li {
+    margin-bottom: 20px;
+  }
+  .imagenesWeb li {
+    margin-bottom: 30px;
+  }
+  #panoramio {
+    height: 300px;
+    width: 280px;
+  }
+  #flickr {
+    height: 230px;
+    width: 280px;
+  }
+  #reverbnation {
+    height: 300px;
+    width: 280px;
+  }
+  #youtube {
+    height: 200px;
+    width: 280px;
+  }
+  #myspace {
+    height: 300px;
+    width: 280px;  
+  }
+  footer {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  footer div {
+    display: block;
+  }
+  .contenidoFooter {
+    margin-top: 15px;
+  }
+  .cajaLuz {
+    font-size: 16px;
+    padding: 5%;
+  }
+  .cajaLuzContenido {
+    padding: 15px;
+  }
+  .cerrar {
+    margin-top: -20px;
+    padding: 10px;
+    right: 1%;
+  }
+  .cerrar ~ span {
+    margin-top: -15px;
+    right: 15%;
+  }
+}
+/* ********** Estilos Mayor Movil(1) ********** */
+@media only screen and (min-width:481px) {
+  header h1 {
+    margin-left: 20px;
+  }
+  nav li {
+    text-align: center;
+  }
+  #perfil h3 {
+    margin: 50px 50px 50px 0;
+  }
+  .imgWeb:hover, .imgWeb:active, .imgWeb:focus {
+    transform: scale(1.5);
+      -o-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -webkit-transform: scale(1.5);
+  }
+  #aficion section object {
+    margin-left: 10px;
+  }
+  #panoramio {
+    height: 400px;
+    width: 400px;
+  }
+  #reverbnation {
+    height: 600px;
+  }
+  #myspace {
+    height: 600px;
+    width: 300px;  
+  }
+  .cajaLuz {
+    padding: 10%;
+  }
+  .cajaLuzContenido {
+    padding: 30px;
+  }
+  .cerrar {
+    margin-top: -50px;
+    padding: 15px;
+    right: 9%;
+  }
+  .cerrar ~ span {
+    margin-top: -35px;
+    right: 1%;
+  }
+}
+/* ********** Estilos Movil(2) ********** */
+@media only screen and (min-width:481px) and (max-width:640px) {
+  header h1 {
+    top: 8px;
+  }
+  nav {
+    right: -420px;
+  }
+  nav li {
+    width: 90px;
+  }
+  .menu {
+    top: -15px;
+  }
+  .menu span {
+    display: none;
+  }
+  nav li:nth-child(4) {
+    top: 0;
+  }
+  article {
+    padding: 100px 30px 50px 30px;
+  }
+  #perfil ul, #proyectos ul {
+    margin: 0 20px;
+  }
+  #youtube {
+    height: 235px;
+    width: 400px;
+  }
+}
+/* ********** Estilos Movil(2) y Tablet ********** */
+@media only screen and (min-width:481px) and (max-width:1024px) {
+  nav li {
+    margin-right: 10px;
+  }
+  nav li p {
+    font-size: 24px;
+  }
+  nav:hover, nav:active, nav:focus {
+    transition: right 1s ease-out 1s;
+      -o-transition: right 1s ease-out 1s;
+      -moz-transition: right 1s ease-out 1s;
+      -webkit-transition: right 1s ease-out 1s;
+    width: 100%;
+  }
+  .imagenesWeb li {
+    margin: 0 30px 30px 30px;
+  }
+  #flickr {
+    height: 320px;
+    width: 400px;
+  }
+  #reverbnation {
+    width: 300px;
+  }
+}
+/* ********** Estilos Mayor Tablet ********** */
+@media only screen and (min-width: 641px) {
+  header object {
+    height: 60px;
+    width: 60px;
+  }
+  nav li:nth-child(2) {
+    top: -5px;
+  }
+  article h4 ~ p {
+    padding: 0 20px;
+  }
+  #perfil ul, #proyectos ul {
+    margin: 0 50px;
+  }
+  #picasa, #wiki {
+    position: absolute;
+  }
+}
+/* ********** Estilos Tablet ********** */
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  nav {
+    right: -670px;
+    top: 8px;
+  }
+  nav li {
+    width: 150px;
+  }
+  nav li p {
+    color: hsl(270, 50%, 80%);
+    margin-left: 10px;
+    position: absolute;
+    top: 10px;
+  }
+  nav li:nth-child(4) p {
+    top: 0;
+  }
+  article {
+    padding: 100px 50px;
+  }
+  #picasa, #wiki {
+    margin-left: 20px;
+  }
+  #youtube {
+    height: 268px;
+    width: 480px;
+  }
+  .iconPanoramio {
+    top: -254px;
+  }
+  .iconFlickr {
+    top: -177px;
+  }
+  .iconYoutube {
+    top: -126px;
+  }
+  .iconMySpace, .iconReverbnation {
+    top: -457px;
+  }
+  footer {
+    padding: 50px;
+  }
+}
+/* ********** Estilos Monitor ********** */
+@media only screen and (min-width: 1025px) {
+  nav {
+    right: 50px;
+    top: 10px;
+  }
+  nav li {
+    width: 190px;
+  }
+  nav li p {
+    left: 0px;
+    position: absolute;
+    top: 5px;
+    width: 190px;
+    transform-origin: 50% 50% 0px;
+      -o-transform-origin: 50% 50% 0px;
+      -ms-transform-origin: 50% 50% 0px;
+      -moz-transform-origin: 50% 50% 0px;
+      -webkit-transform-origin: 50% 50% 0px;
+    transform: rotateY(-180deg);
+      -o-transform: rotateY(-180deg);
+      -ms-transform: rotateY(-180deg);
+      -moz-transform: rotateY(-180deg);
+      -webkit-transform: rotateY(-180deg);
+  }
+  #menu {
+    display: none;
+  }
+  .menu:hover, .menu:active, .menu:focus {
+    cursor: pointer;
+    transform: rotateY(-180deg);
+      -o-transform: rotateY(-180deg);
+      -ms-transform: rotateY(-180deg);
+      -moz-transform: rotateY(-180deg);
+      -webkit-transform: rotateY(-180deg);
+  }
+  article {
+    padding: 100px;
+  }
+  .imgWeb {
+    transform: scale(0.8);
+      -o-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+  }
+  #aficion ul {
+    font-size: 18px;
+  }
+  #aficion:after {
+    height: 700px;
+  }
+  #flickr {
+    height: 400px;
+    width: 500px;
+  }
+  #picasa, #wiki, #divReverbnation {
+    margin-left: 200px;
+  }
+  #reverbnation {
+    width: 370px;
+  }
+  #youtube {
+    height: 340px;
+    width: 600px;
+  }
+  .iconPanoramio {
+    top: -249px;
+  }
+  .iconFlickr {
+    top: -252px;
+  }
+  .iconYoutube {
+    top: -192px;
+  }
+  .iconMySpace, .iconReverbnation {
+    top: -452px;
+  }
+  footer {
+    font-size: 26px;
+    padding: 100px;
+  }
+  #contacto span {
+    font-size: 40px;
+  }
+}

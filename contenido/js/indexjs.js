@@ -34,7 +34,9 @@ function anchoPrincipal() {             //  Calcular el ancho de la pantalla
   var encabezadoSubMenu = elementoId('encabezadoSubMenu');
     var anchoSubMenu = window.innerWidth - anchoScroll - anchoNav - 5;
     encabezadoSubMenu.style.width = anchoSubMenu/16 + 'rem';
-}
+  var elementoFooter = elementoId('footer');
+		elementoFooter.style.width = (window.innerWidth - anchoScroll - anchoNav + 18)/16 + 'rem';
+ }
 
 function menuPrincipal() {              //  Generar el Menu Principal y Submenu
 	var fechaArticulo = '';
@@ -65,6 +67,8 @@ function menuPrincipal() {              //  Generar el Menu Principal y Submenu
 						var opcionSubMenuLi = elementoNuevo('li');
 							var tipoFuncion = opcionesSubMenu[j].funcion;
 							var funcionSubMenu = '';
+//var nuevaFecha = calcularFecha(fechaArticulo);
+//alert(nuevaFecha);
 							switch (tipoFuncion) {
 								case 'mostrarFuncion' :
 								case 'codigosAscii' :
@@ -143,6 +147,9 @@ function mostrarArticulos(articulo,menuActual) {  //  Muestra el contenido de lo
     elementoAnterior.setAttribute('class','');
     menuAnterior = '';
   }
+	if (elementoNav.scrollTopMax > 0) {
+		ocultarScroll();
+	}
 }
 
 function mostrarContenido() {           //  Muestra el bloque de Seccion
@@ -175,7 +182,7 @@ function mostrarBloques(subTitulo, bloque) {    //  Muestra los bloques del Html
   mostrarContenido();
 }
 
-function mostrarFuncion(texto,dato,subTitulo){  //  Muestra Enlaces externos
+function mostrarFuncion(texto,dato,subTitulo, fecha){  //  Muestra Enlaces externos
   ocultarContenido();
   if (subTitulo != '') {
     borrarSubMenu();
@@ -191,6 +198,8 @@ function mostrarFuncion(texto,dato,subTitulo){  //  Muestra Enlaces externos
   contenidoEmbed = elementoId("contenido");
     contenidoEmbed.src = dato;
   titulo.textContent = texto;
+  var fechaArticulo = elementoId("fechaArticulo");
+	fechaArticulo.textContent = fecha;
   mostrarBloques(tituloSubMenu, "hoja");
   if (dato.substr(0,4) != 'http') {
     var espera = setTimeout(escribirCss,1000);
@@ -229,10 +238,11 @@ function mostrarSubMenu(subTitulo,i,j) {        //  Genera el Contenido del Subm
 			var fechaArticulo = new Date(fecha);
 			var fechaActual = new Date();
 			if (fechaActual >= fechaArticulo) {		//	Muestra solo los articulos que tienen fecha actual
+				var nuevaFecha = calcularFecha(fechaArticulo);
 				var funcionSubMenu = '';
 				var tipoFuncion = opcionesSubMenu[k].funcion;
 				if (tipoFuncion !=  'nuevaVentana') {
-					funcionSubMenu = opcionesSubMenu[k].funcion + '("' + opcionesSubMenu[k].subTitulo + '", "' + opcionesSubMenu[k].enlace + '", "");';
+					funcionSubMenu = opcionesSubMenu[k].funcion + '("' + opcionesSubMenu[k].subTitulo + '", "' + opcionesSubMenu[k].enlace + '", "", "' + nuevaFecha +'");';
 				} else {
 					funcionSubMenu = opcionesSubMenu[k].funcion + '("' + opcionesSubMenu[k].enlace + '", true);';
 				}

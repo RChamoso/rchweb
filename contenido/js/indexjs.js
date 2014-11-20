@@ -3,14 +3,12 @@ var articuloAnterior = '';
 var disenoAnterior = '';
 var menuAnterior = '';
 var ruta = [];
-
 function inicio() {                     // Elementos ID Globales
   contenido = elementoId('articulos');
   encabezadoArticulo = elementoId('encabezadoArticulo');
   botonMostrar = elementoId('abrirSubMenu');
   elementoNav = elementoId('menuPrincipal');
 	divUltimosArticulos = elementoId('ultimosArticulos');
-
   anchoPrincipal();
   window.onresize = function(){ocultarScroll();};
   window.onresize = function(){anchoPrincipal();};
@@ -18,7 +16,6 @@ function inicio() {                     // Elementos ID Globales
 	buscarArticulos(menuJSON);
 	ordenarFechas();
 }
-
 function anchoPrincipal() {             //  Calcular el ancho de la pantalla
   var anchoScroll = 0;
   if (window.scrollMaxY > 0) {          //  El scroll esta visible
@@ -27,7 +24,6 @@ function anchoPrincipal() {             //  Calcular el ancho de la pantalla
   var anchoNav = elementoNav.offsetWidth;
   var elementoAside = elementoId('aside');
     var anchoAside = elementoAside.offsetWidth;
-
   var cuerpoPrincipal = elementoId('cuerpoPrincipal');
     var anchoTotal = window.innerWidth - anchoScroll - anchoNav - anchoAside - 25;
     cuerpoPrincipal.style.width = anchoTotal/16 + 'rem';
@@ -35,9 +31,8 @@ function anchoPrincipal() {             //  Calcular el ancho de la pantalla
     var anchoSubMenu = window.innerWidth - anchoScroll - anchoNav - 5;
     encabezadoSubMenu.style.width = anchoSubMenu/16 + 'rem';
   var elementoFooter = elementoId('footer');
-		elementoFooter.style.width = (window.innerWidth - anchoScroll - anchoNav + 18)/16 + 'rem';
- }
-
+		elementoFooter.style.width = (window.innerWidth - anchoScroll - anchoNav)/16 + 'rem';
+}
 function menuPrincipal() {              //  Generar el Menu Principal y Submenu
 	var fechaArticulo = '';
 	var fechaActual = '';
@@ -67,8 +62,6 @@ function menuPrincipal() {              //  Generar el Menu Principal y Submenu
 						var opcionSubMenuLi = elementoNuevo('li');
 							var tipoFuncion = opcionesSubMenu[j].funcion;
 							var funcionSubMenu = '';
-//var nuevaFecha = calcularFecha(fechaArticulo);
-//alert(nuevaFecha);
 							switch (tipoFuncion) {
 								case 'mostrarFuncion' :
 								case 'codigosAscii' :
@@ -93,9 +86,7 @@ function menuPrincipal() {              //  Generar el Menu Principal y Submenu
     idMenuPrincipal.appendChild(subMenu);
   }
   ocultarScroll();
-	
 }
-
 function ocultarScroll() {              //  Oculta el Scroll del Menu
   var cabecera = elementoId('header');
   var posicionIzquierda = elementoNav.scrollWidth;
@@ -105,7 +96,6 @@ function ocultarScroll() {              //  Oculta el Scroll del Menu
     var estilo = 'left:' + posicionIzquierda + 'px; height:' + altura + 'px; top:' + posicionSuperior + 'px;';
     ocultarScroll.style = estilo;
 }
-
 function borrarSubMenu() {              //  Borra el Submenu de la Seccion de Articulos
   var divSubMenu = elementoId("subMenu");
   var nodos = divSubMenu.children;
@@ -115,7 +105,6 @@ function borrarSubMenu() {              //  Borra el Submenu de la Seccion de Ar
   }
   botonMostrar.style.display = 'none';
 }
-
 function mostrarArticulos(articulo,menuActual) {  //  Muestra el contenido de los Articulos
   borrarSubMenu();
   ocultarContenido();
@@ -124,6 +113,11 @@ function mostrarArticulos(articulo,menuActual) {  //  Muestra el contenido de lo
   var menuDiv = elementoId(menuActual);
   var elementoAnterior = menuDiv.previousSibling;
   if (menuActual != menuAnterior) {
+		if (menuDiv.childElementCount === 0) {
+			var vacio = elementoNuevo('p');
+			vacio.textContent = 'no hay artículos';
+			menuDiv.appendChild(vacio);
+		}
     articuloDiv.style.display = 'block';
     var articuloH1 = elementoId("tituloArticulo");
       articuloH1.textContent = articulo;
@@ -141,7 +135,6 @@ function mostrarArticulos(articulo,menuActual) {  //  Muestra el contenido de lo
     elementoAnterior.setAttribute('class','menuActual');
     menuAnterior = menuActual;
   } else {
-//    articuloDiv.style.display = 'none';
 		mostrarUltimosArticulos();
     menuDiv.style.display = 'none';
     elementoAnterior.setAttribute('class','');
@@ -151,25 +144,20 @@ function mostrarArticulos(articulo,menuActual) {  //  Muestra el contenido de lo
 		ocultarScroll();
 	}
 }
-
 function mostrarContenido() {           //  Muestra el bloque de Seccion
   contenido.style.display = 'block';
 }
-
 function ocultarContenido() {           //  Oculta el bloque de Seccion
   contenido.style.display = 'none';
 }
-
 function mostrarUltimosArticulos() {           //  Muestra el bloque de Seccion
 	divUltimosArticulos.style.display = 'block';
 	var articuloH1 = elementoId("tituloArticulo");
 	articuloH1.textContent = 'Artículos Recientes';
 }
-
 function ocultarUltimosArticulos() {           //  Oculta el bloque de Seccion
 	divUltimosArticulos.style.display = 'none';
 }
-
 function mostrarBloques(subTitulo, bloque) {    //  Muestra los bloques del Html
   if (anterior != '') {
     var hojaAnterior = elementoId(anterior);
@@ -181,7 +169,6 @@ function mostrarBloques(subTitulo, bloque) {    //  Muestra los bloques del Html
   tituloArticulo(subTitulo);
   mostrarContenido();
 }
-
 function mostrarFuncion(texto,dato,subTitulo, fecha){  //  Muestra Enlaces externos
   ocultarContenido();
   if (subTitulo != '') {
@@ -207,7 +194,6 @@ function mostrarFuncion(texto,dato,subTitulo, fecha){  //  Muestra Enlaces exter
     contenidoObject.height = window.screen.height + 5;
   }
 }
-
 function tituloArticulo(subTitulo) {            //  Titulo Principal de la Seccion
   var articuloH1 = elementoId("tituloArticulo");
   var contenidoTitulo = articuloH1.textContent;
@@ -223,7 +209,6 @@ function tituloArticulo(subTitulo) {            //  Titulo Principal de la Secci
   }
   articuloH1.textContent = contenidoTitulo;
 }
-
 function mostrarSubMenu(subTitulo,i,j) {        //  Genera el Contenido del Submenu de la Seccion
   borrarSubMenu();
   ocultarContenido();
@@ -231,6 +216,7 @@ function mostrarSubMenu(subTitulo,i,j) {        //  Genera el Contenido del Subm
   tituloSubMenu = subTitulo;
   opcionesSubMenu = menuJSON.listaMenu[i].contenido[j].subMenu;
   var divSubMenu = elementoId("subMenu");
+	var contador = 0;
 // falta elemento <ul>
   for (var k in opcionesSubMenu) {
 		if ((opcionesSubMenu[k].fecha) && (opcionesSubMenu[k].fecha.dia !== '')) {
@@ -253,32 +239,35 @@ function mostrarSubMenu(subTitulo,i,j) {        //  Genera el Contenido del Subm
 				opcionSubMenu.textContent = opcionesSubMenu[k].titulo;
 				opcionSubMenu.setAttribute('onclick', funcionSubMenu);
 				divSubMenu.appendChild(opcionSubMenu);
+				contador++;
 			}
 		}
 	}
+	if (contador === 0) {
+		var vacio = elementoNuevo('p');
+		vacio.textContent = 'no hay artículos';
+		divSubMenu.appendChild(vacio);
+	}
   abrirSubMenu();
 }
-
 function ocultarSubMenu() {                     //  Oculta el Submenu de la Seccion
-  encabezadoArticulo.style.height = '4.37rem';
+	var altura = 0;
+	if (window.innerWidth > 1024) {
+		altura = '4.65rem';
+	} else {
+		altura = '4.37rem';
+	}
+  encabezadoArticulo.style.height = altura;
   botonMostrar.style.display = 'block';
 }
-
 function abrirSubMenu() {                       //  Muestra el Submenu de la Seccion
   ocultarContenido();
   encabezadoArticulo.style.height = 'auto';
   botonMostrar.style.display = 'none';
 }
-
 function nuevaVentana(dato, subMenu) {          //  Abrir una Ventana Nueva
-  if (!subMenu) {
-//    tituloArticulo("");
-//    borrarSubMenu();
-//    ocultarContenido();
-  }
   window.open(dato, "nuevo");
 }
-
 function codigosAscii(tituloAscii, tipoCodigoAscii) { //  Muestra los caracteres del Codigo Ascii seleccionado
   borrarSubMenu();
   ocultarContenido();
@@ -333,7 +322,6 @@ function codigosAscii(tituloAscii, tipoCodigoAscii) { //  Muestra los caracteres
   }
   mostrarBloques(tituloAscii, "codigosAsciiCompleto");
 }
-
 function AsciiBasicoContenido(tabla, contenido, boton, inicio, fin) {   //  Genera las Tablas de los Codigos Ascii
   var cerrarMenu = elementoId(boton);
     cerrarMenu.style.display = 'inline-block';
@@ -380,24 +368,20 @@ function AsciiBasicoContenido(tabla, contenido, boton, inicio, fin) {   //  Gene
     }
   }
 }
-
 function cerrar(tabla,boton) {                  //  Cierra la Tabla del Codigo Ascii
   var cerrarTabla = elementoId(tabla);
     cerrarTabla.style.display = 'none';
   var botonCerrar = elementoId(boton);
     botonCerrar.style.display = 'none';
 }
-
 function mostrarCajaLuz() {
   elementoId('frenteCajaLuz').style.display='block';
   elementoId('fondoCajaLuz').style.display='block';
 }
-
 function ocultarCajaLuz() {
   elementoId('frenteCajaLuz').style.display='none';
   elementoId('fondoCajaLuz').style.display='none';
 }
-
 function escribirCss() {                        //  Escribir Html y Css del Articulo
   var contenido = contenidoObject.contentWindow.document;
   if (contenido != null) {
@@ -417,42 +401,6 @@ function escribirCss() {                        //  Escribir Html y Css del Arti
             p = parseFloat(m);
             posicion++;
             if (letra != 10) {
-/*              switch (letra) {
-                case 44 :
-                  if (textoCss.charCodeAt(p-1) == 41) {
-                    codigoLineaEstilo.textContent += textoCss[m];
-                    codigoLineaEstilo.textContent += '\n';
-                    for (var j=0; j<=posicionDosPuntos; j++) {
-                      codigoLineaEstilo.textContent += ' ';
-                    }
-                   }
-                break;
-                case 58 :
-                  posicionDosPuntos = posicion;
-                break;
-                case 59 :
-                  if (p+2 != textoCss.length-1) {
-                    codigoLineaEstilo.textContent += '\n ';
-                  } else {
-                    codigoLineaEstilo.textContent += '\n';
-                  }
-                  posicion = 0;
-                  posicionDosPuntos = 0;
-                break;
-                case 123 :
-                  codigoLineaEstilo.textContent += '\n ';
-                  posicion = 0;
-                  posicionDosPuntos = 0;
-                break;
-                default :
-                  if (letra > 255) {
-                    codigoLineaEstilo.textContent += "\\" + letra.toString(16);
-                  } else if (p+2 != textoCss.length) {
-                    codigoLineaEstilo.textContent += textoCss[m];
-                  }
-                break;
-              }*/
-
               if (letra == 58) {
                 posicionDosPuntos = posicion;
               }
@@ -465,7 +413,7 @@ function escribirCss() {                        //  Escribir Html y Css del Arti
                   codigoLineaEstilo.textContent += ' ';
                 }
               } else if (p+2 != textoCss.length) {
-/*modificar en el switch*/                  codigoLineaEstilo.textContent += textoCss[m];
+                codigoLineaEstilo.textContent += textoCss[m];
               }
               if (letra == 123) {
                 codigoLineaEstilo.textContent += '\n ';
@@ -490,6 +438,6 @@ function escribirCss() {                        //  Escribir Html y Css del Arti
       var codigoLineaHtml = contenido.getElementById('htmlCodigo');
       codigoLineaHtml.textContent += codigoHtml;
     }
-    contenidoObject.height = contenido.body.clientHeight + 50;
+    contenidoObject.height = contenido.body.clientHeight + 70;
   }
 }

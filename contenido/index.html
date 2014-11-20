@@ -2,25 +2,22 @@
 <html lang='es' itemscope itemtype="http://schema.org/WebPage">
 
 <head>
-
   <title>Herramientas para el Desarrollo WEB</title>
   <meta charset='utf-8' />
   <meta itemprop="primaryImageOfPage" content="../img/logoRChWeb.png"/>
-  <meta name='description' content='Desarrollo de p&aacute;ginas y aplicaciones moviles Web. Utilizando Html5, Css3, Javascript, Svg, Canvas. Con t&eacute;cnicas de Dise&ntilde;o Adaptable (Responsive Design).' />
+  <meta name='description' content='Herramientas para el Desarrollo y Diseño de p&aacute;ginas y aplicaciones moviles Web. Utilizando Html5, Css3, Javascript, Svg, Canvas. Con t&eacute;cnicas de Dise&ntilde;o Adaptable (Responsive Design).' />
   <meta name='author' content='Roberto Chamoso' />
   <meta name='web_author' content='Roberto Chamoso' />
   <meta name='designer' content='Roberto Chamoso' />
   <meta name='created' content='2014-07-25' />
   <meta name='contact' content='robchamoso@gmail' />
-  <meta name='keywords' content='desarrollo web, html5, css3, javascript, canvas, responsive design, dise&ntilde;o adaptable' />
+  <meta name='keywords' content='desarrollo web, html5, css3, javascript, canvas, responsive design, dise&ntilde;o adaptable, svg, json' />
   <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=1' />
   <meta name="HandheldFriendly" content="true">
   <link rel='shortcut icon' href='../img/favicon.ico' type="image/x-icon" />
   <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
 	<link rel="stylesheet" href="css/estiloConsulta.css" />
 	<script src='../js/funciones.js'></script>
-	<!--script src='js/contenidoMenu.js'></script>
-	<!--link type='application/json' src='js/contenidoMenu2.json'></link-->
 	<script src='js/codigoAscii.js'></script>
 	<script src='js/indexjs.js'></script>
 	<script src='js/fechasArticulos.js'></script>
@@ -42,6 +39,24 @@
       }
     }
 
+		//	Cargar estilos individuales según navegador
+		var tipoNavegador = window.navigator.vendor;
+		var estiloOpcional = elementoNuevo('link');
+		estiloOpcional.setAttribute('rel', 'stylesheet');
+		switch (tipoNavegador) {
+			case 'Google Inc.' :
+				estiloOpcional.setAttribute('href', 'css/estiloConsultaGoogle.css');
+				break;
+			case 'Apple Computer, Inc.' :
+				estiloOpcional.setAttribute('href', 'css/estiloConsultaSafari.css');
+				break;
+			default :
+				estiloOpcional.setAttribute('href', 'css/estiloConsultaOtros.css');
+				break;
+		}
+		var tagHead = elementoTN('head');
+		tagHead[0].appendChild(estiloOpcional);
+		
     //  Cargar el archivo JSON del Menu
     var xmlhttp = new XMLHttpRequest();
     var url = "../json/contenidoMenu.json";
@@ -56,15 +71,12 @@
   </script>
 	<!-- Boton G+ -->
 	<script src="https://apis.google.com/js/platform.js" defer> { lang: 'es' } </script>
-
 </head>
 
 <body onload='inicio();'>
 
   <header id='header'>
-    <object rel='image_src' type='image/svg+xml' data='../img/logoRChWeb.svg' title='Logo de RchWeb.net' >
-      <img rel='image_src' src='../img/logoRChWeb.png' alt='Logo de RchWeb.net' title='Logo de RchWeb.net'/>
-    </object>
+    <img rel='image_src' src='../img/logoRChWeb.png' alt='Logo de RchWeb.net' title='Logo de RchWeb.net'/>
     <h1 class='inlineBlock'><span class='inlineBlock'>R</span>Ch Web</h1>
 		<h2 class='dch'>Herramientas para el Desarrollo WEB</h2>
   </header>
@@ -81,29 +93,20 @@
 				<hgroup id='encabezadoArticulo'>
 					<h1 id='tituloArticulo' class='inline'></h1>
 					<div class='googlePlus dch inline'>
-						<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+						<div class="g-plusone" data-size="medium" data-annotation="bubble"></div>
 					</div>
-          <div id='abrirSubMenu' class='separador'>mostrar menú <span onclick='abrirSubMenu();'>&#9660;</span></div>
+          <div id='abrirSubMenu' class='separador'>mostrar menú <span class='abrirSubMenu' onclick='abrirSubMenu();'>&#9660;</span></div>
 					<div id='subMenu' class='separador' onclick='ocultarSubMenu();'></div>
 				</hgroup>
 			</header>
 			<section id='ultimosArticulos'>
-				<!--article class='ultimosArticulos'>
-					<object id='contenidoUltArt' data='HtmlCss/botones/botonesCirculares.html' width='240' height='250'>
-						<embed id='contenidoUltArtEmb' type='text/html' src='HtmlCss/botones/botonesCirculares.html' width='240' height='250'></embed>
-					</object>
-					<h4>Botones Circulares</h4>
-					<p>Html & Css >> Botones</p>
-					<p class='fecha'>miercoles 25/11/2014 23:55</p>
-				</article-->
 			</section>
 			<section id='articulos' class='articulos'>
 				<article id='hoja'>
           <div>
             <h3 id='titulo'></h3>
-            <!--a id='nuevaVentana' href='' target="_blank" title='pestaña nueva'>&#9094;</a-->
             <a id='nuevaVentana' href='' target="_blank" title='pestaña nueva'>&#10144;</a>
-						<p id='fechaArticulo'></p>
+						<p id='fechaArticulo' class='fecha'></p>
           </div>
 					<object id='contenidoObject' data='' width='100%' height='500'>
 						<embed id='contenido' type='text/html' src='' width='100%' height='500'></embed>
@@ -217,11 +220,18 @@
 	</section>
 
 	<aside id='aside'>
-		<iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&npa=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=herramiparael-21&o=30&p=8&l=as1&m=amazon&f=ifr&ref=tf_til&asins=8498804817" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-		<iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=herramiparael-21&o=30&p=8&l=as1&asins=1490381600&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&npa=1&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-		<iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=herramiparael-21&o=30&p=8&l=as1&asins=8441531935&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&npa=1&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-		<iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=herramiparael-21&o=30&p=11&l=ur1&category=kindle&banner=1AZH6V5K92VBZPR4EGG2&f=ifr" width="120" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-		<!--img height="auto" src="https://storage.googleapis.com/support-kms-prod/SNP_1DA7588EEB5450EE2A22C2B2F0A6458A61C0_2922342_en_v1"/-->
+		<div>
+			<img src='../img/no.png' alt='Imagen de Publicidad' title='Imagen de Publicidad'/>
+			<p>Publicidad</p>
+		</div>
+		<div>
+			<img src='../img/no.png' alt='Imagen de Publicidad' title='Imagen de Publicidad'/>
+			<p>Publicidad</p>
+		</div>
+		<div>
+			<img src='../img/no.png' alt='Imagen de Publicidad' title='Imagen de Publicidad'/>
+			<p>Publicidad</p>
+		</div>
 	</aside>
 
   <footer id='footer'>
@@ -237,6 +247,12 @@
         <span class='inlineBlock' itemprop="author" itemscope itemtype="http://schema.org/Person">Roberto Chamoso</span>
       </a>
     </div>
+		<form class='inline' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="4RQBM77UYURTG">
+			<input id='paypal' type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal. La forma rápida y segura de pagar en Internet.">
+			<img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+		</form>
   </footer>
 
   <aside>

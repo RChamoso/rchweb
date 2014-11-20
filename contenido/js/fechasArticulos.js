@@ -4,18 +4,18 @@ var ruta = [];
 function buscarArticulos(objeto) {										//	Busca todos los articulos que tienen fecha
 	for (i in objeto) {
 		var tipoElemento = typeof(objeto[i]);
-		ruta.push(i);																		//	agrega el identificador del elemento del objeto
+		ruta.push(i);																			//	agrega el identificador del elemento del objeto
 		if (i === 'fecha') {
 			if (objeto[i].dia !== '') {
 				var direccion = ruta.toString();
 				crearFechas(objeto[i].dia + ' ' + objeto[i].hora, direccion);
 			}
-			ruta.pop();																		//	elimina el identificador del objeto para el siguiente
+			ruta.pop();																			//	elimina el identificador del objeto para el siguiente
 		} else if (tipoElemento === 'object') {
 			buscarArticulos(objeto[i]);											//	vuelve a llamar esta función
-			ruta.pop();																		//	elimina el identificador del objeto para el siguiente
+			ruta.pop();																			//	elimina el identificador del objeto para el siguiente
 		} else {
-			ruta.pop();																		//	elimina el identificador del objeto para el siguiente
+			ruta.pop();																			//	elimina el identificador del objeto para el siguiente
 		}
 	}
 }
@@ -40,7 +40,7 @@ function ordenarFechas() {														//	Ordena todas las fechas de mayor a me
 	fechaJSON.splice(11, fechaJSON.length);							//	selecciona los primeros 11 articulos
 	ultimosArticulos();
 }
-function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artículos
+function ultimosArticulos() {													//	Muestra la fecha de los últi,os 11 artículos
 	var ruta2 = '';
 	var titulo = '';
 	var tituloPpal = '';
@@ -56,30 +56,11 @@ function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artí
 	for (var i=0; i<fechaJSON.length; i++) {
 		var nuevaFecha = new Date(fechaJSON[i].fecha);
 		var fechaActual = new Date();
-		if (fechaActual >= nuevaFecha) {		//	Muestra solo los articulos que tienen fecha actual
+		if (fechaActual >= nuevaFecha) {									//	Muestra solo los articulos que tienen fecha actual
 			var articulo = elementoNuevo('article');
 			articulo.setAttribute('class', 'ultimosArticulos');
 			nuevaFecha = calcularFecha(nuevaFecha);
-/*			var dia = nuevaFecha.getDate().toString();
-			if (dia.length == 1) {
-				dia = '0' + dia;
-			}
-			/*var mes = (nuevaFecha.getMonth() + 1).toString();
-			if (mes.length == 1) {
-				mes = '0' + mes;
-			}*/
-/*			var mes = meses[nuevaFecha.getMonth()];
-			var hora = nuevaFecha.getHours().toString();
-			if (hora.length == 1) {
-				hora = '0' + hora;
-			}
-			var minutos = nuevaFecha.getMinutes().toString();
-			if (minutos.length == 1) {
-				minutos = '0' + minutos;
-			}
-			var anno = nuevaFecha.getFullYear();
-			nuevaFecha = String.fromCharCode(8986) + ' ' + hora + ':' + minutos + ' - ' + dia + ' ' + mes + ' ' + anno;
-*/			var posicion = fechaJSON[i].direccion;
+			var posicion = fechaJSON[i].direccion;
 			posicion = posicion.split(',');
 			var longitud = posicion.length;
 			switch (longitud) {
@@ -116,11 +97,7 @@ function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artí
 				objeto.setAttribute('data', ruta2);
 				objetoEmb.setAttribute('src', ruta2);
 				objetoEmb.setAttribute('type', 'text/html');
-//				objetoEmb.setAttribute('height', '250');
-//				objetoEmb.setAttribute('width', '240');
 				objeto.appendChild(objetoEmb);
-//				objeto.setAttribute('height', '250');
-//				objeto.setAttribute('width', '240');
 			} else {
 				funcionClick = funcion + '("' + ruta2 + '", false);';
 				articulo.setAttribute('class', 'nuevaVentana ultimosArticulos');
@@ -135,6 +112,10 @@ function ultimosArticulos() {							//	Muestra la fecha de los últi,os 11 artí
 			}
 			articulo.appendChild(objeto);
 			var campoSubTitulo = elementoNuevo('h4');
+			var tipoNavegador = window.navigator.vendor;
+			if (tipoNavegador === 'Apple Computer, Inc.') {
+				campoSubTitulo.setAttribute('style', 'font-size: 12px; font-size: 0.8rem;');
+			}
 			campoSubTitulo.textContent = subTitulo;
 			articulo.appendChild(campoSubTitulo);
 			var ubicacion = elementoNuevo('p');

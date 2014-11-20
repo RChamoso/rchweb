@@ -34,29 +34,12 @@
 		url(../../fuentes/Gabrielle.otf) format('otf'),
 		url(../../fuentes/Gabrielle.svg#abril_fatfaceregular) format('svg');
 }
-/*@font-face {
-	font-family: SemiBold;
-	src: url(../fuentes/OpenSans-SemiBold.ttf) format('truetype');
-}
-@font-face {
-	font-family: ExtraBold;
-	src: url(../fuentes/OpenSans-ExtraBold.ttf) format('truetype');
-}*/
 @font-face {
 	font-family: RegularItalic;
 	font-style: normal;
 	font-weight: normal;
 	src: url(../../fuentes/OpenSans-Italic.ttf) format('truetype');
 }
-/*@font-face {
-	font-family: BoldItalic;
-	src: url(../fuentes/OpenSans-BoldItalic.ttf) format('truetype');
-}
-@font-face {
-	font-family: unifont;
-	src: url(../fuentes/unifont.ttf) format('truetype');
-}*/
-
 /* ********** Estilos Basicos ********** */
 * {
 	font-family: Regular;
@@ -148,34 +131,23 @@ li {
 	color: hsl(0, 0%, 100%);
 	height: 60px;
 	height: 3.75rem;
-	letter-spacing: 0.03rem;
-	padding: 5px 10px;
-	padding: 0.31rem 0.62rem;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 3000;
 }
-#header object {
+#header object, #header img {
 	height: 50px;
 	height: 3.1rem;
-/*	margin-left: 20px;
-	margin-left: 1.25rem;*/
 	width: 50px;
 	width: 3.1rem;
 }
 #header h1 {
 	color: hsl(270, 75%, 70%);
-	letter-spacing: 0.08rem;
-/*	font-size: 2.4rem;
-	margin-left: 20px;
-	margin-left: 1.25rem;*/
 	padding-left: 5px;
 	padding-left: 0.3rem;
 	position: absolute;
 	text-shadow: -1px -1px hsl(270, 30%, 75%), 2px 2px hsl(270, 30%, 10%);
-	top: 12px;
-	top: 0.75rem;
 }
 #header h1, header span {
 	font-family: fontTitulo;
@@ -189,15 +161,8 @@ li {
 }
 #header h2 {
 	color: hsl(120, 100%, 30%);
-/*	color: hsl(270, 75%, 70%);*/
 	font-family: RegularItalic;
-	letter-spacing: 0.08rem;
-/*	margin-right: 16px;
-	margin-right: 1rem;*/
-	margin-top: 5px;
-	margin-top: 0.31rem;
 	text-shadow: -1px -1px hsl(120, 100%, 40%), 2px 2px hsl(120, 100%, 10%);
-/*	text-shadow: -1px -1px hsl(270, 30%, 80%), 1px 1px hsl(270, 30%, 10%);*/
 }
 #ocultarScroll {
 	background-color: hsl(270, 75%, 90%);
@@ -221,17 +186,9 @@ li {
 	padding: 0.93rem 0;
 	position: fixed;
 	top: 0;
-/*	width: 180px;
-	width: 11.25rem;*/
 }
 #menuPrincipal::-webkit-scrollbar {   /*  Ocultar barra scroll */
 	width: 0 !important;
-}
-#menuPrincipal li {
-/*	padding-left: 15px;
-	padding-left: 0.93rem;*/
-	padding-right: 5px;
-	padding-right: 0.31rem;
 }
 #menuPrincipal li:hover {
 	background-color: hsl(270, 75%, 30%);
@@ -240,17 +197,9 @@ li {
 }
 #tituloArticulo {
 	color: hsl(270, 75%, 70%);
-	letter-spacing: 0.05rem;
-/*	font-size: 2rem;*/
-	margin-left: 20px;
-	margin-left: 1.25rem;
 	padding-left: 5px;
 	padding-left: 0.31rem;
 	text-shadow: -1px -1px hsl(270, 30%, 80%), 1px 1px hsl(270, 30%, 10%);
-}
-.googlePlus {
-	margin-top: 5px;
-	margin-top: 0.31rem;
 }
 .menuActual {
 	background-color: hsl(270, 75%, 30%);
@@ -265,8 +214,6 @@ li {
 	font-family: Regular;
 	font-size: 12px;
 	font-size: 0.75rem;
-/*	padding-left: 15px;
-	padding-left: 0.93rem;*/
 }
 .subMenu  li {
 	padding-left: 5px;
@@ -319,12 +266,8 @@ li {
 #cuerpoPrincipal {
 	display: block;
 	float: left;
-/*	margin-left: 170px;
-	margin-left: 10.62rem;*/
 	margin-top: 60px;
 	margin-top: 3.75rem;
-	padding-left: 10px;
-	padding-left: 0.62rem;
 }
 #cuerpoPrincipal nav {
 	margin-bottom: 16px;
@@ -332,7 +275,6 @@ li {
 }
 #seccionArticulo header {
 	background-color: hsl(270, 75%, 90%);
-	/*  height: 62px;*/
 	margin-bottom: 10px;
 	margin-bottom: 0.62rem;
 	overflow: hidden;
@@ -345,19 +287,11 @@ li {
 	color: hsl(216, 95%, 20%);
 	height: 75px;
 	height: 4.68rem;
-	padding: 5px 10px;
-	padding: 0.31rem 0.62rem;
 }
 #ultimosArticulos {
 	border: 1px solid hsl(0, 0%, 85%);
 	margin-bottom: 15px;
 	margin-bottom: 0.93rem;
-	margin-left: 5px;
-	margin-left: 0.31rem;
-	margin-right: 5px;
-	margin-right: 0.31rem;
-	padding: 100px 10px 50px 10px;
-	padding: 6.25rem 0.62rem 3.12rem 0.62rem;
 	text-align: justify;
 }
 .ultimosArticulos {
@@ -379,12 +313,8 @@ li {
 	display: inline-block;
 	height: 350px;
 	height: 21.87rem;
-	margin: 15px;
-	margin: 0.93rem;
 	overflow: hidden;
 	text-align: center;
-	width: 260px;
-	width: 16.25rem;
 }
 .ultimosArticulos:hover {
 	box-shadow: 1px 1px 25px hsl(270, 75%, 60%), -1px -1px hsl(270, 75%, 93%);
@@ -396,7 +326,6 @@ li {
 }
 #ultimosArticulos object, #ultimosArticulos embed, #ultimosArticulos div {
 	background-color: hsl(270, 75%, 87%);
-/*	box-shadow: -1px -1px hsl(270, 75%, 80%), 1px 1px hsl(270, 75%, 93%);*/
 	box-shadow: -1px -1px hsl(270, 75%, 70%), -1px 0 hsl(270, 75%, 70%), 0 -1px hsl(270, 75%, 70%),
 							-2px -2px hsl(270, 75%, 80%), -2px 0 hsl(270, 75%, 80%), 0 -2px hsl(270, 75%, 80%),
 							 1px  1px hsl(270, 75%, 91%),  1px 0 hsl(270, 75%, 91%), 0  1px hsl(270, 75%, 91%),
@@ -422,8 +351,6 @@ li {
 	margin-top: 7px;
 	margin-top: 0.44rem;
 	overflow: hidden;
-	width: 240px;
-	width: 15rem;
 }
 #ultimosArticulos div {
 	margin-bottom: 10px;
@@ -463,26 +390,20 @@ li {
 	padding: 0 5px 7px 0;
 	padding: 0 0.31rem 0.43rem 0;
 }
-#subMenu  li {
-	display: inline-block;
-}
 #subMenu {
 	margin-left: 15px;
 	margin-left: 0.93rem;
 }
 #subMenu  li {
 	background-color: hsl(215, 100%, 93%);
-	border-left: 1px dotted hsl(216, 95%, 20%);
-	font-size: 14px;
-	font-size: 0.87rem;
+	border-left: 4px solid hsl(120, 100%, 30%);
+	display: inline-block;
 	margin-bottom: 5px;
 	margin-bottom: 0.31rem;
 	margin-right: 10px;
 	margin-right: 0.62rem;
 	padding: 0px 5px;
 	padding: 0 0.31rem;
-	width: 180px;
-	width: 11.25rem;
 }
 #subMenu  li:hover {
 	background-color: hsl(216, 95%, 20%);
@@ -500,8 +421,8 @@ li {
 	border-right: 1px solid hsl(0, 0%, 36%);
 	border-top: 1px solid hsl(0, 0%, 85%);
 	display: none;
-	margin-bottom: 15px;
-	margin-bottom: 0.93rem;
+	margin-bottom: 47px;
+	margin-bottom: 2.93rem;
 	margin-left: 5px;
 	margin-left: 0.31rem;
 	margin-right: 5px;
@@ -515,10 +436,6 @@ li {
 	border-bottom: 1px solid hsl(225,0%,75%);
 	border-right: 1px solid hsl(225,0%,75%);
 	border-top: 2px solid hsl(270, 75%, 30%);
-/*	margin-left: -6px;
-	margin-left: -0.37rem;
-/*	margin-top: -4px;
-	margin-top: -0.25rem;*/
 	padding: 0 8px 3px 8px;
 	padding: 0 0.5rem 0.18rem 0.5rem;
 	position: fixed;
@@ -541,8 +458,8 @@ li {
 	font-size: 0.8rem;
 }
 #contenidoObject, #contenido, #articulos article:not(#hoja) {
-	padding: 45px 5px 5px;
-	padding: 2.81rem 0.31rem 0.31rem;
+	padding: 45px 5px 21px;
+	padding: 2.81rem 0.31rem 1.31rem;
 }
 #aside {
 	height: auto;
@@ -550,15 +467,33 @@ li {
 	margin-top: 145px;
 	margin-top: 9.06rem;
 	text-align: center;
-/*	width: 170px;
-	width: 10.62rem;*/
+}
+#aside div {
+	background-color: hsl(0, 0%, 100%);
+	height: 240px;
+	margin-bottom: 10px;
+	margin-bottom: 0.62rem;
+	width: 120px;
+	width: 7.5rem;
+}
+#aside img {
+	border-width: 1px;
+	border-style: solid;
+	border-bottom-color: hsl(0, 0%, 10%);
+	border-left-color: hsl(0, 0%, 50%);
+	border-right-color: hsl(0, 0%, 10%);
+	border-top-color: hsl(0, 0%, 50%);
+	margin-top: 10px;
+	margin-top: 0.62rem;
+	padding: 10px;
+	padding: 0.62rem;
 }
 
 /***		codigosAsciiVarios		***/
 #codigosAsciiVarios {
 	padding: 10px;
 	padding: 0.62rem;
-	font-family: Georgia, Times New Roman, Times, serif;
+	font-family: Regular;
 }
 #codigosAsciiVarios h3 {
 	margin-bottom: 20px;
@@ -574,7 +509,7 @@ li {
 }
 #codigosAsciiVarios strong {
 	border: 1px dotted hsl(0, 0%, 0%);
-	font-family: Georgia, Times New Roman, Times, serif;
+	font-family: Regular;
 	font-size: 26px;
 	font-size: 1.62rem;
 	margin-right: 10px;
@@ -678,10 +613,6 @@ footer {
   background-color: hsl(270, 50%, 50%);
 	bottom: 0;
 	display: block;
-	height: 40px;
-	height: 2.5rem;
-	padding-top: 8px;
-	padding-top: 0.5rem;
 	position: fixed;
 	right: 0;
 	text-align: center;
@@ -689,8 +620,6 @@ footer {
 }
 footer div {
   display: inline-block;
-  margin: 0 40px 10px 40px;
-  margin: 0 2.5rem 0.62rem 2.5rem;
 }
 footer div:hover, footer div:active, footer div:focus {
   cursor: pointer;
@@ -700,8 +629,6 @@ footer a {
 }
 #contacto a {
   font-family: fontTitulo;
-  font-size: 18px;
-  font-size: 1.12rem;
 }
 /* ********** Estilos Cookies ********** */
 #aceptarCookies {
@@ -737,6 +664,7 @@ footer a {
 .cajaLuz {
   background-color: hsla(0, 0%, 0%, 0.8);
   bottom: 0;
+	color: hsl(0, 0%, 100%);
   display: none;
   height: 100%;
   left: 0;
@@ -805,131 +733,193 @@ footer a {
   margin-bottom: 10px;
 }
 /*	***********	Estilos Responsive Design	*********** */
-/*	***********	Estilos Movil Antiguo	*********** */
-@media only screen and (max-width: 298px) {
-}
 /*	***********	Estilos Movil (1)	*********** */
-@media only screen and (min-width: 299px) and (max-width: 480px) {
-	#header object {
-		margin-left: 16px;
-		margin-left: 1rem;
-	}
-	#header h1 {
-		font-size: 2rem;
-		margin-left: 16px;
-		margin-left: 1rem;
-	}
-	#menuPrincipal {
-		font-size: 14px;
-		font-size: 0.9rem;
-		width: 150px;
-		width: 9.5rem;
-	}
-	#menuPrincipal li, .subMenu {
-		padding-left: 8px;
-		padding-left: 0.5rem;
-	}
-	#cuerpoPrincipal {
-		margin-left: 145px;
-		margin-left: 10rem;
-	}
-	#tituloArticulo {
-		font-size: 1.5rem;
-	}
-	#hoja div, #articulos article > h3  {
-		margin-top: -8px;
-		margin-top: -0.5rem;
-	}
-	#aside {
-		width: 160px;
-		width: 10rem;
-	}
-	footer {
-		margin-left: 145px;
-		margin-left: 10rem;
+@media only screen and (max-width: 480px) {
+	header, nav, section, aside, footer, div {
+		display: none;
 	}
 }
 /*	***********	Estilos Movil (2)	*********** */
 @media only screen and (min-width: 481px) and (max-width: 640px) {
+	#header {
+		padding: 5px;
+		padding: 0.31rem;
+	}
 	#header object {
 		margin-left: 0;
 	}
 	#header h1 {
-		font-size: 1.9rem;
-		margin-left: 0;
+		font-size: 1.8rem;
+		top: 0;
 	}
 	#header h2 {
-		font-size: 0.9rem;
-		letter-spacing: 0;
-		margin-right: 3px;
-		margin-right: 0.2rem;
-		margin-top: 16px;
-		margin-top: 1rem;
+		font-size: 1.1rem;
+		margin-right: 0;
+		margin-top: 24px;
+		margin-top: 1.5rem;
 	}
 	#menuPrincipal {
-		font-size: 11px;
-		font-size: 0.7rem;
-		width: 112px;
-		width: 7rem;
+		font-size: 12px;
+		font-size: 0.8rem;
+		width: 128px;
+		width: 8rem;
 	}
 	#menuPrincipal li, .subMenu {
-		padding-left: 8px;
-		padding-left: 0.5rem;
+		padding-left: 5px;
+		padding-left: 0.31rem;
+		padding-right: 5px;
+		padding-right: 0.31rem;
 	}
 	#cuerpoPrincipal {
-		margin-left: 112px;
-		margin-left: 7rem;
+		margin-left: 128px;
+		margin-left: 8rem;
+		padding-left: 10px;
+		padding-left: 0.62rem;
+	}
+	#encabezadoArticulo {
+		padding: 5px 10px;
+		padding: 0.31rem 0.2rem;
 	}
 	#tituloArticulo {
-		font-size: 1.3rem;
+		font-size: 1rem;
+		letter-spacing: 0rem;
+		margin-left: 4px;
+		margin-left: 0.25rem;
+	}
+	.googlePlus {
+		margin-top: 5px;
+		margin-top: 0.31rem;
+	}
+	#subMenu  li {
+		font-size: 14px;
+		font-size: 0.87rem;
+		width: 180px;
+		width: 11.25rem;
+	}
+	#ultimosArticulos {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 100px 0px 50px 0px;
+		padding: 6.25rem 0 3.12rem 0;
+	}
+	.ultimosArticulos {
+		margin: 15px;
+		margin: 0.93rem;
+		width: 260px;
+		width: 16.25rem;
+	}
+	#ultimosArticulos object, #ultimosArticulos embed, #ultimosArticulos div {
+		width: 240px;
+		width: 15rem;
 	}
 	#hoja div, #articulos article > h3  {
-		font-size: 0.8rem;
-		margin-left: 0;
+		margin-left: -6px;
+		margin-left: -0.37rem;
 		margin-top: -8px;
 		margin-top: -0.5rem;
 	}
 	#aside {
-		width: 96px;
-		width: 6rem;
+		width: 128px;
+		width: 8rem;
 	}
 	footer {
-		margin-left: 112px;
-		margin-left: 7rem;
+		height: 40px;
+		height: 2.5rem;
+		margin-left: 145px;
+		margin-left: 10rem;
+		padding-top: 8px;
+		padding-top: 0.5rem;
+	}
+	footer div {
+		margin: 0 8px 10px 8px;
+		margin: 0 0.5rem 0.62rem 0.5rem;
+	}
+	footer a {
+		font-size: 0.8rem;
+	}
+	#paypal {
+		width: 50px;
+		width: 3.12rem;
 	}
 }
 /*	***********	Estilos Tablet	*********** */
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
+	#header {
+		letter-spacing: 0.03rem;
+		padding: 5px 10px;
+		padding: 0.31rem 0.62rem;
+	}
 	#header object {
-		margin-left: 16px;
-		margin-left: 1rem;
+		margin-left: 0;
 	}
 	#header h1 {
 		font-size: 2rem;
-		margin-left: 16px;
-		margin-left: 1rem;
+		margin-left: 8px;
+		margin-left: 0.5rem;
+		top: 12px;
+		top: 0.75rem;
 	}
 	#header h2 {
-		letter-spacing: 0.08rem;
-		margin-right: 16px;
-		margin-right: 1rem;
+		font-size: 1.3rem;
+		margin-right: 0;
+		margin-top: 5px;
+		margin-top: 0.31rem;
 	}
 	#menuPrincipal {
 		font-size: 14px;
 		font-size: 0.9rem;
-		width: 150px;
-		width: 9.5rem;
+		width: 166px;
+		width: 10.5rem;
 	}
 	#menuPrincipal li, .subMenu {
 		padding-left: 8px;
 		padding-left: 0.5rem;
+		padding-right: 21px;
+		padding-right: 1.31rem;
 	}
 	#cuerpoPrincipal {
 		margin-left: 145px;
 		margin-left: 10rem;
+		padding-left: 10px;
+		padding-left: 0.62rem;
+	}
+	#encabezadoArticulo {
+		padding: 5px 19px;
+		padding: 0.31rem 1.2rem;
 	}
 	#tituloArticulo {
 		font-size: 1.5rem;
+		letter-spacing: 0rem;
+		margin-left: 4px;
+		margin-left: 0.25rem;
+	}
+	.googlePlus {
+		margin-top: 5px;
+		margin-top: 0.31rem;
+	}
+	#subMenu  li {
+		font-size: 14px;
+		font-size: 0.87rem;
+		width: 180px;
+		width: 11.25rem;
+	}
+	#ultimosArticulos {
+		margin-left: 5px;
+		margin-left: 0.31rem;
+		margin-right: 5px;
+		margin-right: 0.31rem;
+		padding: 100px 10px 50px 10px;
+		padding: 6.25rem 0.62rem 3.12rem 0.62rem;
+	}
+	.ultimosArticulos {
+		margin: 15px;
+		margin: 0.93rem;
+		width: 260px;
+		width: 16.25rem;
+	}
+	#ultimosArticulos object, #ultimosArticulos embed, #ultimosArticulos div {
+		width: 240px;
+		width: 15rem;
 	}
 	#hoja div, #articulos article > h3  {
 		margin-left: -6px;
@@ -942,25 +932,50 @@ footer a {
 		width: 10rem;
 	}
 	footer {
+		height: 40px;
+		height: 2.5rem;
 		margin-left: 145px;
 		margin-left: 10rem;
+		padding-top: 8px;
+		padding-top: 0.5rem;
+	}
+	footer div {
+		margin: 0 8px 10px 8px;
+		margin: 0 0.5rem 0.62rem 0.5rem;
+	}
+	footer a {
+		font-size: 0.8rem;
+	}
+	#paypal {
+		width: 50px;
+		width: 3.12rem;
 	}
 }
 /*	***********	Estilos Monitor	*********** */
 @media only screen and (min-width: 1025px) {
+	#header {
+		letter-spacing: 0.03rem;
+		padding: 5px 10px;
+		padding: 0.31rem 0.62rem;
+	}
 	#header object {
 		margin-left: 20px;
 		margin-left: 1.25rem;
 	}
 	#header h1 {
 		font-size: 2.4rem;
+		letter-spacing: 0.08rem;
 		margin-left: 20px;
 		margin-left: 1.25rem;
+		top: 12px;
+		top: 0.75rem;
 	}
 	#header h2 {
 		letter-spacing: 0.08rem;
 		margin-right: 16px;
 		margin-right: 1rem;
+		margin-top: 5px;
+		margin-top: 0.31rem;
 	}
 	#menuPrincipal {
 		font-size: 16px;
@@ -971,13 +986,52 @@ footer a {
 	#menuPrincipal li, .subMenu {
 		padding-left: 15px;
 		padding-left: 0.93rem;
+		padding-right: 21px;
+		padding-right: 1.31rem;
 	}
 	#cuerpoPrincipal {
 		margin-left: 170px;
 		margin-left: 10.62rem;
+		padding-left: 10px;
+		padding-left: 0.62rem;
+	}
+	#encabezadoArticulo {
+		padding: 5px 10px;
+		padding: 0.31rem 0.62rem;
 	}
 	#tituloArticulo {
 		font-size: 2rem;
+		letter-spacing: 0.05rem;
+		margin-left: 20px;
+		margin-left: 1.25rem;
+	}
+	.googlePlus {
+		margin-top: 5px;
+		margin-top: 0.31rem;
+	}
+	#subMenu  li {
+		font-size: 14px;
+		font-size: 0.87rem;
+		width: 180px;
+		width: 11.25rem;
+	}
+	#ultimosArticulos {
+		margin-left: 5px;
+		margin-left: 0.31rem;
+		margin-right: 5px;
+		margin-right: 0.31rem;
+		padding: 100px 10px 50px 10px;
+		padding: 6.25rem 0.62rem 3.12rem 0.62rem;
+	}
+	.ultimosArticulos {
+		margin: 15px;
+		margin: 0.93rem;
+		width: 260px;
+		width: 16.25rem;
+	}
+	#ultimosArticulos object, #ultimosArticulos embed, #ultimosArticulos div {
+		width: 240px;
+		width: 15rem;
 	}
 	#hoja div, #articulos article > h3  {
 		margin-left: -6px;
@@ -990,7 +1044,15 @@ footer a {
 		width: 10.62rem;
 	}
 	footer {
+		height: 40px;
+		height: 2.5rem;
 		margin-left: 170px;
 		margin-left: 10.62rem;
+		padding-top: 8px;
+		padding-top: 0.5rem;
+	}
+	footer div {
+	  margin: 0 40px 10px 40px;
+		margin: 0 2.5rem 0.62rem 2.5rem;
 	}
 }

@@ -51,13 +51,18 @@ pre {
 .codigo {
   background-color: #F2F7FF;
   border: 3px solid #032A66;
-/*  font-family: monospace !important;
-*/  margin: 0px 50px;
+  margin: 0px 10px;
 }
 .columna1 {
   background-color: #BFD8FC;
   display: none;
   padding: 5px 10px;
+}
+#htmlCodigo:nth-child(odd) {
+	background-color: red;
+}
+#htmlCodigo:nth-child(even) {
+	background-color: blue;
 }
 #css  {
   padding: 15px;

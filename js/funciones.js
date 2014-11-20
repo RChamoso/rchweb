@@ -58,6 +58,6 @@ function calcularFecha(fecha) {
 			minutos = '0' + minutos;
 		}
 		var anno = fecha.getFullYear();
-		nuevaFecha = String.fromCharCode(8986) + ' ' + hora + ':' + minutos + ' - ' + dia + ' ' + mes + ' ' + anno;
+		nuevaFecha = ' ' + hora + ':' + minutos + ' - ' + dia + ' ' + mes + ' ' + anno;
 		return nuevaFecha;
 }

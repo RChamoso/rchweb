@@ -188,11 +188,11 @@ function mostrarFuncion(texto,dato,subTitulo, fecha){  //  Muestra Enlaces exter
   var fechaArticulo = elementoId("fechaArticulo");
 	fechaArticulo.textContent = fecha;
   mostrarBloques(tituloSubMenu, "hoja");
-  if (dato.substr(0,4) != 'http') {
+/*  if (dato.substr(0,4) != 'http') {
     var espera = setTimeout(escribirCss,1000);
-  } else {
+  } else {*/
     contenidoObject.height = window.screen.height + 5;
-  }
+//  }
 }
 function tituloArticulo(subTitulo) {            //  Titulo Principal de la Seccion
   var articuloH1 = elementoId("tituloArticulo");
@@ -382,7 +382,7 @@ function ocultarCajaLuz() {
   elementoId('frenteCajaLuz').style.display='none';
   elementoId('fondoCajaLuz').style.display='none';
 }
-function escribirCss() {                        //  Escribir Html y Css del Articulo
+/*function escribirCss() {                        //  Escribir Html y Css del Articulo
   var contenido = contenidoObject.contentWindow.document;
   if (contenido != null) {
     var mostrarDatos = contenido.getElementById('ocultar');
@@ -440,4 +440,4 @@ function escribirCss() {                        //  Escribir Html y Css del Arti
     }
     contenidoObject.height = contenido.body.clientHeight + 70;
   }
-}
+}*/

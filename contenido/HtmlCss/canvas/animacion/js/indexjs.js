@@ -1,30 +1,35 @@
+var anguloBody = 0;
+var anguloNav = 60;
+var factorAnguloNav = anguloNav / 20;
+var scaleNav = 0.6;
+var factorScaleNav = (1 - scaleNav) / 20;
+var anguloSection = 60;
+var factorAnguloSection = anguloSection / 20;
+var anguloAside = 80;
+var factorAnguloAside = anguloAside / 20;
 function inicio() {
-  divBody = elementoId('body');
-  divHeader = elementoId('header');
-  divLogo = elementoId('logo');
-  divNav = elementoId('nav');
-  divMenu = elementoId('menu');
-  divSection = elementoId('section');
-  divAside = elementoId('aside');
-  divFooter = elementoId('footer');
+  divBody = document.getElementById('body');
+  divHeader = document.getElementById('header');
+  divNav = document.getElementById('nav');
+  divSection = document.getElementById('section');
+  divAside = document.getElementById('aside');
+  divFooter = document.getElementById('footer');
+  divBoton = document.getElementById('boton');
+  divCheckbox = document.getElementById('checkbox1');
+  divCheckbox.checked = true;
+  canvas = document.getElementById('canvas');
+  divMensaje = document.getElementById('mensaje');
+  divImagenLogo = document.getElementById('imagenLogo');
   calcularVentana();
   window.onresize = function(){calcularVentana();};
 }
 function calcularVentana() {
   estiloNav = ''; 
-  var estiloHeader; var estiloSection; var estiloAside; var estiloFooter; var estiloLogo;
+  var estiloHeader; var estiloSection; var estiloAside; var estiloFooter; var estiloMensaje;
   pantallaAlto = document.documentElement.clientHeight;
   pantallaAncho = document.documentElement.clientWidth;
-  var estiloHeader = 'height:' + pantallaAlto + 'px; width:' + (pantallaAncho/2) + 'px;';
-  divHeader.setAttribute('style', estiloHeader);
-  var estiloLogo = 'height:' + (pantallaAlto/2) + 'px; width:' + (pantallaAlto/2) + 'px; margin-top:' + (pantallaAlto/4) + 'px; margin-left:' + (pantallaAncho/8) + 'px;';
-  divLogo.setAttribute('style', estiloLogo);
-//	var altoMenu = divMenu.offsetHeight;
-  var altoMenu = (pantallaAlto - divMenu.offsetHeight)/2;
-  var estiloNav = 'height:' + (pantallaAlto) + 'px; width:' + (pantallaAncho/2) + 'px; padding-top:' + altoMenu + 'px;';
-  divNav.setAttribute('style', estiloNav);
-//  divMenu.setAttribute('style', estiloMenu);
-/*  divBody.setAttribute('style', estiloBody);
+  var estiloBody = 'height:' + pantallaAlto + 'px;';
+  divBody.setAttribute('style', estiloBody);
   anguloHeader = Math.atan(pantallaAlto/pantallaAncho);
   altoHeader = pantallaAlto * 0.1;
   alturaTriangulo = pantallaAlto - altoHeader;            //  y
@@ -61,12 +66,13 @@ function calcularVentana() {
     irA = cambiarColor();
   }
   estiloMensaje = 'height:' + pantallaAlto + 'px;';
+  divHeader.setAttribute('style', estiloHeader);
   divNav.setAttribute('style', estiloNav);
   divSection.setAttribute('style', estiloSection);
   divAside.setAttribute('style', estiloAside);
   divFooter.setAttribute('style', estiloFooter);
   divMensaje.setAttribute('style', estiloMensaje);
-  var intervalo = setTimeout(irA, 1000);*/
+  var intervalo = setTimeout(irA, 1000);
 }
 function moverHeader() {
   var estiloHeader;
@@ -517,7 +523,7 @@ function encender() {
     intervaloAjustar += tercioBoton/10;
     var intervalo = setTimeout(encender, 50);
   } else if (intervaloAjustar == tercioBoton) {
-    botonP = elementoId('botonP');
+    botonP = document.getElementById('botonP');
     botonP.setAttribute('style','background-color: #67b04f;');
     divCheckbox.checked = false;
     brazoDerecho.x1 = brazoDerecho.x + 20;
@@ -561,4 +567,11 @@ function cambiarColor() {
     divImagenLogo.height = '90';
   }
   var intervalo = setTimeout(moverBody, 1000);
+}
+function validarEstilo(id) {
+  var estilo = id.getAttribute('style');
+  if (!estilo) {
+    estilo = '';
+  }
+  return estilo;
 }

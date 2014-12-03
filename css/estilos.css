@@ -141,27 +141,47 @@ header, nav {
   background-color: hsl(270, 75%, 30%);
   font-family: fontTitulo;
   letter-spacing: 0.03em;
-  position: fixed;
-  top: 0;
+/*  position: fixed;
+  top: 0;*/
   z-index: 1000;
 }
-header {
+/*header {
   padding: 5px 10px;
-  width: 100%;
-}
-header h1 {
+  width: 50%;
+}*/
+/*header h1 {
   position: absolute;
   top: 12px;
+}*/
+#header h1 {
+	color: hsl(270, 75%, 70%);
+	font-size: 4rem;
+	margin-left: 1rem;
+	margin-top: 1rem;
+	padding-left: 5px;
+	padding-left: 0.3rem;
+	position: absolute;
+	text-shadow: -1px -1px hsl(270, 30%, 75%), 2px 2px hsl(270, 30%, 10%);
 }
-nav {
+#header h1:hover span {
+	transform: scale(-1,1);
+		-o-transform: scale(-1,1);
+		-ms-transform: scale(-1,1);
+		-moz-transform: scale(-1,1);
+		-webkit-transform: scale(-1,1);
+}
+/*nav {
   transition: all 1s ease-in 0s;
     -o-transition: all 1s ease-in 0s;
     -moz-transition: all 1s ease-in 0s;
     -webkit-transition: all 1s ease-in 0s;
   z-index: 1100;
+}* /
+nav ul {
+	margin-top: 1rem;
 }
 nav li {
-  display: inline-block;
+  display: block;
   font-size: 36px;
   position: relative;
   transition: all 1s ease-out 1s;
@@ -173,17 +193,196 @@ nav li {
     -ms-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
+}*/
+nav {
+	padding-left: 6.25rem;
 }
-nav li p, nav li span {
+.botonCircular {
+  background: #f7f7f7;
+  font-size: 5em;
+  list-style: none;
+  text-align: center;
+}
+.botonCircular li {
+  display: block;
+  font-size: 2rem;
+}
+.botonCircular a {
+  background-color: hsl(270, 75%, 30%);
+  border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+  box-shadow: 0 0 5px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 50%), 1px 1px hsl(270, 30%, 15%);
+    -o-box-shadow: 0 0 5px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 50%), 1px 1px hsl(270, 30%, 15%);
+    -ms-box-shadow: 0 0 5px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 50%), 1px 1px hsl(270, 30%, 15%);
+    -moz-box-shadow: 0 0 5px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 50%), 1px 1px hsl(270, 30%, 15%);
+    -webkit-box-shadow: 0 0 5px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 50%), 1px 1px hsl(270, 30%, 15%);
+/*  box-shadow: 0px 0px 20px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+    -o-box-shadow: 0px 0px 20px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+    -ms-box-shadow: 0px 0px 20px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+    -moz-box-shadow: 0px 0px 20px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+    -webkit-box-shadow: 0px 0px 20px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);*/
+  color: #a7a7a7;
+  display: inline-block;
+	height: 4rem;
+  line-height: 4rem;
+  margin: 1.5rem;
+  position: relative;
+	text-align: center;
+	width: 4rem;
+}
+.botonCircular a:before {
+  border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+  border-bottom: 1px solid hsl(270, 30%, 30%);
+/*  border-top: 2px solid hsl(270, 30%, 10%);
+  box-shadow: inset 0px 8px 30px hsl(270, 30%, 15%);
+    -o-box-shadow: inset 0px 8px 30px hsl(270, 30%, 15%);
+    -ms-box-shadow: inset 0px 8px 30px hsl(270, 30%, 15%);
+    -moz-box-shadow: inset 0px 8px 30px hsl(270, 30%, 15%);
+    -webkit-box-shadow: inset 0px 8px 30px hsl(270, 30%, 15%);*/
+  border-top: 1px solid hsl(270, 30%, 20%);
+  box-shadow: 0 0 hsl(270, 30%, 15%);
+    -o-box-shadow: 0 0 hsl(270, 30%, 15%);
+    -ms-box-shadow: 0 0 hsl(270, 30%, 15%);
+    -moz-box-shadow: 0 0 hsl(270, 30%, 15%);
+    -webkit-box-shadow: 0 0 hsl(270, 30%, 15%);
+/*  border-left: 2px solid hsl(270, 30%, 10%);
+  border-right: 1px solid hsl(270, 30%, 30%);*/
+  bottom: -18px;
+  content: "";
+  display: block;
+  left: -18px;
+  position: absolute;
+  right: -18px;
+  top: -18px;
+}
+.botonCircular a:hover {
+  box-shadow: 0px 0px 20px hsl(270, 30%, 40%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+    -o-box-shadow: 0px 0px 20px hsl(270, 30%, 40%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+    -ms-box-shadow: 0px 0px 20px hsl(270, 30%, 40%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+    -moz-box-shadow: 0px 0px 20px hsl(270, 30%, 40%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+    -webkit-box-shadow: 0px 0px 20px hsl(270, 30%, 40%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+}
+.botonCircular a:active {
+  box-shadow: 0px 0px 20px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+    -o-box-shadow: 0px 0px 20px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+    -ms-box-shadow: 0px 0px 20px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+    -moz-box-shadow: 0px 0px 20px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+    -webkit-box-shadow: 0px 0px 20px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 65%), 2px 2px hsl(270, 30%, 0%);
+/*  box-shadow: 0 0 5px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 50%), 1px 1px hsl(270, 30%, 15%);
+    -o-box-shadow: 0 0 5px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 50%), 1px 1px hsl(270, 30%, 15%);
+    -ms-box-shadow: 0 0 5px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 50%), 1px 1px hsl(270, 30%, 15%);
+    -moz-box-shadow: 0 0 5px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 50%), 1px 1px hsl(270, 30%, 15%);
+    -webkit-box-shadow: 0 0 5px hsl(270, 30%, 0%), -1px -1px hsl(270, 30%, 50%), 1px 1px hsl(270, 30%, 15%);*/
+}
+.botonCircular a:active:before {
+  border-top: 2px solid hsl(270, 30%, 10%);
+  box-shadow: inset 0px 8px 30px hsl(270, 30%, 15%);
+    -o-box-shadow: inset 0px 8px 30px hsl(270, 30%, 15%);
+    -ms-box-shadow: inset 0px 8px 30px hsl(270, 30%, 15%);
+    -moz-box-shadow: inset 0px 8px 30px hsl(270, 30%, 15%);
+    -webkit-box-shadow: inset 0px 8px 30px hsl(270, 30%, 15%);
+/*  border-top: 1px solid hsl(270, 30%, 20%);
+  box-shadow: 0 0 hsl(270, 30%, 15%);
+    -o-box-shadow: 0 0 hsl(270, 30%, 15%);
+    -ms-box-shadow: 0 0 hsl(270, 30%, 15%);
+    -moz-box-shadow: 0 0 hsl(270, 30%, 15%);
+    -webkit-box-shadow: 0 0 hsl(270, 30%, 15%);*/
+}
+.botonCircular p {
+	display: inline-block;
+}
+.menu p {
+	display: inline-block;
+	position: relative;
+	visibility: hidden;
+}
+p.menu:after {
+	color: hsl(270, 30%, 80%);
+	display: block;
+	left: -1rem;
+	position: absolute;
+	top: -2rem;
+	visibility: visibility;
+/*  transition: visibility 2s ease-out 1s, color 2s ease-out 1s;
+    -o-transition: visibility 2s ease-out 1s, color 2s ease-out 1s;
+    -ms-transition: visibility 2s ease-out 1s, color 2s ease-out 1s;
+    -moz-transition: visibility 2s ease-out 1s, color 3s ease-out 1s;
+    -webkit-transition: visibility 2s ease-out 1s, color 2s ease-out 1s;*/
+}
+.trabajoP:after {
+	content: 'mi';
+}
+.perfilP:after {
+	content: 'mi';
+}
+.herramientasP:after {
+	content: 'mis';
+}
+.fotografiaP:after {
+	content: 'mis';
+}
+.menu:hover p.menu:after {
+	color: hsl(270, 30%, 80%);
+  visibility: visible;
+}
+.trabajo:after {
+	content: 'Trabajo';
+}
+.perfil:after {
+	content: 'Perfil';
+}
+.herramientas:after {
+	content: 'Herramientas';
+}
+.fotografia:after {
+	content: 'Fotografías';
+}
+.trabajo:after, .perfil:after, .herramientas:after, .fotografia:after {
+	color: transparent;
+	left: 5rem;
+	position: absolute;
+  top: 0;
+  visibility: hidden;
+  transition: visibility 2s ease-out 1s, left 2s ease-out 1s, color 2s ease-out 1s;
+    -o-transition: visibility 2s ease-out 1s, left 2s ease-out 1s, color 2s ease-out 1s;
+    -ms-transition: visibility 2s ease-out 1s, left 2s ease-out 1s, color 2s ease-out 1s;
+    -moz-transition: visibility 2s ease-out 1s, left 2s ease-out 1s, color 3s ease-out 1s;
+    -webkit-transition: visibility 2s ease-out 1s, left 2s ease-out 1s, color 2s ease-out 1s;
+}
+.menu a:hover:after {
+	color: hsl(270, 30%, 80%);
+  left: 6rem;
+  visibility: visible;
+}
+/*nav li p, nav li span {
   backface-visibility: hidden;
     -o-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
   display: inline-block;
+	font-size: 3rem;
 }
 nav li span {
   background-color: hsl(270, 75%, 30%);
+/*	border: 1px solid hsl(0, 0%, 100%);* /
+  border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+    -o-box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+    -ms-box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+    -moz-box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+    -webkit-box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+	height: 4rem;
+	width: 4rem;
 }
 nav li p {
   background-color: hsl(270, 75%, 30%);
@@ -678,10 +877,10 @@ footer div:hover, footer div:active, footer div:focus {
     color: hsl(270, 50%, 90%);
     position: relative;
   }
-  #menu span {
+/*  #menu span {
     position: relative;
     top: -10px;
-  }
+  }*/
   .menu span {
     display: none;
   }
@@ -717,10 +916,11 @@ footer div:hover, footer div:active, footer div:focus {
 }
 /* ********** Estilos Movil(1/2) y Tablet ********** */
 @media only screen and (min-width:299px) and (max-width:1024px) {
-  nav {
+/*  nav {
     height: 55px;
-  }
-  #menu {
+  }*/
+/*  #menu {
+		display: none;
     position: relative;
     width: 50px;
     z-index: 100;
@@ -730,11 +930,11 @@ footer div:hover, footer div:active, footer div:focus {
   }
   #menu span {
     width: 50px;
-  }
-  nav:hover, nav:active, nav:focus {
+  }*/
+/*  nav:hover, nav:active, nav:focus {
     cursor: pointer;
     right: 0;
-  }
+  }*/
   .imagenesWeb {
     text-align: center;
   }
@@ -792,11 +992,11 @@ footer div:hover, footer div:active, footer div:focus {
   nav:hover, nav:active, nav:focus {
     left: -115px;
   }
-  #menu {
+/*  #menu {
     display: inline-block;
     left: -35px;
     top: 8px;
-  }
+  }*/
   .menu {
     top: -12px;
   }
@@ -865,7 +1065,7 @@ footer div:hover, footer div:active, footer div:focus {
     margin-left: 20px;
   }
   nav li {
-    text-align: center;
+    text-align: left;
   }
   #perfil h3 {
     margin: 50px 50px 50px 0;
@@ -940,19 +1140,19 @@ footer div:hover, footer div:active, footer div:focus {
 }
 /* ********** Estilos Movil(2) y Tablet ********** */
 @media only screen and (min-width:481px) and (max-width:1024px) {
-  nav li {
+  /*nav li {
     margin-right: 10px;
-  }
+  }*/
   nav li p {
     font-size: 24px;
   }
-  nav:hover, nav:active, nav:focus {
+/*  nav:hover, nav:active, nav:focus {
     transition: right 1s ease-out 1s;
       -o-transition: right 1s ease-out 1s;
       -moz-transition: right 1s ease-out 1s;
       -webkit-transition: right 1s ease-out 1s;
     width: 100%;
-  }
+  }*/
   .imagenesWeb li {
     margin: 0 30px 30px 30px;
   }
@@ -985,11 +1185,11 @@ footer div:hover, footer div:active, footer div:focus {
 }
 /* ********** Estilos Tablet ********** */
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  nav {
+/*  nav {
     right: -670px;
     top: 8px;
-  }
-  nav li {
+  }*/
+/*  nav li {
     width: 150px;
   }
   nav li p {
@@ -1000,7 +1200,7 @@ footer div:hover, footer div:active, footer div:focus {
   }
   nav li:nth-child(4) p {
     top: 0;
-  }
+  }*/
   article {
     padding: 100px 50px;
   }
@@ -1052,9 +1252,9 @@ footer div:hover, footer div:active, footer div:focus {
       -moz-transform: rotateY(-180deg);
       -webkit-transform: rotateY(-180deg);
   }
-  #menu {
+/*  #menu {
     display: none;
-  }
+  }*/
   .menu:hover, .menu:active, .menu:focus {
     cursor: pointer;
     transform: rotateY(-180deg);

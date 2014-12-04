@@ -7,6 +7,30 @@
 */
 /* ********** Fuentes Personalizadas ********** */
 @font-face {
+  font-family: Titulo1;
+  src:  url(../fuentes/AnnieUseYourTelescope.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Titulo2;
+  src:  url(../fuentes/ArchitectsDaughter.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Titulo3;
+  src:  url(../fuentes/SetFireToTheRain.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Titulo4;
+  src:  url(../fuentes/SwaggerBold.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: Regular;
   src:  url(../fuentes/Aller_Lt.ttf);
   src:  url(../fuentes/Aller_Lt.eot);
@@ -394,10 +418,50 @@ article {
   font-size: 26px;
   font-size-adjust: 0.5;
   letter-spacing: 0.2px;
-  text-align: justify;
+}
+.section h2 {
+	color: hsl(270, 75%, 70%);
+	font-size: 3rem;
+  font-family: fontTitulo;
+	text-shadow: -1px -1px hsl(270, 30%, 75%), 2px 2px hsl(270, 30%, 10%);
 }
 .primerParrafo {
   margin-top: 50px;
+}
+#trabajo {
+	text-align: left;
+}
+#trabajo h2 {
+	color: hsl(270, 75%, 30%);
+	font-size: 3rem;
+  font-family: fontTitulo;
+	margin-bottom: 3rem;
+	margin-top: 3rem;
+	text-shadow: 1px 1px hsl(270, 30%, 55%), -1px -1px hsl(270, 30%, 10%);
+}
+#trabajo p {
+	background-color: hsl(270, 75%, 95%);
+	border-top-right-radius: 5% 100%;
+	box-shadow: 0 1px #000000 inset, -1px -1px #000000 inset;
+		-o-box-shadow: 0 1px #000000 inset, -1px -1px #000000 inset;
+		-ms-box-shadow: 0 1px #000000 inset, -1px -1px #000000 inset;
+		-moz-box-shadow: 0 1px #000000 inset, -1px -1px #000000 inset;
+		-webkit-box-shadow: 0 1px #000000 inset, -1px -1px #000000 inset;
+	color: hsl(270, 75%, 20%);
+	float: left;
+	margin-bottom: 1rem;
+	margin-right: 2rem;
+	padding: 0.5rem 1.5rem;
+	width: 45%;
+}
+#trabajo p:nth-child(n+0) {
+	border-left: 10px solid orange;
+}
+#trabajo p:nth-child(2n+0) {
+	border-left: 10px solid red;
+}
+#trabajo p:nth-child(3n+0) {
+	border-left: 10px solid green;
 }
 article h4 {
   background-color: hsl(270, 75%, 30%);

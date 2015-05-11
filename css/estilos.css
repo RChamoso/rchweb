@@ -161,22 +161,79 @@ body {
   width: 100%;
 }
 /* ********** Estilos Header y Nav ********** */
+
+#portada {
+background-image: url(../img/fondos/internet1_e.png),
+                  url(../img/fondos/oficina1_e.png),
+                  url(../img/fondos/internet2_e.png),
+                  url(../img/fondos/oficina2_e.png);
+  background-attachment: fixed;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+  width: 100%;
+  height: 100%;
+  animation: fondo 28s linear infinite 0s;
+    -o-animation: fondo 28s linear infinite 0s;
+    -ms-animation: fondo 28s linear infinite 0s;
+    -moz-animation: fondo 28s linear infinite 0s;
+    -webkit-animation: fondo 28s linear infinite 0s;
+}
+#portada div {
+  bottom: 1rem;
+  font-family: Titulo3;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+#portada div cite {
+  margin-right: 1rem;
+}
+/* Slideshow imagenes fondo principal */
+@-webkit-keyframes fondo { 
+  0%  { background-position: center 0px, center -3000px, center -3000px, center -3000px; }
+  25%  { background-position: center 0px, center 0px, center -3000px, center -3000px; }
+  50%  { background-position: center -3000px, center 0px, center 0px, center -3000px; }
+  75%  { background-position: center -3000px, center -3000px, center 0px, center 0px; }
+  100% { background-position: center 0px, center -3000px, center -3000px, center 0px; }
+}
+@-moz-keyframes fondo { 
+  0%  { background-position: center 0px, center -3000px, center -3000px, center -3000px; }
+  25%  { background-position: center 0px, center 0px, center -3000px, center -3000px; }
+  50%  { background-position: center -3000px, center 0px, center 0px, center -3000px; }
+  75%  { background-position: center -3000px, center -3000px, center 0px, center 0px; }
+  100% { background-position: center 0px, center -3000px, center -3000px, center 0px; }
+}
+@-o-keyframes fondo { 
+  0%  { background-position: center 0px, center -3000px, center -3000px, center -3000px; }
+  25%  { background-position: center 0px, center 0px, center -3000px, center -3000px; }
+  50%  { background-position: center -3000px, center 0px, center 0px, center -3000px; }
+  75%  { background-position: center -3000px, center -3000px, center 0px, center 0px; }
+  100% { background-position: center 0px, center -3000px, center -3000px, center 0px; }
+}
+@-ms-keyframes fondo { 
+  0%  { background-position: center 0px, center -3000px, center -3000px, center -3000px; }
+  25%  { background-position: center 0px, center 0px, center -3000px, center -3000px; }
+  50%  { background-position: center -3000px, center 0px, center 0px, center -3000px; }
+  75%  { background-position: center -3000px, center -3000px, center 0px, center 0px; }
+  100% { background-position: center 0px, center -3000px, center -3000px, center 0px; }
+}
+@keyframes fondo { 
+  0%  { background-position: center 0px, center -3000px, center -3000px, center -3000px; }
+  25%  { background-position: center 0px, center 0px, center -3000px, center -3000px; }
+  50%  { background-position: center -3000px, center 0px, center 0px, center -3000px; }
+  75%  { background-position: center -3000px, center -3000px, center 0px, center 0px; }
+  100% { background-position: center 0px, center -3000px, center -3000px, center 0px; }
+}
 header, nav {
-  background-color: hsl(270, 75%, 30%);
+  background-color: hsla(270, 75%, 30%, 0.45);
   font-family: fontTitulo;
   letter-spacing: 0.03em;
-/*  position: fixed;
-  top: 0;*/
   z-index: 1000;
 }
-/*header {
-  padding: 5px 10px;
-  width: 50%;
-}*/
-/*header h1 {
-  position: absolute;
-  top: 12px;
-}*/
 #header h1 {
 	color: hsl(270, 75%, 70%);
 	font-size: 4rem;

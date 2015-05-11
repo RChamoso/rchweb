@@ -1,5 +1,6 @@
 function inicio() {
   divBody = elementoId('body');
+  divPortada = elementoId('portada');
   divHeader = elementoId('header');
   divLogo = elementoId('logo');
   divNav = elementoId('nav');
@@ -12,9 +13,11 @@ function inicio() {
 }
 function calcularVentana() {
   estiloNav = ''; 
-  var estiloHeader; var estiloSection; var estiloAside; var estiloFooter; var estiloLogo;
+  var estiloHeader; var estiloPortada; var estiloSection; var estiloAside; var estiloFooter; var estiloLogo;
   pantallaAlto = document.documentElement.clientHeight;
   pantallaAncho = document.documentElement.clientWidth;
+  estiloPortada = 'height:' + pantallaAlto + 'px;';
+  divPortada.setAttribute('style', estiloPortada);
   var estiloHeader = 'height:' + pantallaAlto + 'px; width:' + (pantallaAncho/2) + 'px;';
   divHeader.setAttribute('style', estiloHeader);
   var estiloLogo = 'height:' + (pantallaAlto/2) + 'px; width:' + (pantallaAlto/2) + 'px; margin-top:' + (pantallaAlto/4) + 'px; margin-left:' + (pantallaAncho/8) + 'px;';

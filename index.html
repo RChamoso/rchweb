@@ -22,38 +22,45 @@
 </head>
 
 <body onload='inicio();'>
-  <header id='header' class='izq'>
-    <h1 itemprop="author" itemscope itemtype="http://schema.org/Person"><span class='inlineBlock'>R</span>Ch Web</h1>
-    <a rel='home' href='http://www.rchweb.net' target='_blank' title='RChWeb.net'>
-			<object id='logo' rel='image_src' type='image/svg+xml' data='img/logoRChWeb.svg' title='Logo de RchWeb.net' >
-				<img rel='image_src' src='img/logoRChWeb.png' alt='Logo de RchWeb.net' title='Logo de RchWeb.net'/>
-			</object>
-    </a>
-  </header>
 
-  <nav id='nav' class='center izq'>
-    <ul id='menu' class='inline botonCircular'>
-      <!--li>
-        <span title='Desplegar Men&uacute;'>&#9776;</span>
-      </li-->
-      <li class='menu'>
-        <a class='trabajo' rel='section' href='#trabajo' title='mi Trabajo'>&#9000;</a>
-        <p class='trabajoP'>mi Trabajo</p>
-      </li>
-      <li class='menu'>
-        <a class='perfil' rel='section' href='#perfil' title='mi Perfil'>&#9786;</a>
-        <p class='perfilP'>mi Perfil</p>
-      </li>
-      <li class='menu'>
-        <a class='herramientas' rel='section' href='#herramientas' title='mis Recursos'>&#9763;</a>
-        <p class='herramientasP'>mis Recursos</p>
-      </li>
-      <li class='menu'>
-        <a class='fotografia' rel='section' href='#fotografia' title='mis Fotograf&iacute;as'>&#9836;</a>
-        <p class='fotografiaP'>mis Fotograf&iacute;as</p>
-      </li>
-    </ul>
-  </nav>
+	<div id='portada'>
+    <div>
+      <cite>"La mejor manera de tener una buena idea es tener muchas ideas."</cite>
+      <a href='http://es.wikipedia.org/wiki/Linus_Pauling' title='Informaci&oacute;n de Linus Pauling en Wikipedia'>Linus Pauling</a>
+    </div>
+		<header id='header' class='izq'>
+			<h1 itemprop="author" itemscope itemtype="http://schema.org/Person"><span class='inlineBlock'>R</span>Ch Web</h1>
+			<a rel='home' href='http://www.rchweb.net' target='_blank' title='RChWeb.net'>
+				<object id='logo' rel='image_src' type='image/svg+xml' data='img/logoRChWeb.svg' title='Logo de RchWeb.net' >
+					<img rel='image_src' src='img/logoRChWeb.png' alt='Logo de RchWeb.net' title='Logo de RchWeb.net'/>
+				</object>
+			</a>
+		</header>
+
+		<nav id='nav' class='center izq'>
+			<ul id='menu' class='inline botonCircular'>
+				<!--li>
+					<span title='Desplegar Men&uacute;'>&#9776;</span>
+				</li-->
+				<li class='menu'>
+					<a class='trabajo' rel='section' href='#trabajo' title='mi Trabajo'>&#9000;</a>
+					<p class='trabajoP'>mi Trabajo</p>
+				</li>
+				<li class='menu'>
+					<a class='herramientas' rel='section' href='#herramientas' title='mis Recursos'>&#9763;</a>
+					<p class='herramientasP'>mis Recursos</p>
+				</li>
+				<li class='menu'>
+					<a class='perfil' rel='section' href='#perfil' title='mi Perfil'>&#9786;</a>
+					<p class='perfilP'>mi Perfil</p>
+				</li>
+				<!--li class='menu'>
+					<a class='fotografia' rel='section' href='#fotografia' title='mis Fotograf&iacute;as'>&#9836;</a>
+					<p class='fotografiaP'>mis Fotograf&iacute;as</p>
+				</li-->
+			</ul>
+		</nav>
+	</div>
 
   <section id='trabajo' class='section'>
     <article>
@@ -78,6 +85,16 @@
     </article>
   </section>
 
+  <section id='herramientas' class='section'>
+    <article>
+			<h2>Herramientas para el Desarrollo y Dise&ntilde;o Web</h2>
+			<p>Semi-Blog personal creado para la consulta r&aacute;pida de algunos c&oacute;digos, herramientas
+					y enlace &uacute;tiles.</p>
+			<p>Dirigido principalmente a los dise&ntilde;adores y desarrolladores web y a las personas que se 
+					esten iniciando en el desarrollo Web.</p>
+    </article>
+  </section>
+
   <section id='perfil' class='section'>
     <article>
       <img src='img/rchamoso.png' alt='Foto de Perfil de Roberto Chamoso' title='Roberto Chamoso' itemprop="image" itemscope itemtype="http://schema.org/Person" />
@@ -96,17 +113,7 @@
     </article>
   </section>
     
-  <section id='herramientas' class='section'>
-    <article>
-			<h2>Herramientas para el Desarrollo y Dise&ntilde;o Web</h2>
-			<p>Semi-Blog personal creado para la consulta r&aacute;pida de algunos c&oacute;digos, herramientas
-					y enlace &uacute;tiles.</p>
-			<p>Dirigido principalmente a los dise&ntilde;adores y desarrolladores web y a las personas que se 
-					esten iniciando en el desarrollo Web.</p>
-    </article>
-  </section>
-
-  <section id='fotografia' class='section'>
+  <!--section id='fotografia' class='section'>
     <article>
 			<h2>Blog Fotogr&aacute;fico</h2>
 			<p>En este blog personal comparto mis trabajos fotogr&aacute;ficos.</p>
@@ -119,7 +126,7 @@
 					en la red social de Panoramio, donde se muestran fotos de todo el mundo y principal base de datos
 					fotogr&aacute;fica para Google Maps y Earth.</p>
     </article>
-  </section>
+  </section-->
 
   <footer id='footer'>
     <div>

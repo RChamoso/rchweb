@@ -2,7 +2,7 @@ function inicio() {
   divBody = elementoId('body');
   divPortada = elementoId('portada');
   divHeader = elementoId('header');
-  divLogo = elementoId('logo');
+//  divLogo = elementoId('logo');
   divNav = elementoId('nav');
   divMenu = elementoId('menu');
   divSection = elementoId('section');
@@ -20,8 +20,8 @@ function calcularVentana() {
   divPortada.setAttribute('style', estiloPortada);
   var estiloHeader = 'height:' + pantallaAlto + 'px; width:' + (pantallaAncho/2) + 'px;';
   divHeader.setAttribute('style', estiloHeader);
-  var estiloLogo = 'height:' + (pantallaAlto/2) + 'px; width:' + (pantallaAlto/2) + 'px; margin-top:' + (pantallaAlto/4) + 'px; margin-left:' + (pantallaAncho/8) + 'px;';
-  divLogo.setAttribute('style', estiloLogo);
+//  var estiloLogo = 'height:' + (pantallaAlto/2) + 'px; width:' + (pantallaAlto/2) + 'px; margin-top:' + (pantallaAlto/4) + 'px; margin-left:' + (pantallaAncho/8) + 'px;';
+//  divLogo.setAttribute('style', estiloLogo);
 //	var altoMenu = divMenu.offsetHeight;
   var altoMenu = (pantallaAlto - divMenu.offsetHeight)/2;
   var estiloNav = 'height:' + (pantallaAlto) + 'px; width:' + (pantallaAncho/2) + 'px; padding-top:' + altoMenu + 'px;';

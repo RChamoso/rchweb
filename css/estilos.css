@@ -81,6 +81,17 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: Fontello;
+  src:  url(../fuentes/fontello.ttf);
+  src:  url(../fuentes/fontello.eot);
+  src:  url(../fuentes/fontello.eot?#iefix) format('embedded-opentype'),
+        url(../fuentes/fontello.woff) format('woff'),
+        url(../fuentes/fontello.ttf) format('truetype'),
+        url(../fuentes/fontello.svg#abril_fatfaceregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /* ********** Estilos Basicos ********** */
 *  {
   margin: 0 auto;
@@ -182,15 +193,13 @@ background-image: url(../img/fondos/internet1_e.png),
     -moz-animation: fondo 28s linear infinite 0s;
     -webkit-animation: fondo 28s linear infinite 0s;
 }
-#portada div {
-  bottom: 1rem;
-  font-family: Titulo3;
-  position: absolute;
+#header cite, #header  a  {
+  display: block;
+  font-family: fontTitulo;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
   text-align: center;
-  width: 100%;
-}
-#portada div cite {
-  margin-right: 1rem;
 }
 /* Slideshow imagenes fondo principal */
 @-webkit-keyframes fondo { 
@@ -492,33 +501,143 @@ article {
 	color: hsl(270, 75%, 30%);
 	font-size: 3rem;
   font-family: fontTitulo;
-	margin-bottom: 3rem;
-	margin-top: 3rem;
+	margin-bottom: 2rem;
 	text-shadow: 1px 1px hsl(270, 30%, 55%), -1px -1px hsl(270, 30%, 10%);
 }
-#trabajo p {
-	background-color: hsl(270, 75%, 95%);
+.listaTrabajo {
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+  width: 45%;
+  height: 13rem;
 	border-top-right-radius: 5% 100%;
-	box-shadow: 0 1px #000000 inset, -1px -1px #000000 inset;
-		-o-box-shadow: 0 1px #000000 inset, -1px -1px #000000 inset;
-		-ms-box-shadow: 0 1px #000000 inset, -1px -1px #000000 inset;
-		-moz-box-shadow: 0 1px #000000 inset, -1px -1px #000000 inset;
-		-webkit-box-shadow: 0 1px #000000 inset, -1px -1px #000000 inset;
-	color: hsl(270, 75%, 20%);
+	color: hsl(270, 0%, 100%);
+  font-family: Titulo3;
 	float: left;
 	margin-bottom: 1rem;
 	margin-right: 2rem;
+}
+.listaTrabajo p {
+  background-color: hsla(270, 75%, 30%, 0.6);
+	border-top-right-radius: 5% 100%;
+  height: 100%;
 	padding: 0.5rem 1.5rem;
-	width: 45%;
+  transition-duration: 0.9s;
+    -o-transition-duration: 0.9s;
+    -ms-transition-duration: 0.9s;
+    -moz-transition-duration: 0.9s;
+    -webkit-transition-duration: 0.9s;
 }
-#trabajo p:nth-child(n+0) {
-	border-left: 10px solid orange;
+.listaTrabajo:hover p {
+/* No cambiar el orden */
+  background-color:  hsla(270, 75%, 30%, 0.9);
+	border-top-right-radius: 0;
+/*	color: transparent;
+  width: 0%;*/
+  height: auto;
+  font-size: 16px;
+/*  margin-left: 50%;
+  margin-top: 50%;
+  transform: rotateZ(750deg);
+    -o-transform: rotateZ(750deg);
+    -ms-transform: rotateZ(750deg);
+    -moz-transform: rotateZ(750deg);
+    -webkit-transform: rotateZ(750deg);*/
 }
-#trabajo p:nth-child(2n+0) {
-	border-left: 10px solid red;
+#trabajo1 {
+  background-image: url(../img/fondos/reunion1_e.png),
+                    url(../img/fondos/oficina3_e.png),
+                    url(../img/fondos/portatil2_e.png);
+	border-left: 10px solid hsl(15, 90%, 50%);
 }
-#trabajo p:nth-child(3n+0) {
-	border-left: 10px solid green;
+#trabajo2 {
+  background-image: url(../img/fondos/codigo3_e.png),
+                    url(../img/fondos/design2_e.png),
+                    url(../img/fondos/design3_e.png);
+	border-left: 10px solid hsl(210, 90%, 50%);
+}
+#trabajo3 {
+  background-image: url(../img/fondos/responsive2_e.png),
+                    url(../img/fondos/oficina1_e.png),
+                    url(../img/fondos/responsive1_e.png);
+	border-left: 10px solid hsl(60, 90%, 50%);
+}
+#trabajo4 {
+  background-image: url(../img/fondos/codigo1_e.png),
+                    url(../img/fondos/codigo2_e.png),
+                    url(../img/fondos/codigo4_e.png);
+	border-left: 10px solid hsl(15, 90%, 50%);
+}
+#trabajo5 {
+  background-image: url(../img/fondos/antiguo1_e.png),
+                    url(../img/fondos/camara2_e.png),
+                    url(../img/fondos/design1_e.png);
+	border-left: 10px solid hsl(210, 90%, 50%);
+}
+#trabajo6 {
+  background-image: url(../img/fondos/redesSociales_e.png),
+                    url(../img/fondos/personas1_e.png),
+                    url(../img/fondos/socialMedia4_e.png);
+	border-left: 10px solid hsl(60, 90%, 50%);
+}
+#trabajo7 {
+  background-image: url(../img/fondos/libros1_e.png),
+                    url(../img/fondos/discoDuro2_e.png),
+                    url(../img/fondos/discoDuro1_e.png);
+	border-left: 10px solid hsl(15, 90%, 50%);
+}
+#trabajo8 {
+  background-image: url(../img/fondos/palabras1_e.png),
+                    url(../img/fondos/seo1_e.png),
+                    url(../img/fondos/socialMedia2_e.png);
+	border-left: 10px solid hsl(210, 90%, 50%);
+}
+#trabajo9 {
+  background-image: url(../img/fondos/telefono_e.png),
+                    url(../img/fondos/bombilla1_e.png),
+                    url(../img/fondos/palabras2_e.png);
+	border-left: 10px solid hsl(60, 90%, 50%);
+}
+.listaTrabajo:hover {
+  animation: fondoTrabajo 9s linear infinite 0s;
+    -o-animation: fondoTrabajo 9s linear infinite 0s;
+    -ms-animation: fondoTrabajo 9s linear infinite 0s;
+    -moz-animation: fondoTrabajo 9s linear infinite 0s;
+    -webkit-animation: fondoTrabajo 9s linear infinite 0s;
+}
+/* Slideshow imagenes fondo trabajo */
+@-webkit-keyframes fondoTrabajo { 
+  0%  { background-position: center 0px, -3000px 0px, -3000px 0px; }
+  33%  { background-position: center 0px, center 0px, -3000px 0px; }
+  66%  { background-position: -3000px 0px, center 0px, center 0px; }
+  100% { background-position: center 0px, -3000px 0px, center 0px; }
+}
+@-moz-keyframes fondoTrabajo { 
+  0%  { background-position: center 0px, -3000px 0px, -3000px 0px; }
+  33%  { background-position: center 0px, center 0px, -3000px 0px; }
+  66%  { background-position: -3000px 0px, center 0px, center 0px; }
+  100% { background-position: center 0px, -3000px 0px, center 0px; }
+}
+@-o-keyframes fondoTrabajo { 
+  0%  { background-position: center 0px, -3000px 0px, -3000px 0px; }
+  33%  { background-position: center 0px, center 0px, -3000px 0px; }
+  66%  { background-position: -3000px 0px, center 0px, center 0px; }
+  100% { background-position: center 0px, -3000px 0px, center 0px; }
+}
+@-ms-keyframes fondoTrabajo { 
+  0%  { background-position: center 0px, -3000px 0px, -3000px 0px; }
+  33%  { background-position: center 0px, center 0px, -3000px 0px; }
+  66%  { background-position: -3000px 0px, center 0px, center 0px; }
+  100% { background-position: center 0px, -3000px 0px, center 0px; }
+}
+@keyframes fondoTrabajo { 
+  0%  { background-position: center 0px, -3000px 0px, -3000px 0px; }
+  33%  { background-position: center 0px, center 0px, -3000px 0px; }
+  66%  { background-position: -3000px 0px, center 0px, center 0px; }
+  100% { background-position: center 0px, -3000px 0px, center 0px; }
 }
 article h4 {
   background-color: hsl(270, 75%, 30%);
@@ -1282,8 +1401,10 @@ footer div:hover, footer div:active, footer div:focus {
 /* ********** Estilos Mayor Tablet ********** */
 @media only screen and (min-width: 641px) {
   header object {
-    height: 60px;
-    width: 60px;
+    height: 5rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 5rem;
   }
   nav li:nth-child(2) {
     top: -5px;
@@ -1317,7 +1438,7 @@ footer div:hover, footer div:active, footer div:focus {
     top: 0;
   }*/
   article {
-    padding: 100px 50px;
+    padding: 20px 50px;
   }
   #picasa, #wiki {
     margin-left: 20px;
